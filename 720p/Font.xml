@@ -1,0 +1,519 @@
+<fonts>
+
+  <fontset id="XEON" unicode="true">
+    <font>
+	
+	
+      <name>menufont</name>
+      <filename>fruitylight.ttf</filename>
+      <size>56</size>
+    </font>
+
+	<font>
+		<name>fruity21</name>
+		<filename>fruitylight.ttf</filename>
+		<size>21</size>
+	</font>
+	
+	<font>
+		<name>fruity19</name>
+		<filename>fruitylight.ttf</filename>
+		<size>19</size>
+	</font>
+	
+	<font>
+		<name>fruity19b</name>
+		<filename>fruitylight.ttf</filename>
+		<size>19</size>
+		<style>bold</style>
+	</font>
+	
+	<font>
+		<name>fruity19s</name>
+		<filename>fruitylight.ttf</filename>
+		<size>19</size>
+		<shadow>dF000000</shadow>
+	</font>
+	
+	<font>
+		<name>fruity17</name>
+		<filename>fruitylight.ttf</filename>
+		<size>17</size>
+	</font>
+
+	<font>
+		<name>fruity17b</name>
+		<filename>fruitylight.ttf</filename>
+		<size>17</size>
+		<style>bold</style>
+	</font>
+	
+	<font>
+		<name>fruity17s</name>
+		<filename>fruitylight.ttf</filename>
+		<size>17</size>
+		<shadow>dF000000</shadow>
+	</font>
+
+	<font>
+		<name>acens21</name>
+		<filename>Acens.ttf</filename>
+		<size>21</size>
+	</font>
+	
+    <font>
+      <name>menufontacens</name>
+      <filename>Acens.ttf</filename>
+      <size>54</size>
+    </font>
+	<font>
+      <name>menufontacens2</name>
+      <filename>HANDGOTLB.ttf</filename>
+      <size>62</size>
+    </font>
+	<font>
+      <name>titlefontacens2</name>
+      <filename>HANDGOTLB.ttf</filename>
+      <size>162</size>
+    </font>	
+	<font>
+      <name>menufontacens2b</name>
+      <filename>HANDGOTLB.ttf</filename>
+      <size>34</size>
+    </font>
+	
+    <font>
+      <name>menufontacensfocus</name>
+      <filename>Acens.ttf</filename>
+      <size>54</size>
+	  <shadow>dF000000</shadow>
+    </font>
+	
+	<font>
+      <name>menufontacensfocus2</name>
+      <filename>HANDGOTLB.ttf</filename>
+      <size>62</size>
+	  <shadow>dF000000</shadow>
+    </font>
+	
+	<font>
+      <name>intro</name>
+      <filename>Acens.ttf</filename>
+      <size>20</size>
+    </font>
+	
+    <font>
+      <name>menufontshadow</name>
+      <filename>fruitylight.ttf</filename>
+      <size>56</size>
+      <shadow>dF000000</shadow>
+    </font>
+
+    <font>
+      <name>weatherfont</name>
+      <filename>fruitylight.ttf</filename>
+      <size>75</size>
+      <shadow>dF000000</shadow>
+    </font>
+
+  <!--  <font>
+      <name>sysinfo</name>
+      <filename>ocr.ttf</filename>
+      <size>20</size>
+      <shadow>FF000000</shadow>
+    </font>
+
+    <font>
+      <name>osdsmall</name>
+      <filename>ocr.ttf</filename>
+      <size>20</size>
+      <shadow>FF000000</shadow>
+    </font>
+    <font>
+      <name>osdbig</name>
+      <filename>ocr.ttf</filename>
+      <size>22</size>
+      <shadow>FF000000</shadow>
+    </font>
+	-->
+    <font>
+      <name>episodeicon</name>
+      <filename>fruitylight.ttf</filename>
+      <size>27</size>
+	  <shadow>FF666666</shadow>
+    </font>
+	
+    <font>
+      <name>episodetitle</name>
+      <filename>frutiger.ttf</filename>
+      <size>27</size>
+    </font>
+
+
+    <font>
+      <name>music_vis</name>
+      <filename>frutiger.ttf</filename>
+      <size>30</size>
+    </font>
+
+	
+    <font>
+      <name>episodeinfo</name>
+      <filename>frutiger.ttf</filename>
+      <size>18</size>
+    </font>
+	
+    <font>
+      <name>episodetext</name>
+      <filename>frutiger.ttf</filename>
+      <size>20</size>
+    </font>
+	
+    <font>
+      <name>episodetitlelight</name>
+      <filename>fruitylight.ttf</filename>
+      <size>27</size>
+    </font>
+	
+    <font>
+      <name>episodeinfolight</name>
+      <filename>fruitylight.ttf</filename>
+      <size>18</size>
+    </font>
+	
+    <font>
+      <name>episodetextlight</name>
+      <filename>fruitylight.ttf</filename>
+      <size>20</size>
+	  <linespacing>1.1</linespacing>
+    </font>
+	
+
+
+    <font>
+      <name>osdfont</name>
+      <filename>fruitylight.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>dropdown</name>
+      <filename>fruitylight.ttf</filename>
+      <size>18</size>
+      <linespacing>1.3</linespacing>
+    </font>
+	
+    <font>
+      <name>rssacens</name>
+      <filename>fruitylight.ttf</filename>
+      <size>21</size>
+      <linespacing>1.3</linespacing>
+    </font>
+	
+	<!-- \\ FOR MY CUSTOM MUSIC VISUAL \\ -->
+
+	<font>
+      <name>Time</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>26</size>
+    </font>
+
+	<font>
+      <name>LargeTitle</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>25</size>
+    </font>
+
+    <font>
+      <name>MediumTitle</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>SmallTitle</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>17</size>
+    </font>
+
+    <font>
+      <name>TinyTitle</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>14</size>
+    </font>
+
+    <font>
+      <name>TinyTitle2</name>
+      <filename>TitleCaps.ttf</filename>
+      <size>13</size>
+    </font>
+
+	<font>
+      <name>musicvis</name>
+      <filename>fruitylight.ttf</filename>
+      <size>20</size>
+      <shadow>FF000000</shadow>
+	  <style>bold</style>
+    </font>
+
+	<font>
+      <name>musicvis2</name>
+      <filename>fruitylight.ttf</filename>
+      <size>20</size>
+      <shadow>FF000000</shadow>
+    </font>
+
+	<!-- \\ END FOR MY CUSTOM MUSIC VISUAL \\ -->
+
+    <font>
+      <name>keyboard</name>
+      <filename>fruitylight.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>keyboardspecial</name>
+      <filename>fruitylight.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>keyboardedit</name>
+      <filename>fruitylight.ttf</filename>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>scraper</name>
+      <filename>fruitylight.ttf</filename>
+      <size>17</size>
+    </font>
+
+    <font>
+      <name>imdb</name>
+      <filename>fruitylight.ttf</filename>
+      <size>17</size>
+	  <style>bold</style>
+    </font>
+	
+    <font>
+      <name>imdbshadow</name>
+      <filename>frutiger.ttf</filename>
+      <size>19</size>
+	  <style>bold</style>
+      <shadow>FF000000</shadow>
+    </font>
+
+    <font>
+      <name>imdbshadowbig</name>
+      <filename>frutiger.ttf</filename>
+      <size>23</size>
+	  <style>bold</style>
+      <shadow>FF000000</shadow>
+    </font>
+	
+    <font>
+      <name>imdbheader</name>
+      <filename>fruitylight.ttf</filename>
+      <size>28</size>
+    </font>
+
+    <font>
+      <name>nothumb</name>
+      <filename>fruitylight.ttf</filename>
+      <size>16</size>
+      <shadow>FF000000</shadow>
+    </font>
+
+    <font>
+      <name>nothumblarge</name>
+      <filename>fruitylight.ttf</filename>
+      <size>21</size>
+      <shadow>FF000000</shadow>
+    </font>
+
+    <font>
+      <name>dropdowns</name>
+      <filename>fruitylight.ttf</filename>
+      <size>26</size>
+      <shadow>FF000000</shadow>
+    </font>
+
+    <font>
+      <name>fruity21</name>
+      <filename>fruitylight.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>fruity24</name>
+      <filename>fruitylight.ttf</filename>
+      <size>22</size>
+    </font>
+
+    <font>
+      <name>dropdownbig</name>
+      <filename>fruitylight.ttf</filename>
+      <size>22</size>
+      <shadow>FF000000</shadow>
+    </font>
+
+    <font>
+      <name>font18</name>
+      <filename>fruitylight.ttf</filename>
+      <size>22</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font13</name>
+      <filename>fruitylight.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>font13c</name>
+      <filename>fruitylight.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>font13csmall</name>
+      <filename>fruitylight.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>font13s</name>
+      <filename>fruitylight.ttf</filename>
+      <shadow>FF000000</shadow>
+      <size>31</size>
+    </font>
+
+    <font>
+      <name>weatherday</name>
+      <filename>fruitylight.ttf</filename>
+      <size>37</size>
+    </font>
+
+    <font>
+      <name>moviewalltitle</name>
+      <filename>fruitylight.ttf</filename>
+      <size>23</size>
+    </font>
+
+    <font>
+      <name>font13cs</name>
+      <filename>fruitylight.ttf</filename>
+      <shadow>FF000000</shadow>
+      <size>18</size>
+    </font>
+
+    <font>
+      <name>font14</name>
+      <filename>fruitylight.ttf</filename>
+      <size>21</size>
+    </font>
+
+    <font>
+      <name>font64</name>
+      <filename>fruitylight.ttf</filename>
+      <size>18</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>matrix8</name>
+      <filename>fruitylight.ttf</filename>
+      <size>20</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font04</name>
+      <filename>fruitylight.ttf</filename>
+      <size>20</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font15</name>
+      <filename>fruitylight.ttf</filename>
+      <size>20</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>font10</name>
+      <filename>fruitylight.ttf</filename>
+      <size>16</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>filesize</name>
+      <filename>fruitylight.ttf</filename>
+      <size>16</size>
+    </font>
+
+    <font>
+      <name>font12</name>
+      <filename>fruitylight.ttf</filename>
+      <size>18</size>
+      <style>bold</style>
+    </font>
+
+    <font>
+      <name>fontKB</name>
+      <filename>fruitylight.ttf</filename>
+      <style>bold</style>
+      <size>20</size>
+    </font>
+
+    <font>
+      <name>font101</name>
+      <filename>fruitylight.ttf</filename>
+    </font>
+
+    <font>
+      <name>menubutton</name>
+      <filename>fruitylight.ttf</filename>
+      <size>17</size>
+    </font>
+
+	<font>
+      <name>font13b</name>
+      <filename>fruitylight.ttf</filename>
+      <size>21</size>
+	  <style>bold</style>
+    </font>
+	
+     <font>
+      <name>xbmc-info</name>
+      <filename>fruitylight.ttf</filename>
+      <size>30</size>
+	  <style>bold</style>
+    </font>
+	
+	<font>
+      <name>xbmc-info-big</name>
+      <filename>fruitylight.ttf</filename>
+      <size>45</size>
+	  <style>bold</style>
+    </font>
+	
+	 <font>
+      <name>MOV-info</name>
+      <filename>fruitylight.ttf</filename>
+      <size>18</size>
+    </font>	
+	
+	 <font>
+      <name>plot-info</name>
+      <filename>fruitylight.ttf</filename>
+      <size>24</size>
+	  <style>bold</style>
+    </font>
+  </fontset>
+
+</fonts>

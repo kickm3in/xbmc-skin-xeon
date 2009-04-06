@@ -1,0 +1,306 @@
+<includes>
+
+<include name="wallglass">
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>720</height>
+		<width>1280</width>
+		<visible>Control.IsVisible(58) | Control.IsVisible(51)</visible>
+		<include>common-fade</include>
+		<texture>white.png</texture>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>720</height>
+		<width>1280</width>
+		<visible>!Skin.HasSetting(eeemode) + [Control.IsVisible(58) | Control.IsVisible(51)]</visible>
+		<include>common-fade</include>
+		<texture>wallfilter.png</texture>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>720</height>
+		<width>1280</width>
+		<visible>Skin.HasSetting(eeemode) + [Control.IsVisible(58) | Control.IsVisible(51)]</visible>
+		<include>common-fade</include>
+		<texture>wallfilter_eee.png</texture>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>720</height>
+		<width>1280</width>
+		<visible>!Skin.HasSetting(eeemode) + Window.IsVisible(2) + Control.IsVisible(59) | Control.IsVisible(51) | Control.IsVisible(58)</visible>
+		<include>common-fade</include>
+		<texture>photowallpaper.png</texture>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>720</height>
+		<width>1280</width>
+		<visible>Skin.HasSetting(eeemode) + Window.IsVisible(2) + Control.IsVisible(59) | Control.IsVisible(51) | Control.IsVisible(58)</visible>
+		<include>common-fade</include>
+		<texture>photowallpaper_eee.png</texture>
+	</control>
+	<control type="image" id="987">
+		<description>background top image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture>black.png</texture>
+		<colordiffuse>c3FFFFFF</colordiffuse>
+		<visible>[[Control.HasFocus(58) + Skin.HasSetting(wallinfopanelvids) + Window.IsActive(25)] | [Control.HasFocus(51) + Skin.HasSetting(wallinfopanelpics) + [Window.IsActive(2) | Window.IsActive(502)]]] + !Container(58).OnNext + !Container(58).OnPrevious + !Container(51).OnNext + !Container(51).OnPrevious</visible>
+		<animation effect="fade" start="0" end="100" time="100" reversible="false" delay="3000">Visible</animation>
+	</control>
+</include>
+
+<include name="wallposterformat">
+	<width>181</width>
+	<height>261</height>
+</include>
+
+<include name="wallposterlabel">
+	<include>wallposterformat</include>
+	<colordiffuse>8eFFFFFF</colordiffuse>
+	<wrapmultiline>true</wrapmultiline>
+	<font>font13c</font>
+	<aligny>center</aligny>
+	<include>openclose</include>
+</include>
+
+<include name="Viewtype_Photowall">
+
+	<control type="group">
+	<posx>0</posx>
+	<posy>0</posy>
+
+	<control type="panel" id="51">
+	     <viewtype label="Wall">icon</viewtype>
+	     <posx>-324</posx>
+	     <posy>-145</posy>
+	     <width>1778</width>
+	     <height>1063</height>
+	     <onleft>51</onleft>
+	     <onright>51</onright>
+	     <onup>2</onup>
+	     <ondown>2</ondown>
+	     <orientation>horizontal</orientation>
+		<include>common-fade</include>
+		<visible>[Window.IsActive(501) + !Skin.HasSetting(wallmusic)] | [Window.IsActive(502) + !Skin.HasSetting(wallmusiclib)] | [Window.IsActive(2) + !Skin.HasSetting(wallpictures)]</visible>
+	     <itemlayout height="179" width="180">
+		    <control type="image">
+				  <include>Photowall_Unfocused</include>
+				  <visible>Window.IsActive(2) + Skin.HasSetting(iconsxbmc01remix)</visible>
+			      <texture>defaulticonpicture.png</texture>
+		      </control>
+		    <control type="image">
+				  <include>Photowall_Unfocused</include>
+				  <visible>!Window.IsActive(2) + Skin.HasSetting(iconsxbmc01remix)</visible>
+			      <texture>defaulticonmusic.png</texture>
+		      </control>
+		    <control type="image">
+				  <include>Photowall_Unfocused</include>
+				  <visible>Window.IsActive(2) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+			      <texture>defaulticonpicture_xbmc01.png</texture>
+		      </control>
+		    <control type="image">
+				  <include>Photowall_Unfocused</include>
+				  <visible>!Window.IsActive(2) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+			      <texture>defaulticonmusic_xbmc01.png</texture>
+		      </control>
+		    <control type="image">
+			      <posx>75</posx>
+			      <posy>70</posy>
+			      <width>180</width>
+			      <height>179</height>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <texture>posterback.png</texture>
+			      <aspectratio aligny="center">scale</aspectratio>
+				  <visible>Control.IsVisible(987) + Skin.HasSetting(wallinfopanelpics)</visible>
+		          <animation effect="fade" start="0" end="100" time="100" reversible="false">Visible</animation>
+			</control>
+		      <control type="label">
+			      <posx>75</posx>
+			      <posy>70</posy>
+			      <width>180</width>
+			      <height>179</height>
+			      <font>font13c</font>
+			      <info>ListItem.Label</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <visible>IsEmpty(ListItem.Thumb)</visible>
+		      </control>
+	     </itemlayout>
+	     <focusedlayout height="179" width="180">
+		      <control type="image">
+			      <texture>defaulticonpicture.png</texture>
+				  <visible>Window.IsActive(2) + Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <include>Photowall_Focused</include>
+		      </control>
+		      <control type="image">
+				  <include>Photowall_Focused</include>
+			      <texture>defaulticonmusic.png</texture>
+				  <visible>!Window.IsActive(2) + Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+		      <control type="image">
+			      <texture>defaulticonpicture_xbmc01.png</texture>
+				  <visible>Window.IsActive(2) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <include>Photowall_Focused</include>
+		      </control>
+		      <control type="image">
+				  <include>Photowall_Focused</include>
+			      <texture>defaulticonmusic_xbmc01.png</texture>
+				  <visible>!Window.IsActive(2) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+		      <control type="image">
+			      <posx>57</posx>
+			      <posy>58</posy>
+			      <width>215</width>
+			      <height>204</height>
+			      <texture>photowallframe.png</texture>
+			      <animation type="focus" reversible="false">
+				<effect type="zoom" start="57,58,215,204" end="0,0,327,323" time="200" />
+			      </animation>
+		      </control>
+
+			<include>wallinfopanel</include>
+			
+	     </focusedlayout>
+			</control>
+
+             <animation effect="slide" end="359,0" time="200" condition="Container.Column(0)">Conditional</animation>
+             <animation effect="slide" end="180,0" time="200" condition="Container.Column(1)">Conditional</animation>
+             <animation effect="slide" end="0,179" time="200" condition="Container.Row(0)">Conditional</animation>
+             <animation effect="slide" end="-180,0" time="200" condition="Container.Column(8)">Conditional</animation>
+             <animation effect="slide" end="0,-179" time="200" condition="Container.Row(4)">Conditional</animation>
+   	   </control>
+
+ 
+	   
+</include>
+
+<include name="Viewtype_Posterwall">
+
+	<control type="panel" id="58">
+	     <viewtype label="Wall">icon</viewtype>
+	     <posx>-178</posx>
+	     <posy>-208</posy>
+	     <width>1627</width>
+	     <height>1166</height>
+	     <onleft>58</onleft>
+	     <onright>58</onright>
+	     <onup>2</onup>
+	     <ondown>2</ondown>
+	     <orientation>horizontal</orientation>
+		 <include>common-fade</include>
+ 		 <visible>[Window.IsActive(24) + Skin.HasSetting(videomovies) + !Skin.HasSetting(wallmovies)] | [Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(walltv)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(wallmovieslib)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(walltvlib)]</visible>
+		 <visible>!Container.Content(episodes)</visible>
+	     <itemlayout height="235" width="164">
+			<control type="image">
+				  <include>Posterwall_Unfocused</include>
+			      <texture>defaulticonposter.png</texture>
+				  <visible>Skin.HasSetting(videomovies) + Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+			<control type="image">
+				  <include>Posterwall_Unfocused</include>
+			      <texture>defaulticonpostertv.png</texture>
+				  <visible>Skin.HasSetting(videotv) + Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+			<control type="image">
+				  <include>Posterwall_Unfocused</include>
+			      <texture>defaulticonposter_xbmc01.png</texture>
+				  <visible>Skin.HasSetting(videomovies) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+			<control type="image">
+				  <include>Posterwall_Unfocused</include>
+				  <texture>defaulticonpostertv_xbmc01.png</texture>
+				  <visible>Skin.HasSetting(videotv) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+		    <control type="image">
+			      <posx>82</posx>
+			      <posy>95</posy>
+			      <width>164</width>
+			      <height>235</height>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <texture>posterback.png</texture>
+			      <aspectratio aligny="center">scale</aspectratio>
+				  <visible>Control.IsVisible(987) + Skin.HasSetting(wallinfopanelvids) + Window.IsActive(25)</visible>
+		          <animation effect="fade" start="0" end="100" time="100" reversible="false">Visible</animation>
+		    </control>
+		      <control type="label">
+			      <posx>164</posx>
+			      <posy>95</posy>
+			      <width>164</width>
+			      <height>235</height>
+			      <font>nothumb</font>
+			      <info>ListItem.Label</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <visible>IsEmpty(ListItem.Thumb)</visible>
+				<wrapmultiline>true</wrapmultiline>
+				<aligny>center</aligny>
+				<align>center</align>
+		      </control>
+	     </itemlayout>
+	     <focusedlayout height="235" width="164">
+		      <control type="image">
+				  <include>Posterwall_Focused</include>
+			      <texture>defaulticonposter.png</texture>
+				  <visible>Skin.HasSetting(videomovies) + Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+		      <control type="image">
+				  <include>Posterwall_Focused</include>
+			      <texture>defaulticonpostertv.png</texture>
+				  <visible>Skin.HasSetting(videotv) + Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+		      <control type="image">
+				  <include>Posterwall_Focused</include>
+				  <texture>defaulticonposter.png</texture>
+				  <visible>Skin.HasSetting(videomovies) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+		      <control type="image">
+				  <include>Posterwall_Focused</include>
+			      <texture>defaulticonpostertv.png</texture>
+				  <visible>Skin.HasSetting(videotv) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+		      </control>
+		      <control type="label">
+			      <posx>164</posx>
+			      <posy>52</posy>
+			      <width>223</width>
+			      <height>320</height>
+			      <font>nothumblarge</font>
+			      <info>ListItem.Label</info>
+			      <colordiffuse>8eFFFFFF</colordiffuse>
+			      <visible>IsEmpty(ListItem.Thumb)</visible>
+				<wrapmultiline>true</wrapmultiline>
+				<aligny>center</aligny>
+				<align>center</align>
+			      <animation effect="zoom" start="164,95,164,235" end="164,52,223,320" reversible="false" time="200">Focus</animation>
+		      </control>
+		      <control type="image">
+			      <posx>14</posx>
+			      <posy>19</posy>
+			      <width>295</width>
+			      <height>388</height>
+			      <texture>posterwallframe.png</texture>
+			      <animation type="focus" reversible="false">
+				<effect type="zoom" start="54,69,219,286" end="14,19,295,388" time="200" />
+			      </animation>
+		      </control>
+			  
+		<include>wallinfopanel</include>
+
+	     </focusedlayout>
+			
+            <animation effect="slide" end="164,0" time="200" condition="Container.Column(0)">Conditional</animation>
+            <animation effect="slide" end="0,235" time="200" condition="Container.Row(0)">Conditional</animation>
+            <animation effect="slide" end="-164,0" time="200" condition="Container.Column(8)">Conditional</animation>
+            <animation effect="slide" end="0,-235" time="200" condition="Container.Row(3)">Conditional</animation>
+   	   </control>
+
+</include>
+
+</includes>

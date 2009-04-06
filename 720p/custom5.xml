@@ -1,0 +1,89 @@
+<window type="dialog" id="603">
+	<defaultcontrol>11</defaultcontrol>
+	<zorder>3</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>context-fade</include>
+	<visible>Window.IsActive(603) + !Window.IsActive(126)</visible>
+	<controls>
+
+	<control type="image">
+		<description>background image</description>
+		<posx>239</posx>
+		<posy>164</posy>
+		<width>802</width>
+		<height>393</height>
+		<texture>iconselectback.png</texture>
+		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
+	</control>
+	
+	<control type="wraplist" id="11">
+	<viewtype label="Wide">wrap</viewtype>
+	<posx>271</posx>
+	<posy>235</posy>
+	<height>276</height>
+	<width>738</width>
+	<onleft>11</onleft>
+	<onright>11</onright>
+	<focusposition>1</focusposition>
+	<orientation>horizontal</orientation>
+	<include>common-fade</include>
+	<itemlayout height="277" width="251">
+        	<control type="image">
+		       <posx>37</posx>
+		       <posy>40</posy>
+		       <width>160</width>
+		       <height>188</height>
+		       <info>ListItem.Thumb</info>
+		       <aspectratio aligny="center">scale</aspectratio>
+		</control>
+	</itemlayout>
+	<focusedlayout height="277" width="251">
+		<control type="image">
+		       <posx>0</posx>
+		       <posy>0</posy>
+		       <width>232</width>
+		       <height>277</height>
+		       <info>ListItem.Thumb</info>
+		       <aspectratio aligny="center">scale</aspectratio>
+		       <animation effect="zoom" start="37,40,160,188" end="0,0,232,277" time="150">Focus</animation>
+		</control>
+		<control type="label">
+				<posx>116</posx>
+				<posy>240</posy>
+				<width>332</width>
+				<font>imdb</font>
+				<info>ListItem.Label</info>
+				<align>center</align>
+		</control>
+	</focusedlayout>
+		<content>
+			<item id="1">
+				<description>My Files</description>
+				<label>[COLOR FFFFFFFF]DEJAH Remix[/COLOR]</label>
+				<thumb>iconset_xbmc01_remix.png</thumb>
+				<onclick>Skin.SetBool(iconsxbmc01remix)</onclick>
+				<onclick>Skin.Reset(iconsxbmc01)</onclick>
+			</item>
+			<item id="2">
+				<description>My Programs</description>
+				<label>[COLOR FFFFFFFF]DEJAH[/COLOR]</label>
+				<thumb>iconset_xbmc01.png</thumb>
+				<onclick>Skin.SetBool(iconsxbmc01)</onclick>
+				<onclick>Skin.Reset(iconsxbmc01remix)</onclick>
+			</item>
+			<item id="3">
+				<description>My Files</description>
+				<label>[COLOR FFFFFFFF]DEJAH Remix[/COLOR]</label>
+				<thumb>iconset_xbmc01_remix.png</thumb>
+				<onclick>Skin.SetBool(iconsxbmc01remix)</onclick>
+				<onclick>Skin.Reset(iconsxbmc01)</onclick>
+			</item>
+		</content>
+	</control>
+	
+	</controls>
+</window>

@@ -1,0 +1,56 @@
+<window id="20">
+	<defaultcontrol always="true">50</defaultcontrol>
+
+	<controls>
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomScripts)</info>
+		<visible>!Skin.HasSetting(CustomScripts) + !Skin.HasSetting(CustomScriptsFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomScriptsFolder)</info>
+		<visible>!Skin.HasSetting(CustomScriptsFolder)</visible>
+	</control>
+
+	<include>mediaglass</include>
+	<include>Window-Files</include>
+
+	<control type="label">
+
+		<label>SCRIPTS</label>
+		<include>medialabel</include>
+	</control>
+
+	<control type="grouplist">
+		<include>mediamenugroup</include>
+		<visible>Skin.HasSetting(videomovies)</visible>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="3">
+		<label>103</label>
+		<include>mediamenu</include>
+		</control>
+		
+		<control type="button" id="555">
+		<label>View types</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ActivateWindow(602)</onclick>
+		</control>
+	</control>
+
+	<include>Viewtype_List</include>
+	<include>Viewtype_Icon</include>
+	<include>Viewtype_Poster</include>
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<include>time</include>
+	</controls>
+
+</window>

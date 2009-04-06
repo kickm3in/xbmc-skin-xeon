@@ -1,0 +1,79 @@
+<window id="501">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<control type="multiimage">
+		<include>mediabackgroundmusic</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>!Skin.HasSetting(CustomMusic) + !Skin.HasSetting(CustomMusicFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfoldermusic</include>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>!Skin.HasSetting(CustomMusicFolder)</visible>
+	</control>
+
+	<include>wallglass</include>
+	<include>vignette</include>
+	<include>Viewtype_Photowall</include>
+	<include>wallmenu</include>
+
+
+	<control type="group">
+	<include>mediaglasslib</include>
+	<include>Window-Files</include>
+	<include>musicpanel</include>
+	<include>musicpaneltext</include>
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+
+	<control type="label">
+		<include>medialabel</include>
+		<include>wallmenu-slide</include>
+		<label>MUSIC</label>
+	</control>
+
+	<control type="grouplist">
+		<include>mediamenugroup</include>
+		<include>wallmenu-slide</include>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="3">
+		<label>103</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="5">
+		<label>Library</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ReplaceWindow(MyMusicLibrary)</onclick>
+		</control>
+
+		<control type="button" id="19">
+		<label>View types</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ActivateWindow(602)</onclick>
+		</control>
+		
+		<control type="button" id="20">
+		<label>Setup</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ActivateWindow(mymusicsettings)</onclick>
+		</control>
+
+	</control>
+	<include>Viewtype_Musicroller</include>
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<include>time</include>
+	</control>
+	</controls>
+</window>

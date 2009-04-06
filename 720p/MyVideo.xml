@@ -1,0 +1,268 @@
+<window>
+	<id>6</id>
+	<defaultcontrol>2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomGames)</info>
+		<visible>Skin.HasSetting(gametrailers) + !Skin.HasSetting(CustomGamesFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomGamesFolder)</info>
+		<visible>Skin.HasSetting(gametrailers) + !Skin.HasSetting(CustomGamesFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMovies)</info>
+		<visible>[Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers)] + !Skin.HasSetting(CustomMoviesFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomMoviesFolder)</info>
+		<visible>[Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers)] + !Skin.HasSetting(CustomMoviesFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>Skin.HasSetting(videomusic) + !Skin.HasSetting(CustomMusicFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>Skin.HasSetting(videomusic) + !Skin.HasSetting(CustomMusicFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomAdult)</info>
+		<visible>Skin.HasSetting(videoadult) + !Skin.HasSetting(CustomAdultFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomAdultFolder)</info>
+		<visible>Skin.HasSetting(videoadult) + !Skin.HasSetting(CustomAdultFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomTV)</info>
+		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(CustomTVFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomTVFolder)</info>
+		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(CustomTVFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomClips)</info>
+		<visible>Skin.HasSetting(videoclips) + !Skin.HasSetting(CustomClipsFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomClipsFolder)</info>
+		<visible>Skin.HasSetting(videoclips) + !Skin.HasSetting(CustomClipsFolder)</visible>
+	</control>
+	
+	<control type="image">
+		<posx>-5</posx>
+		<posy>-5</posy>
+		<width>1290</width>
+		<height>730</height>
+		<visible>!IsEmpty(listitem.property(fanart_image))</visible>
+		<animation effect="fade" end="0" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200" delay="100">VisibleChange</animation>
+		<texture>$INFO[listitem.property(fanart_image)]</texture>
+	</control>
+
+	<control type="image">
+		<include>mediabackgroundfolder</include>
+		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		<texture flipy="true" diffuse="tvmask.png">photowallpaper.png</texture>
+		<visible>!Skin.HasSetting(eeemode) + [Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(55)]</visible>
+	</control>
+
+	<control type="image">
+		<include>mediabackgroundfolder</include>
+		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		<texture flipy="true" diffuse="tvmask.png">photowallpaper_eee.png</texture>
+		<visible>Skin.HasSetting(eeemode) + [Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(55)]</visible>
+	</control>		
+	
+	<include>wallglass</include>
+	<include>vignette</include>
+	<include>Viewtype_Posterwall</include>
+	<include>wallmenu</include>
+
+
+
+
+	<control type="group">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<include>common-fade-quick</include>
+	<include>mediaglass</include>
+
+	<control type="label">
+		<include>wallmenu-slide</include>
+		<label>MOVIES</label>
+		<visible>Skin.HasSetting(videomovies)</visible>
+		<include>medialabel</include>
+	</control>
+
+	<control type="label">
+		<include>wallmenu-slide</include>
+		<label>TV SHOWS</label>
+		<visible>Skin.HasSetting(videotv)</visible>
+		<include>medialabel</include>
+	</control>
+
+	<control type="label">
+		<include>wallmenu-slide</include>
+		<label>CLIPS</label>
+		<visible>Skin.HasSetting(videoclips)</visible>
+		<include>medialabel</include>
+	</control>
+
+	<control type="label">
+		<include>wallmenu-slide</include>
+		<label>ADULT</label>
+		<visible>Skin.HasSetting(videoadult)</visible>
+		<include>medialabel</include>
+	</control>
+
+	<control type="label">
+		<include>wallmenu-slide</include>
+		<label>TRAILERS</label>
+		<visible>Skin.HasSetting(gametrailers) | Skin.HasSetting(movietrailers)</visible>
+		<include>medialabel</include>
+	</control>
+
+	<control type="grouplist">
+		<include>wallmenu-slide</include>
+		<include>mediamenugroup</include>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="3">
+		<label>103</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="5">
+		<label>Library</label>
+		<include>mediamenu</include>
+		<onclick>Skin.SetBool(movielibrary)</onclick>
+		<onclick>XBMC.ReplaceWindow(MyVideoLibrary,movietitles)</onclick>
+		<visible allowhiddenfocus="false">Skin.HasSetting(videomovies)</visible>
+		</control>
+
+		<control type="button" id="8">
+		<label>Library</label>
+		<include>mediamenu</include>
+		<onclick>Skin.SetBool(tvlibrary)</onclick>
+		<onclick>XBMC.ReplaceWindow(MyVideoLibrary,tvshowtitles)</onclick>
+		<visible allowhiddenfocus="false">Skin.HasSetting(videotv)</visible>
+		</control>
+
+		<control type="radiobutton" id="7">
+		<label>14000</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="10">
+		<label>Pictures</label>
+		<include>mediamenu</include>
+		<onclick>Skin.SetBool(adultpics)</onclick>
+		<onclick>XBMC.ReplaceWindow(MyPictures,AdultPics)</onclick>
+		<visible allowhiddenfocus="false">Skin.HasSetting(videoadult)</visible>
+		</control>
+
+		<control type="button" id="11">
+		<label>Games</label>
+		<include>mediamenu</include>
+		<onclick>Skin.Reset(gametrailers)</onclick>
+		<onclick>XBMC.ReplaceWindow(MyPrograms,$INFO[Skin.String(gamespath)])</onclick>
+		<visible allowhiddenfocus="false">Skin.HasSetting(gametrailers)</visible>
+		</control>
+
+		<control type="button" id="18">
+		<include>mediamenu</include>
+		<label>Trailers</label>
+		<onclick>Skin.SetBool(movietrailers)</onclick>
+		<onclick>Skin.Reset(videomovies)</onclick>
+		<onclick>Skin.Reset(videotv)</onclick>
+		<onclick>Skin.Reset(videoclips)</onclick>
+		<onclick>Skin.Reset(videomusic)</onclick>
+		<onclick>Skin.Reset(videoadult)</onclick>
+		<onclick>XBMC.ReplaceWindow(MyVideoFiles,$INFO[Skin.String(movietrailerpath)])</onclick>
+		<visible allowhiddenfocus="false">Skin.HasSetting(videomovies)</visible>
+		</control>
+
+		<control type="button" id="19">
+		<label>Movies</label>
+		<include>mediamenu</include>
+		<onclick>Skin.Reset(movietrailers)</onclick>
+		<onclick>Skin.SetBool(videomovies)</onclick>
+		<onclick>XBMC.ReplaceWindow(MyVideoFiles,$INFO[Skin.String(moviepath)])</onclick>
+		<visible allowhiddenfocus="false">Skin.HasSetting(movietrailers)</visible>
+		</control>
+
+		<control type="button" id="20">
+		<label>Setup</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ActivateWindow(myvideossettings)</onclick>
+		</control>
+		
+		<control type="button" id="555">
+		<label>View types</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ActivateWindow(602)</onclick>
+		</control>
+	</control>
+
+		<control type="grouplist">
+		<control type="button" id="999">
+		<label>xeon</label>
+		<include>mediamenu</include>
+		</control>
+	</control>
+
+	
+	<include>Window-Files</include>
+	
+	<include>Viewtype_List</include>
+	<include>Viewtype_Poster</include>
+
+	</control>
+
+	<include>Viewtype_Showcase</include>
+	<!--<include>Viewtype_ShowcaseWide</include>-->
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<!--<include>time</include>-->
+	</controls>
+</window>

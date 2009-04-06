@@ -1,0 +1,21 @@
+<window type="dialog" id="678">
+	<defaultcontrol>-</defaultcontrol>
+	<zorder>4</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture>testcard.png</texture>
+	</control>
+	
+	</controls>
+</window>

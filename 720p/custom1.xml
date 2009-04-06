@@ -1,0 +1,137 @@
+<window type="dialog" id="600">
+	<defaultcontrol>3112</defaultcontrol>
+	<zorder>3</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>484</posx>
+	<posy>130</posy>
+	</coordinates>
+	<include>context-fade</include>
+	<controls>
+
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>440</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>440</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		<control type="radiobutton" id="3112">
+			<description>shutdown button</description>
+			<posy>0</posy>
+			<label>Movies</label>
+			<onclick>Skin.ToggleSetting(nomovies)</onclick>
+			<include>contextformatleft</include>
+			<selected>!Skin.HasSetting(nomovies)</selected>
+			<onup>3005</onup>
+			<ondown>3114</ondown>
+		</control>
+		<control type="radiobutton" id="3114">
+			<description>reset button</description>
+			<posy>44</posy>
+			<label>TV Shows</label>
+			<onclick>Skin.ToggleSetting(notvshows)</onclick>
+			<selected>!Skin.HasSetting(notvshows)</selected>
+			<include>contextformatleft</include>
+			<onup>3112</onup>
+			<ondown>3115</ondown>
+		</control>
+		<control type="radiobutton" id="3115">
+			<description>reset button</description>
+			<posy>88</posy>
+			<label>Clips</label>
+			<onclick>Skin.ToggleSetting(clips)</onclick>
+			<selected>Skin.HasSetting(clips)</selected>
+			<include>contextformatleft</include>
+			<onup>3114</onup>
+			<ondown>2999</ondown>
+		</control>
+		<control type="radiobutton" id="2999">
+			<description>set alarm</description>
+			<posy>132</posy>
+			<label>Pictures</label>
+			<onclick>Skin.ToggleSetting(nopictures)</onclick>
+			<selected>!Skin.HasSetting(nopictures)</selected>
+			<include>contextformatleft</include>
+			<onup>3115</onup>
+			<ondown>3000</ondown>
+		</control>
+		<control type="radiobutton" id="3000">
+			<description>reset button</description>
+			<posy>176</posy>
+			<label>Music</label>
+			<onclick>Skin.ToggleSetting(nomusic)</onclick>
+			<selected>!Skin.HasSetting(nomusic)</selected>
+			<include>contextformatleft</include>
+			<onup>2999</onup>
+			<ondown>3001</ondown>
+		</control>
+		<control type="radiobutton" id="3001">
+			<description>reset button</description>
+			<posy>220</posy>
+			<label>Games</label>
+			<onclick>Skin.ToggleSetting(nogames)</onclick>
+			<selected>!Skin.HasSetting(nogames)</selected>
+			<include>contextformatleft</include>
+			<onup>3000</onup>
+			<ondown>3002</ondown>
+		</control>
+		<control type="radiobutton" id="3002">
+			<description>reset button</description>
+			<posy>264</posy>
+			<label>Arcade</label>
+			<onclick>Skin.ToggleSetting(arcade)</onclick>
+			<selected>Skin.HasSetting(arcade)</selected>
+			<include>contextformatleft</include>
+			<onup>3001</onup>
+			<ondown>3003</ondown>
+		</control>
+		<control type="radiobutton" id="3003">
+			<description>reset button</description>
+			<posy>308</posy>
+			<label>Apps</label>
+			<onclick>Skin.ToggleSetting(apps)</onclick>
+			<selected>Skin.HasSetting(apps)</selected>
+			<include>contextformatleft</include>
+			<onup>3002</onup>
+			<ondown>3004</ondown>
+		</control>
+		<control type="radiobutton" id="3004">
+			<description>reset button</description>
+			<posy>352</posy>
+			<label>Adult</label>
+			<onclick>Skin.ToggleSetting(adult)</onclick>
+			<selected>Skin.HasSetting(adult)</selected>
+			<include>contextformatleft</include>
+			<onup>3003</onup>
+			<ondown>3005</ondown>
+		</control>
+		<control type="radiobutton" id="3005">
+			<description>reset button</description>
+			<posy>396</posy>
+			<label>Weather</label>
+			<onclick>Skin.ToggleSetting(weather)</onclick>
+			<selected>Skin.HasSetting(weather)</selected>
+			<include>contextformatleft</include>
+			<onup>3004</onup>
+			<ondown>3112</ondown>
+		</control>
+	</controls>
+</window>

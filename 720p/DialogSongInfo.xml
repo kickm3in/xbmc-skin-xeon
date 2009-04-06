@@ -1,0 +1,12 @@
+<window id="135">
+	<defaultcontrol>10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>common-fade</include>
+	<visible>false</visible>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+
+</window>

@@ -1,0 +1,62 @@
+<window id="107">
+	<zorder>1</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<controls>
+
+	<control type="group" id="901">
+		<posx>14</posx>
+		<posy>672</posy>
+		<width>1255</width>
+		<height>140</height>
+		<visible>!Window.IsVisible(100)</visible>
+		<animation effect="slide" start="0,51" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,51" time="150">WindowClose</animation>
+		<control type="image" id="80">
+		<posy>-65</posy>		
+			<width>1255</width>
+			<height>140</height>
+			<texture>popup.png</texture>
+		</control>
+		<control type="label" id="401">
+			<posx>53</posx>
+			<posy>-45</posy>
+			<width>1000</width>
+			<height>51</height>
+			<align>left</align>
+			<font>font13s</font>
+			<textcolor>d0ffffff</textcolor>
+			<label>-</label>			
+			<scroll>true</scroll>
+		</control>		
+		
+		<control type="label" id="402">
+			<posx>1202</posx>
+			<posy>12</posy>
+			<width>1000</width>
+			<height>51</height>
+			<align>right</align>
+			<font>font13s</font>
+			<textcolor>d0ffffff</textcolor>
+			<label>-</label>			
+			<scroll>true</scroll>
+		</control>
+            <control type="image" id="400">
+                <description>avatar</description>
+                <posx>-20</posx>
+                <posy>-670</posy>
+                <width>220</width>
+                <height>140</height>
+                <aspectratio>keep</aspectratio>
+		<animation effect="slide" start="-150,-51" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-150,-51" time="150">WindowClose</animation>
+                <texture>DefaultFileBig.png</texture>
+            </control>
+
+	</control>
+
+	</controls>
+</window>

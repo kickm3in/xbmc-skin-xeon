@@ -1,0 +1,60 @@
+<window id="35">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Games</imagepath>
+		<info>Skin.String(CustomGames)</info>
+		<visible>!Skin.HasSetting(CustomMoviesFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomGamesFolder)</info>
+		<visible>!Skin.HasSetting(CustomMoviesFolder)</visible>
+	</control>
+
+	<control type="group">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>720</width>
+	<height>576</height>
+	<include>common-fade-quick</include>
+
+	<include>mediaglasslib</include>
+	<include>Window-Files2</include>
+
+	<control type="label">
+
+		<label>SAVES</label>
+		<include>medialabel3</include>
+	</control>
+
+	<control type="grouplist">
+		<include>mediamenugroup2</include>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="3">
+		<label>103</label>
+		<include>mediamenu</include>
+		</control>
+
+	</control>
+	
+		<include>Viewtype_List2</include>
+	<include>Viewtype_Gameroller</include>
+
+	</control>
+
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<include>time</include>
+	
+	</controls>
+</window>

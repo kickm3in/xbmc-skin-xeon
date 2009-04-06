@@ -1,0 +1,48 @@
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>context-fade</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+		<origin x="448" y="100">Window.IsActive(MyVideoLibrary)</origin>
+	</coordinates>
+	<controls>
+
+		<control type="image" id="997">
+			<description>background top image</description>
+			<posx>37</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image" id="999">
+			<description>background image</description>
+			<posx>37</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image" id="998">
+			<description>background bottom image</description>
+			<posx>37</posx>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<posx>56</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>44</height>
+			<font>fruity17b</font>
+			<align>center</align>
+			<textcolor>FF8f8f8f</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<texturenofocus>contextbutton.png</texturenofocus>
+			<texturefocus>contextbuttonpressed.png</texturefocus>
+		</control>
+	</controls>
+</window>

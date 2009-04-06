@@ -1,0 +1,561 @@
+<window type="dialog" id="2001">
+	<defaultcontrol>8</defaultcontrol>
+	<zorder>2</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>common-fade</include>
+	<visible>Window.IsActive(2001) + !Window.IsActive(126)</visible>
+	<controls>
+
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>infobackmusic.png</texture>
+		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>infobackmusic_xbox.png</texture>
+		<visible>Skin.HasSetting(lowerres)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>infobackmusic_eee.png</texture>
+		<visible>Skin.HasSetting(eeemode)</visible>
+	</control>
+
+		<control type="image">
+			<description>Cover image</description>
+			<posx>112</posx>
+			<posy>154</posy>
+			<width>334</width>
+			<height>334</height>
+			<texture>$INFO[listitem.thumb]</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>common-fade</include>
+		</control>
+		<control type="image">
+			<description>Cover image</description>
+			<posx>112</posx>
+			<posy>488</posy>
+			<width>334</width>
+			<height>334</height>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="Thumb_Mask5.png">$INFO[listitem.thumb]</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>common-fade</include>
+		</control>
+		
+		<control type="image">
+			<posx>112</posx>
+			<posy>154</posy>
+			<width>334</width>
+			<height>334</height>
+			<texture>browserframe.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>	
+	
+		<control type="image">
+			<posx>112</posx>
+			<posy>488</posy>
+			<width>334</width>
+			<height>334</height>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="Thumb_Mask.png">browserframe.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	
+	<control type="grouplist" id="9000">
+		<include>musicinfomenugroup</include>
+
+		<control type="button" id="8">
+		<label>Play</label>
+		<include>contextformatbrowser</include>
+		</control>
+
+		<control type="button" id="9">
+		<label>Resume</label>
+		<include>contextformatbrowser</include>
+		</control>
+
+		<control type="button" id="6">
+		<label>Refresh</label>
+		<include>contextformatbrowser</include>
+		</control>
+
+		<control type="button" id="10">
+		<label>Get Thumb</label>
+		<include>contextformatbrowser</include>
+		</control>
+
+		<control type="button" id="5">
+		<label>182</label>
+		<include>contextformatbrowser</include>
+		</control>
+		
+	</control>
+
+#-------------------------------------------------------------------------------------------
+#ALBUM INFO
+#-------------------------------------------------------------------------------------------			
+			
+		<control type="group">
+		<posx>150</posx>
+		<posy>70</posy>
+		<visible>Container.Content(albums)</visible>
+			<control type="label" id="1">
+				<description>Movie Title value</description>
+				<posx>370</posx>
+				<posy>85</posy>
+				<width>750</width>
+				<label>$INFO[listitem.album]</label>
+				<include>scraperimdbheader</include>
+				<scroll>true</scroll>
+			</control>
+			<control type="image">
+				<posx>370</posx>
+				<posy>126</posy>
+				<width>700</width>
+				<height>4</height>
+				<texture>infoline.png</texture>
+			</control>
+			<control type="label">
+				<description>Artist txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>$LOCALIZE[557]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Discog txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>Tracklist:</label>
+				<include>scraperimdbtitle</include>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Year txt</description>
+				<posx>370</posx>
+				<posy>166</posy>
+				<width>165</width>
+				<label>$LOCALIZE[562]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Rating txt</description>
+				<posx>370</posx>
+				<posy>192</posy>
+				<width>165</width>
+				<label>$LOCALIZE[563]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Genre txt</description>
+				<posx>370</posx>
+				<posy>218</posy>
+				<width>165</width>
+				<label>$LOCALIZE[515]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Moods txt</description>
+				<posx>370</posx>
+				<posy>244</posy>
+				<width>165</width>
+				<label>$LOCALIZE[175]:</label>
+				<include>scraperimdbtitle</include>
+				<scroll>false</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Styles txt</description>
+				<posx>370</posx>
+				<posy>270</posy>
+				<width>165</width>
+				<label>$LOCALIZE[176]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Artist value</description>
+				<posx>520</posx>
+				<posy>140</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Artist]</label>
+				<include>scraperimdb</include>
+				<scroll>true</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Year value</description>
+				<posx>520</posx>
+				<posy>166</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Year]</label>
+				<include>scraperimdb</include>
+				<scroll>true</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Rating value</description>
+				<posx>520</posx>
+				<posy>192</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Rating]</label>
+				<include>scraperimdb</include>
+				<scroll>true</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Genre value</description>
+				<posx>520</posx>
+				<posy>218</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Genre]</label>
+				<include>scraperimdb</include>
+				<scroll>false</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Moods value</description>
+				<posx>520</posx>
+				<posy>244</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Property(AlbumMoods)]</label>
+				<include>scraperimdb</include>
+				<scroll>false</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Styles value</description>
+				<posx>520</posx>
+				<posy>270</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Property(AlbumStyles)]</label>
+				<include>scraperimdb</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="textbox">
+				<description>textarea</description>
+				<posx>370</posx>
+				<posy>296</posy>
+				<width>605</width>
+				<height>122</height>
+				<include>scraperimdb</include>
+				<info>ListItem.Property(AlbumReview)</info>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+		</control>
+
+#-------------------------------------------------------------------------------------------
+#ARTIST INFO
+#-------------------------------------------------------------------------------------------			
+			
+		<control type="group">
+		<posx>150</posx>
+		<posy>70</posy>
+		<visible>Container.Content(artists)</visible>
+			<control type="label" id="1">
+				<description>Movie Title value</description>
+				<posx>370</posx>
+				<posy>85</posy>
+				<width>750</width>
+				<label>$INFO[listitem.artist]</label>
+				<include>scraperimdbheader</include>
+				<scroll>true</scroll>
+			</control>
+			<control type="image">
+				<posx>370</posx>
+				<posy>126</posy>
+				<width>700</width>
+				<height>4</height>
+				<texture>infoline.png</texture>
+			</control>
+			<control type="label">
+				<description>Discography txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>Discography:</label>
+				<include>scraperimdbtitle</include>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Formed txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>$LOCALIZE[21894]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!IsEmpty(ListItem.Property(Formed))</visible>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Born txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>$LOCALIZE[21893]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!IsEmpty(ListItem.Property(Born))</visible>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Born/Formed txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>$LOCALIZE[21900]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>IsEmpty(ListItem.Property(Born)) + IsEmpty(ListItem.Property(Formed))</visible>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Genre txt</description>
+				<posx>370</posx>
+				<posy>166</posy>
+				<width>165</width>
+				<label>$LOCALIZE[515]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Rating txt</description>
+				<posx>370</posx>
+				<posy>192</posy>
+				<width>165</width>
+				<label>$LOCALIZE[563]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Moods txt</description>
+				<posx>370</posx>
+				<posy>218</posy>
+				<width>165</width>
+				<label>$LOCALIZE[175]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Instruments txt</description>
+				<posx>370</posx>
+				<posy>244</posy>
+				<width>165</width>
+				<label>$LOCALIZE[21892]:</label>
+				<include>scraperimdbtitle</include>
+				<scroll>false</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Died txt</description>
+				<posx>370</posx>
+				<posy>270</posy>
+				<width>165</width>
+				<label>$LOCALIZE[21897]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!IsEmpty(ListItem.Property(Died))</visible>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Disbanded txt</description>
+				<posx>370</posx>
+				<posy>270</posy>
+				<width>165</width>
+				<label>$LOCALIZE[21896]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!IsEmpty(ListItem.Property(Disbanded))</visible>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Died / Disbanded txt</description>
+				<posx>370</posx>
+				<posy>270</posy>
+				<width>165</width>
+				<label>$LOCALIZE[21896]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>IsEmpty(ListItem.Property(Disbanded)) + IsEmpty(ListItem.Property(Disbanded))</visible>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Born / Formed value</description>
+				<posx>520</posx>
+				<posy>140</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Property(Born)]$INFO[ListItem.Property(Formed)]</label>
+				<include>scraperimdb</include>
+				<scroll>true</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Genre value</description>
+				<posx>520</posx>
+				<posy>166</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Genre]</label>
+				<include>scraperimdb</include>
+				<scroll>true</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Rating value</description>
+				<posx>520</posx>
+				<posy>192</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Rating]</label>
+				<include>scraperimdb</include>
+				<scroll>true</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Moods value</description>
+				<posx>520</posx>
+				<posy>218</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Property(Moods)]</label>
+				<include>scraperimdb</include>
+				<scroll>false</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Instruments value</description>
+				<posx>520</posx>
+				<posy>244</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Property(Instruments)]</label>
+				<include>scraperimdb</include>
+				<scroll>false</scroll>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="label">
+				<description>Died Disbanded value</description>
+				<posx>520</posx>
+				<posy>270</posy>
+				<width>455</width>
+				<label fallback="416">$INFO[ListItem.Property(Died)]$INFO[ListItem.Property(Disbanded)]</label>
+				<include>scraperimdb</include>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+			<control type="textbox" id="4">
+				<description>textarea</description>
+				<posx>370</posx>
+				<posy>296</posy>
+				<width>605</width>
+				<height>122</height>
+				<include>scraperimdb</include>
+				<info>ListItem.Property(Biography)</info>
+				<visible>!Control.IsVisible(50)</visible>
+			</control>
+		</control>
+		
+		<control type="list" id="50">
+			<description>Track List Container</description>
+			<posx>670</posx>
+			<posy>210</posy>
+			<width>455</width>
+			<height>208</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<orientation>vertical</orientation>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<visible>!Control.IsVisible(4)</visible>
+			<itemlayout width="455" height="26">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>26</height>
+					<include>scraperimdb</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+					<visible>container.content(albums)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>26</height>
+					<include>scraperimdb</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label] ($INFO[ListItem.Label2])</label>
+					<visible>container.content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>350</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>26</height>
+					<include>scraperimdb</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Duration]</label>
+					<visible>container.content(albums)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="26" width="250">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>26</height>
+					<include>scraperimdb</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.TrackNumber] - $INFO[ListItem.Label]</label>
+					<visible>container.content(albums)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>26</height>
+					<include>scraperimdb</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label] ($INFO[ListItem.Label2])</label>
+					<visible>container.content(artists)</visible>
+				</control>
+				<control type="label">
+					<posx>350</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>26</height>
+					<include>scraperimdb</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Duration]</label>
+					<visible>container.content(albums)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		
+	</controls>
+</window>

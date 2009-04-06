@@ -1,0 +1,77 @@
+<window id="4">
+	<defaultcontrol always="true">22</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<description>Background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>Startup\background-startup-16x9.png</texture>
+			<animation effect="fade" end="100" time="1000">WindowOpen</animation>			
+			<animation effect="fade" end="0" time="2500">WindowClose</animation>
+		</control>
+
+		<control type="label"id="69">
+		<animation type="WindowOpen" reversible="false">
+		<effect type="slide" tween="bounce"delay="500" start ="180,0" end="0,0" time="500" />
+		</animation>
+		<label>XEON</label>
+		<posx>58</posx>
+		<posy>323</posy>
+		<width>1150</width>
+		<height>30</height>
+		<font>menufontacens2</font>
+		<textcolor>ff0000000</textcolor>
+		<include>common-fade</include>
+		</control>
+		
+	<control type="label">
+		<posx>0</posx>
+		<posy>-125</posy>
+		<width>1280</width>
+		<height>720</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>xbmc-info</font>
+		<label>WELCOME TO XEON&#10;Please note that this beta software is still in development&#10;&#10;YOUR XBMC BUILD IS DATED $INFO[System.BuildDate]&#10;THIS SKIN REQUIRES A BUILD DATED Nov 03 2008 OR LATER&#10;&#10;PRESS BACK TO BEGIN (ALL SETTINGS KEPT)&#10;or&#10;PRESS SELECT TO BEGIN (SETTINGS RESET, USER PATHS KEPT - FRESH INSTALL)</label>
+	</control>
+
+	<control type="button" id="22">
+		<posx>0</posx>
+		<posy>-75</posy>
+		<include>keepusersettings</include>
+		<onclick>XBMC.ActivateWindow(Home)</onclick>
+		<onclick>Skin.SetString(CustomMoviesFolder,special://xbmc/BACKDROPS/Movies/)</onclick>
+		<onclick>Skin.SetBool(CustomMoviesFoldOn)</onclick>
+		<onclick>Skin.SetString(CustomTVFolder,special://xbmc/BACKDROPS/tv/)</onclick>
+		<onclick>Skin.SetBool(CustomTVFoldOn)</onclick>
+		<onclick>Skin.SetString(CustomClipsFolder,special://xbmc/BACKDROPS/clips/)</onclick>
+		<onclick>Skin.SetBool(CustomClipsFoldOn)</onclick>	
+		<onclick>Skin.SetString(CustomPicturesFolder,special://xbmc/BACKDROPS/pics/)</onclick>
+		<onclick>Skin.SetBool(CustomPicturesFoldOn)</onclick>	
+		<onclick>Skin.SetString(CustomMusicFolder,special://xbmc/BACKDROPS/music/)</onclick>
+		<onclick>Skin.SetBool(CustomMusicFoldOn)</onclick>	
+		<onclick>Skin.SetString(CustomGamesFolder,special://xbmc/BACKDROPS/games/)</onclick>
+		<onclick>Skin.SetBool(CustomGamesFoldOn)</onclick>	
+		<onclick>Skin.SetString(CustomArcadeFolder,special://xbmc/BACKDROPS/arcade/)</onclick>
+		<onclick>Skin.SetBool(CustomArcadeFoldOn)</onclick>
+		<onclick>Skin.SetString(CustomAppsFolder,special://xbmc/BACKDROPS/apps/)</onclick>
+		<onclick>Skin.SetBool(CustomAppsFoldOn)</onclick>
+		<onclick>Skin.SetString(CustomSettingsFolder,special://xbmc/BACKDROPS\settings\)</onclick>
+		<onclick>Skin.SetBool(CustomSettingsFoldOn)</onclick>
+		<onclick>Skin.SetString(CustomScriptsFolder,special://xbmc/BACKDROPS/scripts/)</onclick>
+		<onclick>Skin.SetBool(CustomScriptsFoldOn)</onclick>
+		<onclick>Skin.SetString(CustomAdultFolder,special://xbmc/BACKDROPS/adult/)</onclick>
+		<onclick>Skin.SetBool(CustomAdultFoldOn)</onclick>		
+		<onclick>Skin.SetString(CustomWeatherFolder,special://xbmc/BACKDROPS/weather/)</onclick>
+		<onclick>Skin.SetBool(CustomWeatherFoldOn)</onclick>		
+		<onclick>Skin.SetString(CustomComicsFolder,special://xbmc/BACKDROPS/comics/)</onclick>
+		<onclick>Skin.SetBool(CustomComicsFoldOn)</onclick>		
+		
+		
+		
+	</control>
+	</controls>
+</window>

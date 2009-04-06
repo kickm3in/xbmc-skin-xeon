@@ -1,0 +1,700 @@
+<window type="dialog" id="2003">
+	<defaultcontrol>5</defaultcontrol>
+	<zorder>1</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>common-fade</include>
+	<visible>Window.IsActive(2003) + !Window.IsActive(126)</visible>
+	<controls>
+
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>infoback.png</texture>
+		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>infoback_xbox.png</texture>
+		<visible>Skin.HasSetting(lowerres)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>infoback_eee.png</texture>
+		<visible>Skin.HasSetting(eeemode)</visible>
+	</control>
+
+		<control type="image">
+			<description>Cover image</description>
+			<posx>102</posx>
+			<posy>136</posy>
+			<width>259</width>
+			<height>384</height>
+			<texture>$INFO[listitem.thumb]</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>common-fade</include>
+			<visible>!container.content(episodes) + !container.content(musicvideos)</visible>
+		</control>
+		<control type="image">
+			<description>Cover image</description>
+			<posx>102</posx>
+			<posy>520</posy>
+			<width>259</width>
+			<height>384</height>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="Thumb_Mask5.png">$INFO[listitem.thumb]</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>common-fade</include>
+			<visible>!container.content(episodes) + !container.content(musicvideos) + !Control.IsVisible(50)</visible>
+		</control>
+		<control type="image">
+			<description>Cover image</description>
+			<posx>102</posx>
+			<posy>136</posy>
+			<width>259</width>
+			<height>384</height>
+			<texture>$INFO[container.tvshowthumb]</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>common-fade</include>
+			<visible>container.content(episodes)</visible>
+		</control>
+		<control type="image">
+			<description>Cover image</description>
+			<posx>102</posx>
+			<posy>520</posy>
+			<width>259</width>
+			<height>384</height>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+			<texture flipy="true" diffuse="Thumb_Mask5.png">$INFO[container.tvshowthumb]</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>common-fade</include>
+			<visible>container.content(episodes)</visible>
+		</control>
+	
+	<control type="grouplist" id="9000">
+		<include>imdbmenugroup</include>
+
+		<control type="button" id="5">
+		<label>Cast / Credits</label>
+		<include>contextformatinfo</include>
+		</control>
+		
+		<control type="button" id="8">
+		<label>Play</label>
+		<include>contextformatinfo</include>
+		</control>
+
+		<control type="button" id="9">
+		<label>Resume</label>
+		<include>contextformatinfo</include>
+		</control>
+
+		<control type="button" id="6">
+		<label>Refresh</label>
+		<include>contextformatinfo</include>
+		</control>
+
+		<control type="button" id="10">
+		<label>Get Thumb</label>
+		<include>contextformatinfo</include>
+		</control>
+
+		<control type="button" id="12">
+		<label>Get Fanart</label>
+		<include>contextformatinfo</include>
+		</control>
+		
+		<control type="button" id="11">
+		<label>Trailer</label>
+		<include>contextformatinfo</include>
+		</control>
+	</control>
+
+#-------------------------------------------------------------------------------------------
+#MOVIE INFO
+#-------------------------------------------------------------------------------------------			
+			
+		<control type="group">
+		<posx>50</posx>
+		<posy>70</posy>
+		<visible>Container.Content(movies) + !Control.IsVisible(50)</visible>
+		<animation effect="fade" start="0" end="100" time="100">Visible</animation>
+			<control type="label" id="1">
+				<description>Studio txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>$LOCALIZE[572]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Director txt</description>
+				<posx>370</posx>
+				<posy>166</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20339]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Writing Credits txt</description>
+				<posx>370</posx>
+				<posy>192</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20417]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Genre txt</description>
+				<posx>370</posx>
+				<posy>218</posy>
+				<width>165</width>
+				<label>$LOCALIZE[515]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Year</description>
+				<posx>370</posx>
+				<posy>244</posy>
+				<width>165</width>
+				<label>$LOCALIZE[562]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>TagLine txt</description>
+				<posx>370</posx>
+				<posy>270</posy>
+				<width>165</width>
+				<label>$LOCALIZE[202]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>PlotOutline txt</description>
+				<posx>370</posx>
+				<posy>296</posy>
+				<width>165</width>
+				<label>$LOCALIZE[203]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Rating txt</description>
+				<posx>370</posx>
+				<posy>322</posy>
+				<width>165</width>
+				<label>$LOCALIZE[563]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Runtime txt</description>
+				<posx>370</posx>
+				<posy>348</posy>
+				<width>165</width>
+				<label>$LOCALIZE[2050]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>MPPA Rating txt</description>
+				<posx>370</posx>
+				<posy>374</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20074]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Location</description>
+				<posx>370</posx>
+				<posy>400</posy>
+				<width>165</width>
+				<label>File Location:</label>
+				<include>scraperimdbtitle</include>
+			</control>			
+			
+			<control type="label" id="36">
+				<description>Studio value</description>
+				<posx>520</posx>
+				<posy>140</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="21">
+				<description>Director value</description>
+				<posx>520</posx>
+				<posy>166</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="22">
+				<description>Writing Credits value</description>
+				<posx>520</posx>
+				<posy>192</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="23">
+				<description>Genre value</description>
+				<posx>520</posx>
+				<posy>218</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="24">
+				<description>Year value</description>
+				<posx>520</posx>
+				<posy>244</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="25">
+				<description>TagLine value</description>
+				<posx>520</posx>
+				<posy>270</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<scroll>false</scroll>
+				<visible>container.content(movies) + Skin.HasSetting(imdbinfoscroll)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="25">
+				<description>TagLine value</description>
+				<posx>520</posx>
+				<posy>270</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<scroll>false</scroll>
+				<visible>container.content(movies) + !Skin.HasSetting(imdbinfoscroll)</visible>
+				<scroll>false</scroll>
+			</control>
+			<control type="label" id="26">
+				<description>PlotOutline value</description>
+				<posx>520</posx>
+				<posy>296</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="30">
+				<description>Rating and votes value</description>
+				<posx>520</posx>
+				<posy>322</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="31">
+				<description>Runtime value</description>
+				<posx>520</posx>
+				<posy>348</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="32">
+				<description>MPPA Rating value</description>
+				<posx>520</posx>
+				<posy>374</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<description>File Path value</description>
+				<posx>520</posx>
+				<posy>400</posy>
+				<width>585</width>
+				<info>Listitem.FilenameAndPath</info>
+				<include>scraperimdb</include>				
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="1">
+				<description>Top 250 Text</description>
+				<posx>370</posx>
+				<posy>426</posy>
+				<width>165</width>
+				<label>$LOCALIZE[13409]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>!IsEmpty(listitem.top250) + container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="1">
+				<description>Top 250 Value</description>
+				<posx>520</posx>
+				<posy>426</posy>
+				<width>585</width>
+				<label>$INFO[listitem.top250,#, $LOCALIZE[13408]]</label>
+				<include>scraperimdb</include>
+				<visible>!IsEmpty(listitem.top250) + container.content(movies)</visible>
+				<scroll>true</scroll>
+			</control>
+
+
+		</control>
+#-------------------------------------------------------------------------------------------
+#TV SHOW INFO
+#-------------------------------------------------------------------------------------------
+		
+		<control type="group">
+		<posx>50</posx>
+		<posy>70</posy>
+		<visible>Container.Content(tvshows) + !Control.IsVisible(50)</visible>
+		<animation effect="fade" start="0" end="100" time="100">Visible</animation>
+			<control type="label" id="1">
+				<description>Episodes txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20360]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>First Aired txt</description>
+				<posx>370</posx>
+				<posy>166</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20416]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Genre txt</description>
+				<posx>370</posx>
+				<posy>192</posy>
+				<width>165</width>
+				<label>$LOCALIZE[515]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(tvshows)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Episodes value</description>
+				<posx>520</posx>
+				<posy>140</posy>
+				<width>585</width>
+				<label>$INFO[listitem.episode]</label>
+				<include>scraperimdb</include>
+				<visible>container.content(tvshows)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="24">
+				<description>First aired value</description>
+				<posx>520</posx>
+				<posy>166</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(tvshows)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="23">
+				<description>Genre value</description>
+				<posx>520</posx>
+				<posy>192</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(tvshows)</visible>
+				<scroll>true</scroll>
+			</control>
+		</control>
+
+
+		
+		<control type="group">
+		<posx>50</posx>
+		<posy>70</posy>
+		<animation effect="fade" start="0" end="100" time="100">Visible</animation>
+		<visible>container.content(episodes)</visible>
+			<control type="label" id="1">
+				<description>Episode txt</description>
+				<posx>370</posx>
+				<posy>140</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20359]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Season txt</description>
+				<posx>370</posx>
+				<posy>166</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20373]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Director txt</description>
+				<posx>370</posx>
+				<posy>192</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20339]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Writing Credits txt</description>
+				<posx>370</posx>
+				<posy>218</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20417]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Genre txt</description>
+				<posx>370</posx>
+				<posy>244</posy>
+				<width>165</width>
+				<label>$LOCALIZE[515]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Year</description>
+				<posx>370</posx>
+				<posy>270</posy>
+				<width>165</width>
+				<label>$LOCALIZE[20416]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Rating txt</description>
+				<posx>370</posx>
+				<posy>296</posy>
+				<width>165</width>
+				<label>$LOCALIZE[563]:</label>
+				<include>scraperimdbtitle</include>
+				<visible>container.content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<description>Episode value</description>
+				<posx>520</posx>
+				<posy>140</posy>
+				<width>585</width>
+				<info>Listitem.Episode</info>
+				<include>scraperimdb</include>
+				<visible>container.content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="1">
+				<description>Sesson value</description>
+				<posx>520</posx>
+				<posy>166</posy>
+				<width>585</width>
+				<info>Listitem.Season</info>
+				<include>scraperimdb</include>
+				<visible>container.content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="21">
+				<description>Director value</description>
+				<posx>520</posx>
+				<posy>192</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="22">
+				<description>Writing Credits value</description>
+				<posx>520</posx>
+				<posy>218</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="23">
+				<description>Genre value</description>
+				<posx>520</posx>
+				<posy>244</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="24">
+				<description>Year value</description>
+				<posx>520</posx>
+				<posy>270</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" id="30">
+				<description>Rating and votes value</description>
+				<posx>520</posx>
+				<posy>296</posy>
+				<width>585</width>
+				<label>-</label>
+				<include>scraperimdb</include>
+				<visible>container.content(episodes)</visible>
+				<scroll>true</scroll>
+			</control>
+		</control>
+
+		<control type="label" id="1">
+			<description>Movie Title value</description>
+			<posx>420</posx>
+			<posy>155</posy>
+			<width>750</width>
+			<label>$INFO[listitem.title] Info...</label>
+			<include>scraperimdbheader</include>
+			<scroll>true</scroll>
+			<visible>!Control.IsVisible(50)</visible>
+		</control>
+		
+		<control type="label" id="1">
+			<description>Movie Title value</description>
+			<posx>420</posx>
+			<posy>155</posy>
+			<width>750</width>
+			<label>$INFO[listitem.title] Cast...</label>
+			<include>scraperimdbheader</include>
+			<scroll>true</scroll>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		
+		
+		<control type="image" id="1">
+			<posx>420</posx>
+			<posy>196</posy>
+			<width>800</width>
+			<height>4</height>
+			<texture>infoline.png</texture>
+		</control>
+		
+		<control type="list" id="50">
+			<description>Cast List Container</description>
+			<posx>420</posx>
+			<posy>210</posy>
+			<width>655</width>
+			<height>288</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<orientation>vertical</orientation>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+		    <animation effect="fade" start="0" end="100" time="100">Visible</animation>
+			<itemlayout width="455" height="26">
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<texture>DefaultActorBig.png</texture>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<posy>0</posy>
+					<width>655</width>
+					<height>26</height>
+					<include>scraperimdb</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="26" width="250">
+				<control type="image">
+					<posx>0</posx>
+					<posy>3</posy>
+					<width>22</width>
+					<height>22</height>
+					<texture>DefaultActorBig.png</texture>
+					<info>ListItem.Icon</info>
+				</control>			
+			
+				<control type="label">
+					<posx>35</posx>
+					<posy>0</posy>
+					<width>655</width>
+					<height>26</height>
+					<include>scraperimdbtitle</include>
+					<selectedcolor>green</selectedcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+
+			</focusedlayout>
+			</control>
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<control type="image">
+				<description>Actor image</description>
+				<posx>102</posx>
+				<posy>136</posy>
+				<width>259</width>
+				<height>384</height>
+				<info>Container(50).ListItem.Icon</info>
+				<aspectratio aligny="center">stretch</aspectratio>
+				<align>center</align>
+			</control>
+			
+
+		</control>
+
+			
+
+
+	</controls>
+</window>

@@ -1,0 +1,3238 @@
+<includes>
+
+<include file="Defaults.xml" />
+<include file="CommonContent.xml" />
+<include file="FullscreenViews.xml" />
+<include file="Backgrounds.xml" />
+<include file="Backpreview.xml" />
+<include file="Homescrollers.xml" />
+<include file="MusicRoller.xml" />
+<include file="WallViews.xml" />
+<include file="Reset.xml" />
+<include file="Thumbtypes.xml" />
+
+<include name="Zoom-PlayerControl">
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+	<animation effect="zoom" start="300" end="100" center="60,-212" acceleration="-1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="300" center="60,-212" acceleration="1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+
+
+<include name="dialogeffect">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+<include name="VisibleFadeEffect">
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+</include>
+
+<include name="buffer">
+		<control type="multiimage"id="24">
+			<description>Busy animation</description>
+			<posx>530</posx>
+		<posy>340</posy>
+			<width>54</width>
+			<height>54</height>
+			<imagepath>busy</imagepath>
+			<timeperimage>100</timeperimage>
+			<fadetime>0</fadetime>
+		</control>
+</include>
+<!-- Text colours ================================== -->
+
+<include name="listcolornofocus">
+	<textcolor>FF000000</textcolor>
+	<selectedcolor>FF000000</selectedcolor>
+</include>
+
+<include name="listcolorfocus">
+	<textcolor>FFFFFFFF</textcolor>
+	<selectedcolor>FFFFFFFF</selectedcolor>
+</include>
+
+<include name="playlistcolor1">
+	<textcolor>FFFFFFFF</textcolor>
+	<selectedcolor>e1b1e021</selectedcolor>
+</include>
+
+<include name="playlistcolor2">
+	<textcolor>FFFFFFFF</textcolor>
+	<selectedcolor>e1b1e021</selectedcolor>
+</include>
+
+<include name="settingsmenufont">
+	<textcolor>FFa8a8a8</textcolor>
+	<selectedcolor>e1b1e021</selectedcolor>
+	<focusedcolor>ffffffff</focusedcolor>
+</include>
+
+<include name="settingsmenubar">
+	<textcolor>FFffffff</textcolor>
+	<focusedcolor>FFffff00</focusedcolor>
+	<selectedcolor>FFffff00</selectedcolor>
+</include>
+
+<include name="osdfont">
+	<textcolor>FFffffff</textcolor>
+	<focusedcolor>FFababab</focusedcolor>
+	<selectedcolor>FFababab</selectedcolor>
+</include>
+
+<include name="osdfont2">
+	<textcolor>FFb8b8b8</textcolor>
+	<focusedcolor>FFFFFFFF</focusedcolor>
+	<selectedcolor>FFFFFFFF</selectedcolor>
+</include>
+
+<!-- Animation styles ====================== -->
+
+<include name="common-fade">
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+<include name="common-fade-delay">
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" delay="1000" time="200">WindowClose</animation>
+</include>
+
+<include name="common-fade-delay">
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" delay="1000" time="200">WindowClose</animation>
+</include>
+
+<include name="context-fade">
+	<animation effect="fade" time="200">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+<include name="openclose">
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="300">WindowClose</animation>
+</include>
+
+<include name="common-fade-normal">
+	<animation effect="fade" time="1000" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" delay="200" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+	<animation effect="fade" start="0" end="100" time="500" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="500" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+
+<include name="common-fade-media">
+	<animation effect="fade" delay="200" time="1000" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" delay="200" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+	<animation effect="fade" delay="200" start="0" end="100" time="500" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="300" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+<include name="common-fade-quick">
+	<animation effect="fade" time="0">Visible</animation>
+	<animation effect="fade" time="0">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+</include>
+<include name="common-effect">
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+</include>
+
+<include name="dialogslide">
+	<animation effect="slide" start="1280,0" end="-658,0" time="200" acceleration="-1">Visible</animation>
+	<animation effect="slide" start="-658,0" end="1280,0" time="200" acceleration="1">Hidden</animation>
+</include>
+
+<include name="backgroundfade">
+         <animation effect="fade" delay = "200" time="500">WindowOpen</animation>
+         <animation effect="fade" time="200">WindowClose</animation>
+         <animation effect="fade" delay = "200" time="800">Visible</animation>
+         <animation effect="fade" delay = "200" time="800">Hidden</animation>
+</include>
+
+<include name="wallmenu-fade">
+	<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+	<animation effect="fade" start="0" end="100" time="0">Visible</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+<include name="wallmenu-slide">
+	<animation effect="slide" end="0,-98" time="180" condition="[Control.IsVisible(51) + Control.HasFocus(51)] | [Control.IsVisible(55) + Control.HasFocus(55)] | [Control.IsVisible(54) + Control.HasFocus(54)] | [Control.IsVisible(58) + Control.HasFocus(58)] | [Control.IsVisible(57) + Control.HasFocus(57)] | [Control.IsVisible(59) + Control.HasFocus(59)] | [Control.IsVisible(53) + Control.HasFocus(53)]">Conditional</animation>
+</include>
+
+
+<!-- Visibility conditions ============================= -->
+
+<include name="Home-Visible">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(FileBrowser) + !Window.IsActive(contextmenu)</visible>
+	<visible>!Window.IsActive(PlayerControls) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(134)</visible>
+</include>
+
+<include name="Home-Visible2">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(contextmenu)</visible>
+	<visible> !Window.IsActive(PlayerControls) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog)</visible>
+</include>
+
+<include name="Common-Visible">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(FileBrowser) + !Window.IsActive(contextmenu)</visible>
+	<visible>!Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(128) + !Window.IsActive(129) + !Window.IsActive(PlayerControls) + !Window.IsActive(selectdialog) + !Window.IsActive(MusicOverlay) + !Window.IsActive(VideoOverlay) + !Window.IsActive(115)</visible>
+</include>
+
+<include name="MenuBG">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(128) + !Window.IsActive(129) + !Window.IsActive(scandialog) + !Window.IsActive(progressdialog) + !Window.IsActive(MusicOverlay) + !Window.IsActive(VideoOverlay)</visible>
+</include>
+
+<include name="MenuBG2">
+	<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(numericinput) + !Window.IsActive(yesnodialog) + !Window.IsActive(okdialog) + !Window.IsActive(128) + !Window.IsActive(129) + !Window.IsActive(scandialog) + !Window.IsActive(progressdialog) + !Window.IsActive(MusicOverlay) + !Window.IsActive(VideoOverlay)</visible>
+</include>
+
+<include name="Music_Overlay">
+	<visible>[Player.HasAudio + !Skin.HasSetting(MediaInfo) + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation)] | !Window.IsActive(Home) + !Window.IsActive(Settings) + !Window.IsActive(3) + !Window.IsActive(2007) + [Player.HasAudio + !Skin.HasSetting(MediaInfoIdleTime) + !Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)] | !Window.IsActive(Home)  + !Window.IsActive(2007) + [Player.HasAudio + !Skin.HasSetting(MediaInfoIdleTime) + Window.IsActive(PlayerControls) + Skin.HasSetting(MediaInfo) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)]</visible>
+</include>
+
+<include name="Video_Overlay">
+	<visible>[Player.HasVideo + !Skin.HasSetting(MediaInfo) + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation)] | !Window.IsActive(Home)  + !Window.IsActive(2007) + [Player.HasVideo + !Skin.HasSetting(MediaInfoIdleTime) + !Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)] | !Window.IsActive(Home)  + !Window.IsActive(2007) + [Player.HasVideo + !Skin.HasSetting(MediaInfoIdleTime) + Window.IsActive(PlayerControls) + Skin.HasSetting(MediaInfo) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(visualisation) + System.IdleTime(30)]</visible>
+</include>
+
+<!-- Global time and weather panel ================================== -->
+
+<include name="contextback">
+		<control type="image">
+			<description>background top image</description>
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1330</width>
+			<height>750</height>
+			<texture>black.png</texture>
+			<colordiffuse>c3FFFFFF</colordiffuse>
+			<include>context-fade</include>
+			<visible>Window.IsVisible(600) | Window.IsVisible(603) | Window.IsVisible(2000) | Window.IsVisible(601) | Window.IsVisible(602) | Window.IsVisible(2001) | Window.IsVisible(2003) | Window.IsVisible(601) | Window.IsVisible(111) | Window.IsVisible(601) | Window.IsVisible(132) | Window.IsVisible(106) | Window.IsVisible(103) | Window.IsVisible(129) | Window.IsVisible(126)</visible>
+		</control>
+</include>
+
+<include name="osdformat">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>33</height>
+		<width>90</width>
+		<font>dropdown</font>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textcolor>FFb8b8b8</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<selectedcolor>FFFFFFFF</selectedcolor>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+</include>
+
+<include name="contextformat">
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<texturenofocus>contextbutton.png</texturenofocus>
+		<texturefocus>contextbuttonpressed.png</texturefocus>
+		<width>275</width>
+		<height>44</height>
+		<font>fruity17s</font>
+		<posx>19</posx>
+</include>
+
+<include name="contextformatbrowser">
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>FF2d2d2d</disabledcolor>
+		<texturenofocus>contextbutton.png</texturenofocus>
+		<texturefocus>contextbuttonpressed.png</texturefocus>
+		<align>center</align>
+		<width>229</width>
+		<height>40</height>
+		<font>fruity17s</font>
+</include>
+
+<include name="contextformatinfo">
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>FF2d2d2d</disabledcolor>
+		<texturenofocus>contextbutton.png</texturenofocus>
+		<texturefocus>contextbuttonpressed.png</texturefocus>
+		<align>center</align>
+		<width>163</width>
+		<height>40</height>
+		<font>fruity17s</font>
+</include>
+
+<include name="contextformatleft">
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<texturenofocus>contextbutton.png</texturenofocus>
+		<texturefocus>contextbuttonpressed.png</texturefocus>
+		<textureradiofocus>contextbuttons.png</textureradiofocus>
+		<textureradionofocus>contextbuttonns.png</textureradionofocus>
+		<width>275</width>
+		<height>44</height>
+		<align>left</align>
+		<font>fruity17s</font>
+		<posx>19</posx>
+		<textoffsetx>10</textoffsetx>
+</include>
+
+<include name="contextformatgroup">
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<texturenofocus>contextbutton.png</texturenofocus>
+		<texturefocus>contextbuttonpressed.png</texturefocus>
+		<textureradiofocus>contextbuttons.png</textureradiofocus>
+		<textureradionofocus>contextbuttonns.png</textureradionofocus>
+		<height>44</height>
+		<width>275</width>
+		<align>center</align>
+		<font>fruity17b</font>
+		<textoffsetx>10</textoffsetx>
+</include>
+
+<include name="timeformat">
+		<posx>907</posx>
+		<posy>9</posy>
+		<width>360</width>
+		<font>fruity21</font>
+		<align>right</align>
+		<textcolor>FFcbcbcb</textcolor>
+</include>
+
+<include name="timeformat2">
+		<posx>1262</posx>
+		<posy>9</posy>
+		<width>360</width>
+		<font>fruity21</font>
+		<align>right</align>
+		<textcolor>FF000000</textcolor>
+</include>
+
+<include name="timeformat3">
+		<posx>1262</posx>
+		<posy>9</posy>
+		<width>360</width>
+		<font>fruity21</font>
+		<align>right</align>
+		<textcolor>FFcbcbcb</textcolor>
+</include>
+
+<include name="discformat">
+		<posx>15</posx>
+		<posy>0</posy>
+		<width>355</width>
+		<font>fruity21</font>
+		<align>left</align>
+		<textcolor>FFcbcbcb</textcolor>
+</include>
+
+<include name="disc">
+
+	<control type="image">
+		<posx>-30</posx>
+		<posy>-85</posy>
+		<width>410</width>
+		<height>252</height>
+		<include>discformat</include>		
+		<texture flipx="true">42.png</texture>
+		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
+		<aspectratio>keep</aspectratio>
+		<animation effect="slide" delay="300" start="-650,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+
+		<animation effect="slide" reversible="true" delay="400" start="0,0" end="300,300" time="150" condition="Container(300).HasFocus(13) + Control.HasFocus(300)">Conditional</animation>
+	</control>
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>-55</posy>
+		<width>310</width>
+		<height>52</height>
+		<colordiffuse>FFFFFFFF</colordiffuse>
+		<include>discformat</include>		
+		<texture>browserinfoback.png</texture>
+		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
+	</control>
+
+	
+		<control type="label">
+		<posx>1400</posx>
+		<posy>300</posy>
+		<label>$INFO[System.DVDLabel]</label>
+		<font>menufontacens2</font>
+		<include>common-fade</include>
+		<visible>System.HasMediadvd + Window.IsActive(Home) + Control.HasFocus(300)</visible>	
+		<animation effect="slide" delay="300" start="850,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="!Control.HasFocus(300) +!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+		
+		<animation effect="slide" tween="bounce" delay="50" start="450,0" end="-750,0" time="550" condition="Container(300).HasFocus(13)">Conditional</animation>
+		</control>	
+	<control type="image">
+		<posx>0</posx>
+		<posy>-3</posy>
+		<width>410</width>
+		<height>52</height>
+		<include>discformat</include>		
+		<texture flipx="true">timepanel3.png</texture>
+		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
+		<animation effect="slide" delay="300" start="-450,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+
+	</control>	
+		<control type="fadelabel">
+		<posx>25</posx>
+		<posy>0</posy>
+		<include>discformat</include>
+		<label>Disc Inserted Into Optical Drive</label>
+		<label>Disc Title: $INFO[System.DVDLabel]</label>
+		<scrollout>false</scrollout>
+		<pauseatend>6000</pauseatend>
+		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
+		<animation effect="slide" delay="300" start="-450,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+
+		</control>
+</include>
+
+<include name="time2">
+	<control type="image">
+		<posx>870</posx>
+		<posy>0</posy>
+		<width>410</width>
+		<height>52</height>
+		<texture>timepanel3.png</texture>
+		<visible>!Skin.HasSetting(timepanel) | Skin.HasSetting(weatherpanel)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="[Window.IsVisible(2600) | Window.IsVisible(3)]">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="[Window.IsVisible(2600) | Window.IsVisible(3)]">WindowClose</animation>
+	</control>
+	
+		<control type="label">
+		<include>timeformat3</include>
+		<label>$INFO[System.Date]  |  $INFO[System.Time]</label>
+		<visible>!Skin.HasSetting(timepanel) | Skin.HasSetting(weatherpanel)</visible>	
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="[Window.IsVisible(2600) | Window.IsVisible(3)]">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="[Window.IsVisible(2600) | Window.IsVisible(3)]">WindowClose</animation>
+		</control>
+</include>
+
+<include name="time">
+	<control type="image">
+		<posx>870</posx>
+		<posy>0</posy>
+		<width>410</width>
+		<height>52</height>
+		<texture>timepanel3.png</texture>
+		<visible>!Skin.HasSetting(timepanel) | Skin.HasSetting(weatherpanel)</visible>
+		<animation effect="slide" delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+	</control>
+
+	<control type="fadelabel" id="70">
+		<include>timeformat</include>
+		<label>$INFO[System.Date]  |  $INFO[System.Time]</label>
+		<label>$INFO[Weather.Conditions] ($INFO[Weather.Temperature]) |  $INFO[System.Time]</label>
+		<scrollout>false</scrollout>
+		<pauseatend>6000</pauseatend>
+		<visible>Skin.HasSetting(weatherpanel) + [!Control.HasFocus(301) + !Control.HasFocus(302)] + !Window.IsActive(56) + !Window.IsActive(12) + !Window.IsActive(13) + !Window.IsActive(14) + !Window.IsActive(15) + !Window.IsActive(16) + !Window.IsActive(17) + !Window.IsActive(18) + !Window.IsActive(19) + !Window.IsActive(600) + !Window.IsActive(126) + !Window.IsActive(602) + !Window.IsActive(601) + !Window.IsActive(603) + !Window.IsActive(111) + !Window.IsActive(600)</visible>
+		<animation effect="slide"  delay="300" start="455,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="455,0" time="150" condition="!Window.Next(56) + !Window.Next(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="455,0" time="150" condition="[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(54) + !Control.HasFocus(54)]  | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="455,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>	
+		<animation effect="slide" start="0,0" end="455,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+	</control>
+	
+	<control type="label" id="70">
+		<include>timeformat3</include>
+		<label>$INFO[System.Date]  |  $INFO[System.Time]</label>
+		<visible>!Skin.HasSetting(timepanel) + [!Control.HasFocus(301) + !Control.HasFocus(302)] + !Window.IsActive(56) + !Window.IsActive(12) + !Window.IsActive(13) + !Window.IsActive(14) + !Window.IsActive(15) + !Window.IsActive(16) + !Window.IsActive(17) + !Window.IsActive(18) + !Window.IsActive(19) + !Window.IsActive(126) + !Window.IsActive(601) + !Window.IsActive(602) + !Window.IsActive(603) + !Window.IsActive(111) + !Window.IsActive(600)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.Next(56) + !Window.Next(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>	
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+	</control>
+
+	<control type="label">
+		<include>timeformat3</include>
+		<label>XBMC Setup Menu  |  $INFO[System.Time]</label>
+		<visible>[Control.HasFocus(302) | Window.IsActive(56) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19)] + !Window.IsActive(126) + !Window.IsActive(601) + !Window.IsActive(600) + !Window.IsActive(602) + !Window.IsActive(603) + !Window.IsActive(111)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19)">WindowOpen</animation>
+	</control>
+
+	<control type="label">
+		<include>timeformat3</include>
+		<label>System Control Menu  |  $INFO[System.Time]</label>
+		<visible>Control.HasFocus(301) + !Window.IsActive(126) + !Window.IsActive(601) + !Window.IsActive(600) + !Window.IsActive(603) + !Window.IsActive(602) + !Window.IsActive(111)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.Next(56)">WindowClose</animation>
+	</control>
+	
+	<control type="label">
+		<include>timeformat3</include>
+		<label>Customise Home  |  $INFO[System.Time]</label>
+		<visible>Window.IsActive(600)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.Next(56)">WindowClose</animation>
+	</control>
+	
+	<control type="label">
+		<include>timeformat3</include>
+		<label>Quick Commands  |  $INFO[System.Time]</label>
+		<visible>Window.IsActive(111)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.Next(56)">WindowClose</animation>
+	</control>
+	
+	<control type="label">
+		<include>timeformat3</include>
+		<label>Choose File/Folder  |  $INFO[System.Time]</label>
+		<visible>Window.IsActive(126)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.Next(56)">WindowClose</animation>
+	</control>
+	
+	<control type="label">
+		<include>timeformat3</include>
+		<label>Change Backdrops  |  $INFO[System.Time]</label>
+		<visible>Window.IsActive(601)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.Next(56)">WindowClose</animation>
+	</control>
+	
+	<control type="label">
+		<include>timeformat3</include>
+		<label>View types  |  $INFO[System.Time]</label>
+		<visible>Window.IsActive(602)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.Next(56)">WindowClose</animation>
+	</control>
+	
+	<control type="label">
+		<include>timeformat3</include>
+		<label>Choose Icon Set  |  $INFO[System.Time]</label>
+		<visible>Window.IsActive(603)</visible>
+		<animation effect="slide"  delay="300" start="450,0" end="0,0" time="150" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="450,0" time="150" condition="!Window.Next(56)">WindowClose</animation>
+	</control>
+</include>
+
+<!-- Live tutorials ================================== -->
+
+<include name="tutorialformat">
+		<posx>0</posx>
+		<posy>8</posy>
+		<font>font13s</font>
+		<textoffsetx>10</textoffsetx>
+		<textcolor>d0ffffff</textcolor>
+		<scrollout>false</scrollout>
+		<pauseatend>6000</pauseatend>
+		<width>874</width>
+		<height>52</height>
+</include>
+
+<!--<include name="tutorial">
+
+</include>	-->
+
+<include name="mediafocuslabel">
+	<control type="label">
+	<description>Selected items in Media panes</description>
+	<posx>1254</posx>
+	<posy>570</posy>
+	<label>[COLOR d0ffffff]$INFO[listitem.title][/COLOR] [COLOR ffa1a1a1]($INFO[listitem.year])[/COLOR]</label>
+	<align>right</align>
+	<font>fruity21</font>
+	<textcolor>d0ffffff</textcolor>
+	<include>common-fade</include>
+	<visible>Window.IsActive(25) + [Control.IsVisible(52) | Control.IsVisible(56)] + [!Control.IsVisible(57)]</visible>
+	</control>
+	
+	<control type="label">
+	<description>Selected items in Media panes</description>
+	<posx>1254</posx>
+	<posy>567</posy>
+	<label>[COLOR d0ffffff][UPPERCASE]$INFO[listitem.Label][/UPPERCASE][/COLOR] [COLOR green]($INFO[listitem.programcount])[/COLOR]</label>
+	<align>right</align>
+	<font>plot-info</font>
+	<textcolor>d0ffffff</textcolor>
+	<include>common-fade</include>
+	<visible>Window.IsActive(1) + [Control.IsVisible(52) | Control.IsVisible(56)] + [!Control.IsVisible(57)]</visible>
+	</control>
+	
+	<control type="label">
+	<description>Selected items in Media panes</description>
+	<posx>1254</posx>
+	<posy>567</posy>
+	<label>$INFO[listitem.label]</label>
+	<align>right</align>
+	<font>fruity21</font>
+	<textcolor>d0ffffff</textcolor>
+	<include>common-fade</include>
+	<visible>Window.IsActive(24) + [Control.IsVisible(52) | Control.IsVisible(56)] + [!Control.IsVisible(57)]</visible>
+	</control>
+	
+	<control type="fadelabel">
+	<description>Selected items in Media panes</description>
+	<posx>453</posx>
+	<posy>567</posy>
+	<width>800</width>
+	<label>[COLOR ffa1a1a1]Running time:[/COLOR][COLOR d0ffffff] $INFO[listitem.duration][/COLOR]</label>
+	<label>[COLOR ffa1a1a1]Director:[/COLOR][COLOR d0ffffff] $INFO[listitem.director][/COLOR]</label>
+	<align>right</align>
+	<pauseatend>6000</pauseatend>
+	<scrollout>false</scrollout>
+	<font>fruity21</font>
+	<include>common-fade</include>
+	<visible>Control.IsVisible(50) + Container.Content(movies)</visible>
+	</control>
+</include>
+
+<include name="mediafocusvideo">
+	<posx>1254</posx>
+	<posy>564</posy>
+	<info>listitem.label</info>
+	<align>right</align>
+	<font>font13s</font>
+	<textcolor>d0ffffff</textcolor>
+	<include>common-fade</include>
+	<visible>[!Control.HasFocus(53) | !Container.HasFocus(57)] + [!Container.Content(episodes) | !Container.Content(movies)]</visible>
+</include>
+
+<include name="mediafocusvideolibrary">
+	<posx>720</posx>
+	<posy>564</posy>
+	<info>listitem.label</info>
+	<align>right</align>
+	<font>font13s</font>
+	<textcolor>d0ffffff</textcolor>
+	<include>Common-Visible</include>
+	<include>common-fade</include>
+	<visible>[!Control.HasFocus(53) | !Control.HasFocus(57)] + [!Container.Content(episodes) | !Container.Content(movies)]</visible>
+</include>
+
+<include name="Window-Files">
+	<control type="label" id="12">
+		<posx>26</posx>
+		<posy>567</posy>
+		<label>-</label>
+		<font>fruity21</font>
+		<textcolor>ffa1a1a1</textcolor>
+		<include>common-fade-quick</include>
+		<visible>!Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(53)</visible>
+	</control>
+</include>
+
+<include name="Window-Files2">
+	<control type="label" id="12">
+		<posx>26</posx>
+		<posy>573</posy>
+		<label>-</label>
+		<font>fruity21</font>
+		<textcolor>ffa1a1a1</textcolor>
+		<include>common-fade-quick</include>
+		<visible>!Control.IsVisible(51) + !Control.IsVisible(55) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(53) + !Control.IsVisible(54)</visible>
+	</control>
+</include>
+
+<include name="contextselected">
+	<control type="label">
+		<posx>676</posx>
+		<posy>563</posy>
+		<font>font13s</font>
+		<align>right</align>
+		<textcolor>d0ffffff</textcolor>
+		<label>Selected: $INFO[ListItem.Label]</label>
+		<include>common-fade</include>
+		<visible>[Window.IsActive(106) | Window.IsActive(132)] + + !Control.IsVisible(50) + !Container.Content(episodes)</visible>
+	</control>
+</include>
+
+<include name="bulktext">
+	<textcolor>FF000000</textcolor>
+	<selectedcolor>FF000000</selectedcolor>
+	<focusedcolor>FF000000</focusedcolor>
+	<font>font13</font>
+	<align>left</align>
+</include>
+
+<include name="medialabel">
+	<align>left</align> 
+	<posx>26</posx> 
+	<posy>117</posy>
+	<height>34</height>
+	<font>acens21</font>
+	<textcolor>d0FFFFFF</textcolor>
+	<visible allowhiddenfocus="true">!Control.HasFocus(88)</visible>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(55) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(53) | Window.IsActive(2600)">Conditional</animation>
+	<aligny>center</aligny>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="medialabel2">
+	<align>left</align> 
+	<posx>335</posx> 
+	<posy>610</posy>
+	<font>fruity21</font>
+	<textcolor>ffffde00</textcolor>
+	<aligny>center</aligny>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="medialabel3">
+	<align>left</align> 
+	<posx>26</posx> 
+	<posy>110</posy>
+	<height>34</height>
+	<font>acens21</font>
+	<textcolor>d0FFFFFF</textcolor>
+	<visible allowhiddenfocus="true">!Control.HasFocus(88)</visible>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(55) | Control.IsVisible(58)  | Control.IsVisible(54) | Control.IsVisible(53) | Window.IsActive(2600)">Conditional</animation>
+	<aligny>center</aligny>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="medialabel4">
+	<align>left</align> 
+	<posx>26</posx> 
+	<posy>114</posy>
+	<height>34</height>
+	<font>acens21</font>
+	<textcolor>d0FFFFFF</textcolor>
+	<visible allowhiddenfocus="true">!Control.HasFocus(88)</visible>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(53) | Window.IsActive(2600)">Conditional</animation>
+	<aligny>center</aligny>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="medialabelright">
+	<align>right</align> 
+	<posx>1254</posx> 
+	<posy>116</posy>
+	<height>34</height>
+	<font>font13</font>
+	<textcolor>d0FFFFFF</textcolor>
+	<visible allowhiddenfocus="true">!Control.HasFocus(88)</visible>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Window.IsActive(2600)">Conditional</animation>
+	<aligny>center</aligny>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="settingstitlexephyr">
+		<font>menufont</font>
+		<posy>320</posy>
+</include>
+
+<include name="settingstitleacens">
+		<font>menufontacensfocus</font>
+		<posy>324</posy>
+</include>
+
+<include name="settingstitleacensdegsy">
+		<font>menufontacensfocus2</font>
+		<textcolor>FFffffff</textcolor>
+		<posy>324</posy>
+		
+		<animation type="WindowOpen">
+		<effect type="slide" start="0,0" end="0,0" />
+		<effect type="slide" delay="450" start="0,300" end="0,-200" time="150"/></animation>
+		<animation effect="slide" start="0,-200" end="0,300" time="150">WindowClose</animation>
+</include>
+
+<include name="settingstitlefranklein">
+		<font>menufontfranklein</font>
+		<posy>322</posy>
+</include>
+
+<include name="settingstitle">
+	<posx>633</posx>
+	<height>68</height>
+	<width>350</width>
+	<align>center</align>
+	<aligny>center</aligny>
+	<textcolor>FFffffff</textcolor>
+</include>
+
+<include name="reflection">
+	<control type="image">
+		<posx>0</posx>
+		<posy>415</posy>
+		<width>1280</width>
+		<height>98</height>
+		<texture>reflection.png</texture>
+		<visible>Control.IsVisible(57)</visible>
+		<animation effect="slide" end="-463,0" time="150" condition="Player.HasMedia">Conditional</animation>
+	</control>
+</include>
+
+<include name="nowplayingnav">
+	<control type="image">
+		<posx>-151</posx>
+		<posy>559</posy>
+		<width>914</width>
+		<height>67</height>
+		<texture>glasscoverup.png</texture>
+		<visible>!Control.IsVisible(58)</visible>
+		<include>common-fade</include>
+	</control>
+</include>
+
+<include name="nowplaying">
+	<control type="image">
+		<posx>0</posx>
+		<posy>691</posy>
+		<width>1280</width>
+		<height>56</height>
+		<texture>nowplaying.png</texture>
+		<visible>[system.getbool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(drophome)] | Window.IsActive(56) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19)</visible>
+		<visible>System.HasNetwork</visible>
+		<animation effect="fade" end="100" time="400">Visible</animation>
+		<animation effect="fade" end="100" time="400">Hidden</animation>
+		<animation effect="fade" end="100" time="400">WindowOpen</animation>
+		<animation effect="fade" end="0" time="400" condition="!system.getbool(lookandfeel.enablerssfeeds) | [!Window.Next(Home) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)]">WindowClose</animation>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>690</posy>
+		<width>1280</width>
+		<height>18</height>
+		<texture>nowplayingsmall.png</texture>
+		<visible>[!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(drophome)] + Window.IsActive(Home)</visible>
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</control>
+</include>
+
+<include name="vignette">
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture>vignette.png</texture>
+		<visible>Skin.HasSetting(vignettehome) + Window.IsActive(0)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<colordiffuse>d0FFFFFF</colordiffuse>
+		<texture>vignette.png</texture>
+		<visible>Skin.HasSetting(vignette) + !Window.IsActive(0)</visible>
+	</control>
+</include>
+
+<include name="wallmenu">
+	<control type="image">
+		<posx>-142</posx>
+		<posy>0</posy>
+		<width>937</width>
+		<height>68</height>
+		<texture>wallmenu.png</texture>
+		<visible>[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(59) + !Control.HasFocus(59)] | [Control.IsVisible(51) + !Control.HasFocus(51)] | [Window.IsActive(2600) + !Control.HasFocus(88)] | [!Control.HasFocus(53) + Control.IsVisible(53)]</visible>
+		<animation effect="slide" start="0,-68" end="0,0" time="180">VisibleChange</animation>
+	</control>
+</include>
+
+<include name="rsstext">
+		<posx>0</posx>
+		<width>1280</width>
+		<urlset>1</urlset>
+		<titlecolor>fffff000</titlecolor>
+		<headlinecolor>ffffffff</headlinecolor>
+		<textcolor>ffffff00</textcolor>
+		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
+		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+		<visible>[!Player.HasVideo + !Player.HasAudio] | !Skin.HasSetting(mediapanel)</visible>
+		<visible>!Skin.HasSetting(drophome)</visible>
+		<visible>System.HasNetwork</visible>
+</include>
+
+<include name="rsstext2">
+		<posx>0</posx>
+		<width>1280</width>
+		<urlset>2</urlset>
+		<titlecolor>fffff000</titlecolor>
+		<headlinecolor>ffffffff</headlinecolor>
+		<textcolor>ffffff00</textcolor>
+		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
+		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+		<visible>[!Player.HasVideo + !Player.HasAudio] | !Skin.HasSetting(mediapanel)</visible>
+		<visible>!Skin.HasSetting(drophome)</visible>
+		<visible>System.HasNetwork</visible>
+</include>
+
+<!-- Weather ================================== -->
+
+<include name="weatherday">
+		<align>center</align>
+		<width>256</width>
+		<posx>0</posx>
+		<posy>41</posy>
+		<textcolor>6a000000</textcolor>
+		<font>weatherday</font>
+</include>
+
+<include name="weatherconditions">
+		<align>center</align>
+		<width>261</width>
+		<posx>0</posx>
+		<posy>288</posy>
+		<textcolor>dF000000</textcolor>
+		<font>font13</font>
+</include>
+
+<include name="weathericon">
+		<posx>14</posx>
+		<posy>113</posy>
+		<height>160</height>
+		<width>228</width>
+		<texture>-</texture>
+		<aspectratio>keep</aspectratio>
+</include>
+
+<include name="weatherhightemp">
+		<posx>115</posx>
+		<posy>363</posy>
+		<label>-</label>
+		<font>weatherfont</font>
+		<textcolor>ffff0000</textcolor>
+		<align>center</align>
+</include>
+
+<include name="weatherlowtemp">
+		<posx>115</posx>
+		<posy>450</posy>
+		<label>-</label>
+		<font>weatherfont</font>
+		<textcolor>ff9759ff</textcolor>
+		<align>center</align>
+</include>
+
+<include name="weathercondright">
+		<posx>222</posx>
+		<align>right</align>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>df000000</textcolor>
+</include>
+
+<include name="weathercondleft">
+		<posx>32</posx>
+		<label>-</label>
+		<font>font13</font>
+		<textcolor>df000000</textcolor>
+</include>
+
+<!-- Background transitions ================================== -->
+
+<include name="mediabackground">
+	<posx>-50</posx>
+	<posy>0</posy>
+	<width>1380</width>
+	<height>720</height>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<visible>!Control.IsVisible(58)</visible>
+</include>
+
+<include name="mediabackgroundfolder">
+	<posx>-50</posx>
+	<posy>0</posy>
+	<width>1380</width> <!-- fix overscan on 16:9 -->
+	<height>720</height>
+	<imagepath>-</imagepath>
+	<timeperimage>20000</timeperimage>
+	<fadetime>2000</fadetime>
+	<randomize>true</randomize>
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<visible>!Control.IsVisible(58)</visible>
+</include>
+
+<include name="mediabackgroundmusic">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<visible>!Control.IsVisible(58)</visible>
+</include>
+
+<include name="mediabackgroundfoldermusic">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<imagepath>-</imagepath>
+	<timeperimage>20000</timeperimage>
+	<fadetime>2000</fadetime>
+	<randomize>true</randomize>
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<visible>!Control.IsVisible(58)</visible>
+</include>
+
+<!-- Glass panes ================================== -->
+
+<include name="osdglass">
+	<control type="image">
+		<description>Panel</description>
+		<posx>12</posx>
+		<posy>-605</posy>
+		<height>656</height>
+		<width>1255</width>
+		<texture>osdtab.png</texture>
+		<animation effect="slide" start="0,-52" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" end="0,-52" time="150">WindowClose</animation>
+		<animation effect="slide" end="0,605" time="300" condition="Window.IsActive(123) | Window.IsActive(124)">Conditional</animation>
+	</control>
+</include>
+
+<include name="mediaglass">
+	<control type="image">
+		<posx>0</posx>
+		<posy>87</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>m-glasswide.png</texture>
+		<include>common-fade</include>
+		<visible>!Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(59) + !Control.IsVisible(53) + !Control.IsVisible(55)</visible>
+		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>87</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>m-glasswide_xbox.png</texture>
+		<include>common-fade</include>
+		<visible>!Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(59) + !Control.IsVisible(53) + !Control.IsVisible(55)</visible>
+		<visible>Skin.HasSetting(lowerres)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>87</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>m-glasswide_eee.png</texture>
+		<include>common-fade</include>
+		<visible>!Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(59) + !Control.IsVisible(53) + !Control.IsVisible(55)</visible>
+		<visible>Skin.HasSetting(eeemode)</visible>
+	</control>
+</include>
+
+<include name="mediaglasslib">
+	<control type="image">
+		<posx>0</posx>
+		<posy>87</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>m-glassshort.png</texture>
+		<include>common-fade</include>
+		<visible>!Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(59)</visible>
+		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>87</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>m-glassshort_xbox.png</texture>
+		<include>common-fade</include>
+		<visible>!Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(59)</visible>
+		<visible>Skin.HasSetting(lowerres)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>87</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>m-glassshort_eee.png</texture>
+		<include>common-fade</include>
+		<visible>!Control.IsVisible(51) + !Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(59)</visible>
+		<visible>Skin.HasSetting(eeemode)</visible>
+	</control>
+</include>
+
+<!-- Menu styles ================================== -->
+
+<include name="mediamenugroup">
+	<posx>162</posx>
+	<posy>116</posy>
+	<width>513</width>
+	<height>34</height>
+	<itemgap>10</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>50</onup>
+	<ondown>50</ondown>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(55) | Control.IsVisible(58) | Control.IsVisible(53) | Control.IsVisible(59) | Window.IsActive(2600)">Conditional</animation>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="mediamenufakegroup">
+	<posx>162</posx>
+	<posy>416</posy>
+	<width>513</width>
+	<height>34</height>
+	<itemgap>10</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>50</onup>
+	<ondown>50</ondown>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(57) | Control.IsVisible(55) | Control.IsVisible(58) | Control.IsVisible(53) | Control.IsVisible(59) | Window.IsActive(2600)">Conditional</animation>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="mediamenugroup2">
+	<posx>162</posx>
+	<posy>110</posy>
+	<width>513</width>
+	<height>34</height>
+	<itemgap>10</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>50</onup>
+	<ondown>50</ondown>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) |  Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(55) | Control.IsVisible(58) | Window.IsActive(2600)">Conditional</animation>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="mediamenugroup3">
+	<posx>162</posx>
+	<posy>114</posy>
+	<width>513</width>
+	<height>34</height>
+	<itemgap>10</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>50</onup>
+	<ondown>50</ondown>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(55) | Control.IsVisible(58) | Control.IsVisible(53) | Control.IsVisible(59) | Window.IsActive(2600)">Conditional</animation>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="mediamenugroup4">
+	<posx>162</posx>
+	<posy>114</posy>
+	<width>513</width>
+	<height>34</height>
+	<itemgap>10</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>50</onup>
+	<ondown>50</ondown>
+	<onleft>40</onleft>
+	<onright>40</onright>
+	<animation effect="slide" end="0,-110" time="1" condition="Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(55) | Control.IsVisible(58) | Control.IsVisible(53) | Control.IsVisible(59) | Window.IsActive(2600)">Conditional</animation>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="imdbmenugroup">
+	<posx>595</posx>
+	<posy>350</posy>
+	<width>700</width>
+	<height>40</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>50</onup>
+	<ondown>50</ondown>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="filemanmenugroup">
+	<posx>67</posx>
+	<posy>597</posy>
+	<width>1145</width>
+	<height>40</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>21</onup>
+	<ondown>21</ondown>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="vismenugroup">
+	<posx>300</posx>
+	<posy>622</posy>
+	<width>986</width>
+	<height>40</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>214</onup>
+	<ondown>213</ondown>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="vismenugroup3">
+	<posx>301</posx>
+	<posy>510</posy>
+	<width>986</width>
+	<height>40</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>214</onup>
+	<ondown>213</ondown>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="vismenugroup2">
+	<posx>650</posx>
+	<posy>430</posy>
+	<width>110</width>
+	<height>30</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>214</onup>
+	<ondown>213</ondown>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="musicinfomenugroup">
+	<posx>67</posx>
+	<posy>565</posy>
+	<width>1145</width>
+	<height>40</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="browsermenugroup">
+	<posx>67</posx>
+	<posy>565</posy>
+	<width>1145</width>
+	<height>40</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>450</onup>
+	<ondown>450</ondown>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="selectmenugroup">
+	<posx>302</posx>
+	<posy>565</posy>
+	<width>1145</width>
+	<height>40</height>
+	<itemgap>0</itemgap>
+	<orientation>horizontal</orientation>
+	<onup>450</onup>
+	<ondown>450</ondown>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="mediamenu">
+	<height>34</height>
+	<width>160</width>
+	<texturenofocus>-</texturenofocus>
+	<texturefocus>-</texturefocus>
+	<alttexturenofocus>-</alttexturenofocus>
+	<alttexturefocus>-</alttexturefocus>
+	<pulseonselect>false</pulseonselect>
+	<textcolor>60FFFFFF</textcolor>
+	<focusedcolor>d0ffffff</focusedcolor>
+	<disabledcolor>3cFFFFFF</disabledcolor>
+	<textoffsetx>0</textoffsetx>
+	<align>center</align>
+	<font>fruity21</font>
+	<include>common-fade</include>
+</include>
+
+<include name="customsettingsmenu">
+	<posy>201</posy>
+	<height>41</height>
+	<width>249</width>
+	<texturefocus>-</texturefocus>
+	<texturenofocus></texturenofocus>
+	<align>center</align>
+	<textcolor>FF8f8f8f</textcolor>
+	<focusedcolor>FFFFFFFF</focusedcolor>
+	<textoffsety>center</textoffsety>
+	<aligny>top</aligny>
+	<font>fruity19b</font>
+	
+		<animation type="WindowOpen">
+		<effect type="slide"  start="-1200,0" end="0,0" time="250" />
+		<effect type="slide" delay="450" start="0,500" end="0,0" time="150"/>
+		</animation>
+		<animation type="WindowClose">
+		<effect type="slide" start="0,0" end="0,500" time="150"/>
+		<effect type="slide" delay="400" start="0,0" end="-1300,0"  time="250" />
+		</animation>
+		<include>common-fade-quick</include>
+</include>
+
+<include name="customsettingsmenu-header">
+	<posy>201</posy>
+	<height>41</height>
+	<width>249</width>
+	<texturefocus>-</texturefocus>
+	<texturenofocus></texturenofocus>
+	<align>center</align>
+	<textcolor>FFFFFFFF</textcolor>
+	<textoffsety>center</textoffsety>
+	<aligny>top</aligny>
+	<font>fruity19b</font>
+	
+		<animation type="WindowOpen">
+		<effect type="slide"  start="-1200,0" end="0,0" time="250" />
+		<effect type="slide" delay="450" start="0,500" end="0,0" time="150"/>
+		</animation>
+		<animation type="WindowClose">
+		<effect type="slide" start="0,0" end="0,500" time="150"/>
+		<effect type="slide" delay="400" start="0,0" end="-1300,0"  time="250" />
+		</animation>
+		<include>common-fade-quick</include>
+</include>
+
+<include name="customsettingsmenu2">
+	<posy>401</posy>
+	<height>41</height>
+	<width>249</width>
+	<texturefocus>-</texturefocus>
+	<texturenofocus></texturenofocus>
+	<align>center</align>
+	<textcolor>FFFFFFFF</textcolor>
+	<textoffsety>center</textoffsety>
+	<aligny>top</aligny>
+	<font>episodeinfo</font>
+	<pulseonselect>false</pulseonselect>
+	<include>common-fade-quick</include>
+	<include>Common-Visible</include>
+
+</include>
+
+<include name="customsettingsgroup">
+	<posy>250</posy>
+	<height>452</height>
+	<include>osdfont</include>
+	<itemgap>0</itemgap>
+	<orientation>vertical</orientation>
+	<animation effect="slide" delay="400" start="0,1054" end="0,0" time="150">WindowOpen</animation>
+	<animation effect="slide" start="0,0" end="0,1054" time="150">WindowClose</animation>
+</include>
+
+<include name="customsettingsbutton">
+	<width>533</width>
+	<height>32</height>
+	<font>fruity19b</font>
+	<texturefocus>-</texturefocus>
+	<texturenofocus>-</texturenofocus>
+	<alttexturefocus>-</alttexturefocus>
+	<alttexturenofocus>-</alttexturenofocus>
+	<textcolor>FF8f8f8f</textcolor>
+	<focusedcolor>FFFFfffF</focusedcolor>
+</include>
+
+<include name="customsettingslabel">
+	<width>533</width>
+	<height>32</height>
+	<aligny>center</aligny>
+	<font>fruity19b</font>
+	<texturefocus>-</texturefocus>
+	<texturenofocus>-</texturenofocus>
+	<alttexturefocus>-</alttexturefocus>
+	<alttexturenofocus>-</alttexturenofocus>
+	<textcolor>8f8f8f8f</textcolor>
+	<focusedcolor>FFFFFFFF</focusedcolor>
+</include>
+
+<!-- Music info panel - Music media pane ================================== -->
+
+<include name="musicpanelformat">
+	<posx>352</posx>
+	<width>355</width>
+	<height>25</height>
+	<align>right</align>
+	<font>dropdown</font>
+	<visible>Player.HasAudio</visible>
+</include>
+
+<!-- Scraper info panel ================================== -->
+
+<include name="scrapertitle">
+	<textcolor>e1b1e021</textcolor>
+	<font>scraper</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="wallscrapertitle">
+	<textcolor>ee000000</textcolor>
+	<font>moviewalltitle</font>
+	<include>common-fade</include>
+</include>
+
+<include name="scraperinfo">
+	<textcolor>FFffffff</textcolor>
+	<font>scraper</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="scraperimdb">
+	<textcolor>FFffffff</textcolor>
+	<font>imdb</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="scraperimdbtitle">
+	<textcolor>e1b1e021</textcolor>
+	<font>imdb</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="wallinfotitle">
+	<textcolor>e1b1e021</textcolor>
+	<font>imdbshadow</font>
+</include>
+
+<include name="wallinfoheader">
+	<textcolor>FFFFFFFF</textcolor>
+	<font>imdbshadowbig</font>
+</include>
+
+<include name="wallinfo">
+	<textcolor>ffe1e1e1</textcolor>
+	<font>imdbshadow</font>
+</include>
+
+<include name="scraperimdbheader">
+	<textcolor>FFffffff</textcolor>
+	<font>imdbheader</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="scraperinfogrey">
+	<textcolor>FF9d9d9d</textcolor>
+	<font>scraper</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="moviesvisible">
+	<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+	<visible>Container.Content(movies)</visible>
+</include>
+
+<include name="tvshowsvisible">
+	<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+	<visible>Container.Content(tvshows)</visible>
+</include>
+
+<include name="episodesvisible">
+	<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+	<visible>Container.Content(episodes)</visible>
+	<visible>false</visible>
+</include>
+
+<include name="libraryinfo">
+
+<!-- Line 1 - Director (Movies) / Year (TVShows) / Episode (Episodes) ================================== -->
+<!-- label -->
+
+	<control type="group">
+	<posx>20</posx>
+	<posy>0</posy>
+	<control type="label">
+		<posx>862</posx>
+		<posy>200</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>moviesvisible</include>
+		<label>Director: </label>		
+	</control>
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>200</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>tvshowsvisible</include>
+		<label>Year: </label>		
+	</control>
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>200</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>episodesvisible</include>
+		<label>Season $INFO[listitem.season] Episode $INFO[listitem.episode]</label>		
+	</control>
+
+<!-- info -->
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>200</posy>
+		<width>267</width>
+		<height>28</height>
+		<include>scraperinfo</include>
+		<include>moviesvisible</include>
+		<info>listitem.director</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>200</posy>
+		<width>141</width>
+		<height>28</height>
+		<include>scraperinfo</include>
+		<include>tvshowsvisible</include>
+		<info>listitem.year</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>200</posy>
+		<width>141</width>
+		<height>28</height>
+		<include>scraperinfogrey</include>
+		<visible>false</visible>
+		<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+		<visible>[IsEmpty(listitem.year) + Container.Content(tvshows)] | [IsEmpty(listitem.director) + Container.Content(movies)] | [IsEmpty(listitem.episode) + Container.Content(episodes)]</visible>
+		<label>Unavailable</label>		
+	</control>
+
+<!-- Line 2 - Genre (Movies) / Genre (TVShows) / Writer (Episodes) ================================== -->
+<!-- label -->
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>225</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+		<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+		<label>Genre: </label>		
+	</control>
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>225</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>episodesvisible</include>
+		<label>Writer: </label>		
+	</control>
+
+<!-- info -->
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>225</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>moviesvisible</include>
+		<info>listitem.genre</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>225</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>episodesvisible</include>
+		<info>listitem.writer</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>225</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>tvshowsvisible</include>
+		<info>listitem.genre</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>225</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfogrey</include>
+		<visible>false</visible>
+		<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+		<visible>[IsEmpty(listitem.genre) + Container.Content(tvshows)] | [IsEmpty(listitem.genre) + Container.Content(movies)] | [IsEmpty(listitem.writer) + Container.Content(episodes)]</visible>
+		<label>Unavailable</label>		
+	</control>
+
+<!-- Line 3 - Year (Movies) / Episodes (TVShows) / First Aired (Episodes) ================================== -->
+<!-- label -->
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>250</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>moviesvisible</include>
+		<label>Year: </label>		
+	</control>
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>250</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>tvshowsvisible</include>
+		<label>Episodes: </label>		
+	</control>
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>250</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>episodesvisible</include>
+		<label>Aired: </label>		
+	</control>
+
+<!-- info -->
+	
+	<control type="label">
+		<posx>943</posx>
+		<posy>250</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>moviesvisible</include>
+		<info>listitem.year</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>250</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>tvshowsvisible</include>
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>250</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>episodesvisible</include>
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>250</posy>
+		<width>267</width>
+		<height>38</height>
+		<visible>false</visible>
+		<include>scraperinfogrey</include>
+		<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+		<visible>[IsEmpty(listitem.episodes) + Container.Content(tvshows)] | [IsEmpty(listitem.year) + Container.Content(movies)] | [IsEmpty(listitem.aired) + Container.Content(episodes)]</visible>
+		<label>Unavailable</label>	
+	</control>
+
+<!-- Line 4 - Runtime (Movies) / Synopsis (TVShows) / Synopsis (Episodes) ================================== -->
+<!-- label -->
+	
+	<control type="label">
+		<posx>862</posx>
+		<posy>275</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>moviesvisible</include>
+		<label>Runtime: </label>		
+	</control>
+	
+<!-- info -->
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>275</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>moviesvisible</include>
+		<info>listitem.duration</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>275</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfogrey</include>
+		<include>moviesvisible</include>
+		<visible>IsEmpty(listitem.duration)</visible>
+		<label>Unavailable</label>		
+	</control>
+
+	<control type="textbox">
+		<posx>862</posx>
+		<posy>288</posy>
+		<width>355</width>
+		<height>265</height>
+		<font>scraper</font>
+		<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+		<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
+		<visible>false</visible>
+		<pagecontrol>999999999</pagecontrol>
+		<label>$INFO[ListItem.Plot]</label>		
+		<include>common-fade</include>
+	        <autoscroll time="2000" delay="3000"></autoscroll>
+	</control>
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>288</posy>
+		<width>355</width>
+		<height>265</height>
+		<include>scraperinfogrey</include>
+		<visible>!Window.IsActive(502) + !Control.IsVisible(58)</visible>
+		<visible>[Container.Content(tvshows) | Container.Content(episodes)] + IsEmpty(listitem.plot)</visible>
+		<visible>false</visible>
+		<label>Synopsis unavailable</label>		
+	</control>
+
+<!-- Line 5 - MPAA Rating (Movies) ================================== -->
+<!-- label -->
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>300</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>moviesvisible</include>
+		<label>Rating: </label>		
+	</control>
+
+<!-- info -->
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>300</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>moviesvisible</include>
+		<info>listitem.mpaa</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>300</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfogrey</include>
+		<include>moviesvisible</include>
+		<visible>IsEmpty(listitem.mpaa)</visible>
+		<label>Unavailable</label>		
+	</control>
+
+<!-- Line 5 - Tagline (Movies) ================================== -->
+<!-- label -->
+		
+	<control type="label">
+		<posx>862</posx>
+		<posy>325</posy>
+		<width>711</width>
+		<height>38</height>
+		<include>scrapertitle</include>
+		<include>moviesvisible</include>
+		<label>Tagline: </label>		
+	</control>
+
+<!-- info -->
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>325</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfo</include>
+		<include>moviesvisible</include>
+		<info>listitem.tagline</info>		
+	</control>
+
+	<control type="label">
+		<posx>943</posx>
+		<posy>325</posy>
+		<width>267</width>
+		<height>38</height>
+		<include>scraperinfogrey</include>
+		<include>moviesvisible</include>
+		<visible>IsEmpty(listitem.tagline)</visible>
+		<label>Unavailable</label>		
+	</control>
+
+<!-- Line 6 - Plot (Movies) ================================== -->
+<!-- info -->
+
+	<control type="textbox">
+		<posx>862</posx>
+		<posy>363</posy>
+		<width>355</width>
+		<height>152</height>
+		<font>scraper</font>
+		<include>moviesvisible</include>
+		<pagecontrol>999999999</pagecontrol>
+		<label>$INFO[ListItem.Plot]</label>		
+		<include>common-fade</include>
+	        <autoscroll time="2000" delay="3000"></autoscroll>
+	</control>
+
+	<control type="label">
+		<posx>862</posx>
+		<posy>363</posy>
+		<width>355</width>
+		<height>184</height>
+		<font>scraper</font>
+		<include>scraperinfogrey</include>
+		<include>moviesvisible</include>
+		<visible>IsEmpty(listitem.plot)</visible>
+		<label>Synopsis unavailable</label>		
+	</control>
+	</control>
+
+</include>
+
+<!-- Now playing panel - Home page with Visualisation ================================== -->
+
+<include name="playingvisaudio">
+		<width>533</width>
+		<height>25</height>
+		<align>left</align>
+		<posx>214</posx>
+		<font>osdsmall</font>
+		<textcolor>FF8f8f8f</textcolor>
+		<visible>Player.HasAudio</visible>
+</include>
+
+<include name="playingvisvideo">
+		<width>533</width>
+		<height>25</height>
+		<align>left</align>
+		<posx>182</posx>
+		<font>osdsmall</font>
+		<visible>Player.HasVideo</visible>
+</include>
+
+<include name="playingvis">
+	<control type="group">
+		<posx>0</posx>
+		<posy>100</posy>
+		<width>1280</width>
+		<height>224</height>
+		<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
+		<control type="image">
+
+			<width>1280</width>
+			<height>224</height>
+			<texture>playingvis.png</texture>
+			<visible>false</visible>			
+		</control>
+
+		<control type="image">
+			<posx>55</posx>
+			<posy>93</posy>
+			<height>112</height>
+			<width>117</width>
+			<info>MusicPlayer.Cover</info>
+		</control>
+
+		<control type="image">
+			<posx>36</posx>
+			<posy>98</posy>
+			<height>102</height>
+			<width>83</width>
+			<info>VideoPlayer.Cover</info>
+		</control>
+
+		<control type="image">
+			<posx>34</posx>
+			<posy>86</posy>
+			<height>128</height>
+			<width>147</width>
+			<texture>case.png</texture>
+			<visible>Player.HasAudio</visible>
+		</control>
+
+		<control type="image">
+			<posx>34</posx>
+			<posy>86</posy>
+			<height>120</height>
+			<width>121</width>
+			<texture>dvdcover.png</texture>
+			<visible>Player.HasVideo</visible>
+		</control>
+
+		<control type="label">
+			<include>playingvisaudio</include>
+			<posy>109</posy>
+			<label>$INFO[MusicPlayer.Title]</label>
+		</control>
+
+		<control type="label">
+			<include>playingvisaudio</include>
+			<posy>134</posy>
+			<label>$INFO[MusicPlayer.Artist]</label>
+		</control>
+
+		<control type="label">
+			<include>playingvisaudio</include>
+			<posy>158</posy>
+			<label>$INFO[MusicPlayer.Album]</label>
+		</control>
+
+		<control type="label">
+			<include>playingvisaudio</include>
+			<posy>184</posy>
+			<label>$INFO[MusicPlayer.Time] ($INFO[MusicPlayer.Duration])</label>
+		</control>
+
+		<control type="label">
+			<include>playingvisvideo</include>
+			<posy>158</posy>
+			<label>$INFO[VideoPlayer.Title]</label>
+		</control>
+
+		<control type="label">
+			<include>playingvisvideo</include>
+			<posy>184</posy>
+			<label>$INFO[VideoPlayer.Time] ($INFO[VideoPlayer.Duration])</label>
+		</control>
+
+	</control>
+</include>
+
+<!-- Now playing panel - Home page without Visualisation ================================== -->
+
+<include name="mediapanel">
+	<control type="group">
+		<posx>0</posx>
+		<posy>375</posy> <!-- now playing pos -->
+		<height>396</height>
+		<width>1097</width>
+		<animation effect="slide" start="-1398,-28" end="0,-28" time="200"  delay="1200"condition="!system.getbool(lookandfeel.enablerssfeeds)">WindowOpen</animation>
+		<animation effect="slide" start="-1398,0" end="0,0" time="800" delay="1200"  condition="system.getbool(lookandfeel.enablerssfeeds)+!Window.IsActive(69)+!Window.IsActive(56)">WindowOpen</animation>
+
+       <animation type="WindowOpen" condition="Window.IsActive(69)">
+		<effect type="slide" start="-1398,0" end="0,0" time="800" delay="2100"  />
+		<effect type="slide" start="0,0" end="0,-60" time="200" delay="2950" acceleration="2" />
+		</animation>
+		
+       <animation type="WindowOpen" condition="Window.IsActive(56)">
+		<effect type="slide" start="-1398,0" end="0,0" time="800" delay="2100"  />
+		<effect type="slide" start="0,0" end="0,-500" time="200" delay="2950" acceleration="2" />
+		</animation>
+		
+		<animation effect="slide" start="-1398,0" end="0,0" time="800" delay="6200">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="800" condition="!Player.HasAudio">Conditional</animation>
+
+		<animation effect="slide" start="0,0" end="-1398,0" time="200" condition="system.getbool(lookandfeel.enablerssfeeds)">WindowClose</animation>
+		<animation effect="slide" start="0,-28" end="-1398,-28" time="200" condition="!system.getbool(lookandfeel.enablerssfeeds)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-1398,0" time="200">WindowClose</animation>
+		<!--<animation effect="slide" start="0,0" end="-1398,0" time="200" delay="3200"condition="Window.IsActive(56) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19)">Conditional</animation>-->
+		<!--<animation effect="slide" start="0,0" end="-1398,0" time="200" delay="1200">Hidden</animation>-->
+		<!--<visible>Player.HasMedia + !Skin.HasSetting(mediapanel) + !Skin.HasSetting(Visualisation) + !Skin.HasSetting(drophome) + !Player.HasVideo</visible>-->
+
+		
+
+
+		<control type="image">
+			<posx>-44</posx>
+			<posy>-12</posy>
+			<width>1097</width>
+			<height>396</height>
+			<texture>playpanel.png</texture>
+			<visible>!system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<colordiffuse>d0FFFFFF</colordiffuse>
+
+
+		</control>
+
+		<!--<control type="image">
+			<posx>66</posx>
+			<posy>44</posy>
+			<height>191</height>
+			<width>199</width>
+			<info>MusicPlayer.Cover</info>
+			<visible>Player.HasAudio</visible>
+		</control>-->
+		
+		<control type="image">
+			<posx>36</posx>
+			<posy>38</posy>
+			<height>205</height>
+			<width>160</width>
+			<info>VideoPlayer.Cover</info>
+			<visible>Player.HasVideo</visible>
+		</control>
+
+		<!--<control type="image">
+			<posx>34</posx>
+			<posy>34</posy>
+			<height>215</height>
+			<width>241</width>
+			<texture>case.png</texture>
+			<visible>Player.HasAudio</visible>
+		</control>-->
+		
+		<control>
+		      <type>image</type>
+		      <description>box</description>
+		      <posx>0</posx>
+		      <posy>178</posy>
+		      <width>1400</width>
+		      <height>66</height>
+		      <texture>box_opacity60.png</texture>
+
+			<include>common-fade-normal</include>		
+			 <!-- <visible>Player.HasAudio</visible>-->
+			  </control>
+		
+		
+		<control type="image">
+			<posx>18</posx>
+			<posy>25</posy>
+			<height>162</height>
+			<width>247</width>
+			<texture>dvdcover.png</texture>
+			<visible>Player.HasVideo</visible>
+		</control>
+
+		<control type="label">
+			<posx>100</posx> <!--left / right -->
+			<posy>180</posy>
+			<width>633</width>
+			<height>25</height>
+			<aligny>left</aligny>
+			<label>$INFO[MusicPlayer.Title]</label>
+			<font>LargeTitle</font>
+			<textcolor>FFffffff</textcolor>
+			<visible>Player.HasAudio</visible>
+					<include>common-fade-media</include>		
+
+		</control>
+
+		<control> <!-- arrows-->
+		      <type>image</type>
+		      <description>next audio icon</description>
+		      <posx>1220</posx>
+		      <posy>187</posy>
+		      <width>46</width>
+		      <height>18</height>
+		      <texture>Animations\arrows.gif</texture>
+						<visible>Player.HasAudio</visible>
+					<include>common-fade-normal</include>		
+		    </control>
+
+		<control type="label"><!-- next-->
+			<posx>1270</posx>
+			<posy>208</posy>
+			<label>$INFO[MusicPlayer.offset(1).Title]</label>
+			<font>TinyTitle</font>
+			<textcolor>d0FFFFFF</textcolor>
+			<align>right</align>
+									<visible>Player.HasAudio</visible>
+					<include>common-fade-media</include>		
+		</control>
+
+		<control type="label"><!-- next-->
+			<posx>1270</posx>
+			<posy>226</posy>
+			<label>$INFO[MusicPlayer.offset(1).Artist]</label>
+			<font>TinyTitle</font>
+			<textcolor>d0FFFFFF</textcolor>
+			<align>right</align>
+						<visible>Player.HasAudio</visible>
+					<include>common-fade-media</include>		
+		</control>
+		
+		<control type="label">
+			<posx>285</posx>
+			<posy>49</posy>
+			<width>653</width>
+			<height>25</height>
+			<aligny>left</aligny>
+			<label>$INFO[VideoPlayer.Title]</label>
+			<font>LargeTitle</font>
+			<visible>Player.HasVideo</visible>
+		</control>
+
+		<control type="label">
+			<posx>100</posx>
+			<posy>204</posy>
+			<height>31</height>
+			<aligny>left</aligny>
+			<label>$INFO[MusicPlayer.Artist]</label>
+			<font>MediumTitle</font>
+			<textcolor>d0FFFFFF</textcolor>
+			<visible>Player.HasAudio</visible>
+					<include>common-fade-media</include>		
+		</control>
+
+		<control type="label">
+			<posx>285</posx>
+			<posy>74</posy>
+			<height>31</height>
+			<aligny>left</aligny>
+			<label>Running time: $INFO[VideoPlayer.Duration]</label>
+			<font>MediumTitle</font>
+			<textcolor>FF8f8f8f</textcolor>
+			<visible>Player.HasVideo</visible>
+		</control>
+
+		<control type="label">
+			<posx>100</posx>
+			<posy>223</posy>
+			<height>31</height>
+			<aligny>left</aligny>
+			<label>$INFO[MusicPlayer.Album]</label>
+			<font>SmallTitle</font>
+			<textcolor>d0FFFFFF</textcolor>
+			<visible>Player.HasAudio</visible>
+					<include>common-fade-media</include>		
+		</control>
+
+		<control type="label">
+			<posx>285</posx>
+			<posy>97</posy>
+			<height>31</height>
+			<aligny>left</aligny>
+			<label>$INFO[VideoPlayer.Time]</label>
+			<font>Time</font>
+			<textcolor>FF8f8f8f</textcolor>
+			<visible>Player.HasVideo</visible>
+		</control>
+		
+		<control>
+		      <type>image</type>
+		      <description>Animated Audio Icon</description>
+		      <posx>30</posx>
+		      <posy>195</posy>
+		      <width>59</width>
+		      <height>43</height>
+		      <texture>Animations\audio_icon.gif</texture>
+			  <visible>Player.HasAudio + !Player.Paused</visible>
+					<include>common-fade-normal</include>		
+		</control>
+		
+		<control>
+		      <type>image</type>
+		      <description>pause Icon</description>
+		      <posx>30</posx>
+		      <posy>195</posy>
+		      <width>59</width>
+		      <height>43</height>
+		      <texture>media-pause-focus.png</texture>
+			  <visible>Player.Paused</visible>
+					<include>common-fade-normal</include>		
+		</control>
+
+		<!--<control type="label">
+			<posx>285</posx>
+			<posy>145</posy>
+			<height>31</height>
+			<aligny>left</aligny>
+			<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.TimeRemaining]</label>
+			<font>Time</font>
+			<textcolor>FF8f8f8f</textcolor>
+			<visible>Player.HasAudio + !Player.Paused</visible>
+		</control>
+
+		<control type="label">
+			<posx>285</posx>
+			<posy>175</posy>
+			<label>$INFO[MusicPlayer.Duration]</label>
+			<font>SmallTitle</font>
+			<textcolor>FFA0A0A0</textcolor>
+			<align>left</align>
+		</control>
+		
+		<control type="label">
+			<posx>285</posx>
+			<posy>145</posy>
+			<height>31</height>
+			<aligny>left</aligny>
+			<label>PAUSED ($INFO[MusicPlayer.Time])</label>
+			<font>Time</font>
+			<visible>Player.Paused</visible>
+		</control>-->
+					<include>common-fade-normal</include>		
+
+	</control>
+</include>
+
+<!-- Home page - Main menu scroller ================================== -->
+
+<include name="homeglass">
+	<control type="image">
+		<posx>0</posx>
+		<posy>614</posy>
+		<width>1280</width>
+		<height>86</height>
+		<texture>glass_home.png</texture>
+		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
+		<animation effect="fade" time="0">Visible</animation>
+		<animation effect="fade" time="0">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19)">WindowOpen</animation>
+		<animation effect="fade" time="200" condition="!Window.Next(Home) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>614</posy>
+		<width>1280</width>
+		<height>86</height>
+		<texture>glass_home_xbox.png</texture>
+		<visible>system.platform.xbox | Skin.HasSetting(lowerres)</visible>
+		<animation effect="fade" time="0">Visible</animation>
+		<animation effect="fade" time="0">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19)">WindowOpen</animation>
+		<animation effect="fade" time="200" condition="!Window.Next(Home) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>614</posy>
+		<width>1280</width>
+		<height>86</height>
+		<texture>glass_home_eee.png</texture>
+		<visible>Skin.HasSetting(eeemode)</visible>
+		<animation effect="fade" time="0">Visible</animation>
+		<animation effect="fade" time="0">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19)">WindowOpen</animation>
+		<animation effect="fade" time="200" condition="!Window.Next(Home) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
+	</control>
+</include>
+
+<include name="homepolish">
+	<control type="image">
+		<posx>0</posx>
+		<posy>622</posy>
+		<width>1280</width>
+		<height>67</height>
+		<colordiffuse>acFFFFFF</colordiffuse>
+		<texture>homepolishsmall.png</texture>
+		<visible>system.getbool(lookandfeel.enablerssfeeds) | Window.IsActive(56) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19)</visible>
+		<animation effect="fade" time="0">Visible</animation>
+		<animation effect="fade" time="0">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19)">WindowOpen</animation>
+		<animation effect="fade" time="200" condition="!Window.Next(Home) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>622</posy>
+		<width>1280</width>
+		<height>67</height>
+		<texture>homepolishsmall.png</texture>
+		<visible>!system.getbool(lookandfeel.enablerssfeeds) + Window.IsActive(Home) + !Skin.HasSetting(medtrans)</visible>
+		<animation effect="fade" time="0">Visible</animation>
+		<animation effect="fade" time="0">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19)">WindowOpen</animation>
+		<animation effect="fade" time="200" condition="!Window.Next(Home) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>622</posy>
+		<width>1280</width>
+		<height>67</height>
+		<texture>homepolishsmall.png</texture>
+		<colordiffuse>dbFFFFFF</colordiffuse>
+		<visible>!system.getbool(lookandfeel.enablerssfeeds) + Window.IsActive(Home) + Skin.HasSetting(medtrans)</visible>
+		<animation effect="fade" time="0">Visible</animation>
+		<animation effect="fade" time="0">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19)">WindowOpen</animation>
+		<animation effect="fade" time="200" condition="!Window.Next(Home) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
+	</control>
+</include>
+
+<include name="homeoverlay">
+	<control type="image">
+		<posx>0</posx>
+		<posy>900</posy>
+		<height>656</height>
+		<width>1280</width>
+		<include>common-fade</include>
+		<texture>osdtab.png</texture>
+		<colordiffuse>d0FFFFFF</colordiffuse>
+	</control>
+</include>	
+
+<include name="nowplayingpopup">
+	<control type="group" id="966">
+		<posx>12</posx>
+		<posy>668</posy>
+		<width>1255</width>
+		<height>52</height>
+		<visible>Player.HasAudio + !Container.Content(episodes) + !Control.IsVisible(53) + !Control.IsVisible(57)</visible>
+		<animation effect="slide" start="0,38" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,38" time="150">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="0,38" time="150" condition="Container(51).Row(4) | Container(51).Row(3)">Conditional</animation>
+		<control type="image" id="80">
+			<width>1255</width>
+			<height>52</height>
+			<texture>popup.png</texture>
+		</control>
+		<control type="fadelabel">
+			<posx>311</posx>
+			<posy>15</posy>
+			<width>900</width>
+			<height>52</height>
+			<align>right</align>
+			<font>font13s</font>
+			<scrollout>false</scrollout>
+			<pauseatend>4000</pauseatend>
+			<textcolor>d0ffffff</textcolor>
+			<label>"$INFO[MusicPlayer.Title]" by $INFO[MusicPlayer.Artist]</label>
+			<label>from the album "$INFO[MusicPlayer.Album]"</label>
+			<label>$INFO[MusicPlayer.Time]/$INFO[MusicPlayer.Duration]</label>
+		</control>
+
+		<control type="label">
+			<posx>53</posx>
+			<posy>15</posy>
+			<width>355</width>
+			<height>52</height>
+			<align>left</align>
+			<font>font13s</font>
+			<textcolor>d0ffffff</textcolor>
+			<label>Now Playing:</label>
+			<scroll>true</scroll>
+		</control>
+
+	</control>
+</include>
+
+<include name="episodeinfo">
+	<control type="group" id="84">
+	<posx>460</posx>
+	<posy>379</posy>
+	<width>800</width>
+	<height>300</height>
+	<visible>Control.HasFocus(53) + Container.Content(episodes) + [!Container(53).OnNext + !Container(53).OnPrevious]</visible>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="150" delay="6000">Visible</animation>
+	<animation effect="fade" start="0" end="100" time="150" delay="6000">WindowOpen</animation>	
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>931</width>
+			<height>482</height>
+			<texture>showcasepanel3.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>7</posy>
+			<textcolor>FFaaaaaa</textcolor>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]SEASON $INFO[ListItem.Season], EPISODE $INFO[ListItem.Episode][/UPPERCASE]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>26</posy>
+			<textcolor>FFe0e0e0</textcolor>
+			<font>episodetitle</font>
+			<label>[B][UPPERCASE][COLOR=orange]$INFO[ListItem.Title][/COLOR][/UPPERCASE][/B]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="fadelabel">
+			<posx>20</posx>
+			<posy>56</posy>
+			<width>800</width>
+			<textcolor>FFaaaaaa</textcolor>
+			<scroll>false</scroll>
+			<scrollout>false</scrollout>
+			<pauseatend>4000</pauseatend>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]WRITER: $INFO[ListItem.Writer][/UPPERCASE]</label>
+			<label>[UPPERCASE]DIRECTOR: $INFO[ListItem.Director][/UPPERCASE]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="textbox">
+			<posx>20</posx>
+			<posy>92</posy>
+			<width>726</width>
+			<height>140</height>
+			<textcolor>FFd6d6d6</textcolor>
+			<font>episodetext</font>
+			<label>[B][/B]$INFO[ListItem.Plot]</label>
+			<align>left</align>
+	        <autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
+			<scroll>true</scroll>
+		</control>
+	</control>
+</include>
+
+<include name="movieinfo">
+	<control type="group" id="84">
+	<posx>340</posx>
+	<posy>305</posy>
+	<width>901</width>
+	<height>360</height>
+	<visible>Control.HasFocus(57) + [Container.Content(movies) | Container.Content(tvshows)] + [!Container(57).OnNext + !Container(57).OnPrevious] + !Window.IsActive(2003) + !Window.IsActive(106)</visible>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation effect="slide" start="0,500" end="0,0" time="150" acceleration="-1" delay="6200">Visible</animation>
+	
+	<!--<animation effect="fade" start="0" end="100" time="150" delay="3000">WindowOpen</animation>-->
+	<animation effect="slide" start="0,500" end="0,0" time="150" acceleration="-1" delay="6200">WindowOpen</animation>	
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>931</width>
+			<height>482</height>
+			<texture>showcasepanel3.png</texture>
+		</control>
+		<control type="label">
+			<posx>20</posx>
+			<posy>6</posy>
+			<textcolor>FFe0e0e0</textcolor>
+			<font>episodetitle</font>
+			<label>[B][UPPERCASE][COLOR=orange]$INFO[ListItem.Title][/COLOR][/UPPERCASE][/B]</label>
+			<visible>!Container.Content(tvshows)</visible>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>		
+		<control type="label">
+			<posx>20</posx>
+			<posy>35</posy>
+			<textcolor>FFaaaaaa</textcolor>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+
+		<control type="label">
+			<posx>20</posx>
+			<posy>6</posy>
+			<textcolor>FFe0e0e0</textcolor>
+			<font>episodetitle</font>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			<visible>Container.Content(tvshows)</visible>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="fadelabel">
+			<posx>20</posx>
+			<posy>56</posy>
+			<width>800</width>
+			<textcolor>FFaaaaaa</textcolor>
+			<scroll>false</scroll>
+			<scrollout>false</scrollout>
+			<pauseatend>4000</pauseatend>
+			<font>episodeinfo</font>
+			<visible>!Container.Content(tvshows)</visible>
+			<label>[UPPERCASE]WRITER: $INFO[ListItem.Writer][/UPPERCASE]</label>
+			<label>[UPPERCASE]DIRECTOR: $INFO[ListItem.Director][/UPPERCASE]</label>
+			<label>[UPPERCASE]CERTIFICATE: $INFO[ListItem.mpaa][/UPPERCASE]</label>
+			<label>[UPPERCASE]IMDb RATING: $INFO[ListItem.ratingandvotes][/UPPERCASE]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="fadelabel">
+			<posx>20</posx>
+			<posy>56</posy>
+			<width>800</width>
+			<textcolor>FFaaaaaa</textcolor>
+			<scroll>false</scroll>
+			<scrollout>false</scrollout>
+			<pauseatend>4000</pauseatend>
+			<font>episodeinfo</font>
+			<visible>Container.Content(tvshows)</visible>
+			<label>[UPPERCASE]EPISODES: $INFO[ListItem.episode][/UPPERCASE]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="textbox">
+			<posx>20</posx>
+			<posy>92</posy>
+			<width>860</width>
+			<height>230</height>
+			<textcolor>FFd6d6d6</textcolor>
+			<font>plot-info</font>
+			<label>[B][/B]$INFO[ListItem.Plot]</label>
+			<align>left</align>
+			<visible>!Skin.HasSetting(disablescroll)</visible>
+	        <autoscroll time="2000" delay="15000" repeat="10000">Visible</autoscroll>
+			<scroll>true</scroll>
+		</control>
+		<control type="textbox">
+			<posx>20</posx>
+			<posy>92</posy>
+			<width>860</width>
+			<height>140</height>
+			<textcolor>FFd6d6d6</textcolor>
+			<font>episodetext</font>
+			<label>$INFO[ListItem.Plot]</label>
+			<align>left</align>
+			<visible>Skin.HasSetting(disablescroll)</visible>
+	        <autoscroll time="2000" delay="10000" repeat="10000">false</autoscroll>
+			<scroll>true</scroll>
+		</control>
+
+<!--#################################################################################################-->		
+<!--##   Media flags   ######################################################################################-->		
+		<control type="group">
+		<posx>295</posx>
+		<posy>340</posy>
+		<width>753</width>
+		<height>86</height>
+		<visible>!Skin.HasSetting(mediaflags)</visible>
+			<control type="image">
+				<posx>502</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_avi.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.FilenameAndPath,.avi)</visible>				
+			</control>
+			<control type="image">
+				<posx>502</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_iso.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.FilenameAndPath,.iso)</visible>
+			</control>
+			<control type="image">
+				<posx>502</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_mp4.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.FilenameAndPath,.mp4)</visible>
+			</control>
+			<control type="image">
+				<posx>502</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_mkv.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.FilenameAndPath,.mkv)</visible>
+			</control>		
+			<control type="image">
+				<posx>502</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_DIVX.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.FilenameAndPath,.DIVX)</visible>
+			</control>				
+			<control type="image">
+				<posx>502</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_dvd.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.Filename,VIDEO_TS.IFO)</visible>
+			</control>	
+			<control type="image">
+				<posx>502</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_blueray.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.Filename,blueray)</visible>
+			</control>				
+			<control type="image">
+				<posx>392</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_axxo.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.Filename,aXXo)</visible>
+			</control>	
+			<control type="image">
+				<posx>282</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>86</height>
+				<texture>flag_dvdrip.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.Filename,dvdrip)</visible>
+			</control>	
+			<control type="image">
+				<posx>182</posx>
+				<posy>-100</posy>
+				<width>200</width>
+				<height>86</height>
+				<texture>flag_offline.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>substring(Listitem.Filename,offline)</visible>
+			</control>			
+		<!--<control type="textbox">
+				<posx>-202</posx>
+				<posy>-50</posy>
+				<width>1051</width>
+				<height>86</height>
+			<textcolor>FFd6d6FF</textcolor>
+			<font>menufontacens</font>
+			<label>$INFO[Listitem.Filename]</label>
+			<align>LEFT</align>
+			<scroll>true</scroll>
+		</control>	-->	
+		<control type="label">
+			<posx>600</posx>
+			<posy>-340</posy>
+			<width>800</width>
+			<textcolor>FFaaaaaa</textcolor>
+			<font>menufontacens2</font>
+			<visible>!Container.Content(tvshows)</visible>
+			<label>[UPPERCASE]$INFO[ListItem.rating]/10[/UPPERCASE]</label>
+			<align>right</align>
+		</control>		
+		</control>
+	</control>
+	
+</include>
+	<include name="ScrollOffsetLabel">
+                <control type="group">
+			<visible>Container.Scrolling</visible>
+			<animation effect="fade" time="100">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="slide" end="0,80" time="0" condition="[Window.IsVisible(MusicFiles) | Window.IsVisible(Musiclibrary)] + Control.IsVisible(57)">Conditional</animation>
+			<animation effect="slide" end="-60,-90" time="0" condition="[Window.IsVisible(VideoLibrary) | Window.IsVisible(Musiclibrary)] + Control.IsVisible(51)">Conditional</animation>
+			<animation effect="slide" end="0,-70" time="0" condition="[Window.IsVisible(Musiclibrary)] + Control.IsVisible(58)">Conditional</animation>
+			<posx>600</posx>
+			<posy>460</posy>
+			<width>330</width>
+			<height>232</height>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture border="10">box_opacity70.png</texture>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>70</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>white</textcolor>
+				<font>menufontacens2</font>
+			</control>
+                </control>
+	</include>
+	
+<include name="moviewideinfo">
+	<control type="group" id="84">
+	<posx>630</posx>
+	<posy>400</posy>
+	<width>400</width>
+	<height>300</height>
+	<visible>Control.HasFocus(53) + [Container.Content(movies) | Container.Content(tvshows)] + [!Container(53).OnNext + !Container(53).OnPrevious]</visible>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="150" delay="3000">Visible</animation>
+		<control type="label">
+			<posx>0</posx>
+			<posy>4</posy>
+			<textcolor>FF625b5b</textcolor>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>23</posy>
+			<textcolor>FF524c4c</textcolor>
+			<font>episodetitle</font>
+			<label>$INFO[ListItem.Title]</label>
+			<visible>!Container.Content(tvshows)</visible>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>23</posy>
+			<textcolor>FF524c4c</textcolor>
+			<font>episodetitle</font>
+			<label>$INFO[ListItem.Label]</label>
+			<visible>Container.Content(tvshows)</visible>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="fadelabel">
+			<posx>0</posx>
+			<posy>56</posy>
+			<width>800</width>
+			<textcolor>FF625b5b</textcolor>
+			<scroll>false</scroll>
+			<scrollout>false</scrollout>
+			<pauseatend>4000</pauseatend>
+			<font>episodeinfo</font>
+			<visible>!Container.Content(tvshows)</visible>
+			<label>[UPPERCASE]WRITER: $INFO[ListItem.Writer][/UPPERCASE]</label>
+			<label>[UPPERCASE]DIRECTOR: $INFO[ListItem.Director][/UPPERCASE]</label>
+			<label>[UPPERCASE]CERTIFICATE: $INFO[ListItem.mpaa][/UPPERCASE]</label>
+			<label>[UPPERCASE]IMDb RATING: $INFO[ListItem.ratingandvotes][/UPPERCASE]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="fadelabel">
+			<posx>0</posx>
+			<posy>56</posy>
+			<width>800</width>
+			<textcolor>FF625b5b</textcolor>
+			<scroll>false</scroll>
+			<scrollout>false</scrollout>
+			<pauseatend>4000</pauseatend>
+			<font>episodeinfo</font>
+			<visible>Container.Content(tvshows)</visible>
+			<label>[UPPERCASE]EPISODES: $INFO[ListItem.episode][/UPPERCASE]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>83</posy>
+			<width>1000</width>
+			<height>2</height>
+			<texture>episodeline.png</texture>
+		</control>
+		<control type="textbox">
+			<posx>0</posx>
+			<posy>92</posy>
+			<width>870</width>
+			<height>128</height>
+			<textcolor>FF655656</textcolor>
+			<font>episodetext</font>
+			<label>$INFO[ListItem.Plot]</label>
+			<align>left</align>
+			<visible>!Skin.HasSetting(disablescroll)</visible>
+	        <autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
+			<scroll>true</scroll>
+		</control>
+		<control type="textbox">
+			<posx>0</posx>
+			<posy>92</posy>
+			<width>870</width>
+			<height>128</height>
+			<textcolor>FF655656</textcolor>
+			<font>episodetext</font>
+			<label>$INFO[ListItem.Plot]</label>
+			<align>left</align>
+			<visible>Skin.HasSetting(disablescroll)</visible>
+	        <autoscroll time="2000" delay="10000" repeat="10000">false</autoscroll>
+			<scroll>true</scroll>
+		</control>
+	</control>
+</include>
+
+<include name="movieinfopanel">
+	<control type="group" id="84">
+	<posx>-1</posx>
+	<posy>170</posy>
+	<width>800</width>
+	<height>400</height>
+	<visible>Skin.HasSetting(movieinfopanel) + Control.HasFocus(56) + !Window.IsActive(132) + !Window.IsActive(2000) + !Window.IsActive(103) + !Window.IsActive(106) + Container.Content(movies) + [!Container(56).OnNext + !Container(56).OnPrevious]</visible>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation type="Visible" reversible="false">
+		<effect type="fade" start="0" end="100" time="200" delay="3000" />
+		<effect type="slide" start="-800,0" end="0,0" time="200" acceleration="-1" delay="3000" />
+	</animation>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>838</width>
+			<height>397</height>
+			<texture>infohighlight.png</texture>
+			<aspectratio aligny="bottom">stretch</aspectratio>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>24</posy>
+			<textcolor>FF3e3232</textcolor>
+			<font>episodetitle</font>
+			<label>$INFO[ListItem.Title]</label>
+			<align>left</align>
+			<scroll>true</scroll>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>56</posy>
+			<width>760</width>
+			<textcolor>FF3e3232</textcolor>
+			<scroll>false</scroll>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]DIRECTOR: $INFO[ListItem.Director][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>77</posy>
+			<width>760</width>
+			<textcolor>FF3e3232</textcolor>
+			<scroll>false</scroll>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]WRITER: $INFO[ListItem.Writer][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>98</posy>
+			<width>760</width>
+			<textcolor>FF3e3232</textcolor>
+			<scroll>false</scroll>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]GENRE: $INFO[ListItem.Genre][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>119</posy>
+			<width>760</width>
+			<textcolor>FF3e3232</textcolor>
+			<scroll>false</scroll>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]YEAR: $INFO[ListItem.Year][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>140</posy>
+			<width>760</width>
+			<textcolor>FF3e3232</textcolor>
+			<scroll>false</scroll>
+			<font>episodeinfo</font>
+			<label>[UPPERCASE]RUNNING TIME: $INFO[ListItem.Duration][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="image">
+			<posx>1</posx>
+			<posy>165</posy>
+			<width>800</width>
+			<height>2</height>
+			<texture>episodeline.png</texture>
+		</control>
+		<control type="textbox">
+			<posx>40</posx>
+			<posy>170</posy>
+			<width>760</width>
+			<height>172</height>
+			<textcolor>FF3e3232</textcolor>
+			<font>episodetext</font>
+			<label>$INFO[ListItem.Plot]</label>
+			<align>left</align>
+			<visible>!Skin.HasSetting(disablescroll)</visible>
+	        <autoscroll time="2000" delay="10000" repeat="10000">Visible</autoscroll>
+			<scroll>true</scroll>
+		</control>
+		<control type="textbox">
+			<posx>40</posx>
+			<posy>170</posy>
+			<width>760</width>
+			<height>172</height>
+			<textcolor>FF3e3232</textcolor>
+			<font>episodetext</font>
+			<label>$INFO[ListItem.Plot]</label>
+			<align>left</align>
+			<visible>Skin.HasSetting(disablescroll)</visible>
+	        <autoscroll time="2000" delay="10000" repeat="10000">false</autoscroll>
+			<scroll>true</scroll>
+		</control>
+	</control>
+</include>
+
+<include name="wallinfopanel">
+	<control type="group" id="84">
+	<posx>284</posx>
+	<posy>10</posy>
+	<width>800</width>
+	<height>400</height>
+	<visible>Skin.HasSetting(wallinfopanelvids) + Window.IsActive(25) + Control.HasFocus(58) + !Window.IsActive(132) + !Window.IsActive(2000) + !Window.IsActive(103) + !Window.IsActive(106) + [!Container(58).OnNext + !Container(58).OnPrevious] + [Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)]</visible>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="150" delay="3000">Visible</animation>
+	<animation effect="fade" start="0" end="100" time="150" delay="3000">WindowOpen</animation>	
+		<control type="label">
+			<posx>40</posx>
+			<posy>56</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]DIRECTOR[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>77</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Director][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>102</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]GENRE[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>123</posy>
+			<width>400</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>148</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]YEAR[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>169</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>194</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]Rating[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>215</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+	</control>
+	<control type="group" id="84">
+	<posx>-30</posx>
+	<posy>10</posy>
+	<width>800</width>
+	<height>400</height>
+	<visible>Skin.HasSetting(wallinfopanelvids) + Window.IsActive(25) + Control.HasFocus(58) + !Window.IsActive(132) + !Window.IsActive(2000) + !Window.IsActive(103) + !Window.IsActive(106) + [!Container(58).OnNext + !Container(58).OnPrevious] + [Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)]</visible>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="150" delay="3000">WindowOpen</animation>	
+	<animation type="Visible" reversible="false">
+		<effect type="fade" start="0" end="100" time="200" delay="3000" />
+	</animation>
+		<control type="label">
+			<posx>40</posx>
+			<posy>56</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]DIRECTOR[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>77</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Director][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>102</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]GENRE[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>123</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>148</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]YEAR[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>169</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Year][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>194</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]Rating[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>215</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+	</control>
+
+	<control type="group" id="84">
+	<posx>284</posx>
+	<posy>10</posy>
+	<width>800</width>
+	<height>400</height>
+	<visible>[Window.IsActive(2) | Window.IsActive(502)] + Skin.HasSetting(wallinfopanelpics) + Control.HasFocus(51) + !Window.IsActive(132) + !Window.IsActive(2000) + !Window.IsActive(103) + !Window.IsActive(106) + [!Container(51).OnNext + !Container(51).OnPrevious] + [Container.Column(0) | Container.Column(1) | Container.Column(2) | Container.Column(3) | Container.Column(4)]</visible>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="150" delay="3000">WindowOpen</animation>	
+	<animation type="Visible" reversible="false">
+		<effect type="fade" start="0" end="100" time="200" delay="3000" />
+	</animation>
+		<control type="label">
+			<posx>40</posx>
+			<posy>56</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]NAME[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>77</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>102</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]SIZE[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>123</posy>
+			<width>400</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.size][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>148</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]RESOLUTION[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>169</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.pictureresolution][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>194</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]TAKEN[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>215</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.picturedatetime][/UPPERCASE]</label>
+			<align>left</align>
+		</control>
+	</control>
+	
+	<control type="group" id="84">
+	<posx>-30</posx>
+	<posy>10</posy>
+	<width>800</width>
+	<height>400</height>
+	<visible>[Window.IsActive(2) | Window.IsActive(502)] + Skin.HasSetting(wallinfopanelpics) + Control.HasFocus(51) + !Window.IsActive(132) + !Window.IsActive(2000) + !Window.IsActive(103) + !Window.IsActive(106) + [!Container(51).OnNext + !Container(51).OnPrevious] + [Container.Column(5) | Container.Column(6) | Container.Column(7) | Container.Column(8) | Container.Column(9)]</visible>
+	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+	<animation effect="fade" start="0" end="100" time="150" delay="3000">WindowOpen</animation>	
+	<animation type="Visible" reversible="false">
+		<effect type="fade" start="0" end="100" time="200" delay="3000" />
+	</animation>
+		<control type="label">
+			<posx>40</posx>
+			<posy>56</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]NAME[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>77</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>102</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]SIZE[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>123</posy>
+			<width>400</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.size][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>148</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]RESOLUTION[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>169</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.pictureresolution][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>194</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfotitle</include>
+			<label>[UPPERCASE][COLOR e1b1e021]TAKEN[/COLOR][COLOR FFFFFFFF]$INFO[ListItem.Balls][/COLOR][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>215</posy>
+			<width>760</width>
+			<scroll>false</scroll>
+			<include>wallinfoheader</include>
+			<label>[UPPERCASE]$INFO[ListItem.picturedatetime][/UPPERCASE]</label>
+			<align>right</align>
+		</control>
+	</control>
+	
+
+</include>
+
+</includes>

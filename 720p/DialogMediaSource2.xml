@@ -1,0 +1,14 @@
+<window id="129">
+	<defaultcontrol>10</defaultcontrol>
+	<zorder>1</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+		<animation effect="slide" start="720,0" end="-370,0" time="200" acceleration="-1">WindowOpen</animation>
+		<animation effect="slide" start="-370,0" end="720,0" time="200" acceleration="1">WindowClose</animation>
+	<controls>
+
+	</controls>
+</window>

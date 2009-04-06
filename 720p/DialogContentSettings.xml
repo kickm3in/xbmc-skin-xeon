@@ -1,0 +1,229 @@
+<window id="132">
+	<defaultcontrol>3</defaultcontrol>
+	<zorder>3</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>context-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>background image</description>
+		<posx>135</posx>
+		<posy>144</posy>
+		<width>1011</width>
+		<height>433</height>
+		<texture>contentback.png</texture>
+		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>135</posx>
+		<posy>144</posy>
+		<width>1011</width>
+		<height>433</height>
+		<texture>contentback_xbox.png</texture>
+		<visible>Skin.HasSetting(lowerres)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>135</posx>
+		<posy>144</posy>
+		<width>1011</width>
+		<height>433</height>
+		<texture>contentback_eee.png</texture>
+		<visible>Skin.HasSetting(eeemode)</visible>
+	</control>
+		<control type="image">
+			<description>scraper image</description>
+			<posx>750</posx>
+			<posy>175</posy>
+			<width>320</width>
+			<height>320</height>
+		<aligny>left</aligny>			
+			<aspectratio>keep</aspectratio>
+			<info>ListItem.Icon</info>
+		</control>	
+	<control type="label" id="1000">
+		<description>directory contains label</description>
+		<posx>197</posx>
+		<posy>178</posy>
+		<width>338</width>
+		<height>28</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<aligny>center</aligny>
+		<font>special13</font>
+		<textcolor>FF8f8f8f</textcolor>
+		<label>Directory contains:</label>
+	</control>
+
+	<control type="spincontrolex" id="3">
+		<description>directory content select spincontrol</description>
+		<posx>230</posx>
+		<posy>178</posy>
+		<width>373</width>
+		<height>28</height>
+		<height>28</height>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<font>special13</font>
+		<textcolor>FF8f8f8f</textcolor>
+		<onup>28</onup>
+		<ondown>4</ondown>
+		<onleft>3</onleft>
+		<onright>3</onright>
+		<aligny>center</aligny>
+		<subtype>text</subtype>
+	</control>
+
+	<control type="list" id="4">
+		<posx>197</posx>
+		<posy>240</posy>
+		<width>509</width>
+		<height>120</height>
+		<onup>3</onup>
+		<ondown>5</ondown>
+		<onleft>3</onleft>
+		<onright>5</onright>
+		<scrolltime>200</scrolltime>
+		<itemlayout height="30">
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>489</width>
+				<height>30</height>
+				<textcolor>FF6a6565</textcolor>
+				<selectedcolor>FFe4ec06</selectedcolor>
+				<aligny>center</aligny>
+				<font>special13</font>
+				<align>left</align>
+				<info>ListItem.Label</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="30">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>509</width>
+				<height>30</height>
+				<texture>listhighlightstub.png</texture>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>489</width>
+				<height>30</height>
+				<textcolor>FFFFFFFF</textcolor>
+				<selectedcolor>FFe4ec06</selectedcolor>
+				<aligny>center</aligny>
+				<font>special13</font>
+				<align>left</align>
+				<info>ListItem.Label</info>
+			</control>
+		</focusedlayout>
+	</control>
+
+	<control type="grouplist" id="5">
+		<description>control area</description>
+		<posx>177</posx>
+		<posy>383</posy>
+		<width>510</width>
+		<height>118</height>
+		<itemgap>0</itemgap>
+		<onup>4</onup>
+		<ondown>28</ondown>
+		<onleft>4</onleft>
+		<onright>28</onright>
+	</control>
+
+	<control type="button" id="7">
+		<description>Default Button</description>
+		<posx>942</posx>
+		<posy>188</posy>
+		<height>29</height>
+		<font>font12</font>
+		<textoffsetx>12</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus>input-focus.png</texturefocus>
+		<texturenofocus>input-nofocus.png</texturenofocus>
+	</control>
+
+	<control type="radiobutton" id="8">
+		<description>Default RadioButton</description>
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<disabledcolor>FF584f4f</disabledcolor>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+		<textureradiofocus>contextbuttons.png</textureradiofocus>
+		<textureradionofocus>contextbuttonns.png</textureradionofocus>
+		<width>310</width>
+		<height>27</height>
+		<align>left</align>
+		<font>special13</font>
+		<posx>19</posx>
+		<textoffsetx>20</textoffsetx>
+	</control>
+		<control type="button" id="6">
+			<description>Settings button</description>
+			<posx>190</posx>
+			<posy>500</posy>
+			<width>200</width>
+			<height>44</height>
+			<align>center</align>
+			<label>5</label>
+			<font>special13</font>
+			<texturenofocus>contextbutton.png</texturenofocus>
+			<texturefocus>contextbuttonpressed.png</texturefocus>
+			<onleft>28</onleft>
+			<onright>29</onright>
+			<onup>30</onup>
+			<ondown>3</ondown>
+		</control>
+	<control type="button" id="28">
+		<description>ok button</description>
+		<posx>590</posx>
+		<posy>500</posy>
+		<width>200</width>
+		<height>44</height>
+		<font>special13</font>
+		<label>186</label>
+		<align>center</align>
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<onleft>29</onleft>
+		<onright>6</onright>
+		<onup>5</onup>
+		<ondown>3</ondown>
+		<texturenofocus>contextbutton.png</texturenofocus>
+		<texturefocus>contextbuttonpressed.png</texturefocus>
+	</control>
+
+	<control type="button" id="29">
+		<description>cancel button</description>
+		<posx>390</posx>
+		<posy>500</posy>
+		<width>200</width>
+		<height>44</height>
+		<font>special13</font>
+		<align>center</align>
+		<label>222</label>
+		<textcolor>FF8f8f8f</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<onleft>6</onleft>
+		<onright>28</onright>
+		<onup>5</onup>
+		<ondown>3</ondown>
+		<texturenofocus>contextbutton.png</texturenofocus>
+		<texturefocus>contextbuttonpressed.png</texturefocus>
+	</control>
+	
+	</controls>
+</window>

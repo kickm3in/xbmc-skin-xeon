@@ -1,0 +1,181 @@
+<window id="1">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomGames)</info>
+		<visible>!Skin.HasSetting(CustomGames) + !Skin.HasSetting(CustomGamesFoldOn) + Skin.HasSetting(programgames)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomGamesFolder)</info>
+		<visible>!Skin.HasSetting(CustomGamesFolder) + Skin.HasSetting(programgames)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomArcade)</info>
+		<visible>!Skin.HasSetting(CustomArcade) + !Skin.HasSetting(CustomArcadeFoldOn) + Skin.HasSetting(programarcade)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomArcadeFolder)</info>
+		<visible>!Skin.HasSetting(CustomArcadeFolder) + Skin.HasSetting(programarcade)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomApps)</info>
+		<visible>!Skin.HasSetting(CustomApps) + !Skin.HasSetting(CustomAppsFoldOn) + Skin.HasSetting(programapps)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomAppsFolder)</info>
+		<visible>!Skin.HasSetting(CustomAppsFolder) + Skin.HasSetting(programapps)</visible>
+	</control>
+		
+	<include>wallglass</include>
+	<include>vignette</include>
+	<include>Viewtype_Photowall</include>
+	<include>wallmenu</include>
+	
+	<control type="image">
+		<posx>0</posx>
+		<posy>40</posy>
+		<width>1280</width>
+		<height>720</height>
+		<animation effect="fade" time="500">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+		<animation effect="fade" time="500">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+		<texture>showcasefilter2.png</texture>
+		<visible>Control.IsVisible(54)</visible>
+	</control>
+	
+	
+	
+	<control type="group">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>720</width>
+	<height>576</height>
+	<include>common-fade-quick</include>
+	
+	<control type="image">
+		<posx>0</posx>
+		<posy>87</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>m-glassshort_xbox2.png</texture>
+		<include>common-fade</include>
+		<visible>Control.IsVisible(50)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>87</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>panelpolish1.png</texture>
+		<include>common-fade</include>
+		<visible>Control.IsVisible(50)</visible>
+	</control>
+      <control type="image">
+		<posx>0</posx>
+		<posy>83</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>m-glasswide_xbox2.png</texture>
+		<include>common-fade</include>
+		<visible>Control.IsVisible(56) | Control.IsVisible(52)</visible>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>83</posy>
+		<width>1280</width>
+		<height>537</height>
+		<texture>panelpolish2.png</texture>
+		<include>common-fade</include>
+		<visible>Control.IsVisible(56) | Control.IsVisible(52)</visible>
+	</control>
+
+			
+	<include>Window-Files2</include>
+	
+	<control type="label">
+		<label>GAMES</label>
+		<visible>Skin.HasSetting(programgames)</visible>
+		<include>medialabel3</include>
+				<include>wallmenu-slide</include>
+	</control>
+
+	<control type="label">
+		<label>APPS</label>
+		<visible>Skin.HasSetting(programapps)</visible>
+		<include>medialabel3</include>
+				<include>wallmenu-slide</include>
+	</control>
+
+	<control type="label">
+		<label>ARCADE</label>
+		<visible>Skin.HasSetting(programarcade)</visible>
+		<include>medialabel3</include>
+				<include>wallmenu-slide</include>
+	</control>
+
+	<control type="grouplist">
+		<include>mediamenugroup2</include>
+				<include>wallmenu-slide</include>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="3">
+		<label>103</label>
+		<include>mediamenu</include>
+		</control>
+		
+		<control type="button" id="5">
+		<include>mediamenu</include>
+		<label>Game Saves</label>
+		<onclick>XBMC.ActivateWindow(gamesaves)</onclick>
+		</control>
+		
+<!--		<control type="button" id="99">
+		<include>mediamenu</include>
+		<label>Xlink Kai</label>
+		<onclick>ActivateWindow(XLinkKai)</onclick>
+		</control> -->
+		
+		<control type="button" id="555">
+				<label>View types</label>
+				<include>mediamenu</include>
+				<onclick>XBMC.ActivateWindow(602)</onclick>
+		</control>
+
+	</control>
+
+	
+	<include>Viewtype_List2</include>
+	<include>Viewtype_Gameroller</include>
+	<include>Viewtype_Poster</include>
+	<include>Viewtype_Icon</include>
+		<include>Viewtype_Media</include>
+	
+	</control>
+
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<include>time</include>
+	</controls>
+</window>

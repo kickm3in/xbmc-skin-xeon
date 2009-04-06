@@ -1,0 +1,98 @@
+<window id="502">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>!Skin.HasSetting(CustomMusic) + !Skin.HasSetting(CustomMusicFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>!Skin.HasSetting(CustomMusicFolder)</visible>
+	</control>
+
+	<include>wallglass</include>
+	<include>vignette</include>
+	<include>Viewtype_Photowall</include>
+	<include>wallmenu</include>
+
+
+	<control type="group">
+	<include>mediaglasslib</include>
+	<include>Window-Files</include>
+	<include>musicpanel</include>
+	<include>musicpaneltext</include>
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+
+	<control type="label">
+		<include>medialabel</include>
+		<label>MUSIC</label>
+		<include>wallmenu-slide</include>
+	</control>
+
+	<control type="grouplist">
+		<include>mediamenugroup</include>
+		<include>wallmenu-slide</include>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="3">
+		<label>103</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="5">
+		<label>Files</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="8">
+		<label>137</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="radiobutton" id="16">
+		<label>Party</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="17">
+		<label>Allmusic</label>
+		<include>mediamenu</include>
+		</control>
+		
+		<control type="button" id="555">
+		<label>View types</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ActivateWindow(602)</onclick>
+		</control>
+		
+		<control type="togglebutton" id="556">
+			<label>Info On</label>
+			<altlabel>Info Off</altlabel>
+			<include>mediamenu</include>
+			<onclick>Skin.SetBool(wallinfopanelpics)</onclick>
+			<altclick>Skin.Reset(wallinfopanelpics)</altclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+	</control>
+	<include>Viewtype_Musicroller</include>
+
+	</control>
+
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<include>time</include>
+	</controls>
+</window>

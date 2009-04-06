@@ -1,0 +1,75 @@
+<window id="500">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>!Skin.HasSetting(CustomMusic) + !Skin.HasSetting(CustomMusicFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>!Skin.HasSetting(CustomMusicFolder)</visible>
+	</control>
+
+	<include>wallglass</include>
+	<include>vignette</include>
+	<include>wallmenu</include>
+
+
+	<control type="group">
+	<include>mediaglasslib</include>
+	<include>Window-Files</include>
+	<include>musicpanel</include>
+	<include>musicpaneltext</include>
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+
+	<control type="label">
+		<include>medialabel</include>
+		<label>MUSIC</label>
+	</control>
+
+	<control type="grouplist">
+		<include>mediamenugroup</include>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="radiobutton" id="20">
+		<label>191</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="26">
+		<label>Repeat</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="21">
+		<label>190</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="22">
+		<label>192</label>
+		<include>mediamenu</include>
+		</control>
+	</control>
+
+	</control>
+
+	<include>Viewtype_Musicroller</include>
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<include>time</include>
+	</controls>
+</window>

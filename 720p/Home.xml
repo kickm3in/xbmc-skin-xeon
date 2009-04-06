@@ -1,0 +1,169 @@
+<window id="0">
+	<defaultcontrol>300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		
+
+		
+		
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomSettings)</info>
+		<visible>!Control.IsVisible(300) + !Window.Previous(24) + !Window.Previous(2006) + !Window.Previous(25) + !Window.Previous(1) + !Window.Previous(2) + !Window.Previous(501) + !Window.Previous(502) + !Window.Previous(503) + !Window.Previous(504)</visible>
+		<visible>!Player.HasVideo</visible>		
+		<include>backgroundfade</include>
+	</control>
+	
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomSettingsFolder)</info>
+		<visible>!Control.IsVisible(300) + !Player.HasVideo</visible>
+		<include>backgroundfade</include>
+	</control>
+	
+        <control type="image" id="87">
+                <texture>-</texture>
+                <visible>Container(300).OnNext | Container(300).OnPrevious</visible>
+                <animation  effect="fade" time="150">Hidden</animation>
+        </control>
+
+		
+	
+		
+	<include>wallpaper</include>
+	<include>vignette</include>
+	<include>mediapanel</include>
+	
+		<control type="videowindow" id="1">
+			<description>video preview window</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+			<!--<visible>!Skin.HasSetting(HomeViewToggle)</visible>-->
+		</control>	
+		
+		
+	<control type="group">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>474</width>
+	<height>768</height>
+	<defaultcontrol>300</defaultcontrol>
+		<include>scrollerjunk</include>
+		<animation effect="slide" start="0,267" end="0,267" condition="Skin.HasSetting(drophome)">WindowOpen</animation>
+		<animation effect="slide" start="0,267" end="0,267" condition="Skin.HasSetting(drophome) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="0,267" time="150" acceleration="1" condition="Skin.HasSetting(drophome) + [Window.Previous(56) | Window.Previous(12) | Window.Previous(13) | Window.Previous(14) | Window.Previous(15) | Window.Previous(16) | Window.Previous(17) | Window.Previous(18) | Window.Previous(19)]">Conditional</animation>
+		<animation effect="slide" start="0,267" end="0,0" time="150" acceleration="-1" condition="Skin.HasSetting(drophome) + [Window.Next(56) | Window.Next(12) | Window.Next(13) | Window.Next(14) | Window.Next(15) | Window.Next(16) | Window.Next(17) | Window.Next(18) | Window.Next(19)]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,-267" time="150" acceleration="1">Hidden</animation>	
+	</control>
+	<include>contextback</include>
+	
+	<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>black2.png</texture>
+			<visible>Window.Next(2006) | Window.Next(2) | Window.Next(20) | Window.Next(1) | Window.Next(24) | Window.Next(25) | Window.Next(501) | Window.Next(502) | Window.Next(2600)</visible>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+	</control>
+	
+	
+	
+	
+	
+	
+			<!-- weather Info -->
+		<control type="group">
+			<posx>365</posx>
+			<posy>360</posy>
+			<visible>Control.HasFocus(7) + Weather.IsFetched + !Skin.HasSetting(homepageWeatherinfo)</visible>
+			<control type="image">
+				<description>weather gradient</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>100</height>
+				<texture>gradient.png</texture>
+			</control>
+			<control type="image">
+				<description>Weather image bg</description>
+				<posx>240</posx>
+				<posy>0</posy>
+				<width>90</width>
+				<height>100</height>
+				<texture>homeinfo-bg.png</texture>
+			</control>
+			<control type="image">
+				<description>Weather image</description>
+				<posx>250</posx>
+				<posy>10</posy>
+				<width>70</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<info>Weather.Conditions</info>
+			</control>
+			<control type="image">
+				<description>Weather image overlay</description>
+				<posx>240</posx>
+				<posy>0</posy>
+				<width>90</width>
+				<height>100</height>
+				<texture>homeinfo-overlay.png</texture>
+			</control>
+			<control type="label">
+				<description>weather label</description>
+				<width>255</width>
+				<posx>230</posx>
+				<posy>2</posy>
+				<label>20088</label>
+				<align>right</align>
+				<font>special12</font>
+			</control>
+			<control type="label">
+				<description>location label</description>
+				<width>255</width>
+				<posx>230</posx>
+				<posy>27</posy>
+				<info>Weather.Location</info>
+				<align>right</align>
+				<font>special13</font>
+			</control>
+			<control type="label">
+				<description>conditions Label</description>
+				<width>255</width>
+				<posx>230</posx>
+				<posy>57</posy>
+				<label>$INFO[Weather.Conditions]</label>
+				<align>right</align>
+				<font>font10</font>
+			</control>
+			<control type="label">
+				<description>temp Label</description>
+				<width>255</width>
+				<posx>230</posx>
+				<posy>77</posy>
+				<label>$LOCALIZE[143] $INFO[Weather.Temperature]</label>
+				<align>right</align>
+				<font>font10</font>
+			</control>
+		</control>
+	
+	
+	<include>time</include>
+	<include>common-fade</include>
+	</controls>
+
+</window>

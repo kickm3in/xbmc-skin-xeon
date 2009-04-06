@@ -1,0 +1,446 @@
+<includes>
+
+<include name="scrollerlabel">
+		<posx>178</posx>
+		<width>355</width>
+		<info>ListItem.Label</info>
+		<align>center</align>
+		<aligny>center</aligny>
+</include>
+
+<include name="scrollerobjects">
+		<posx>-435</posx>
+		<posy>616</posy> <!-- LIST HEIGHT -->
+		<height>68</height>
+		<width>2507</width>
+		<viewtype>list</viewtype>
+		<orientation>horizontal</orientation>
+		<focusposition>3</focusposition>
+		<scrolltime>200</scrolltime>
+		<animation effect="fade" start="0" end="100" time="200" condition="!Window.Previous(56) + !Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(17) + !Window.Previous(18) + !Window.Previous(19)">WindowOpen</animation>
+		<itemlayout width="355" height="68">
+			<control type="label">
+				<posy>5</posy>
+				<height>68</height>
+				<font>menufontacens2</font>
+				<include>scrollerlabel</include>
+				<textcolor>FF000000</textcolor>
+				<!--<animation effect="fade" start="0" end="100" time="800" condition="!Window.Previous(56) | !Window.Previous(12) | !Window.Previous(13) | !Window.Previous(14) | !Window.Previous(15) | !Window.Previous(16) | !Window.Previous(17) | !Window.Previous(18) | !Window.Previous(19)">Conditional</animation>-->
+				<animation effect="fade" start="100" end="0" time="200" >WindowcLOSE</animation>
+			</control>
+		</itemlayout>
+		<focusedlayout width="355" height="68">
+			<control type="label">
+				<posy>5</posy>
+				<height>68</height>
+				<font>menufontacensfocus2</font>
+				<include>scrollerlabel</include>
+				<textcolor>FFffffff</textcolor>
+				<animation effect="fade" start="100" end="0" time="200" condition="Window.Next(3) | Window.Next(2) | Window.Next(20) | Window.Next(1) | Window.Next(24) | Window.Next(25) | Window.Next(501) | Window.Next(502) | Window.Next(2600)">Conditional</animation>
+			</control>
+		</focusedlayout>
+		
+</include>
+	<include>vignette</include>
+		<include>mediapanel</include>
+<include name="scrollernobutton">
+
+	<control type="wraplist" id="301">
+		<onup>300</onup>
+		<ondown>-</ondown>
+		<onleft>301</onleft>
+		<onright>301</onright>
+		<visible allowhiddenfocus="true">Control.HasFocus(301)</visible>
+		<include>scrollerobjects</include>
+		<content>
+			<item id="8">
+				<description>SYS INFO</description>
+				<label>SYS INFO</label>
+				<onclick>XBMC.ActivateWindow(7)</onclick>
+			</item>
+			<item id="8">
+				<description>REBOOT</description>
+				<label>REBOOT</label>
+				<onclick>XBMC.Reboot</onclick>
+			</item>
+			<item id="8">
+				<description>POWER</description>
+				<label>POWER</label>
+				<onclick>XBMC.ShutDown</onclick>
+			</item>
+
+			<item id="8">
+				<description>REFRESH</description>
+				<label>REFRESH</label>
+				<onclick><include>backgroundfade</include></onclick>				
+				<onclick>XBMC.ReloadSkin()</onclick>
+			</item>
+			<item id="8">
+				<description>RESTART</description>
+				<label>RESTART</label>
+				<onclick>XBMC.RestartApp</onclick>
+			</item>
+			<item id="8">
+				<label>CORE</label>
+				<onclick>XBMC.ActivateWindow(MyFiles)</onclick>
+			</item>
+			<item id="8">
+				<description>SCRIPTS</description>
+				<label>SCRIPTS</label>
+				<onclick>XBMC.ActivateWindow(20)</onclick>
+			</item>
+			<item id="8">
+				<description>Dashboard</description>
+				<label>DASH</label>
+				<onclick>XBMC.Dashboard</onclick>
+			</item>
+			</content>
+	</control>
+		<include>disc</include>	
+	<control type="wraplist" id="300">
+		<onup>302</onup>
+		<ondown>301</ondown>
+		<onleft>300</onleft>
+		<onright>300</onright>
+		<visible allowhiddenfocus="true">Control.HasFocus(300)</visible>
+		<include>scrollerobjects</include>
+		<content>
+		
+			<item id="5">
+				<label>PICTURES</label>
+				<onclick>Skin.SetBool(picturepics)</onclick>
+				<onclick>Skin.Reset(programcomics)</onclick>
+				<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+				<visible>!Skin.HasSetting(nopictures)</visible>
+			</item>
+			<item id="15">
+				<label>JUKEBOX</label>
+				<onclick>XBMC.ActivateWindow(69)</onclick>
+				<visible>!Skin.HasSetting(nomusic) + !Skin.HasSetting(musicvideos)</visible>
+			</item>
+			<item id="1">
+				<label>MUSIC</label>
+				<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
+				<visible>!Skin.HasSetting(nomusic) + !Skin.HasSetting(musicvideos)</visible>
+			</item>
+			<item id="13">
+				<description>Play DVD</description>
+				<label>PLAY DISC</label>
+				<onclick>XBMC.PlayDVD</onclick>
+				<visible>System.HasMediadvd</visible>
+		
+			</item>
+			<item id="6">
+				<label>MOVIES</label>
+				<onclick>Skin.SetBool(videomovies)</onclick>
+				<onclick>Skin.Reset(videotv)</onclick>
+				<onclick>Skin.Reset(videoclips)</onclick>
+				<onclick>Skin.Reset(videomusic)</onclick>
+				<onclick>Skin.Reset(videoadult)</onclick>
+				<onclick>Skin.Reset(gametrailers)</onclick>
+				<onclick>Skin.Reset(movietrailers)</onclick>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(moviepath)])</onclick>
+				<visible>!Skin.HasSetting(nomovies) + !Skin.HasSetting(movielibrary)</visible>
+			</item>
+			<item id="6">
+				<label>MOVIES</label>
+				<onclick>Skin.SetBool(videomovies)</onclick>
+				<onclick>Skin.Reset(videotv)</onclick>
+				<onclick>Skin.Reset(videoclips)</onclick>
+				<onclick>Skin.Reset(videomusic)</onclick>
+				<onclick>Skin.Reset(videoadult)</onclick>
+				<onclick>Skin.Reset(gametrailers)</onclick>
+				<onclick>Skin.Reset(movietrailers)</onclick>
+				<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles)</onclick>
+				<visible>!Skin.HasSetting(nomovies) + Skin.HasSetting(movielibrary)</visible>
+			</item>
+			<item id="7">
+				<description>My Videos</description>
+				<label>TV SHOWS</label>
+				<onclick>Skin.SetBool(videotv)</onclick>
+				<onclick>Skin.Reset(videomovies)</onclick>
+				<onclick>Skin.Reset(videoclips)</onclick>
+				<onclick>Skin.Reset(videomusic)</onclick>
+				<onclick>Skin.Reset(videoadult)</onclick>
+				<onclick>Skin.Reset(gametrailers)</onclick>
+				<onclick>Skin.Reset(movietrailers)</onclick>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,TV)</onclick>
+				<visible>!Skin.HasSetting(notvshows) + !Skin.HasSetting(tvlibrary)</visible>
+			</item>
+
+			<item id="7">
+				<description>My Videos</description>
+				<label>TV SHOWS</label>
+				<onclick>Skin.SetBool(videotv)</onclick>
+				<onclick>Skin.Reset(videomovies)</onclick>
+				<onclick>Skin.Reset(videoclips)</onclick>
+				<onclick>Skin.Reset(videomusic)</onclick>
+				<onclick>Skin.Reset(videoadult)</onclick>
+				<onclick>Skin.Reset(gametrailers)</onclick>
+				<onclick>Skin.Reset(movietrailers)</onclick>
+				<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles)</onclick>
+				<visible>!Skin.HasSetting(notvshows) + Skin.HasSetting(tvlibrary)</visible>
+			</item>			
+			<item id="7">
+				<description>My Videos</description>
+				<label>PODCASTS</label>
+				<onclick>Skin.SetBool(videotv)</onclick>
+				<onclick>Skin.Reset(videomovies)</onclick>
+				<onclick>Skin.Reset(videoclips)</onclick>
+				<onclick>Skin.Reset(videomusic)</onclick>
+				<onclick>Skin.Reset(videoadult)</onclick>
+				<onclick>Skin.Reset(gametrailers)</onclick>
+				<onclick>Skin.Reset(movietrailers)</onclick>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(tvpath)])</onclick>
+				<visible>Skin.HasSetting(podcasts)</visible>
+			</item>		
+			
+			<item id="11">
+				<description>My Videos</description>
+				<label>VID CLIPS</label>
+				<onclick>Skin.SetBool(videoclips)</onclick>
+				<onclick>Skin.Reset(videomovies)</onclick>
+				<onclick>Skin.Reset(videotv)</onclick>
+				<onclick>Skin.Reset(videoadult)</onclick>
+				<onclick>Skin.Reset(videomusic)</onclick>
+				<onclick>Skin.Reset(gametrailers)</onclick>
+				<onclick>Skin.Reset(movietrailers)</onclick>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(clipspath)])</onclick>
+				<visible>Skin.HasSetting(clips)</visible>
+			</item>
+			<item id="10">
+				<description>WEATHER</description>
+				<label>WEATHER</label>
+				<onclick>XBMC.ActivateWindow(MyWeather)</onclick>
+				<visible>Skin.HasSetting(weather)</visible>
+			</item>
+			<item id="10">
+				<description>WEATHER+</description>
+				<label>WEATHER+</label>
+				<onclick>XBMC.RunScript(special://xbmc/scripts/TWC Supplemental/default.py)</onclick>
+				<visible>Skin.HasSetting(weatherplus)</visible>
+			</item>
+			<item id="7">
+				<description>iPlayer</description>
+				<label>iPLAYER</label>
+				<onclick>Skin.SetBool(videotv)</onclick>
+				<onclick>Skin.Reset(videomovies)</onclick>
+				<onclick>Skin.Reset(videoclips)</onclick>
+				<onclick>Skin.Reset(videomusic)</onclick>
+				<onclick>Skin.Reset(videoadult)</onclick>
+				<onclick>Skin.Reset(gametrailers)</onclick>
+				<onclick>Skin.Reset(movietrailers)</onclick>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,iplayer)</onclick>
+				<!--<onclick>XBMC.RunPlugin(special://video/iplayer/)</onclick>-->
+				<visible>Skin.HasSetting(iplayer)</visible>
+			</item>	
+			<item id="4">
+				<description>Navi x</description>
+				<label>NAVI-X</label>
+				<onclick>XBMC.RunScript(special://xbmc/scripts/Navi-X/default.py)</onclick>
+				<visible>Skin.HasSetting(navi-x)</visible>
+			</item>				
+			<item id="12">
+				<description>My Videos</description>
+				<label>ADULT</label>
+				<onclick>Skin.SetBool(videoadult)</onclick>
+				<onclick>Skin.Reset(videomovies)</onclick>
+				<onclick>Skin.Reset(videoclips)</onclick>
+				<onclick>Skin.Reset(videomusic)</onclick>
+				<onclick>Skin.Reset(videotv)</onclick>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles,$INFO[Skin.String(adultpath)])</onclick>
+				<visible>Skin.HasSetting(adult)</visible>
+			</item>
+			<item id="2">
+				<label>GAMES</label>
+				<onclick>Skin.SetBool(programgames)</onclick>
+				<onclick>Skin.Reset(programapps)</onclick>
+				<onclick>Skin.Reset(programarcade)</onclick>
+				<onclick>XBMC.ActivateWindow(MyPrograms,$INFO[Skin.String(gamespath)])</onclick>
+				<visible>!Skin.HasSetting(nogames)</visible>
+			</item>
+			<item id="3">
+				<label>ARCADE</label>
+				<onclick>Skin.SetBool(programarcade)</onclick>
+				<onclick>Skin.Reset(programapps)</onclick>
+				<onclick>Skin.Reset(programgames)</onclick>
+				<onclick>XBMC.ActivateWindow(MyPrograms,$INFO[Skin.String(arcadepath)])</onclick>
+				<visible>Skin.HasSetting(arcade)</visible>
+			</item>
+			<item id="4">
+				<label>APPS</label>
+				<onclick>Skin.SetBool(programapps)</onclick>
+				<onclick>Skin.Reset(programgames)</onclick>
+				<onclick>Skin.Reset(programarcade)</onclick>
+				<onclick>XBMC.ActivateWindow(MyPrograms,$INFO[Skin.String(appspath)])</onclick>
+				<visible>Skin.HasSetting(apps)</visible>
+			</item>
+			<item id="14">
+				<label>COMICS</label>
+				<onclick>Skin.SetBool(picturecomics)</onclick>
+				<onclick>Skin.Reset(programpics)</onclick>
+				<onclick>XBMC.ActivateWindow(MyPictures,$INFO[Skin.String(comicpath)])</onclick>
+				<visible>Skin.HasSetting(comics)</visible>
+			</item>
+			<item id="99">
+				<description>About</description>
+				<label>ABOUT</label>
+				<onclick>XBMC.ActivateWindow(71)</onclick>
+			</item>				
+		</content>
+	</control>
+		
+		<control type="label"id="69">
+		<animation reversible="false">
+		<effect type="slide" tween="bounce"delay="500" start ="180,0" end="0,0" time="500" />
+		</animation>
+		<label>SETTINGS FOR..</label>
+		<posx>558</posx>
+		<posy>523</posy>
+		<width>1150</width>
+		<height>30</height>
+		<font>menufontacens2</font>
+		<textcolor>FFffffff</textcolor>
+		<include>common-fade</include>
+				<visible allowhiddenfocus="true">Control.HasFocus(302)</visible>
+		</control>
+		
+	<control type="wraplist" id="302">
+		<onup>-</onup>
+		<ondown>300</ondown>
+		<onleft>302</onleft>
+		<onright>302</onright>
+		<visible allowhiddenfocus="true">Control.HasFocus(302)</visible>
+		<include>scrollerobjects</include>
+		<content>
+			<item id="8">
+				<description>My Videos</description>
+				<label>SYSTEM</label>
+				<onclick>XBMC.ActivateWindow(16)</onclick>
+			</item>
+			<item id="8">
+				<description>Settings</description>
+				<label>NETWORK</label>
+				<onclick>XBMC.ActivateWindow(18)</onclick>
+			</item>
+			<item id="8">
+				<description>Settings</description>
+				<label>SCREEN</label>
+				<onclick>XBMC.ActivateWindow(19)</onclick>
+			</item>
+			<item id="8">
+				<description>Settings</description>
+				<label>XEON</label>
+				<onclick>XBMC.ActivateWindow(56)</onclick>
+			</item>		
+			<item id="8">
+				<description>Settings</description>
+				<label>WEATHER</label>
+				<onclick>XBMC.ActivateWindow(14)</onclick>
+			</item>				
+			<item id="8">
+				<description>My Programs</description>
+				<label>MUSIC</label>
+				<onclick>XBMC.ActivateWindow(15)</onclick>
+			</item>
+			<item id="8">
+				<description>My Files</description>
+				<label>GAMES</label>
+				<onclick>XBMC.ActivateWindow(13)</onclick>
+			</item>
+			<item id="8">
+				<description>Dashboard</description>
+				<label>VIDEO</label>
+				<onclick>XBMC.ActivateWindow(17)</onclick>
+			</item>	
+			<item id="8">
+				<description>My Music</description>
+				<label>PICTURES</label>
+				<onclick>XBMC.ActivateWindow(12)</onclick>
+			</item>
+
+
+		</content>
+	</control>
+
+</include>
+
+<!--<include name="homefocusacens">
+		<font>menufontacensfocus</font>
+		<posy>324</posy>
+</include>-->
+
+<include name="scrollerjunk">
+
+	<include>homeglass</include>
+
+		<control type="image">
+			<posx>632</posx>
+			<posy>622</posy>
+			<width>355</width>
+			<height>71</height>
+			<colordiffuse>EFFFFFFF</colordiffuse>
+			<texture>Home_Focus.png</texture>
+			<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
+			<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+			<animation effect="fade" time="500" condition="!Window.Previous(56) + !Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(17) + !Window.Previous(18) + !Window.Previous(19)">WindowOpen</animation>
+			<animation effect="fade" time="200" condition="!Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)">WindowClose</animation>
+		</control>
+
+		<control type="group">
+			<posx>0</posx>
+			<posy>3</posy>
+			<width>1280</width>
+			<height>720</height>
+			<include>scrollernobutton</include>
+		</control>
+
+		<include>nowplaying</include>
+		<include>homepolish</include>
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>610</posy>
+				<width>53</width>
+				<height>24</height>
+				<texture>glint.png</texture>
+				<visible>!Skin.HasSetting(nosfx)</visible>
+				<animation type="WindowOpen" reversible="false" condition="Window.IsActive(Home)">
+					<effect type="slide" start="0,0" end="1280,0" tween="cubic" easing="in" time="1000" />
+					<effect type="fade" start="0" end="100" time="100" />
+					<effect type="fade" start="100" end="0" delay="900" time="100" />
+				</animation>
+				<animation type="WindowClose" reversible="false" condition="Window.IsActive(Home)">
+					<effect type="fade" start="100" end="0" time="100" />
+				</animation>
+			</control>		
+		
+		
+			<control type="image">
+				<posx>0</posx>
+				<posy>680</posy>
+				<width>53</width>
+				<height>24</height>
+				<texture>glint.png</texture>
+				<visible>!Skin.HasSetting(nosfx)</visible>
+				<animation type="WindowOpen" reversible="false" condition="Window.IsActive(Home)">
+					<effect type="slide" start="0,0" end="1280,0" tween="cubic" easing="in" time="1000" />
+					<effect type="fade" start="0" end="100" time="100" />
+					<effect type="fade" start="100" end="0" delay="900" time="100" />
+				</animation>
+				<animation type="WindowClose" reversible="false" condition="Window.IsActive(Home)">
+					<effect type="fade" start="100" end="0" time="100" />
+				</animation>
+			</control>
+		
+		<control type="rss" id="1">
+			<description>rss feed</description>
+			<posy>697</posy>
+			<font>rssacens</font>
+			<include>rsstext</include>
+			<visible>!Player.HasVideo</visible>
+		</control>
+
+</include>
+
+</includes>

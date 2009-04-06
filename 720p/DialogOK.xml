@@ -1,0 +1,84 @@
+<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<zorder>1</zorder>
+	<include>common-fade</include>
+	<controls>
+
+<control type="group" id="901">
+		<posx>150</posx>
+		<posy>70</posy>
+				
+	<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>190</posy>
+		<width>795</width>
+		<height>220</height>
+		<texture>default\grass.png</texture>
+	</control>
+
+	<control type="label" id="2">
+		<description>dialog line 1</description>
+		<posx>90</posx>
+		<posy>200</posy>
+		<label>0</label>
+		<font>font13b</font>
+		<align>left</align>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="3">
+		<description>dialog line 2</description>
+		<posx>190</posx>
+		<posy>260</posy>
+		<label>0</label>
+		<font>font10</font>
+		<align>center</align>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="label" id="4">
+		<description>dialog line 3</description>
+		<posx>190</posx>
+		<posy>280</posy>
+		<label>0</label>
+		<font>font10</font>
+		<align>center</align>
+		<textcolor>FFffffff</textcolor>
+	</control>
+
+	<control type="button" id="10">
+		<description>OK button</description>
+		<posx>100</posx>
+		<posy>310</posy>
+		<width>90</width>
+		<height>32</height>
+		<align>center</align>
+		<texturefocus>Button-Home2.png</texturefocus>
+		<texturenofocus>Button-List.png</texturenofocus>
+		<label>186</label>
+		<align>center</align>
+	</control>
+
+		<control type="image">
+		<description>Black Panel</description>
+		<posx>63</posx>
+		<posy>140</posy>
+		<width>795</width>
+		<height>50</height>
+		<texture>popup.png</texture>
+	</control>
+	
+	<control type="label" id="1">
+		<description>Heading Label</description>
+		<posx>100</posx>
+		<posy>150</posy>
+		<width>400</width>
+		<height>16</height>
+		<align>left</align>
+		<label>0</label>
+		<font>font13b</font>
+	</control>
+	</control>
+	</controls>
+</window>

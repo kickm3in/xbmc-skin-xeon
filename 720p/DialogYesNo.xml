@@ -1,0 +1,119 @@
+<window id="100">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<zorder>1</zorder>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<posx>14</posx>
+		<posy>580</posy>
+		<width>1255</width>
+		<height>140</height>
+		<animation effect="slide" start="0,51" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,51" time="150">WindowClose</animation>
+		<texture>popup.png</texture>
+	</control>
+
+		<control type="button" id="11">
+			<posx>1148</posx>
+			<posy>681</posy>
+			<width>53</width>
+			<height>39</height>
+			<align>center</align>
+			<font>font13s</font>
+			<onleft>10</onleft>
+			<aligny>top</aligny>
+			<pulseonselect>false</pulseonselect>
+			<texturefocus>-</texturefocus>
+			<focusedcolor>d0ffffff</focusedcolor>
+			<animation effect="slide" start="0,41" end="0,0" time="150">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,41" time="150">WindowClose</animation>
+			<textcolor>FF575757</textcolor>
+			<label>107</label>
+
+			<scroll>true</scroll>
+		</control>
+
+		<control type="button" id="10">
+			<posx>1095</posx>
+			<posy>681</posy>
+			<width>53</width>
+			<height>39</height>
+			<textoffsetx>center</textoffsetx>
+			<aligny>top</aligny>
+			<onright>11</onright>	
+			<align>left</align>
+			<font>font13s</font>
+			<pulseonselect>false</pulseonselect>
+			<texturefocus>-</texturefocus>
+			<focusedcolor>d0ffffff</focusedcolor>
+			<animation effect="slide" start="0,41" end="0,0" time="150">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,41" time="150">WindowClose</animation>
+			<textcolor>FF575757</textcolor>
+			<label>106</label>
+
+			<scroll>true</scroll>
+		</control>
+
+		<control type="label" id="1">
+			<posx>53</posx>
+			<posy>681</posy>
+			<width>900</width>
+			<height>39</height>
+			<align>left</align>
+			<font>font13s</font>
+			<textcolor>d0ffffff</textcolor>
+			<animation effect="slide" start="0,41" end="0,0" time="150">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,41" time="150">WindowClose</animation>
+			<label>-</label>
+			<visible>false</visible>
+			<scroll>true</scroll>
+		</control>
+
+	<control type="label" id="2">
+		<description>dialog line 1</description>
+		<posx>53</posx>
+		<posy>601</posy>
+		<width>900</width>
+		<height>51</height>
+		<label>0</label>
+		<font>font13s</font>
+		<align>left</align>
+		<animation effect="slide" start="0,41" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,41" time="150">WindowClose</animation>
+		<textcolor>d0ffffff</textcolor>
+
+	</control>
+
+	<control type="label" id="3">
+		<description>dialog line 2</description>
+		<posx>53</posx>
+		<posy>641</posy>
+		<width>900</width>
+		<height>51</height>
+		<label>0</label>
+		<font>font13s</font>
+		<align>left</align>
+		<animation effect="slide" start="0,41" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,41" time="150">WindowClose</animation>
+		<textcolor>d0ffffff</textcolor>
+
+	</control>
+
+	<control type="label" id="4">
+		<description>dialog line 3</description>
+		<posx>53</posx>
+		<posy>681</posy>
+		<width>711</width>
+		<height>51</height>
+		<label>0</label>
+		<font>font13s</font>
+		<align>left</align>
+		<animation effect="slide" start="0,41" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,41" time="150">WindowClose</animation>
+		<textcolor>d0ffffff</textcolor>
+
+	</control>
+
+	</controls>
+</window>

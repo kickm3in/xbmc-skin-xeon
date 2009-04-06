@@ -1,0 +1,119 @@
+<window type="dialog" id="111">
+	<defaultcontrol>3112</defaultcontrol>
+	<zorder>3</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>484</posx>
+	<posy>130</posy>
+	</coordinates>
+	<include>context-fade</include>
+	<controls>
+
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>440</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>440</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>440</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+				
+		<control type="button" id="801">
+			<description>shutdown button</description>
+			<label>13005</label>
+			<onclick>XBMC.ShutDown()</onclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="802">
+			<description>reset button</description>
+			<include>contextformatgroup</include>
+			<label>13313</label>
+			<onclick>XBMC.Reset()</onclick>
+		</control>
+		<control type="button" id="803">
+			<description>reset button</description>
+			<label>$LOCALIZE[13313] XBMC</label>
+			<onclick>XBMC.RestartApp()</onclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="804">
+			<description>set alarm</description>
+			<label>20150</label>
+			<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown())</onclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="805">
+			<description>reset button</description>
+			<label>Now playing</label>
+			<onclick>XBMC.ActivateWindow(107)</onclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="806">
+			<description>reset button</description>
+			<label>Set backdrops</label>
+			<onclick>XBMC.ActivateWindow(601)</onclick>
+			<include>contextformatgroup</include>
+			<visible>Window.IsVisible(Home)</visible>
+		</control>
+		<control type="button" id="807">
+			<description>reset button</description>
+			<label>View types</label>
+			<onclick>XBMC.ActivateWindow(602)</onclick>
+			<include>contextformatgroup</include>
+			<visible>!Window.IsVisible(Home)</visible>
+		</control>
+		<control type="button" id="808">
+			<description>reset button</description>
+			<label>Customise Home</label>
+			<onclick>XBMC.ActivateWindow(600)</onclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="809">
+			<description>reset button</description>
+			<label>Choose icon set</label>
+			<onclick>XBMC.ActivateWindow(603)</onclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="810">
+			<description>reset button</description>
+			<label>Switch Home menu position</label>
+			<onclick>Skin.ToggleSetting(drophome)</onclick>
+			<onclick>XBMC.ReplaceWindow(Home)</onclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="811">
+			<description>reset button</description>
+			<label>Toggle visualisation</label>
+			<onclick>Skin.ToggleSetting(visualisation)</onclick>
+			<include>contextformatgroup</include>
+		</control>
+	</control>
+	</controls>
+</window>

@@ -1,0 +1,227 @@
+<window id="126">
+	<defaultcontrol>450</defaultcontrol>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>common-fade</include>
+	<controls>
+
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>browserback.png</texture>
+		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>browserback_xbox.png</texture>
+		<visible>Skin.HasSetting(lowerres)</visible>
+	</control>
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>36</posx>
+		<posy>82</posy>
+		<width>1209</width>
+		<height>557</height>
+		<texture>browserback_eee.png</texture>
+		<visible>Skin.HasSetting(eeemode)</visible>
+	</control>
+	
+	<control type="label" id="412">
+		<description>Path Label</description>
+		<posx>140</posx>
+		<posy>162</posy>
+		<width>510</width>
+		<align>left</align>
+		<font>fruity19b</font>
+		<haspath>false</haspath>
+		<textcolor>FF8f8f8f</textcolor>
+		<visible>[!Window.IsActive(PlayerControls) + !Window.IsActive(128)] | Window.Previous(128)</visible>
+	</control>
+	
+	<control type="image">
+		<posx>130</posx>
+		<posy>197</posy>
+		<width>542</width>
+		<height>4</height>
+		<texture>browserdivider.png</texture>
+	</control>
+	
+	<control type="list" id="450">
+		<posx>130</posx>
+		<posy>201</posy>
+		<width>650</width>
+		<height>280</height>
+		<onleft>413</onleft>
+		<onright>413</onright>
+		<onup>450</onup>
+		<ondown>450</ondown>
+		<pagecontrol>90</pagecontrol>
+		<scrolltime>0</scrolltime>
+		<itemlayout height="41">
+			<control type="label">
+				<posx>30</posx>
+				<posy>4</posy>
+				<width>400</width>
+				<height>30</height>
+				<font>fruity19b</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>542</width>
+				<height>4</height>
+				<texture>browserdivider.png</texture>
+			</control>
+		</itemlayout>
+		<focusedlayout height="41">
+			<control type="label">
+				<posx>30</posx>
+				<posy>4</posy>
+				<width>400</width>
+				<height>30</height>
+				<font>fruity19b</font>
+				<textcolor>FFc1ff03</textcolor>
+				<scroll>true</scroll>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>35</posy>
+				<width>542</width>
+				<height>4</height>
+				<texture>browserdivider.png</texture>
+			</control>
+ 		</focusedlayout>
+	</control>
+	
+	<control type="image">
+		<posx>800</posx>
+		<posy>140</posy>
+		<width>350</width>
+		<height>350</height>
+		<info>ListItem.Icon</info>
+		<aspectratio>scale</aspectratio>
+		<visible>!Window.IsVisible(24) + !Window.IsVisible(25)</visible>
+	</control>
+	
+	<control type="image">
+		<posx>800</posx>
+		<posy>140</posy>
+		<width>350</width>
+		<height>350</height>
+		<info>ListItem.Icon</info>
+		<aspectratio>keep</aspectratio>
+		<visible>Window.IsVisible(24) | Window.IsVisible(25)</visible>
+	</control>
+
+	<control type="image">
+		<posx>800</posx>
+		<posy>400</posy>
+		<width>350</width>
+		<height>70</height>
+		<texture>browserinfoback.png</texture>
+		<aspectratio>scale</aspectratio>
+		<visible>Skin.HasSetting(browserinfo) + !IsEmpty(ListItem.Size) + !Window.IsVisible(24) + !Window.IsVisible(25)</visible>
+		<include>common-fade</include>
+		<colordiffuse>d0FFFFFF</colordiffuse>
+	</control>
+	
+	<control type="image">
+		<posx>800</posx>
+		<posy>140</posy>
+		<width>350</width>
+		<height>350</height>
+		<texture>browserframe.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>	
+
+	<control type="label">
+		<posx>810</posx>
+		<posy>400</posy>
+		<width>330</width>
+		<height>70</height>
+		<font>fruity17</font>
+		<textcolor>FFFFFFFF</textcolor>
+		<scroll>false</scroll>
+		<aligny>center</aligny>
+		<label>[COLOR FF8f8f8f]Date:[/COLOR] [COLOR FFFFFFFF]$INFO[ListItem.Date][/COLOR][CR][COLOR FF8f8f8f]Size:[/COLOR] [COLOR FFFFFFFF]$INFO[ListItem.Size]</label>
+		<visible>!IsEmpty(ListItem.Size) + !Window.IsVisible(24) + !Window.IsVisible(25) + Skin.HasSetting(browserinfo)</visible>
+	</control>
+	
+	<control type="image">
+		<posx>800</posx>
+		<posy>490</posy>
+		<width>350</width>
+		<height>350</height>
+		<texture flipy="true" diffuse="browsermask.png">$INFO[listitem.icon]</texture>
+		<aspectratio>scale</aspectratio>
+		<visible>!Window.IsVisible(24) + !Window.IsVisible(25)</visible>
+	</control>
+	
+	<control type="image">
+		<posx>800</posx>
+		<posy>490</posy>
+		<width>350</width>
+		<height>350</height>
+		<texture flipy="true" diffuse="browsermask.png">$INFO[listitem.icon]</texture>
+		<aspectratio>keep</aspectratio>
+		<visible>Window.IsVisible(24) | Window.IsVisible(25)</visible>
+	</control>
+	
+	<control type="image">
+		<posx>800</posx>
+		<posy>490</posy>
+		<width>350</width>
+		<height>350</height>
+		<colordiffuse>d0FFFFFF</colordiffuse>
+		<texture flipy="true" diffuse="Thumb_Mask.png">browserframe.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
+
+	<control type="grouplist">
+		<include>browsermenugroup</include>
+
+		<control type="button" id="8">
+		<label>7</label>
+		<include>contextformatbrowser</include>
+		<onclick>Skin.Togglesetting(browserinfo)</onclick>
+		</control>
+
+		<control type="button" id="9">
+		<label>Toggle info</label>
+		<include>contextformatbrowser</include>
+		<onclick>Skin.Togglesetting(browserinfo)</onclick>
+		</control>
+
+		<control type="button" id="415">
+		<label>119</label>
+		<include>contextformatbrowser</include>
+		</control>
+
+		<control type="button" id="414">
+		<label>222</label>
+		<include>contextformatbrowser</include>
+		</control>
+
+		<control type="button" id="413">
+		<label>186</label>
+		<include>contextformatbrowser</include>
+		</control>
+	</control>
+	
+	</controls>
+</window>

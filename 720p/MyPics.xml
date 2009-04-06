@@ -1,0 +1,176 @@
+<window id="2">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomPictures)</info>
+		<visible>!Skin.HasSetting(CustomMusic) + !Skin.HasSetting(CustomPicturesFoldOn)</visible>
+		<visible>!Skin.HasSetting(AdultPics) + !Skin.HasSetting(picturecomics) + !Control.IsVisible(57) + !Control.IsVisible(59) + !Control.IsVisible(51)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomPicturesFolder)</info>
+		<visible>!Skin.HasSetting(CustomPicturesFolder)</visible>
+		<visible>!Skin.HasSetting(AdultPics) + !Skin.HasSetting(picturecomics) + !Control.IsVisible(57) + !Control.IsVisible(59) + !Control.IsVisible(51)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomAdult)</info>
+		<visible>Skin.HasSetting(AdultPics) + !Skin.HasSetting(CustomAdultFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomAdultFolder)</info>
+		<visible>Skin.HasSetting(AdultPics) + !Skin.HasSetting(CustomAdultFolder)</visible>
+	</control>
+	
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomComics)</info>
+		<visible>Skin.HasSetting(ComicPics) + !Skin.HasSetting(CustomComicFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomComicFolder)</info>
+		<visible>Skin.HasSetting(ComicPics) + !Skin.HasSetting(CustomComicFolder)</visible>
+	</control>
+
+	<include>wallglass</include>
+	<include>vignette</include>
+	<include>Viewtype_Photowall</include>
+	<include>wallmenu</include>
+
+	<control type="group">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>720</width>
+	<height>576</height>
+	<include>common-fade-quick</include>
+
+	<include>mediaglass</include>
+	<include>Window-Files</include>
+
+	<control type="label">
+		<include>wallmenu-slide</include>
+		<label>PICTURES</label>
+		<include>medialabel</include>
+		<visible>!Skin.HasSetting(picturecomics)</visible>
+	</control>
+	
+	<control type="label">
+		<include>wallmenu-slide</include>
+		<label>COMICS</label>
+		<include>medialabel</include>
+		<visible>Skin.HasSetting(picturecomics)</visible>
+	</control>
+
+	<control type="grouplist" id="77">
+		<include>wallmenu-slide</include>
+		<include>mediamenugroup</include>
+		<visible>!Skin.HasSetting(AdultPics)</visible>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="3">
+		<label>103</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="6">
+		<label>108</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="togglebutton" id="9">
+		<label>Sequential</label>
+		<altlabel>Random</altlabel>
+		<include>mediamenu</include>
+		</control>
+		
+		<control type="button" id="555">
+		<label>View types</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ActivateWindow(602)</onclick>
+		</control>
+		
+		<control type="togglebutton" id="556">
+			<label>Info On</label>
+			<altlabel>Info Off</altlabel>
+			<include>mediamenu</include>
+			<onclick>Skin.SetBool(wallinfopanelpics)</onclick>
+			<altclick>Skin.Reset(wallinfopanelpics)</altclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+
+	</control>
+
+	<control type="grouplist" id="77">
+		<include>wallmenu-slide</include>
+		<include>mediamenugroup</include>
+		<visible>Skin.HasSetting(AdultPics)</visible>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="3">
+		<label>103</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="4">
+		<label>Videos</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ReplaceWindow(MyVideos,Adult)</onclick>
+		</control>
+
+		<control type="button" id="6">
+		<label>108</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="togglebutton" id="9">
+		<label>Sequential</label>
+		<altlabel>Random</altlabel>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="555">
+		<label>View types</label>
+		<include>mediamenu</include>
+		<onclick>XBMC.ActivateWindow(602)</onclick>
+		</control>
+
+		<control type="togglebutton" id="556">
+			<label>Info Off</label>
+			<altlabel>Info On</altlabel>
+			<include>mediamenu</include>
+			<onclick>Skin.SetBool(wallinfopanelpics)</onclick>
+			<altclick>Skin.Reset(wallinfopanelpics)</altclick>
+			<visible>Control.IsVisible(51)</visible>
+		</control>
+		
+	</control>
+
+
+	<include>Viewtype_List</include>
+	<include>Viewtype_Icon</include>
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<include>time</include>
+	</control>
+
+	</controls>
+</window>

@@ -1,0 +1,467 @@
+<includes>
+
+	<include name="wallpaper">
+
+	<control type="visualisation">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<visible>Skin.HasSetting(Visualisation) + Player.HasMedia</visible>
+	</control>
+	<control type="videowindow">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<visible>Skin.HasSetting(videohome) + Player.HasMedia</visible>
+	</control> 
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomSettings)</info>
+		<visible>[[Container(302).HasFocus(8) + Control.IsVisible(302)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]] | [[Container(301).HasFocus(8) + Control.IsVisible(301)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]]</visible>
+		<visible>!Skin.HasSetting(CustomSettings) + !Skin.HasSetting(CustomSettingsFoldOn)</visible>
+        <animation effect="fade" delay = "200" time="800">Hidden</animation> -->
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+		</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomSettingsFolder)</info>
+		<visible>[[Container(302).HasFocus(8) + Control.IsVisible(302)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]] | [[Container(301).HasFocus(8) + Control.IsVisible(301)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]] + !Skin.HasSetting(CustomSettingsFolder)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>ABOUT-16x9.png</imagepath>
+		<visible>[Container(300).HasFocus(99) + Control.IsVisible(300)]  + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>	
+	
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomPictures)</info>
+		<visible>[Container(300).HasFocus(5) + Control.IsVisible(300)]  + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomPictures) + !Skin.HasSetting(CustomPicturesFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomPicturesFolder)</info>
+		<visible>[Container(300).HasFocus(5) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomPicturesFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomWeather)</info>
+		<visible>[Container(300).HasFocus(10) + Control.IsVisible(300)]  + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomWeather) + !Skin.HasSetting(CustomWeatherFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>$INFO[Skin.String(CustomWeatherFolder)]$INFO[Weather.FanartCode]</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<visible>[Container(300).HasFocus(10) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomWeatherFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomGames)</info>
+		<visible>[Container(300).HasFocus(2) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomGames) + !Skin.HasSetting(CustomGamesFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomGamesFolder)</info>
+		<visible>[Container(300).HasFocus(2) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomGamesFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomArcade)</info>
+		<visible>[Container(300).HasFocus(3) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomArcade) + !Skin.HasSetting(CustomArcadeFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomArcadeFolder)</info>
+		<visible>[Container(300).HasFocus(3) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomArcadeFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomApps)</info>
+		<visible>[Container(300).HasFocus(4) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomApps) + !Skin.HasSetting(CustomAppsFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomAppsFolder)</info>
+		<visible>[Container(300).HasFocus(4) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomAppsFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>default</imagepath>
+		<info>Skin.String(CustomMovies)</info>
+		<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomMovies) + !Skin.HasSetting(CustomMoviesFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomMoviesFolder)</info>
+		<visible>[Container(300).HasFocus(6) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomMoviesFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87) + !Control.IsVisible(301) + !Control.IsVisible(302)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>default</imagepath>
+		<info>Skin.String(CustomDisc)</info>
+		<visible>[Container(300).HasFocus(13) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomDisc) + !Skin.HasSetting(CustomDiscFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>special://xbmc/BACKDROPS/Disc</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomDiscFolder)</info>
+		<visible>[Container(300).HasFocus(13) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomMoviesFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87) + !Control.IsVisible(301) + !Control.IsVisible(302)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+	
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomClips)</info>
+		<visible>[Container(300).HasFocus(11) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomClips) + !Skin.HasSetting(CustomClipsFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomClipsFolder)</info>
+		<visible>[Container(300).HasFocus(11) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomClipsFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>[Container(300).HasFocus(1) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomMusic) + !Skin.HasSetting(CustomMusicFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>[Container(300).HasFocus(1) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomMusicFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>[Container(300).HasFocus(15) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomMusic) + !Skin.HasSetting(CustomMusicFoldOn)</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>[Container(300).HasFocus(15) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomMusicFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+	
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomTV)</info>
+		<visible>[Container(300).HasFocus(7) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomTV) + !Skin.HasSetting(CustomTVFoldOn)</visible>
+                <visible>!Control.IsVisible(87) + !Control.IsVisible(301) + !Control.IsVisible(302)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomTVFolder)</info>
+		<visible>[Container(300).HasFocus(7) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomTVFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomAdult)</info>
+		<visible>[Container(300).HasFocus(12) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomAdult) + !Skin.HasSetting(CustomAdultFoldOn)</visible>
+                <visible>!Control.IsVisible(87) + !Control.IsVisible(301) + !Control.IsVisible(302)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>special://xbmc/BACKDROPS/Adult</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomAdultFolder)</info>
+		<visible>[Container(300).HasFocus(12) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomAdultFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+	
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomComics)</info>
+		<visible>[Container(300).HasFocus(14) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)]</visible>
+		<visible>!Skin.HasSetting(CustomAdult) + !Skin.HasSetting(CustomAdultFoldOn)</visible>
+                <visible>!Control.IsVisible(87) + !Control.IsVisible(301) + !Control.IsVisible(302)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>special://xbmc/BACKDROPS/Comics</imagepath>
+		<timeperimage>20000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomComicsFolder)</info>
+		<visible>[Container(300).HasFocus(14) + Control.IsVisible(300)] + [!Player.HasMedia | !Skin.HasSetting(Visualisation) | !Skin.HasSetting(videohome)] + !Skin.HasSetting(CustomAdultFolder)</visible>
+		<visible>[!Control.IsVisible(301) + !Control.IsVisible(302)]</visible>
+                <visible>!Control.IsVisible(87)</visible>
+		<visible>!Player.HasVideo</visible>					
+		<include>backgroundfade</include>
+	</control>
+
+	</include>
+
+</includes>

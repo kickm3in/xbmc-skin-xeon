@@ -1,0 +1,273 @@
+<window type="dialog" id="601">
+	<defaultcontrol>3112</defaultcontrol>
+	<zorder>3</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>484</posx>
+	<posy>130</posy>
+	</coordinates>
+	<include>context-fade</include>
+	<visible>Window.IsActive(601) + !Window.IsActive(126)</visible>
+	<controls>
+
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>440</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>440</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>440</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+		<control type="button" id="801">
+			<description>shutdown button</description>
+			<posy>0</posy>
+			<label>Movies</label>
+			<label>Set Movies background image</label>
+			<altlabel>Reset Movies background image</altlabel>
+			<onclick>Skin.SetImage(CustomMovies)</onclick>
+			<altclick>Skin.Reset(CustomMovies)</altclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="802">
+			<description>shutdown button</description>
+			<label>Movies (Folder)</label>
+			<onclick>Skin.SetPath(CustomMoviesFolder)</onclick>
+			<onclick>Skin.SetBool(CustomMoviesFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomMovies)</onclick>
+			<altclick>Skin.Reset(CustomMoviesFolder)</altclick>
+			<altclick>Skin.Reset(CustomMoviesFoldOn)</altclick>
+			<label>Set Movies background folder</label>
+			<altlabel>Clear Movies background folder</altlabel>
+			<usealttexture>Skin.String(CustomMoviesFolder)</usealttexture>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="803">
+			<description>reset button</description>
+			<label>TV Shows</label>
+			<altlabel>Reset TV Shows background image</altlabel>
+			<onclick>Skin.SetImage(CustomTV)</onclick>
+			<altclick>Skin.Reset(CustomTV)</altclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="804">
+			<description>reset button</description>
+			<label>TV Shows (Folder)</label>
+			<onclick>Skin.SetPath(CustomTVFolder)</onclick>
+			<onclick>Skin.SetBool(CustomTVFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomTV)</onclick>
+			<altclick>Skin.Reset(CustomTVFolder)</altclick>
+			<altclick>Skin.Reset(CustomTVFoldOn)</altclick>
+			<label>Set TV Shows background folder</label>
+			<altlabel>Clear TV Shows background folder</altlabel>
+			<usealttexture>Skin.String(CustomTVFolder)</usealttexture>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="805">
+			<description>set alarm</description>
+			<label>Clips</label>
+			<altlabel>Reset Clips background image</altlabel>
+			<onclick>Skin.SetImage(CustomClips)</onclick>
+			<altclick>Skin.Reset(CustomClips)</altclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="806">
+			<description>reset button</description>
+			<label>Clips (Folder)</label>
+			<onclick>Skin.SetPath(CustomClipsFolder)</onclick>
+			<onclick>Skin.SetBool(CustomClipsFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomClips)</onclick>
+			<altclick>Skin.Reset(CustomClipsFolder)</altclick>
+			<altclick>Skin.Reset(CustomClipsFoldOn)</altclick>
+			<altlabel>Clear Clips background folder</altlabel>
+			<usealttexture>Skin.String(CustomClipsFolder)</usealttexture>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="807">
+			<description>reset button</description>
+			<label>Pictures</label>
+			<altlabel>Reset Pictures background image</altlabel>
+			<onclick>Skin.SetImage(CustomPictures)</onclick>
+			<altclick>Skin.Reset(CustomPictures)</altclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="808">
+			<description>reset button</description>
+			<label>Pictures (Folder)</label>
+			<onclick>Skin.SetPath(CustomPicturesFolder)</onclick>
+			<onclick>Skin.SetBool(CustomPicturesFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomPictures)</onclick>
+			<altclick>Skin.Reset(CustomPicturesFolder)</altclick>
+			<altclick>Skin.Reset(CustomPicturesFoldOn)</altclick>
+			<altlabel>Clear Pictures background folder</altlabel>
+			<usealttexture>Skin.String(CustomPicturesFolder)</usealttexture>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="809">
+			<description>reset button</description>
+			<label>Music</label>
+			<onclick>Skin.SetImage(CustomMusic)</onclick>
+			<altclick>Skin.Reset(CustomMusic)</altclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="810">
+			<description>reset button</description>
+			<label>Music (Folder)</label>
+			<onclick>Skin.SetPath(CustomMusicFolder)</onclick>
+			<onclick>Skin.SetBool(CustomMusicFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomMusic)</onclick>
+			<altclick>Skin.Reset(CustomMusicFolder)</altclick>
+			<altclick>Skin.Reset(CustomMusicFoldOn)</altclick>
+			<usealttexture>Skin.String(CustomMusicFolder)</usealttexture>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="811">
+			<description>reset button</description>
+			<label>Games</label>
+			<onclick>Skin.SetImage(CustomGames)</onclick>
+			<altclick>Skin.Reset(CustomGames)</altclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="812">
+			<description>reset button</description>
+			<label>Games (Folder)</label>
+			<onclick>Skin.SetPath(CustomGamesFolder)</onclick>
+			<onclick>Skin.SetBool(CustomGamesFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomGames)</onclick>
+			<altclick>Skin.Reset(CustomGamesFolder)</altclick>
+			<altclick>Skin.Reset(CustomGamesFoldOn)</altclick>
+			<usealttexture>Skin.String(CustomGamesFolder)</usealttexture>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="813">
+			<description>reset button</description>
+			<label>Arcade</label>
+			<onclick>Skin.SetImage(CustomArcade)</onclick>
+			<altclick>Skin.Reset(CustomArcade)</altclick>
+			<include>contextformatgroup</include>
+		</control>
+		<control type="button" id="814">
+			<description>reset button</description>
+			<label>Arcade (Folder)</label>
+			<onclick>Skin.SetPath(CustomArcadeFolder)</onclick>
+			<onclick>Skin.SetBool(CustomArcadeFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomArcade)</onclick>
+			<altclick>Skin.Reset(CustomArcadeFolder)</altclick>
+			<altclick>Skin.Reset(CustomArcadeFoldOn)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="815">
+			<description>reset button</description>
+			<label>Apps</label>
+			<onclick>Skin.SetImage(CustomApps)</onclick>
+			<altclick>Skin.Reset(CustomApps)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="816">
+			<description>reset button</description>
+			<label>Apps (Folder)</label>
+			<onclick>Skin.SetPath(CustomAppsFolder)</onclick>
+			<onclick>Skin.SetBool(CustomAppsFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomApps)</onclick>
+			<altclick>Skin.Reset(CustomAppsFolder)</altclick>
+			<altclick>Skin.Reset(CustomAppsFoldOn)</altclick>
+			<include>contextformatgroup</include>
+		</control>			
+		<control type="button" id="817">
+			<description>reset button</description>
+			<label>Settings</label>
+			<onclick>Skin.SetImage(CustomSettings)</onclick>
+			<altclick>Skin.Reset(CustomSettings)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="818">
+			<description>reset button</description>
+			<label>Settings (Folder)</label>
+			<onclick>Skin.SetPath(CustomSettingsFolder)</onclick>
+			<onclick>Skin.SetBool(CustomSettingsFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomSettings)</onclick>
+			<altclick>Skin.Reset(CustomSettingsFolder)</altclick>
+			<altclick>Skin.Reset(CustomSettingsFoldOn)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="819">
+			<description>reset button</description>
+			<label>Scripts</label>
+			<onclick>Skin.SetImage(CustomScripts)</onclick>
+			<altclick>Skin.Reset(CustomScripts)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="820">
+			<description>reset button</description>
+			<label>Scripts (Folder)</label>
+			<onclick>Skin.SetPath(CustomScriptsFolder)</onclick>
+			<onclick>Skin.SetBool(CustomScriptsFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomScripts)</onclick>
+			<altclick>Skin.Reset(CustomScriptsFolder)</altclick>
+			<altclick>Skin.Reset(CustomScriptsFoldOn)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="821">
+			<description>reset button</description>
+			<label>Adult</label>
+			<onclick>Skin.SetImage(CustomAdult)</onclick>
+			<altclick>Skin.Reset(CustomAdult)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="822">
+			<description>reset button</description>
+			<label>Adult (Folder)</label>
+			<onclick>Skin.SetPath(CustomAdultFolder)</onclick>
+			<onclick>Skin.SetBool(CustomAdultFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomAdult)</onclick>
+			<altclick>Skin.Reset(CustomAdultFolder)</altclick>
+			<altclick>Skin.Reset(CustomAdultFoldOn)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="823">
+			<description>reset button</description>
+			<label>Weather</label>
+			<onclick>Skin.SetImage(CustomWeather)</onclick>
+			<altclick>Skin.Reset(CustomWeather)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+		<control type="button" id="824">
+			<description>reset button</description>
+			<label>Weather (Folder)</label>
+			<onclick>Skin.SetPath(CustomWeatherFolder)</onclick>
+			<onclick>Skin.SetBool(CustomWeatherFoldOn)</onclick>
+			<onclick>Skin.Reset(CustomWeather)</onclick>
+			<altclick>Skin.Reset(CustomWeatherFolder)</altclick>
+			<altclick>Skin.Reset(CustomWeatherFoldOn)</altclick>
+			<include>contextformatgroup</include>
+		</control>	
+	</control>
+	</controls>
+</window>

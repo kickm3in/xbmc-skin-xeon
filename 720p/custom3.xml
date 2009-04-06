@@ -1,0 +1,935 @@
+<window type="dialog" id="602">
+	<defaultcontrol>3112</defaultcontrol>
+	<zorder>3</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<include>context-fade</include>
+	<visible>Window.IsActive(602) + !Window.IsActive(126)</visible>
+	<controls>
+
+	<control type="group">
+	<posx>484</posx>
+	<posy>254</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(24) + Skin.HasSetting(videomovies)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>176</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>176</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>176</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listmovies)</onclick>
+				<selected>!Skin.HasSetting(listmovies)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(postermovies)</onclick>
+				<selected>!Skin.HasSetting(postermovies)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallmovies)</onclick>
+				<selected>!Skin.HasSetting(wallmovies)</selected>
+			</control>
+			<control type="radiobutton" id="804">
+				<description>shutdown button</description>
+				<label>Showcase</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(showcasemovies)</onclick>
+				<selected>!Skin.HasSetting(showcasemovies)</selected>
+			</control>
+
+		</control>
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>254</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(25) + Skin.HasSetting(videomovies)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>176</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>176</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>176</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listmovieslib)</onclick>
+				<selected>!Skin.HasSetting(listmovieslib)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(postermovieslib)</onclick>
+				<selected>!Skin.HasSetting(postermovieslib)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallmovieslib)</onclick>
+				<selected>!Skin.HasSetting(wallmovieslib)</selected>
+			</control>
+			<control type="radiobutton" id="804">
+				<description>shutdown button</description>
+				<label>Showcase</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(showcasemovieslib)</onclick>
+				<selected>!Skin.HasSetting(showcasemovieslib)</selected>
+			</control>
+
+		</control>
+	</control>
+
+	<control type="group">
+	<posx>484</posx>
+	<posy>232</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(24) + Skin.HasSetting(videotv)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>220</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>220</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>220</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listtv)</onclick>
+				<selected>!Skin.HasSetting(listtv)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(postertv)</onclick>
+				<selected>!Skin.HasSetting(postertv)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(walltv)</onclick>
+				<selected>!Skin.HasSetting(walltv)</selected>
+			</control>
+			<control type="radiobutton" id="804">
+				<description>shutdown button</description>
+				<label>Showcase</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(showcasetv)</onclick>
+				<selected>!Skin.HasSetting(showcasetv)</selected>
+			</control>
+			<control type="radiobutton" id="805">
+				<description>shutdown button</description>
+				<label>Banner</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(showcasewidetv)</onclick>
+				<selected>Skin.HasSetting(showcasewidetv)</selected>
+			</control>
+
+		</control>
+		
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>210</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(25) + Skin.HasSetting(videotv)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>264</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>264</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>264</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listtvlib)</onclick>
+				<selected>!Skin.HasSetting(listtvlib)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(postertvlib)</onclick>
+				<selected>!Skin.HasSetting(postertvlib)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(walltvlib)</onclick>
+				<selected>!Skin.HasSetting(walltvlib)</selected>
+			</control>
+			<control type="radiobutton" id="804">
+				<description>shutdown button</description>
+				<label>Showcase</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(showcasetvlib)</onclick>
+				<selected>!Skin.HasSetting(showcasetvlib)</selected>
+			</control>
+			<control type="radiobutton" id="805">
+				<description>shutdown button</description>
+				<label>Episode</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(episodetvlib)</onclick>
+				<selected>!Skin.HasSetting(episodetvlib)</selected>
+			</control>
+			<control type="radiobutton" id="806">
+				<description>shutdown button</description>
+				<label>Banner</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(showcasewidetvlib)</onclick>
+				<selected>Skin.HasSetting(showcasewidetvlib)</selected>
+			</control>
+
+		</control>
+		
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>298</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(501)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>88</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>88</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>88</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>Roller List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listmusic)</onclick>
+				<selected>!Skin.HasSetting(listmusic)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallmusic)</onclick>
+				<selected>!Skin.HasSetting(wallmusic)</selected>
+			</control>
+
+		</control>
+		
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>298</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(502)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>88</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>88</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>88</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>Roller List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listmusiclib)</onclick>
+				<selected>!Skin.HasSetting(listmusiclib)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallmusiclib)</onclick>
+				<selected>!Skin.HasSetting(wallmusiclib)</selected>
+			</control>
+
+		</control>
+		
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>276</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(2)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>132</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>132</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>132</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listpictures)</onclick>
+				<selected>!Skin.HasSetting(listpictures)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Icon</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(iconpictures)</onclick>
+				<selected>!Skin.HasSetting(iconpictures)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallpictures)</onclick>
+				<selected>!Skin.HasSetting(wallpictures)</selected>
+			</control>
+
+		</control>
+		
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>254</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(1) + Skin.HasSetting(programgames)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>176</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>176</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>176</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listgames)</onclick>
+				<selected>!Skin.HasSetting(listgames)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(postergames)</onclick>
+				<selected>!Skin.HasSetting(postergames)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallgames)</onclick>
+				<selected>!Skin.HasSetting(wallgames)</selected>
+			</control>
+			<control type="radiobutton" id="804">
+				<description>shutdown button</description>
+				<label>Quad</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(quadgames)</onclick>
+				<selected>!Skin.HasSetting(quadgames)</selected>
+			</control>
+
+		</control>
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>254</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(1) + Skin.HasSetting(programarcade)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>176</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>176</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>176</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listarcade)</onclick>
+				<selected>!Skin.HasSetting(listarcade)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(posterarcade)</onclick>
+				<selected>!Skin.HasSetting(posterarcade)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallarcade)</onclick>
+				<selected>!Skin.HasSetting(wallarcade)</selected>
+			</control>
+			<control type="radiobutton" id="804">
+				<description>shutdown button</description>
+				<label>Quad</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(quadarcade)</onclick>
+				<selected>!Skin.HasSetting(quadarcade)</selected>
+			</control>
+
+		</control>
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>276</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(20)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>132</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>132</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>132</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listscripts)</onclick>
+				<selected>!Skin.HasSetting(listscripts)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Icon</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(iconscripts)</onclick>
+				<selected>!Skin.HasSetting(iconscripts)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallscripts)</onclick>
+				<selected>!Skin.HasSetting(wallscripts)</selected>
+			</control>
+
+		</control>
+		
+	</control>
+
+	<control type="group">
+	<posx>484</posx>
+	<posy>254</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(1) + Skin.HasSetting(programapps)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>176</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>176</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>176</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listapps)</onclick>
+				<selected>!Skin.HasSetting(listapps)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(posterapps)</onclick>
+				<selected>!Skin.HasSetting(posterapps)</selected>
+			</control>
+			<control type="radiobutton" id="803">
+				<description>shutdown button</description>
+				<label>Wall</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(wallapps)</onclick>
+				<selected>!Skin.HasSetting(wallapps)</selected>
+			</control>
+			<control type="radiobutton" id="804">
+				<description>shutdown button</description>
+				<label>Quad</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(quadapps)</onclick>
+				<selected>!Skin.HasSetting(quadapps)</selected>
+			</control>
+
+		</control>
+	</control>
+
+	<control type="group">
+	<posx>484</posx>
+	<posy>298</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(24) + Skin.HasSetting(videoadult)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>88</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>88</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>88</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listadult)</onclick>
+				<selected>!Skin.HasSetting(listadult)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(posteradult)</onclick>
+				<selected>!Skin.HasSetting(posteradult)</selected>
+			</control>
+
+		</control>
+		
+	</control>
+	
+	<control type="group">
+	<posx>484</posx>
+	<posy>298</posy>
+	<width>313</width>
+	<height>500</height>
+	<visible>Window.IsVisible(24) + Skin.HasSetting(videoclips)</visible>
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-18</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contexttop.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>313</width>
+			<height>88</height>
+			<texture>contextmiddle.png</texture>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>88</posy>
+			<width>313</width>
+			<height>18</height>
+			<texture>contextbottom.png</texture>
+		</control>
+		
+		<control type="grouplist" id="3112">
+			<posx>19</posx>
+			<posy>0</posy>
+			<width>275</width>
+			<height>88</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<include>common-fade-quick</include>
+		
+			<control type="radiobutton" id="801">
+				<description>shutdown button</description>
+				<label>List</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(listclips)</onclick>
+				<selected>!Skin.HasSetting(listclips)</selected>
+			</control>
+			<control type="radiobutton" id="802">
+				<description>shutdown button</description>
+				<label>Poster</label>
+				<include>contextformatleft</include>
+				<onclick>Skin.Togglesetting(posterclips)</onclick>
+				<selected>!Skin.HasSetting(posterclips)</selected>
+			</control>
+
+		</control>
+		
+	</control>
+	
+	</controls>
+</window>

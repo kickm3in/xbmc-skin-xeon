@@ -1,0 +1,239 @@
+<includes>
+
+	<include name="viewport">
+		<posx>782</posx>
+		<posy>466</posy>
+		<width>409</width>
+		<height>230</height>
+		<animation effect="slide" start="0,749" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,749" time="150">WindowClose</animation>
+		<animation effect="fade" start="0" end="100" time="150">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="150">Hidden</animation>		
+	</include>
+
+	<include name="backpreview">
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMovies)</info>
+		<visible>Control.HasFocus(400)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomMoviesFolder)</info>
+		<visible>Control.HasFocus(401)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomTV)</info>
+		<visible>Control.HasFocus(402)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomTVFolder)</info>
+		<visible>Control.HasFocus(403)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomClips)</info>
+		<visible>Control.HasFocus(404)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomClipsFolder)</info>
+		<visible>Control.HasFocus(405)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomPictures)</info>
+		<visible>Control.HasFocus(406)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomPicturesFolder)</info>
+		<visible>Control.HasFocus(407)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>Control.HasFocus(408)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>Control.HasFocus(409)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomGames)</info>
+		<visible>Control.HasFocus(410)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomGamesFolder)</info>
+		<visible>Control.HasFocus(411)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomArcade)</info>
+		<visible>Control.HasFocus(412)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomArcadeFolder)</info>
+		<visible>Control.HasFocus(413)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Settings</imagepath>
+		<info>Skin.String(CustomApps)</info>
+		<visible>Control.HasFocus(414)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomAppsFolder)</info>
+		<visible>Control.HasFocus(415)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomFiles)</info>
+		<visible>Control.HasFocus(416)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomFilesFolder)</info>
+		<visible>Control.HasFocus(417)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Settings</imagepath>
+		<info>Skin.String(CustomSettings)</info>
+		<visible>Control.HasFocus(418)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomSettingsFolder)</info>
+		<visible>Control.HasFocus(419)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Settings</imagepath>
+		<info>Skin.String(CustomScripts)</info>
+		<visible>Control.HasFocus(420)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomScriptsFolder)</info>
+		<visible>Control.HasFocus(421)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomAdult)</info>
+		<visible>Control.HasFocus(422)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomAdultFolder)</info>
+		<visible>Control.HasFocus(423)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomWeather)</info>
+		<visible>Control.HasFocus(424)</visible>
+		<include>viewport</include>
+	</control>
+
+	<control type="multiimage">
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomWeatherFolder)</info>
+		<visible>Control.HasFocus(425)</visible>
+		<include>viewport</include>
+	</control>
+
+	</include>
+
+</includes>

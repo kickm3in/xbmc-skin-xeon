@@ -1,0 +1,296 @@
+<window id="2006">
+	<allowoverlay>Yes</allowoverlay>
+	<controls>
+
+	<!-- \\ VISUALISATION \\ -->
+
+	<control type="visualisation" id="2">
+		<description>visualisation</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<animation effect="fade" start="0" end="100"  time="200">WindowOpen</animation>
+		<animation effect="fade" start="0" end="50" time="200">Hidden</animation>
+		<animation effect="fade" start="100" end="0"  time="1000">WindowClose</animation>
+				<!--<include>backgroundfade</include>-->
+
+	</control>
+
+    <!-- \\ CODEC INFO \\ -->
+
+	<control type="group">
+	<visible>Player.ShowCodec</visible>
+	<animation effect="fade" time="630">VisibleChange</animation>
+
+	    <control>
+	      <description>preset background image</description>
+	      <type>image</type>
+	      <posx>966</posx>
+	      <posy>0</posy>
+	      <width>280</width>
+	      <height>170</height>
+	      <texture>box_opacity70.png</texture>
+
+	    </control>
+
+	
+		<!-- \\ START VISUAL NOTIFICATION GROUP \\ -->
+	
+		<control type="group">
+			<posx>850</posx>
+			<posy>-24</posy>
+
+		    <control>
+		      <type>image</type>
+		      <description>audio icon</description>
+		      <posx>314</posx>
+		      <posy>126</posy>
+		      <width>50</width>
+		      <height>35</height>
+		      <texture>audio_icon.png</texture>
+		      
+		    </control>
+	
+		    <control>
+		      <description>codec</description>
+		      <type>label</type>
+		      <posx>300</posx>
+		      <posy>120</posy>
+		      <label>$INFO[musicplayer.Codec,Codec:]</label>
+		      <align>right</align>
+			  <textcolor>FFA0A0A0</textcolor>
+		      <font>TinyTitle2</font>
+		      
+		    </control>
+	
+		    <control>
+		      <description>bitrate</description>
+		      <type>label</type>
+		      <id>0</id>
+		      <posx>300</posx>
+		      <posy>135</posy>
+			  <label>$INFO[musicplayer.Bitrate,Bitrate: , kbps]</label>
+		      <align>right</align>
+			  <textcolor>FFA0A0A0</textcolor>
+		      <font>TinyTitle</font>
+		     
+		    </control>
+	
+		    <control>
+		      <description>Codecinfo</description>
+		      <type>label</type>
+		      <posx>300</posx>
+		      <posy>152</posy>
+		      <label>$INFO[musicplayer.Samplerate,Freq.: ,kHz]</label>
+		      <align>right</align>
+			  <textcolor>FFA0A0A0</textcolor>
+		      <font>TinyTitle2</font>
+		      
+		    </control>
+
+		    <control>
+		      <description>Presets label</description>
+		      <type>label</type>
+		      <id>0</id>
+		      <posx>300</posx>
+		      <posy>67</posy>
+		      <width>560</width>
+		      <label>fps: $INFO[System.FPS]</label>
+		      <font>TinyTitle2</font>
+			  <textcolor>FFA0A0A0</textcolor>
+		      <align>right</align>
+		     
+		    </control>
+		
+		    <control>
+		      <description>Presets label</description>
+		      <type>label</type>
+		      <id>0</id>
+		      <posx>300</posx>
+		      <posy>82</posy>
+		      <width>420</width>
+		      <label>$INFO[Visualisation.Preset]</label>
+		      <font>TinyTitle</font>
+			  <textcolor>FFA0A0A0</textcolor>
+		      <align>right</align>
+		     
+		    </control>
+		
+		    <control>
+		      <type>image</type>
+		      <description>Preset locked image</description>
+		      <id>0</id>
+		      <posx>308</posx>
+		      <posy>55</posy>
+		      <width>59</width>
+		      <height>43</height>
+		      <texture>vis_icon2.png</texture>
+		      
+		    </control>
+		
+		    <control>
+		      <description>preset background image</description>
+		      <type>image</type>
+		      <posx>348</posx>
+		      <posy>58</posy>
+		      <width>18</width>
+		      <height>22</height>
+		      <texture>lock.png</texture>
+		      
+		      <visible>Visualisation.Locked</visible>
+		    </control>
+
+		</control>
+
+	</control>
+
+
+	<!-- \\ MP3 INFO DISPLAY \\ -->
+    
+    	<control type="group">
+		<posx>0</posx>
+		<posy>450</posy>
+		<visible>Player.ShowInfo</visible>
+		<animation effect="fade" time="1000">VisibleChange</animation>
+		<!--<animation effect="fade" time="680">Player.Playing</animation>-->
+		
+		<control type="image">
+			<posx>0</posx>
+			<posy>86</posy>
+			<height>366</height>
+			<width>1400</width>
+			<texture>box_opacity70.png</texture>
+			<visible>Player.HasAudio</visible>
+		</control>
+
+		<control type="image">
+			<posx>56</posx>
+			<posy>110</posy>
+			<height>140</height>
+			<width>140</width>
+			<info>MusicPlayer.Cover</info>
+			<visible>Player.HasAudio</visible>
+		</control>
+
+		<control type="group">
+		<posx>190</posx>
+		<posy>0</posy>		
+		
+		<control type="label">
+			<posx>36</posx>
+			<posy>118</posy>
+			<label>$INFO[MusicPlayer.Title]</label>
+			<font>LargeTitle</font>
+			<textcolor>FFFFFFFF</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>36</posx>
+			<posy>146</posy>
+			<label>$INFO[MusicPlayer.Artist]</label>
+			<font>MediumTitle</font>
+			<textcolor>FFA0A0A0</textcolor>
+		</control>
+		
+		<control type="label">
+			<posx>36</posx>
+			<posy>170</posy>
+			<label>$INFO[MusicPlayer.Album]</label>
+			<font>SmallTitle</font>
+			<textcolor>d0FFFFFF</textcolor>
+		</control>
+
+		
+		<control type="label">
+			<posx>36</posx>
+			<posy>202</posy>
+			<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.TimeRemaining,  /  -]</label>
+			<font>font12</font>
+			<textcolor>d0FFFFFF</textcolor>
+			<align>left</align>
+		</control>
+
+		<control type="label">
+			<posx>38</posx>
+			<posy>230</posy>
+			<label>$INFO[MusicPlayer.Duration]</label>
+			<font>font12</font>
+			<textcolor>FFA0A0A0</textcolor>
+			<align>left</align>
+		</control>
+		
+		
+	<!--<control type="image">
+		<posx>-190</posx>
+		<posy>-440</posy>
+		<width>410</width>
+		<height>120</height>
+		<texture flipx="true"  >timepanel3.png</texture>
+			<animation effect="slide" start="410,0" end="0,0" time="150" condition="[Window.IsVisible(2600) | Window.IsVisible(3)]">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="410,0" time="150" condition="[Window.IsVisible(2600) | Window.IsVisible(3)]">WindowClose</animation>
+	</control>-->
+		
+		<control type="label">
+			<posx>-90</posx>
+		    <posy>-432</posy>
+			<label>$INFO[MusicPlayer.Title][CR]$INFO[MusicPlayer.Artist, - by ]</label>
+			<font>xbmc-info-big</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<texture flipx="true"  >timepanel3.png</texture>
+		</control>
+		<control>
+		      <type>image</type>
+		      <description>Animated Audio Icon</description>
+		      <posx>-160</posx>
+		      <posy>-430</posy>
+		      <width>59</width>
+		      <height>43</height>
+		      <texture>Animations\audio_icon.gif</texture>
+			  <visible>Player.HasAudio + !Player.Paused</visible>
+		</control>
+		
+		<control>
+		      <type>image</type>
+		      <description>pause Icon</description>
+		      <posx>30</posx>
+		      <posy>195</posy>
+		      <width>59</width>
+		      <height>43</height>
+		      <texture>media-pause-focus.png</texture>
+			  <visible>Player.Paused</visible>
+		</control>
+		    <control>
+		      <type>image</type>
+		      <description>audio icon</description>
+		      <posx>984</posx>
+		      <posy>187</posy>
+		      <width>46</width>
+		      <height>18</height>
+		      <texture>arrows50.png</texture>
+		    </control>
+
+		<control type="label">
+			<posx>1030</posx>
+			<posy>208</posy>
+			<label>$INFO[MusicPlayer.offset(1).Title]</label>
+			<font>TinyTitle</font>
+			<textcolor>d0FFFFFF</textcolor>
+			<align>right</align>
+		</control>
+
+		<control type="label">
+			<posx>1030</posx>
+			<posy>226</posy>
+			<label>$INFO[MusicPlayer.offset(1).Artist]</label>
+			<font>TinyTitle2</font>
+			<textcolor>FFA0A0A0</textcolor>
+			<align>right</align>
+		</control>
+
+		</control>
+		<include>common-fade</include>	
+	</control>
+
+	</controls>
+</window>

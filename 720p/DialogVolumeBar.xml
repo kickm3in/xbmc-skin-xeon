@@ -1,0 +1,68 @@
+<window id="104">
+	<zorder>1</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<controls>
+	
+
+
+	<control type="group" id="901">
+		<posx>325</posx>
+		<posy>-4</posy>
+		<width>500</width>
+		<height>55</height>
+		<!--<animation effect="slide" start="0,0" end="200,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="200,0" end="0,0" time="150">WindowClose</animation>-->
+		<include>common-fade-delay</include>		
+		<control type="image" id="80">
+		<width>630</width>
+		<height>55</height>
+		<texture flipy="true">popup.png</texture>
+		<colordiffuse>e8FFFFFF</colordiffuse>
+		</control>
+		
+		<control>
+		<type>image</type>
+		<description>audio icon</description>
+		<posx>16</posx>
+		<posy>8</posy>
+		<width>55</width>
+		<height>39</height>
+		<texture>Animations\audio_icon.gif</texture>
+		</control>
+		
+
+		
+		<control type="progress" id="9">
+		<posx>200</posx>
+		<posy>19</posy>
+		<width>373</width>
+		<height>20</height>
+		<info>Player.Volume</info>
+		<lefttexture>Progress-Left.png</lefttexture>
+		<midtexture>Progress-Mid.png</midtexture>
+		<righttexture>Progress-Right.png</righttexture>
+		<overlaytexture>-</overlaytexture>
+		</control>
+		
+		<control type="label" id="10">
+			<posx>78</posx>
+			<posy>10</posy>
+			<width>356</width>
+			<height>51</height>
+			<align>left</align>
+			<font>font13s</font>
+			<textcolor>d0ffffff</textcolor>
+			<label>Volume</label>
+			<scroll>true</scroll>
+		</control>
+
+
+	
+	</control>
+
+	</controls>
+</window>

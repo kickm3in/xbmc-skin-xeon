@@ -1,0 +1,146 @@
+<window id="28">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomGames)</info>
+		<visible>Skin.HasSetting(gametrailers) + !Skin.HasSetting(CustomGamesFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomGamesFolder)</info>
+		<visible>Skin.HasSetting(gametrailers) + !Skin.HasSetting(CustomGamesFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMovies)</info>
+		<visible>[Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers)] + !Skin.HasSetting(CustomMoviesFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomMoviesFolder)</info>
+		<visible>[Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers)] + !Skin.HasSetting(CustomMoviesFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>Skin.HasSetting(videomusic) + !Skin.HasSetting(CustomMusicFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>Skin.HasSetting(videomusic) + !Skin.HasSetting(CustomMusicFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomAdult)</info>
+		<visible>Skin.HasSetting(videoadult) + !Skin.HasSetting(CustomAdultFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomAdultFolder)</info>
+		<visible>Skin.HasSetting(videoadult) + !Skin.HasSetting(CustomAdultFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomTV)</info>
+		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(CustomTVFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomTVFolder)</info>
+		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(CustomTVFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackground</include>
+		<imagepath>Default</imagepath>
+		<info>Skin.String(CustomClips)</info>
+		<visible>Skin.HasSetting(videoclips) + !Skin.HasSetting(CustomClipsFoldOn)</visible>
+	</control>
+
+	<control type="multiimage">
+		<include>mediabackgroundfolder</include>
+		<info>Skin.String(CustomClipsFolder)</info>
+		<visible>Skin.HasSetting(videoclips) + !Skin.HasSetting(CustomClipsFolder)</visible>
+	</control>
+
+	<include>wallglass</include>
+	<include>vignette</include>
+	<include>wallmenu</include>
+
+
+
+	<control type="group">
+	<include>mediaglasslib</include>
+	<include>Window-Files</include>
+	<include>musicpanel</include>
+	<include>musicpaneltext</include>
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<animation effect="slide" start="0,0" end="551,0" time="150" acceleration="-1" condition="[Window.IsActive(111) | Window.IsActive(106) | Window.IsActive(132) | Window.IsActive(129)] + [!Control.IsVisible(57) + !Control.IsVisible(58) + !Control.IsVisible(59) + !Control.IsVisible(51)]">Conditional</animation>
+	<animation effect="slide" start="0,0" end="-1701,0" time="250" acceleration="-1" condition="Window.IsActive(2003)">Conditional</animation>
+
+	<control type="label">
+		<include>wallmenu-slide</include>
+		<label>PLAYLIST</label>
+		<include>medialabel</include>
+	</control>
+
+	<control type="grouplist">
+		<include>mediamenugroup</include>
+
+		<control type="button" id="2">
+		<label>100</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="radiobutton" id="20">
+		<label>191</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="26">
+		<label>Repeat</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="21">
+		<label>190</label>
+		<include>mediamenu</include>
+		</control>
+
+		<control type="button" id="22">
+		<label>192</label>
+		<include>mediamenu</include>
+		</control>
+	</control>
+
+	<include>Window-Files</include>
+	<include>Viewtype_List</include>
+	
+	</control>
+
+	<include>contextback</include>
+	<include>nowplayingpopup</include>
+	<include>time</include>
+	</controls>
+</window>

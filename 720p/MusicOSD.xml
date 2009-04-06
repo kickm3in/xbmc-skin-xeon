@@ -1,0 +1,140 @@
+<window id="120">
+	<defaultcontrol>213</defaultcontrol>
+	<animation effect="slide" start="-400,195" end="0,195" time="200" acceleration="-1">WindowOpen</animation>
+	<animation effect="slide" start="0,195" end="-400,195" time="200" acceleration="1">WindowClose</animation>
+	<controls>
+
+	<control type="image">
+		<description>Panel</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>331</height>
+		<width>400</width>
+		<texture>osdleft.png</texture>
+		<colordiffuse>e8FFFFFF</colordiffuse>
+	</control>
+
+	<control type="image">
+			<description>Panel</description>
+			<posx>15</posx>
+			<posy>15</posy>
+			<height>241</height>
+			<width>241</width>
+			<info>MusicPlayer.Cover</info>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image">
+			<description>Panel</description>
+			<posx>15</posx>
+			<posy>256</posy>
+			<height>241</height>
+			<width>241</width>
+			<colordiffuse>afFFFFFF</colordiffuse>
+   		    <texture flipy="true" diffuse="Thumb_Mask4.png">$INFO[MusicPlayer.Cover]</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+	
+	<control type="grouplist" id="213">
+		<posx>260</posx>
+		<posy>5</posy>
+		<width>160</width>
+		<height>300</height>
+		<itemgap>0</itemgap>
+		<orientation>vertical</orientation>
+		<onup>213</onup>
+		<ondown>213</ondown>
+		<include>common-fade-quick</include>	
+
+			<control type="button" id="9">
+				<label>Pause</label>
+				<include>osdformat</include>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<visible>!Player.Paused</visible>
+			</control>
+			<control type="button" id="10">
+				<label>Resume</label>
+				<include>osdformat</include>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<visible>Player.Paused</visible>
+				<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+			</control>
+			<control type="button" id="11">
+				<label>Skip Fwd</label>
+				<include>osdformat</include>
+				<onclick>XBMC.PlayerControl(Next)</onclick>
+			</control>
+			<control type="button" id="12">
+				<label>Skip Bwd</label>
+				<include>osdformat</include>
+				<onclick>XBMC.PlayerControl(Previous)</onclick>
+			</control>
+			<control type="button" id="13">
+				<label>Fast Forward</label>
+				<include>osdformat</include>
+				<onclick>XBMC.PlayerControl(Forward)</onclick>
+			</control>
+			<control type="button" id="14">
+				<label>Reverse</label>
+				<include>osdformat</include>
+				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			</control>
+			<control type="button" id="15">
+				<label>Playlist</label>
+				<include>osdformat</include>
+				<onclick>XBMC.ActivateWindow(500)</onclick>
+			</control>
+			<control type="button" id="16">
+				<label>Visuals</label>
+				<include>osdformat</include>
+				<onclick>XBMC.ActivateWindow(121)</onclick>
+			</control>
+			<control type="button" id="17">
+				<label>Presets</label>
+				<include>osdformat</include>
+				<onclick>XBMC.ActivateWindow(122)</onclick>
+			</control>
+	</control>
+
+			<control type="label">
+				<label>PLAYING</label>
+				<posx>15</posx>
+				<posy>303</posy>
+				<width>178</width>
+				<font>dropdowns</font>
+				<align>left</align>
+				<visible>!Player.Paused</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+				<posx>385</posx>
+				<posy>303</posy>
+				<width>178</width>
+				<font>dropdowns</font>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>PAUSED</label>
+				<posx>15</posx>
+				<posy>303</posy>
+				<width>160</width>
+				<font>dropdowns</font>
+				<align>left</align>
+				<visible>Player.Paused</visible>
+			</control>
+			<control type="progress" id="23">
+				<description>Progressbar</description>
+				<posx>15</posx>
+				<posy>285</posy>
+				<width>368</width>
+				<height>9</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>true</visible>
+			</control>
+
+</controls>
+</window>

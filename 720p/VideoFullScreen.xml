@@ -1,0 +1,93 @@
+<window id="2005">
+	<controls>
+
+	<!-- === Media Content ======================== -->
+
+	<control type="image">
+		<description>Panel</description>
+		<posx>-331</posx>
+		<posy>194</posy>
+		<height>331</height>
+		<width>331</width>
+		<texture>osdleft.png</texture>
+		<visible>Player.Paused + !Window.IsVisible(2901)</visible>
+		<colordiffuse>e8FFFFFF</colordiffuse>
+
+		<animation effect="slide" start="0,0" end="331,0" time="200" acceleration="-1">Visible</animation>
+		<animation effect="slide" start="331,0" end="0,0" time="200" acceleration="1">Hidden</animation>
+	</control>
+
+	<control type="group" id="213">
+		<posx>-160</posx>
+		<posy>199</posy>
+		<width>160</width>
+		<height>51</height>
+		<visible>Player.Paused</visible>
+		<animation effect="slide" start="0,0" end="347,0" time="200" acceleration="-1">Visible</animation>
+		<animation effect="slide" start="347,0" end="0,0" time="200" acceleration="1">Hidden</animation>
+			<control type="image">
+				<description>Panel</description>
+				<posx>-172</posx>
+				<posy>6</posy>
+				<height>241</height>
+				<width>171</width>
+				<info>VideoPlayer.Cover</info>
+			</control>
+			<control type="image">
+				<description>Panel</description>
+				<posx>-172</posx>
+				<posy>248</posy>
+				<height>241</height>
+				<width>171</width>
+   			        <texture flipy="true" diffuse="Thumb_Mask4.png">$INFO[VideoPlayer.Cover]</texture>
+			</control>
+			<control type="label">
+				<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+				<posx>126</posx>
+				<posy>299</posy>
+				<width>178</width>
+				<font>dropdowns</font>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>PAUSED</label>
+				<posx>-172</posx>
+				<posy>299</posy>
+				<width>178</width>
+				<font>dropdowns</font>
+				<align>left</align>
+			</control>
+			<control type="progress" id="23">
+				<description>Progressbar</description>
+				<posx>-172</posx>
+				<posy>280</posy>
+				<width>299</width>
+				<height>9</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+			</control>
+	</control>
+
+	<!-- === Buffering Dialog ===================== -->
+
+	<control type="label" id="24">
+		<description>buffering label</description>
+		<posx>220</posx>
+		<posy>80</posy>
+		<label>15107</label>
+		<width>291</width>
+		<align>center</align>
+		<font>xbmc-info-big</font>
+
+		<!--<include>buffer</include>-->
+		
+	</control>
+
+
+
+	</controls>
+</window>

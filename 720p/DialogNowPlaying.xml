@@ -1,0 +1,51 @@
+<window id="107">
+	<zorder>1</zorder>
+	<coordinates>
+	<system>1</system>
+	<posx>0</posx>
+	<posy>0</posy>
+	</coordinates>
+	<controls>
+
+	<control type="group" id="901">
+		<posx>7</posx>
+		<posy>535</posy>
+		<width>706</width>
+		<height>41</height>
+		<visible>Player.HasMedia</visible>
+		<animation effect="slide" start="0,41" end="0,0" time="150">WindowOpen</animation>
+		<animation effect="slide" start="0,41" end="0,0" time="150">Hidden</animation>
+		<animation effect="slide" start="0,0" end="0,41" time="150">WindowClose</animation>
+		<control type="image" id="80">
+			<width>706</width>
+			<height>41</height>
+			<texture>popup.png</texture>
+		</control>
+		<control type="label">
+			<posx>676</posx>
+			<posy>10</posy>
+			<width>506</width>
+			<height>41</height>
+			<align>right</align>
+			<font>font13s</font>
+			<textcolor>d0ffffff</textcolor>
+			<label>Now Playing: </label>
+			<scroll>true</scroll>
+		</control>
+
+		<control type="label">
+			<posx>30</posx>
+			<posy>10</posy>
+			<width>200</width>
+			<height>41</height>
+			<align>left</align>
+			<font>font13s</font>
+			<textcolor>d0ffffff</textcolor>
+			<label>-</label>
+			<scroll>true</scroll>
+		</control>
+
+	</control>
+
+	</controls>
+</window>

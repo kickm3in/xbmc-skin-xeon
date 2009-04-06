@@ -1,0 +1,16 @@
+<skin>
+  <defaultresolution>720p</defaultresolution>
+  <defaultresolutionwide>720p</defaultresolutionwide>
+  <version>2.1</version>
+  <effectslowdown>1</effectslowdown>
+  <zoom>1.0</zoom>
+
+<credits>
+	<skinname>Xeon - An Aeon Mod</skinname>
+    	<name>by Chris Daniels</name>
+    	<name>Thanks to Duncan Harris - Creator of Aeon</name>
+    	<name>The XBMC devs and fans</name>
+	<name>for putting the rest to shame</name>
+</credits>
+</skin>
+

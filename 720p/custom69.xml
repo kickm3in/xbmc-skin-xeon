@@ -1,0 +1,327 @@
+<window id="69">
+	<defaultcontrol always="true">91</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>Default</imagepath>
+		<include>backgroundfade</include>
+		<info>Skin.String(CustomMusic)</info>
+		<visible>!Skin.HasSetting(CustomMusic) + !Skin.HasSetting(CustomMusicFolder)</visible>
+	</control>
+
+	<control type="multiimage">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<imagepath>-</imagepath>
+		<timeperimage>5000</timeperimage>
+		<fadetime>2000</fadetime>
+		<randomize>true</randomize>
+		<info>Skin.String(CustomMusicFolder)</info>
+		<visible>!Skin.HasSetting(CustomMusicFolder)</visible>
+		<include>backgroundfade</include>
+	</control>
+		
+<!--		<control type="visualisation">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<include>common-fade</include>
+
+		</control>-->
+		
+	<control type="label"id="69">
+					<animation type="WindowOpen" reversible="false">
+				<effect type="slide" tween="bounce"delay="500" start ="180,0" end="0,0" time="500" />
+				</animation>
+		<label>Jukebox - Playlist Selection Screen...</label>
+		<posx>58</posx>
+		<posy>23</posy>
+		<width>1150</width>
+		<height>30</height>
+		<font>menufontacens2</font>
+		<textcolor>ff0000000</textcolor>
+		<include>common-fade</include>
+
+		</control>	
+
+		<control type="label"id="69">
+				<animation type="WindowOpen" reversible="false">
+				<effect type="slide" tween="bounce"delay="500" start ="0,180" end="0,0" time="500" />
+				</animation>		
+	<label>Jukebox - Playlist Selection Screen...</label>
+		<posx>62</posx>
+		<posy>27</posy>
+		<width>1150</width>
+		<height>30</height>
+		<font>menufontacens2</font>
+		<textcolor>ff0000000</textcolor>
+		<include>common-fade</include>
+		</control>	
+
+		<control type="label"id="70">
+				<animation type="WindowOpen" reversible="false">
+				<effect type="slide" tween="bounce" delay="500" start ="-180,0" end="0,0" time="500" />
+				<!--<effect type="zoom" tween="bounce" end="-100,600,1000,30" time="800"/>-->
+				</animation>
+	<label>Jukebox - Playlist Selection Screen...</label>
+		<posx>60</posx>
+		<posy>25</posy>
+		<width>1150</width>
+		<height>30</height>
+		<font>menufontacens2</font>
+		<textcolor>FFFFFFFF</textcolor>
+		<include>common-fade</include>
+		</control>
+
+
+		
+	    <control>
+	      <description>preset background image</description>
+	      <type>image</type>
+	      <posx>0</posx>
+	      <posy>130</posy>
+	      <width>740</width>
+	      <height>350</height>
+	      <texture>box_opacity70.png</texture>
+        <animation type="WindowOpen" reversible="false">
+              <!--<effect type="zoom" tween="bounce" end="-985,600,243,300" time="800"/>-->
+              <effect type="rotate" center="20,50" start ="-180" end="0" time="1400" delay="400"/>
+            </animation>
+            <animation type="WindowClose">
+ 			 
+              <!--<effect type="zoom" tween="quadratic" start="-930,470,243,300" end="0,0,53,78" time="1000" delay="300"/>-->
+   			  <effect type="rotate" center="20,50" start ="0" end="-180" time="200" />
+            </animation>
+	    </control>
+
+
+	<control type="grouplist">
+		<buttongap>7</buttongap>
+		<posx>60</posx>
+		<posy>140</posy>
+		<width>1500</width>
+		<height>535</height>
+		<scrollspeed>2</scrollspeed>
+		<orientation>vertical</orientation>
+		<animation type="WindowOpen" reversible="false">
+		<effect type="rotate" center="20,50" start ="-180" end="0" time="1400" delay="400"/>
+		</animation>
+        <animation type="WindowClose">
+ 			 
+        <!--<effect type="zoom" tween="quadratic" start="-930,470,243,300" end="0,0,53,78" time="1000" delay="300"/>-->
+   		<effect type="rotate" center="20,50" start ="0" end="-180" time="200" />
+        </animation>		
+		
+		<control type="button" id="91">
+			<height>30</height>
+			<width>160</width>
+			<label>Playlist #1 - All Tracks (Random)</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<include>common-fade</include>
+			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>
+			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/1.m3u)</onclick>
+		</control>
+
+		<control type="button" id="92">
+			<height>30</height>
+			<width>160</width>
+			<label>Playlist #2 - Dance (Random)</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<include>common-fade</include>
+			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
+			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/2.m3u)</onclick>			
+		</control>
+
+		<control type="button" id="93">
+			<height>30</height>
+			<width>160</width>
+			<label>Playlist #3 - Hard Dance (Random)</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<include>common-fade</include>
+			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
+			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/3.m3u)</onclick>			
+		</control>
+		<control type="button" id="94">
+			<height>30</height>
+			<width>160</width>
+			<label>Playlist #4 - 00's (Random)</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<include>common-fade</include>
+			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
+			<onclick>XBMC.PlayMedia(smb://DANIELS/My Music/My Playlists/4.m3u)</onclick>			
+		</control>
+		<control type="button" id="95">
+			<height>30</height>
+			<width>160</width>
+			<label>Playlist #5 - 90's (Random)</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<include>common-fade</include>
+			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
+			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/5.m3u)</onclick>			
+		</control>
+		<control type="button" id="96">
+			<height>30</height>
+			<width>160</width>
+			<label>Playlist #6 - 80's (Random)</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<include>common-fade</include>
+			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
+			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/6.m3u)</onclick>			
+		</control>
+		<control type="button" id="97">
+			<height>30</height>
+			<width>160</width>
+			<label>Playlist #7 - 70's (Random)</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<include>common-fade</include>
+			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
+			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/7.m3u)</onclick>			
+		</control>
+		<control type="button" id="98">
+			<height>30</height>
+			<width>160</width>
+			<label>Playlist #8 - 70's + 80's (Random)</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<include>common-fade</include>
+			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
+			<onclick>XBMC.PlayMedia(smb://DANIELS/My Music/My Playlists/8.m3u)</onclick>			
+		</control>
+		
+		<control type="button" id="99">
+			<height>30</height>
+			<width>160</width>
+			<label>HELP</label>
+			<font>menufontacens2b</font>
+			<align>left</align>
+			<textcolor>90FFFFFF</textcolor>
+			<focusedcolor>FFFFFFFF</focusedcolor>			
+			<include>common-fade</include>
+			<animation effect="zoom" end="150" center="10,10" time="200">Focus</animation>
+			<animation effect="zoom" start="150" end="100" center="10,10" time="200">UnFocus</animation>			
+			<onclick>XBMC.ActivateWindow(70)</onclick>			
+		</control>		
+
+	</control>	
+
+
+	<control type="group">
+		<description>Misc Values</description>
+					<include>common-fade-normal</include>		
+			<posx>0</posx>
+			<posy>35</posy>	
+
+	    <control>
+	      <description>preset background image</description>
+	      <type>image</type>
+	      <posx>0</posx>
+	      <posy>540</posy>
+	      <width>1500</width>
+	      <height>400</height>
+	      <texture>box_opacity70.png</texture>
+		<animation type="WindowOpen" reversible="false">
+		<effect type="slide" delay="2500" start ="0,180" end="0,0" time="600" />
+		</animation>
+			  <visible>Player.HasAudio</visible>
+					<include>common-fade-normal</include>		
+
+	    </control>
+		
+		<control type="label">
+		<animation type="WindowOpen" reversible="false">
+		<effect type="slide" delay="2500" start ="0,180" end="0,0" time="600" />
+		</animation>
+			<posx>640</posx>
+			<posy>520</posy>
+			<align>center</align>
+			<label>____________________________________________________________________</label>
+			<font>xbmc-info</font>
+			  <visible>Player.HasAudio</visible>
+					<include>common-fade-normal</include>		
+			
+		</control>
+		
+
+		<control type="label">
+		<animation type="WindowOpen" reversible="false">
+		<effect type="slide" delay="2500" start ="0,180" end="0,0" time="600" />
+		</animation>			
+			<posx>70</posx>
+			<posy>560</posy>
+			<label>Current Playlist Position: $INFO[MusicPlayer.PlaylistPosition] / $INFO[MusicPlayer.PlaylistLength]</label>
+			<font>menufontacens2b</font>
+			  <visible>Player.HasAudio</visible>
+					<include>common-fade-normal</include>		
+			
+		</control>
+
+		<control type="label">
+		<animation type="WindowOpen" reversible="false">
+		<effect type="slide" delay="2500" start ="0,180" end="0,0" time="600" />
+		</animation>			
+			<posx>70</posx>
+			<posy>590</posy>
+			<label>Current Track will finish @ $INFO[Player.FinishTime] Time Now: $INFO[System.Time]     $INFO[Player.TimeRemaining,-] $INFO[Player.Time,+]</label>
+			<posx>100</posx>
+			<font>menufontacens2b</font>
+			  <visible>Player.HasAudio</visible>
+					<include>common-fade-normal</include>		
+			
+		</control>
+
+		<control type="label">
+		<animation type="WindowOpen" reversible="false">
+		<effect type="slide" delay="2500" start ="0,180" end="0,0" time="600" />
+		</animation>
+			<posx>70</posx>
+			<posy>620</posy>
+			<label>Current Volume Level: $INFO[Player.Volume] </label>
+			<font>menufontacens2b</font>
+			<textcolor>80FFFFFF</textcolor>
+			</control>	
+					<include>common-fade-normal</include>		
+
+	</control>
+		<include>mediapanel</include>
+
+	</controls>
+</window>

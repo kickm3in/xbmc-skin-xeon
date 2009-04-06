@@ -1,0 +1,148 @@
+<window id="115">
+	<defaultcontrol>901</defaultcontrol>
+	<visible>[Window.IsActive(2006) | VideoPlayer.IsFullscreen] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+	<controls>
+	
+		<control type="label">
+				<label>Paused...</label>
+				<posx>40</posx>
+				<posy>80</posy>
+				<width>800</width>
+				<font>xbmc-info-big</font>
+				<align>left</align>
+				<visible>Player.Paused</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[VideoPlayer.Title]</label>
+				<posx>40</posx>
+				<posy>00</posy>
+				<width>1065</width>
+				<font>xbmc-info-big</font>
+				<align>left</align>
+				<visible>Player.Paused</visible>
+			</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>49</posy>
+					<width>995</width>
+					<height>25</height>
+					<label>$INFO[VideoPlayer.Studio] $INFO[VideoPlayer.Year, - Released in ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<visible>Player.Paused</visible>
+				</control>	
+		
+	<!-- \\ MEDIA COVER DISPLAY \\ -->
+
+	<control type="group" id="901">
+		<posx>1230</posx>
+		<posy>496</posy>
+		<width>160</width>
+		<height>51</height>
+		<texture>$INFO[container.tvshowthumb]</texture>
+	<!-- \\ PROGRESS BAR \\ -->
+
+			<control type="progress" id="23">
+				<description>Progressbar</description>
+				<posx>-1075</posx>
+				<posy>195</posy>
+				<width>995</width>
+				<height>8</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>true</visible>
+			</control>
+		<animation effect="slide" start="0,200" end="0,0" time="200" acceleration="1">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,200" time="200" acceleration="1">WindowClose</animation>
+
+
+
+
+
+
+	<!-- \\ TITLE DISPLAY \\ 
+
+			<control type="label">
+				<label>$INFO[VideoPlayer.Title]</label>
+				<posx>-1066</posx>
+				<posy>90</posy>
+				<width>800</width>
+				<font>episodetitle</font>
+				<align>left</align>
+				<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused</visible>
+			</control>-->
+
+	<!-- \\ DIRECTOR DISPLAY \\ 
+
+			<control type="label">
+				<label>$INFO[VideoPlayer.Director]</label>
+				<posx>-1066</posx>
+				<posy>123</posy>
+				<width>800</width>
+				<font>dropdowns</font>
+				<align>left</align>
+				<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused</visible>
+			</control>-->
+
+	<!-- \\ CURRENT TIME DISPLAY \\ -->
+
+			<control type="label">
+				<label>$INFO[VideoPlayer.Time]</label>
+				<posx>-1066</posx>
+				<posy>150</posy>
+				<width>800</width>
+				<font>dropdowns</font>
+				<align>left</align>
+				<visible>Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused</visible>
+			</control>
+
+	<!-- \\ TIME DURATION DISPLAY \\ -->
+
+			<control type="label">
+				<label>$INFO[VideoPlayer.Duration]</label>
+				<posx>-100</posx>
+				<posy>150</posy>
+				<width>800</width>
+				<font>dropdowns</font>
+				<align>right</align>
+				<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding | Player.Paused</visible>
+			</control>
+
+	<!-- \\ PAUSED LABEL \\ 
+
+			<control type="fadelabel">
+				<label>PAUSED</label>
+				<posx>-178</posx>
+				<posy>120</posy>
+				<pauseatend>4000</pauseatend>
+				<font>fontKB</font>
+				<align>right</align>
+				<visible>Player.Paused</visible>
+			</control>-->
+
+
+	<!-- \\ SEEKING TIME DISPLAY \\ -->
+		
+			<control type="label" id="22">
+				<description>Seek Time Label</description>
+				<posx>-1117</posx>
+				<posy>180</posy>
+				<font>dropdowns</font>
+				<align>center</align>
+				<info>Player.SeekTime</info>
+				<width>178</width>
+				<height>20</height>
+				<visible>Player.Seeking + !Player.Paused</visible>
+			</control>
+
+	</control>
+
+
+	</controls>
+</window>

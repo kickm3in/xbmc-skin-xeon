@@ -1,0 +1,235 @@
+<window id="2901">
+	<defaultcontrol>213</defaultcontrol>
+
+	<controls>
+
+	<control type="image">
+		<description>Panel</description>
+		<posx>-331</posx>
+		<posy>194</posy>
+		<height>331</height>
+		<width>331</width>
+		<texture>osdleft.png</texture>
+		<colordiffuse>e8FFFFFF</colordiffuse>
+		<animation effect="slide" start="0,0" end="331,0" time="200" acceleration="-1">WindowOpen</animation>
+		<animation effect="slide" start="331,0" end="0,0" time="200" acceleration="1">WindowClose</animation>
+	</control>
+
+	<control type="group" id="213">
+		<posx>-160</posx>
+		<posy>199</posy>
+		<width>160</width>
+		<height>51</height>
+		<animation effect="slide" start="0,0" end="347,0" time="200" acceleration="-1">WindowOpen</animation>
+		<animation effect="slide" start="347,0" end="0,0" time="200" acceleration="1">WindowClose</animation>
+			<control type="image">
+				<description>Panel</description>
+				<posx>-172</posx>
+				<posy>6</posy>
+				<height>241</height>
+				<width>171</width>
+				<texture>$INFO[container.tvshowthumb]</texture>
+			</control>
+		<control type="image">
+				<description>Panel</description>
+				<posx>-172</posx>
+				<posy>6</posy>
+				<height>241</height>
+				<width>171</width>
+				<info>VideoPlayer.Cover</info>
+			</control>
+			<control type="image">
+				<description>Panel</description>
+				<posx>-172</posx>
+				<posy>247</posy>
+				<height>241</height>
+				<width>171</width>
+   			        <texture flipy="true" diffuse="Thumb_Mask4.png">$INFO[VideoPlayer.Cover]</texture>
+			</control>
+			<control type="button" id="9">
+				<label>Pause</label>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>18</onup>
+				<ondown>11</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<visible>!Player.Paused</visible>
+			</control>
+			<control type="button" id="10">
+				<label>Resume</label>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>18</onup>
+				<ondown>11</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.PlayerControl(Play)</onclick>
+				<visible>Player.Paused</visible>
+				<onclick>XBMC.PlayerControl(ShowVideoMenu)</onclick>
+			</control>
+			<control type="button" id="11">
+				<label>Skip Fwd</label>
+				<posx>0</posx>
+				<posy>29</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>10</onup>
+				<ondown>12</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.PlayerControl(Next)</onclick>
+			</control>
+			<control type="button" id="12">
+				<label>Skip Bwd</label>
+				<posx>0</posx>
+				<posy>58</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>11</onup>
+				<ondown>13</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.PlayerControl(Previous)</onclick>
+			</control>
+			<control type="button" id="13">
+				<label>Fast Forward</label>
+				<posx>0</posx>
+				<posy>86</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>12</onup>
+				<ondown>14</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.PlayerControl(Forward)</onclick>
+			</control>
+			<control type="button" id="14">
+				<label>Reverse</label>
+				<posx>0</posx>
+				<posy>115</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>13</onup>
+				<ondown>15</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+			</control>
+			<control type="button" id="15">
+				<label>Video</label>
+				<posx>0</posx>
+				<posy>144</posy>
+				<width>316</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>14</onup>
+				<ondown>16</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.ActivateWindow(123)</onclick>
+			</control>
+			<control type="button" id="16">
+				<label>Audio</label>
+				<posx>0</posx>
+				<posy>173</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>15</onup>
+				<ondown>17</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.ActivateWindow(124)</onclick>
+			</control>
+			<control type="button" id="17">
+				<label>Root Menu</label>
+				<posx>0</posx>
+				<posy>201</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>16</onup>
+				<ondown>18</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.PlayerControl(Stop)</onclick>
+			</control>
+			<control type="button" id="18">
+				<label>Bookmarks</label>
+				<posx>0</posx>
+				<posy>230</posy>
+				<width>160</width>
+				<font>dropdown</font>
+				<align>left</align>
+				<onup>17</onup>
+				<ondown>9</ondown>
+				<include>osdfont2</include>
+			        <texturefocus>-</texturefocus>
+			        <texturenofocus>-</texturenofocus>
+				<onclick>XBMC.ActivateWindow(125)</onclick>
+			</control>
+			<control type="label">
+				<label>PLAYING</label>
+				<posx>-172</posx>
+				<posy>299</posy>
+				<width>178</width>
+				<font>dropdowns</font>
+				<align>left</align>
+				<visible>!Player.Paused</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
+				<posx>126</posx>
+				<posy>299</posy>
+				<width>178</width>
+				<font>dropdowns</font>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<label>PAUSED</label>
+				<posx>-172</posx>
+				<posy>299</posy>
+				<width>160</width>
+				<font>dropdowns</font>
+				<align>left</align>
+				<visible>Player.Paused</visible>
+			</control>
+			<control type="progress" id="23">
+				<description>Progressbar</description>
+				<posx>-172</posx>
+				<posy>280</posy>
+				<width>299</width>
+				<height>9</height>
+				<info>Player.Progress</info>
+				<texturebg>progress_back.png</texturebg>
+				<lefttexture>progress_left.png</lefttexture>
+				<midtexture>progress_mid.png</midtexture>
+				<righttexture>progress_right.png</righttexture>
+				<overlaytexture>-</overlaytexture>
+				<visible>true</visible>
+			</control>
+	</control>
+
+</controls>
+</window>
