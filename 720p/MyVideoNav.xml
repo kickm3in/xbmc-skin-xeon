@@ -215,12 +215,13 @@
 	</control>
 
 	<include>Viewtype_Showcase</include>
+
 	<!--<include>Viewtype_ShowcaseWide</include>-->
 	<include>Viewtype_Episode</include>
 	<include>contextback</include>	
 	<include>nowplayingpopup</include>
 	<!--<include>time</include>-->
 			<include>ScrollOffsetLabel</include>
-
+	<include>Furniture_Debug</include>
 </controls>	
 </window>

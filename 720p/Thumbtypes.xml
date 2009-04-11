@@ -79,24 +79,30 @@
 </include>
 
 <include name="watched_Focused">
-	<posx>43</posx>
-	<posy>48</posy>
+	<posx>41</posx>
+	<posy>46</posy>
 	<width>146</width>
 	<height>146</height>
 	<info>ListItem.Overlay</info>
-	<visible>Skin.HasSetting(videomovies) + !Skin.HasSetting(iconsxbmc01remix)</visible>
 	<animation type="Focus" condition="!Container.Content(seasons) + !Window.IsActive(24)" reversible="false">
-		<effect type="zoom" start="69,95,100,100" end="43,48,146,146" time="100"/>
-		<effect type="zoom" start="43,48,146,146" end="-450,0,180,180" acceleration="-1" delay="6000" time="150"/>
+		<effect type="zoom" start="69,95,100,100" end="41,46,146,146" time="100"/>
+		<effect type="zoom" start="41,46,146,146" end="-450,-2,180,180" acceleration="-1" delay="6000" time="150"/>
 	</animation>
 
-	<animation type="Focus" condition="Container.Content(seasons) | Window.IsActive(24)" reversible="false">
-		<effect type="zoom" start="69,95,100,100" end="43,48,146,146" time="100"/>
-		<effect type="zoom" start="43,48,146,146" end="-450,0,180,180" acceleration="-1" delay="6000" time="150"/>
+</include>
+
+
+<include name="watched_Focused_tv">
+	<posx>06</posx>
+	<posy>146</posy>
+	<width>146</width>
+	<height>146</height>
+	<info>ListItem.Overlay</info>
+	<animation type="Focus" condition="Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]" reversible="false">
+		<effect type="zoom" start="64,191,100,100" end="06,146,146,146" time="100"/>
+		<effect type="slide" start="0,0" end="-410,0" time="150" delay="6000" reversible="false" acceleration="-1" />
 	</animation>	
-	<!--<animation type="Focus" condition="Container.Content(seasons) | Window.IsActive(24)" reversible="false">
-		<effect type="zoom" start="68,113,40,40" end="42,65,60,60" time="100" />
-    </animation>-->
+
 </include>
 
 <include name="overlay_shine_Focused">

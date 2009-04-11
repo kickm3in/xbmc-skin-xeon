@@ -1,6 +1,6 @@
 <window>
 	<id>6</id>
-	<defaultcontrol>2</defaultcontrol>
+	<defaultcontrol>50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 
@@ -244,12 +244,7 @@
 		</control>
 	</control>
 
-		<control type="grouplist">
-		<control type="button" id="999">
-		<label>xeon</label>
-		<include>mediamenu</include>
-		</control>
-	</control>
+
 
 	
 	<include>Window-Files</include>
@@ -260,9 +255,11 @@
 	</control>
 
 	<include>Viewtype_Showcase</include>
+
 	<!--<include>Viewtype_ShowcaseWide</include>-->
 	<include>contextback</include>
 	<include>nowplayingpopup</include>
 	<!--<include>time</include>-->
+		<include>Furniture_Debug</include>
 	</controls>
 </window>

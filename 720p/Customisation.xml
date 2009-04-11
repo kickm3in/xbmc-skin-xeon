@@ -1072,7 +1072,14 @@
 			<onclick>Skin.ToggleSetting(nosfx)</onclick>
 			<selected>!Skin.HasSetting(nosfx)</selected>	
 		</control>
-	
+
+		<control type="radiobutton" id="605">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Developer Mode</label>
+			<onclick>Skin.ToggleSetting(debug)</onclick>
+			<selected>Skin.HasSetting(debug)</selected>
+		</control>
+		
 		<control type="image" id="9991">
 			<width>800</width>
 			<height>2</height>

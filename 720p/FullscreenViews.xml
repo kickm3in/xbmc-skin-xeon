@@ -10,27 +10,23 @@
 		<onleft>52</onleft>
 		<onright>52</onright>
 		<onup>2</onup>
-		<ondown>2</ondown>
+		<ondown>-</ondown>
 		<focusposition>2</focusposition>
 		<orientation>horizontal</orientation>
 		<include>common-fade</include>
 		<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(episodetvlib) + Container.Content(episodes)</visible>
 		<itemlayout height="184" width="275">
-		      <control type="image">
-				   <include>Episode_Unfocused</include>
-			       <texture>defaulticonepisode.png</texture>
-				   <visible>!Control.IsVisible(84) + Skin.HasSetting(iconsxbmc01remix)</visible>
-		      </control>
+
 		      <control type="image">
 				   <include>Episode_Unfocused</include>
 			       <texture>defaulticonepisode_xbmc01.png</texture>
-				   <visible>!Control.IsVisible(84) + !Skin.HasSetting(iconsxbmc01remix)</visible>
+				   <visible>!Control.IsVisible(84)</visible>
 		      </control>
 			  
 <!--NEW Overlay icon-->
     <control type="image">
 		<posx>64</posx>
-		<posy>190</posy>
+		<posy>191</posy>
 		<width>100</width>
 		<height>100</height>
 		<description>Overlay</description>
@@ -79,20 +75,17 @@
 		      </control>
 		</itemlayout>
 		<focusedlayout height="184" width="275">
+
+		
 		      <control type="image">
 					<include>Episode_Focused</include>
 			        <texture>defaulticonepisode.png</texture>
-					<visible>Skin.HasSetting(iconsxbmc01remix)</visible>
 		      </control>
-		      <control type="image">
-					<include>Episode_Focused</include>
-			        <texture>defaulticonepisode_xbmc01.png</texture>
-					<visible>Skin.HasSetting(iconsxbmc01)</visible>
-		      </control>
+
 			  
 		<control type="image">	  
 			<visible>!Skin.HasSetting(New_SC_label)</visible>
-			<include>watched_Focused</include>
+			<include>watched_Focused_tv</include>
 		</control>
 		
 		      <control type="image">
@@ -102,8 +95,8 @@
 			       <height>276</height>
 			       <texture>fsepisodeframe.png</texture>
 			       <animation type="Focus" reversible="false">
-						<effect type="zoom" start="57,200,268,193" end="0,159,383,276" time="100" />
-						<effect type="slide" start="0,0" end="-410,0" time="150" delay="6000" reversible="false" acceleration="-1" />
+					<effect type="zoom" start="57,200,268,193" end="0,159,383,276" time="100" />
+					<effect type="slide" start="0,0" end="-410,0" time="150" delay="6000" reversible="false" acceleration="-1" />
 				   </animation>				   
 		      </control>
 		      <control type="image">
@@ -115,8 +108,8 @@
 			       <texture flipy="true" diffuse="Thumb_Mask.png">defaulticonepisode.png</texture>
 			       <aspectratio aligny="bottom">scale</aspectratio>
 			       <animation type="Focus" reversible="false">
-						<effect type="zoom" start="82,404,217,146" end="36,452,311,209" time="100" />
-						<effect type="slide" start="0,0" end="-410,0" time="150" delay="6000" reversible="false" acceleration="-1" />
+					<effect type="zoom" start="82,404,217,146" end="36,452,311,209" time="100" />
+					<effect type="slide" start="0,0" end="-410,0" time="150" delay="6000" reversible="false" acceleration="-1" />
 				   </animation>	
 		      </control>
 		      <control type="image">
@@ -126,13 +119,11 @@
 			       <height>276</height>
 			       <texture flipy="true" diffuse="Thumb_Mask.png">fsepisodeframe.png</texture>
 			       <animation type="Focus" reversible="false">
-						<effect type="zoom" start="57,380,268,193" end="0,416,383,276" time="100" />
-						<effect type="slide" start="0,0" end="-410,0" time="150" delay="6000" reversible="false" acceleration="-1" />
+					<effect type="zoom" start="57,380,268,193" end="0,416,383,276" time="100" />
+					<effect type="slide" start="0,0" end="-410,0" time="150" delay="6000" reversible="false" acceleration="-1" />
 				   </animation>					   
 		      </control>
 			  
-			  
-
 		</focusedlayout>
 	</control>
 
@@ -188,17 +179,12 @@
 		<onleft>52</onleft>
 		<onright>52</onright>
 		<onup>2</onup>
-		<ondown>XBMC.ActivateWindow(12003,$INFO[listitem])</ondown>
+		<ondown>-</ondown>
 		<focusposition>4</focusposition>
 		<orientation>horizontal</orientation>
 		<include>common-fade</include>
 		<visible>[Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(showcasetv)] | [Window.IsActive(24) + Skin.HasSetting(videomovies) + !Skin.HasSetting(showcasemovies)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(showcasemovieslib)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(showcasetvlib) + !Container.Content(episodes)]</visible>
 	     <itemlayout height="783" width="160">
-
-
-
-
-
 
 		 
 			<control type="image">
@@ -216,23 +202,14 @@
 		      <control type="image">
 				  <include>Showcase_Unfocused</include>
 			      <texture>defaulticonposter.png</texture>
-				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videomovies) + Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videomovies)</visible>
 		      </control>
 		      <control type="image">
 				  <include>Showcase_Unfocused</include>
 			      <texture>defaulticonpostertv.png</texture>
-				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videotv) + Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videotv)</visible>
 		      </control>
-			  <control type="image">
-				  <include>Showcase_Unfocused</include>
-			      <texture>defaulticonposter_xbmc01.png</texture>
-				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videomovies) + !Skin.HasSetting(iconsxbmc01remix)</visible>
-		      </control>
-		      <control type="image">
-				  <include>Showcase_Unfocused</include>
-			      <texture>defaulticonpostertv_xbmc01.png</texture>
-				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videotv) + !Skin.HasSetting(iconsxbmc01remix)</visible>
-		      </control>
+
 
 
 <!--NEW Overlay icon-->
@@ -280,12 +257,10 @@
 				<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
 				<animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
 		      </control>
-	
 
 	     </itemlayout>
 		 
-
-		 
+ 
 	     <focusedlayout height="783" width="160">
 		 
 <!--Videos_BigFrame-->
@@ -308,30 +283,21 @@
 		 
 		      <control type="image">
 				  <include>Showcase_Focused</include>
-				  <visible>Skin.HasSetting(videomovies) + Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <visible>Skin.HasSetting(videomovies)</visible>
 			      <texture>defaulticonposter.png</texture>
 		      </control>
 		      <control type="image">
-				  <include>Showcase_Focused</include>
-				  <visible>Skin.HasSetting(videotv) + Skin.HasSetting(iconsxbmc01remix)</visible>
-			      <texture>defaulticonpostertv.png</texture>
+				<include>Showcase_Focused</include>
+				<visible>Skin.HasSetting(videotv)</visible>
+				<texture>defaulticonpostertv.png</texture>
 		      </control>
-		      <control type="image">
-				  <include>Showcase_Focused</include>
-				  <visible>Skin.HasSetting(videomovies) + !Skin.HasSetting(iconsxbmc01remix)</visible>
-			      <texture>defaulticonposter_xbmc01.png</texture>
-		      </control>
-		      <control type="image">
-				  <include>Showcase_Focused</include>
-				  <visible>Skin.HasSetting(videotv) + !Skin.HasSetting(iconsxbmc01remix)</visible>
-			      <texture>defaulticonpostertv_xbmc01.png</texture>
-		      </control>
+
 
   
 			  
 			  
 		<control type="image">	
-		<include>overlay_shine_Focused</include>
+			<include>overlay_shine_Focused</include>
 		</control>
 			  
 		<control type="image">	  
@@ -505,23 +471,14 @@
 		      <control type="image">
 				  <include>Showcase_Unfocused</include>
 			      <texture>defaulticonposter.png</texture>
-				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videomovies) + Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videomovies)</visible>
 		      </control>
 		      <control type="image">
 				  <include>Showcase_Unfocused</include>
 			      <texture>defaulticonpostertv.png</texture>
-				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videotv) + Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videotv)</visible>
 		      </control>
-			  <control type="image">
-				  <include>Showcase_Unfocused</include>
-			      <texture>defaulticonposter_xbmc01.png</texture>
-				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videomovies) + !Skin.HasSetting(iconsxbmc01remix)</visible>
-		      </control>
-		      <control type="image">
-				  <include>Showcase_Unfocused</include>
-			      <texture>defaulticonpostertv_xbmc01.png</texture>
-				  <visible>!Control.IsVisible(84) + Skin.HasSetting(videotv) + !Skin.HasSetting(iconsxbmc01remix)</visible>
-		      </control>
+
 		      <control type="image">
 			      <posx>64</posx>
 			      <posy>113</posy>
@@ -562,24 +519,15 @@
 	     <focusedlayout height="783" width="160">
 		      <control type="image">
 				  <include>Showcase_Focused</include>
-				  <visible>Skin.HasSetting(videomovies) + Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <visible>Skin.HasSetting(videomovies)</visible>
 			      <texture>defaulticonposter.png</texture>
 		      </control>
 		      <control type="image">
 				  <include>Showcase_Focused</include>
-				  <visible>Skin.HasSetting(videotv) + Skin.HasSetting(iconsxbmc01remix)</visible>
+				  <visible>Skin.HasSetting(videotv)</visible>
 			      <texture>defaulticonpostertv.png</texture>
 		      </control>
-		      <control type="image">
-				  <include>Showcase_Focused</include>
-				  <visible>Skin.HasSetting(videomovies) + !Skin.HasSetting(iconsxbmc01remix)</visible>
-			      <texture>defaulticonposter_xbmc01.png</texture>
-		      </control>
-		      <control type="image">
-				  <include>Showcase_Focused</include>
-				  <visible>Skin.HasSetting(videotv) + !Skin.HasSetting(iconsxbmc01remix)</visible>
-			      <texture>defaulticonpostertv_xbmc01.png</texture>
-		      </control>
+
 		      <control type="image">
 			      <posx>34</posx>
 			      <posy>60</posy>
@@ -636,13 +584,8 @@
 				   </animation>
 			       <animation type="Focus" condition="Container.Content(seasons) | Window.IsActive(24)" reversible="false">
 						<effect type="zoom" start="84,344,124,181" end="61,377,170,251" time="100" />
-				   
-				   
 				   </animation>
 		      
-			  
-			  
-			  
 			  
 			  </control>
 		      <control type="image">
@@ -655,10 +598,9 @@
 				  <animation type="Focus" reversible="false" condition="!Container.Content(seasons) + !Window.IsActive(24)">
 						<effect type="zoom" start="64,324,165,220" end="34,350,224,304" time="100" />
 						<effect type="zoom" start="34,350,224,304" end="-460,365,269,365" acceleration="-1" delay="3000" time="150" />
-
 				   </animation>
-				  <animation type="Focus" reversible="false" condition="Container.Content(seasons) | Window.IsActive(24)">
-						<effect type="zoom" start="64,324,165,220" end="34,340,224,304" time="100" />
+					<animation type="Focus" reversible="false" condition="Container.Content(seasons) | Window.IsActive(24)">
+					<effect type="zoom" start="64,324,165,220" end="34,340,224,304" time="100" />
 
 				   </animation>
 		      </control>
