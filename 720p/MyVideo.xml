@@ -21,13 +21,13 @@
 		<include>mediabackground</include>
 		<imagepath>Default</imagepath>
 		<info>Skin.String(CustomMovies)</info>
-		<visible>[Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers)] + !Skin.HasSetting(CustomMoviesFoldOn)</visible>
+		<visible>[Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers)] + !Skin.HasSetting(CustomMoviesFoldOn) |IsEmpty(listitem.property(fanart_image))</visible>
 	</control>
 
 	<control type="multiimage">
 		<include>mediabackgroundfolder</include>
 		<info>Skin.String(CustomMoviesFolder)</info>
-		<visible>[Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers)] + !Skin.HasSetting(CustomMoviesFolder)</visible>
+		<visible>[Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers)] + !Skin.HasSetting(CustomMoviesFolder) |IsEmpty(listitem.property(fanart_image))</visible>
 	</control>
 
 	<control type="multiimage">

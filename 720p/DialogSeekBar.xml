@@ -141,6 +141,61 @@
 				<visible>Player.Seeking + !Player.Paused</visible>
 			</control>
 
+			
+			
+<!-- New Finish Time Lable -->
+                <control type="label">
+                        <description>Time finish lable</description>
+                        <posx>-295</posx>
+                        <posy>110</posy>
+                        <include>scraperimdbtitle</include>
+                        <label>Time Now</label>
+                        <width>160</width>
+                        <height>16</height>
+                        <font>Font_OSDTime</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+
+                <control type="label">
+                        <description>Time finish</description>
+                        <posx>-175</posx>
+                        <posy>110</posy>
+                        <include>scraperimdb</include>
+                        <info>System.Time</info>
+                        <width>100</width>
+                        <height>16</height>
+                        <align>center</align>
+                        <font>Font_OSDTime</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+                <control type="label">
+                        <description>Time finish lable</description>
+                        <posx>-295</posx>
+                        <posy>130</posy>
+                        <include>scraperimdbtitle</include>
+                        <label>End Time</label>
+                        <width>160</width>
+                        <height>16</height>
+                        <font>Font_OSDTime</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+
+                <control type="label">
+                        <description>Time finish</description>
+                        <posx>-175</posx>
+                        <posy>130</posy>
+                        <include>scraperimdb</include>
+                        <info>Player.FinishTime</info>
+                        <width>100</width>
+                        <height>16</height>
+                        <align>center</align>
+                        <font>Font_OSDTime</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+
+
+<!-- ------------ -->
+			
 	</control>
 
 

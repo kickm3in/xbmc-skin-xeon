@@ -14,7 +14,7 @@
 		<posy>82</posy>
 		<width>1209</width>
 		<height>557</height>
-		<texture>browserback.png</texture>
+		<texture>Filemanager/browserback.png</texture>
 		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
 	</control>
 	
@@ -24,7 +24,7 @@
 		<posy>82</posy>
 		<width>1209</width>
 		<height>557</height>
-		<texture>browserback_xbox.png</texture>
+		<texture>Filemanager/browserback_xbox.png</texture>
 		<visible>Skin.HasSetting(lowerres)</visible>
 	</control>
 	
@@ -34,7 +34,7 @@
 		<posy>82</posy>
 		<width>1209</width>
 		<height>557</height>
-		<texture>browserback_eee.png</texture>
+		<texture>Filemanager/browserback_eee.png</texture>
 		<visible>Skin.HasSetting(eeemode)</visible>
 	</control>
 	
@@ -55,7 +55,7 @@
 		<posy>197</posy>
 		<width>542</width>
 		<height>4</height>
-		<texture>browserdivider.png</texture>
+		<texture>Filemanager/browserdivider.png</texture>
 	</control>
 	
 	<control type="list" id="450">
@@ -84,7 +84,7 @@
 				<posy>35</posy>
 				<width>542</width>
 				<height>4</height>
-				<texture>browserdivider.png</texture>
+				<texture>Filemanager/browserdivider.png</texture>
 			</control>
 		</itemlayout>
 		<focusedlayout height="41">
@@ -103,7 +103,7 @@
 				<posy>35</posy>
 				<width>542</width>
 				<height>4</height>
-				<texture>browserdivider.png</texture>
+				<texture>Filemanager/browserdivider.png</texture>
 			</control>
  		</focusedlayout>
 	</control>
@@ -133,7 +133,7 @@
 		<posy>400</posy>
 		<width>350</width>
 		<height>70</height>
-		<texture>browserinfoback.png</texture>
+		<texture>Filemanager/browserinfoback.png</texture>
 		<aspectratio>scale</aspectratio>
 		<visible>Skin.HasSetting(browserinfo) + !IsEmpty(ListItem.Size) + !Window.IsVisible(24) + !Window.IsVisible(25)</visible>
 		<include>common-fade</include>
@@ -145,7 +145,7 @@
 		<posy>140</posy>
 		<width>350</width>
 		<height>350</height>
-		<texture>browserframe.png</texture>
+		<texture>Filemanager/browserframe.png</texture>
 		<aspectratio>stretch</aspectratio>
 	</control>	
 
@@ -167,7 +167,7 @@
 		<posy>490</posy>
 		<width>350</width>
 		<height>350</height>
-		<texture flipy="true" diffuse="browsermask.png">$INFO[listitem.icon]</texture>
+		<texture flipy="true" diffuse="Filemanager/browsermask.png">$INFO[listitem.icon]</texture>
 		<aspectratio>scale</aspectratio>
 		<visible>!Window.IsVisible(24) + !Window.IsVisible(25)</visible>
 	</control>
@@ -177,7 +177,7 @@
 		<posy>490</posy>
 		<width>350</width>
 		<height>350</height>
-		<texture flipy="true" diffuse="browsermask.png">$INFO[listitem.icon]</texture>
+		<texture flipy="true" diffuse="Filemanager/browsermask.png">$INFO[listitem.icon]</texture>
 		<aspectratio>keep</aspectratio>
 		<visible>Window.IsVisible(24) | Window.IsVisible(25)</visible>
 	</control>
@@ -188,7 +188,7 @@
 		<width>350</width>
 		<height>350</height>
 		<colordiffuse>d0FFFFFF</colordiffuse>
-		<texture flipy="true" diffuse="Thumb_Mask.png">browserframe.png</texture>
+		<texture flipy="true" diffuse="Thumb_Mask.png">Filemanager/browserframe.png</texture>
 		<aspectratio>stretch</aspectratio>
 	</control>
 

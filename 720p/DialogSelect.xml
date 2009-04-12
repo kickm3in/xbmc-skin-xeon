@@ -55,7 +55,7 @@
 				<posy>35</posy>
 				<width>542</width>
 				<height>4</height>
-				<texture>browserdivider.png</texture>
+				<texture>Filemanager/browserdivider.png</texture>
 			</control>
 		</itemlayout>
 		<focusedlayout height="41">
@@ -74,7 +74,7 @@
 				<posy>35</posy>
 				<width>542</width>
 				<height>4</height>
-				<texture>browserdivider.png</texture>
+				<texture>Filemanager/browserdivider.png</texture>
 			</control>
  		</focusedlayout>
 	</control>

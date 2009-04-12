@@ -67,7 +67,7 @@
 			<posy>154</posy>
 			<width>334</width>
 			<height>334</height>
-			<texture>browserframe.png</texture>
+			<texture>Filemanager/browserframe.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>	
 	
@@ -77,7 +77,7 @@
 			<width>334</width>
 			<height>334</height>
 			<colordiffuse>d0FFFFFF</colordiffuse>
-			<texture flipy="true" diffuse="Thumb_Mask.png">browserframe.png</texture>
+			<texture flipy="true" diffuse="Thumb_Mask.png">Filemanager/browserframe.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 	

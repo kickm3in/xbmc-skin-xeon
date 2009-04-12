@@ -374,7 +374,7 @@
 		<height>52</height>
 		<colordiffuse>FFFFFFFF</colordiffuse>
 		<include>discformat</include>		
-		<texture>browserinfoback.png</texture>
+		<texture>Filemanager/browserinfoback.png</texture>
 		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
 	</control>
 

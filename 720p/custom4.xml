@@ -14,7 +14,7 @@
 		<posy>0</posy>
 		<width>1280</width>
 		<height>720</height>
-		<texture>testcard.png</texture>
+		<texture>Calibrate/testcard.png</texture>
 	</control>
 	
 	</controls>

@@ -39,7 +39,7 @@
 		<posy>50</posy>
 		<width>1209</width>
 		<height>621</height>
-		<texture>filemanback.png</texture>
+		<texture>Filemanager/filemanback.png</texture>
 		<include>common-fade</include>
 		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
 	</control>
@@ -50,7 +50,7 @@
 		<posy>50</posy>
 		<width>1209</width>
 		<height>621</height>
-		<texture>filemanback_xbox.png</texture>
+		<texture>Filemanager/filemanback_xbox.png</texture>
 		<include>common-fade</include>
 		<visible>Skin.HasSetting(lowerres)</visible>
 	</control>
@@ -61,7 +61,7 @@
 		<posy>50</posy>
 		<width>1209</width>
 		<height>621</height>
-		<texture>filemanback_eee.png</texture>
+		<texture>Filemanager/filemanback_eee.png</texture>
 		<include>common-fade</include>
 		<visible>Skin.HasSetting(eeemode)</visible>
 	</control>
@@ -77,7 +77,7 @@
 		<posy>90</posy>
 		<width>576</width>
 		<height>538</height>
-		<texture>filemanfilepanel.png</texture>
+		<texture>Filemanager/filemanfilepanel.png</texture>
 	</control>
 	
 	<control type="image">
@@ -86,7 +86,7 @@
 		<posy>90</posy>
 		<width>576</width>
 		<height>538</height>
-		<texture>filemanfilepanel.png</texture>
+		<texture>Filemanager/filemanfilepanel.png</texture>
 	</control>
 	
 	<control type="label" id="102">
@@ -170,7 +170,7 @@
 				<posy>27</posy>
 				<width>490</width>
 				<height>4</height>
-				<texture>browserdivider.png</texture>
+				<texture>Filemanager/browserdivider.png</texture>
 			</control>
 		</itemlayout>
 		<focusedlayout height="32">
@@ -206,7 +206,7 @@
 				<posy>27</posy>
 				<width>490</width>
 				<height>4</height>
-				<texture>browserdivider.png</texture>
+				<texture>Filemanager/browserdivider.png</texture>
 			</control>
  		</focusedlayout>
 	</control>
@@ -251,7 +251,7 @@
 				<posy>27</posy>
 				<width>490</width>
 				<height>4</height>
-				<texture>browserdivider.png</texture>
+				<texture>Filemanager/browserdivider.png</texture>
 			</control>
 		</itemlayout>
 		<focusedlayout height="32">
@@ -287,7 +287,7 @@
 				<posy>27</posy>
 				<width>490</width>
 				<height>4</height>
-				<texture>browserdivider.png</texture>
+				<texture>Filemanager/browserdivider.png</texture>
 			</control>
  		</focusedlayout>
 	</control>
@@ -305,7 +305,7 @@
 		<posy>90</posy>
 		<width>733</width>
 		<height>541</height>
-		<texture>filemaninfopanel.png</texture>
+		<texture>Filemanager/filemaninfopanel.png</texture>
 	</control>
 	
 	<control type="image">
@@ -313,7 +313,7 @@
 		<posy>220</posy>
 		<width>337</width>
 		<height>379</height>
-		<texture>filemanxbmclogo.png</texture>
+		<texture>Filemanager/filemanxbmclogo.png</texture>
 		<visible>!Skin.HasSetting(lowerres) + !Skin.HasSetting(eeemode)</visible>
 	</control>
 	
@@ -322,7 +322,7 @@
 		<posy>220</posy>
 		<width>337</width>
 		<height>379</height>
-		<texture>filemanxbmclogo_xbox.png</texture>
+		<texture>Filemanager/filemanxbmclogo_xbox.png</texture>
 		<visible>Skin.HasSetting(lowerres)</visible>
 	</control>
 	
@@ -331,7 +331,7 @@
 		<posy>220</posy>
 		<width>337</width>
 		<height>379</height>
-		<texture>filemanxbmclogo_eee.png</texture>
+		<texture>Filemanager/filemanxbmclogo_eee.png</texture>
 		<visible>Skin.HasSetting(eeemode)</visible>
 	</control>
 	
@@ -588,7 +588,7 @@
 		<posy>90</posy>
 		<width>733</width>
 		<height>541</height>
-		<texture>filemaninfopanel.png</texture>
+		<texture>Filemanager/filemaninfopanel.png</texture>
 	</control>
 	
 	<control type="image">
@@ -596,7 +596,7 @@
 		<posy>220</posy>
 		<width>337</width>
 		<height>379</height>
-		<texture>filemanxbmclogo.png</texture>
+		<texture>Filemanager/filemanxbmclogo.png</texture>
 	</control>
 	
 	<control type="group">
@@ -720,7 +720,7 @@
 				<posx>590</posx>
 				<posy>140</posy>
 				<width>455</width>
-				<label>ALPHA13</label>
+				<label>Xeon</label>
 				<include>scraperimdb</include>
 				<scroll>true</scroll>
 			</control>
@@ -970,7 +970,7 @@
 		</control>
 
 		<control type="button" id="6">
-		<label>Viewing habits</label>
+		<label>xxxx</label>
 		<include>contextformatbrowser</include>
 		</control>
 
