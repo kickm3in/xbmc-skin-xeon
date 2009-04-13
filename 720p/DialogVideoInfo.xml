@@ -111,12 +111,12 @@
 		</control>
 
 		<control type="button" id="10">
-		<label>Get Thumb</label>
+		<label>Thumb</label>
 		<include>contextformatinfo</include>
 		</control>
 
 		<control type="button" id="12">
-		<label>Get Fanart</label>
+		<label>Fanart</label>
 		<include>contextformatinfo</include>
 		</control>
 		

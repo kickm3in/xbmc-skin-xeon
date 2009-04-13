@@ -412,6 +412,263 @@
 					<textcolor>grey2</textcolor>
 					<scroll>true</scroll>
 				</control>
+
+				        <control type="label">
+                        <description>Time finish label</description>
+                        <posx>1110</posx>
+                        <posy>10</posy>
+                        <label>Time</label>
+                        <width>160</width>
+                        <height>16</height>
+                        <font>font13</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+				
+				<control type="label" id="1">
+					<description>System Time Label</description>
+					<posx>1250</posx>
+					<posy>10</posy>
+					<width>200</width>
+					<height>25</height>
+					<textcolor>green</textcolor>
+					<label>$INFO[System.Time]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+				</control>
+				
+				        <control type="label">
+                        <description>Time finish label</description>
+                        <posx>1070</posx>
+                        <posy>40</posy>
+                        <label>End Time</label>
+                        <width>160</width>
+                        <height>16</height>
+                        <font>font13</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+
+                <control type="label">
+                        <description>Time finish</description>
+                        <posx>1160</posx>
+                        <posy>40</posy>
+                        <info>Player.FinishTime</info>
+						<textcolor>green</textcolor>						
+                        <width>100</width>
+                        <height>16</height>
+                        <align>center</align>
+                        <font>font13</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+		
+				
+				
+			<control type="group"> <!-- Studio Flag position-->
+				<posx>1100</posx>
+				<posy>-525</posy>
+				<!--<control type="image">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/default.png</texture>
+					<visible>!Control.IsVisible(81) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>				-->
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/20thcenturyfox.png</texture>
+					<visible>substring(VideoPlayer.studio,Fox)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/universal.png</texture>
+					<visible>substring(VideoPlayer.studio,Universal)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/filmfour.png</texture>
+					<visible>substring(VideoPlayer.studio,FilmFour) | substring(VideoPlayer.studio,Channel Four)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/disney.png</texture>
+					<visible>substring(VideoPlayer.studio,Disney) | substring(VideoPlayer.studio,Pixar)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/gaumont.png</texture>
+					<visible>substring(VideoPlayer.studio,Gaumont)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/unitedartists.png</texture>
+					<visible>substring(VideoPlayer.studio,Artists)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/newlinecinema.png</texture>
+					<visible>substring(VideoPlayer.studio,New Line)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/dimension.png</texture>
+					<visible>substring(VideoPlayer.studio,Dimension)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/touchstone.png</texture>
+					<visible>substring(VideoPlayer.studio,Touchstone)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/hollywood.png</texture>
+					<visible>substring(VideoPlayer.studio,Hollywood)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/carolco.png</texture>
+					<visible>substring(VideoPlayer.studio,Carolco)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/revolution.png</texture>
+					<visible>substring(VideoPlayer.studio,Revolution)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/lucasfilm.png</texture>
+					<visible>substring(VideoPlayer.studio,Lucasfilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/screengems.png</texture>
+					<visible>substring(VideoPlayer.studio,Screen Gems)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/warner.png</texture>
+					<visible>substring(VideoPlayer.studio,Warner)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/tristar.png</texture>
+					<visible>substring(VideoPlayer.studio,TriStar)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/castlerock.png</texture>
+					<visible>substring(VideoPlayer.studio,Castle Rock)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/studiocanal.png</texture>
+					<visible>substring(VideoPlayer.studio,Studio Canal)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/paramount.png</texture>
+					<visible>substring(VideoPlayer.studio,Paramount) | substring(VideoPlayer.studio,Comedy Central)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/dreamworks.png</texture>
+					<visible>substring(VideoPlayer.studio,DreamWorks)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/columbia.png</texture>
+					<visible>substring(VideoPlayer.studio,Columbia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/mgm.png</texture>
+					<visible>substring(VideoPlayer.studio,Mayer) | substring(VideoPlayer.studio,MGM)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/sonypictures.png</texture>
+					<visible>substring(VideoPlayer.studio,Sony)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/artisan.png</texture>
+					<visible>substring(VideoPlayer.studio,Artisan)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/lionsgate.png</texture>
+					<visible>substring(VideoPlayer.studio,Lionsgate)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/miramax.png</texture>
+					<visible>substring(VideoPlayer.studio,Miramax) + !substring(VideoPlayer.studio,Universal)</visible>
+				</control>
+				<!-- New flags added by Halibutt and Stagecrew -->
+				<!-- request more flags here: http://xbmc.org/forum/showthread.php?t=48315 -->
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/nuimage.png</texture>
+					<visible>substring(VideoPlayer.studio,Nuimage)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/millenium.png</texture>
+					<visible>substring(VideoPlayer.studio,Millenium)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/constantin.png</texture>
+					<visible>substring(VideoPlayer.studio,Constantin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/orion.png</texture>
+					<visible>substring(VideoPlayer.studio,Orion)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/kadr.png</texture>
+					<visible>substring(VideoPlayer.studio,Studio Filmowe Kadr)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/eurimages.png</texture>
+					<visible>substring(VideoPlayer.studio,EurImages)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/magnolia.png</texture>
+					<visible>substring(VideoPlayer.studio,Magnolia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/wdr.png</texture>
+					<visible>substring(VideoPlayer.studio,WDR)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/legendary.png</texture>
+					<visible>substring(VideoPlayer.studio,Legendary)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/celador.png</texture>
+					<visible>substring(VideoPlayer.studio,Celador)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/abandon.png</texture>
+					<visible>substring(VideoPlayer.studio,Abandon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/amblin.png</texture>
+					<visible>substring(VideoPlayer.studio,Amblin)</visible>
+				</control>
+			</control>				
+				
+				
+				
+				
+				
 			</control>
 			<control type="group">
 				<posy>0</posy>
@@ -419,24 +676,24 @@
 				<include>VisibleFadeEffect</include>
 				<control type="image">
 					<description>media info background image</description>
-					<posx>00</posx>
-					<posy>00</posy>
-					<width>1200</width>
-					<height>235</height>
+					<posx>-5</posx>
+					<posy>-300</posy>
+					<width>1300</width>
+					<height>535</height>
 					<texture>black-back.png</texture>
 					<include>openclose</include>
 				</control>
 				<control type="textbox">
 					<description>Description Value for Movies</description>
 					<posx>050</posx>
-					<posy>00</posy>
-					<width>1100</width>
-					<height>215</height>
+					<posy>-300</posy>
+					<width>1200</width>
+					<height>515</height>
 					<font>xbmc-info</font>
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<pagecontrol>60</pagecontrol>
-					<label>[B]$INFO[VideoPlayer.Title][/B] [CR] $INFO[VideoPlayer.Plot]</label>
+					<label>[B][CR] $INFO[VideoPlayer.Plot][/B] </label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<include>common-fade-quick</include>
 				</control>
@@ -578,8 +835,8 @@
 			
 			<control type="label">
 				<label>Episode Info...</label>
-				<posx>100</posx>
-				<posy>0</posy>
+				<posx>-350</posx>
+				<posy>90</posy>
 				<width>1065</width>
 				<font>xbmc-info-big</font>
 				<align>center</align>
@@ -735,6 +992,37 @@
 					<textcolor>grey2</textcolor>
 					<scroll>true</scroll>
 				</control>
+				
+<!-- New Finish Time Lable -->
+
+                <control type="label">
+                        <description>Time finish label</description>
+                        <posx>1080</posx>
+                        <posy>40</posy>
+                        <label>End Time</label>
+                        <width>160</width>
+                        <height>16</height>
+                        <font>font13</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+
+                <control type="label">
+                        <description>Time finish</description>
+                        <posx>1160</posx>
+                        <posy>40</posy>
+                        <info>Player.FinishTime</info>
+						<textcolor>green</textcolor>						
+                        <width>100</width>
+                        <height>16</height>
+                        <align>center</align>
+                        <font>font13</font>
+                        <visible>!Player.Seeking</visible>
+                </control>
+
+
+<!-- ------------ -->				
+				
+				
 			</control>
 			<control type="group">
 				<posy>0</posy>

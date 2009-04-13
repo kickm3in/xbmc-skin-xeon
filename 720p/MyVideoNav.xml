@@ -42,18 +42,19 @@
 		<posy>-5</posy>
 		<width>1290</width>
 		<height>730</height>
+		<fadetime>400</fadetime>
 		<animation effect="fade" end="0" time="200">WindowClose</animation>
 		<animation effect="fade" start="0" end="100" time="1500" delay="200">Visible</animation>
-
-		<!--<animation type="unFocus">
-		<effect type="fade" start="100" end="0" time="1500" delay="200"/>
-		</animation>-->		
+		<!--<animation effect="fade" start="100" end="0" time="100">Hidden</animation>
+		<animation type="unFocus">
+		<effect type="fade" start="100" end="0" time="10"/>
+		</animation>-->
 		
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
-		<visible>[Container.Content(tvshows) | Container.Content(movies)] + [Control.IsVisible(53) | Control.IsVisible(57)] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image)) + Control.IsVisible(84) + !Control.IsVisible(86)</visible>
+		<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)| Container.Content(Episodes)]] <!--+ [Control.IsVisible(53) -->| Control.IsVisible(57)] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image))  </visible>
 	</control>
 	
-	<control type="image" id="345">
+	<!--<control type="image" id="345">
 		<posx>-10</posx>
 		<posy>-10</posy>
 		<width>1300</width>
@@ -62,7 +63,7 @@
 		<animation effect="fade" start="0" end="100" time="200" delay="200">VisibleChange</animation>
 		<texture>$INFO[Fanart.Image]</texture>
 		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(fanart)</visible>
-	</control>
+	</control>-->
 
 	<control type="image">
 		<include>mediabackgroundfolder</include>
@@ -222,7 +223,7 @@
 	<include>contextback</include>	
 	<include>nowplayingpopup</include>
 	<!--<include>time</include>-->
-			<include>ScrollOffsetLabel</include>
+			<!--<include>ScrollOffsetLabel</include>-->
 	<include>Furniture_Debug</include>
 </controls>	
 </window>
