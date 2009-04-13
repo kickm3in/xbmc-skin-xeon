@@ -260,10 +260,19 @@
 			</control>				
 
 			<control type="label">
+			<description>Platform linux</description>
+			<posx>0</posx>
+			<posy>37</posy>
+			<label>Platform: Other (Apple ?)</label>
+			<font>font12</font>
+			<visible>!system.platform.linux + !system.platform.windows + !system.platform.xbox</visible>				
+			</control>	
+			
+			<control type="label">
 			<description>CPU</description>
 			<posx>0</posx>
 			<posy>70</posy>
-			<label>CPU Useage:</label>
+			<label>CPU Usage:</label>
 			<font>font12</font>
 			</control>		
 			

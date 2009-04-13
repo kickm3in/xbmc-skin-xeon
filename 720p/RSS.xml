@@ -1,0 +1,39 @@
+<includes>
+
+<include name="rsstext">
+		<posx>0</posx>
+		<width>1280</width>
+		<urlset>1</urlset>
+		<titlecolor>fffff000</titlecolor>
+		<headlinecolor>ffffffff</headlinecolor>
+		<textcolor>ffffff00</textcolor>
+		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
+		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+		<visible>[!Player.HasVideo + !Player.HasAudio] | !Skin.HasSetting(mediapanel)</visible>
+		<visible>!Skin.HasSetting(drophome)</visible>
+		<visible>System.HasNetwork</visible>
+</include>
+
+<include name="rsstext2">
+		<posx>0</posx>
+		<width>1280</width>
+		<urlset>2</urlset>
+		<titlecolor>fffff000</titlecolor>
+		<headlinecolor>ffffffff</headlinecolor>
+		<textcolor>ffffff00</textcolor>
+		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Visible</animation>
+		<animation effect="fade" time="0" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+		<animation effect="fade" time="500" condition="!Window.IsActive(56)">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+		<visible>[!Player.HasVideo + !Player.HasAudio] | !Skin.HasSetting(mediapanel)</visible>
+		<visible>!Skin.HasSetting(drophome)</visible>
+		<visible>System.HasNetwork</visible>
+</include>
+	
+
+	
+	
+	
+</includes>	

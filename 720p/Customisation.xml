@@ -1074,8 +1074,9 @@
 		</control>
 
 		<control type="radiobutton" id="605">
-			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Developer Mode</label>
+			<width>1156</width>
+			<include>customsettingsbutton</include>
+			<label>Developer Mode (CPU & Memory meters on select screens)</label>
 			<onclick>Skin.ToggleSetting(debug)</onclick>
 			<selected>Skin.HasSetting(debug)</selected>
 		</control>

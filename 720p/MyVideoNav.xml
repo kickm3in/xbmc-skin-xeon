@@ -15,20 +15,23 @@
 		<include>mediabackgroundfolder</include>
 		<info>Skin.String(CustomMoviesFolder)</info>
 		<visible>Skin.HasSetting(videomovies) + Skin.HasSetting(CustomMoviesFoldOn) + IsEmpty(listitem.property(fanart_image))</visible>
-	</control>
+		<visible>[IsEmpty(Fanart.Image)+IsEmpty(listitem.property(fanart_image))] | Skin.HasSetting(notvfanart)</visible> 			
+		</control>
 
 	<control type="multiimage">
 		<include>mediabackground</include>
 		<imagepath>Default</imagepath>
 		<info>Skin.String(CustomTV)</info>
-		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(CustomTVFoldOn)</visible>
-	</control>
+		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(CustomTVFoldOn) + IsEmpty(listitem.property(fanart_image))</visible>
+		<visible>[IsEmpty(Fanart.Image)+IsEmpty(listitem.property(fanart_image))] | Skin.HasSetting(notvfanart)</visible> 			
+		</control>
 
 	<control type="multiimage">
 		<include>mediabackgroundfolder</include>
 		<info>Skin.String(CustomTVFolder)</info>
-		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(CustomTVFolder)</visible>
-	</control>
+		<visible>Skin.HasSetting(videotv) + !Skin.HasSetting(CustomTVFolder) + IsEmpty(listitem.property(fanart_image))</visible>
+		<visible>[IsEmpty(Fanart.Image)+IsEmpty(listitem.property(fanart_image))] | Skin.HasSetting(notvfanart)</visible> 			
+		</control>
 
     <control type="image" id="86">
             <texture>-</texture>
@@ -37,23 +40,79 @@
     </control>
 
 <!--showcase fan art -->	
-	<control type="image">
+	<!--<control type="image">
 		<posx>-5</posx>
 		<posy>-5</posy>
 		<width>1290</width>
 		<height>730</height>
-		<fadetime>400</fadetime>
-		<animation effect="fade" end="0" time="200">WindowClose</animation>
+		            <aspectratio>scale</aspectratio>
+		<!--<fadetime>900</fadetime>-->
+		<!--<animation effect="fade" end="0" time="200">WindowClose</animation>
 		<animation effect="fade" start="0" end="100" time="1500" delay="200">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="1500" delay="200">WindowOpen</animation>
+		<animation effect="fade" start="0" end="100" time="1500" delay="200">Hidden</animation>-->
 		<!--<animation effect="fade" start="100" end="0" time="100">Hidden</animation>
 		<animation type="unFocus">
 		<effect type="fade" start="100" end="0" time="10"/>
-		</animation>-->
-		
+		</animation>
+
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
-		<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)| Container.Content(Episodes)]] <!--+ [Control.IsVisible(53) -->| Control.IsVisible(57)] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image))  </visible>
-	</control>
+		<animation effect="fade" start="0" end="100" time="1500" delay="200">WindowOpen</animation>
+
+            <animation effect="fade" start="100" end="0" time="300" condition="Control(57).Scrolling">Conditional</animation> 
+
 	
+		<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)| Container.Content(Episodes)]] + [Control.IsVisible(53) | Control.IsVisible(57)] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image))  </visible>
+		</control>	-->
+
+
+
+
+<control type="group">
+<visible>!Container.OnNext + !Container.OnPrevious</visible>
+<animation effect="fade" start="0" end="100" time="600" delay="450">Visible</animation>
+<!--<animation effect="fade" start="100" end="0" time="100">Hidden</animation>-->
+		<animation effect="fade" start="0" end="100" time="1500" delay="200">WindowOpen</animation>
+		<animation effect="fade" end="0" time="200">WindowClose</animation>		
+		
+<control type="image" description="Fanart Image">
+		<posx>-5</posx>
+		<posy>-5</posy>
+		<width>1290</width>
+		<height>730</height>
+<aspectratio>scale</aspectratio>
+<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons)| Container.Content(Episodes)] + [Control.IsVisible(53) | Control.IsVisible(57)] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image))  </visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>
+
+<!--<control type="image" description="Fanart Image">
+		<posx>-5</posx>
+		<posy>-5</posy>
+		<width>1290</width>
+		<height>730</height>
+<aspectratio>scale</aspectratio>
+<texture>$INFO[FanArt.Image]</texture>
+<visible>Container.Content(movies) + [Control.IsVisible(53) | Control.IsVisible(57)] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image))  </visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation>
+</control>-->
+</control>
+
+<control type="image" description="tv Fanart Image">
+		<posx>-5</posx>
+		<posy>-5</posy>
+		<width>1290</width>
+		<height>730</height>
+<!--<aspectratio>scale</aspectratio>-->
+<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+<visible>[Container.Content(tvshows) | Container.Content(seasons)| Container.Content(Episodes)] + !Skin.HasSetting(listitemfanart) + !IsEmpty(listitem.property(fanart_image))</visible>
+<!--<animation effect="fade" time="200">WindowOpen</animation>-->
+<!--<animation effect="fade" time="200">WindowClose</animation>-->
+</control>
+
+		
 	<!--<control type="image" id="345">
 		<posx>-10</posx>
 		<posy>-10</posy>
@@ -210,16 +269,18 @@
 			<include>mediafocusvideo</include>
 			<visible>[Control.IsVisible(53) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(55)] + !Window.IsActive(2004) + !Container.Content(episodes)</visible>
 		</control>
-
+	<include>Viewtype_Showcase</include><!-- id 57-->
 		<include>Viewtype_List</include>
 		<include>Viewtype_Poster</include>
 	
 	</control>
 
-	<include>Viewtype_Showcase</include>
 
-	<!--<include>Viewtype_ShowcaseWide</include>-->
-	<include>Viewtype_Episode</include>
+
+	<include>Coverflow</include><!-- id 54-->
+		<!--<include>3d_CoverView</include>  view id = 500 -->
+
+	<include>Viewtype_Episode</include><!-- id 53-->
 	<include>contextback</include>	
 	<include>nowplayingpopup</include>
 	<!--<include>time</include>-->

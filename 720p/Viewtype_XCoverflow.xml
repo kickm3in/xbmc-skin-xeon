@@ -1,0 +1,816 @@
+<includes>
+	
+	
+<!-- Video Library Wrap List  id 54-->
+
+<include name="Coverflow">
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>0</posx>
+<posy>0</posy>
+<width>720</width>
+<height>576</height>
+<texture>back-row.png</texture>
+<visible>!Skin.HasSetting(Background)</visible>
+<visible>Control.IsVisible(54)</visible>
+</control>	
+
+<control>
+<description>Background</description>
+<type>image</type>
+<posx>-20</posx>
+<posy>0</posy>
+<width>760</width>
+<height>586</height>
+<texture diffuse="lower diffuse.png">background2.png</texture>
+<visible>Control.IsVisible(54)</visible>
+</control>	
+
+<control type="group" id="3001">
+<posy>90</posy>
+<camera x="360" y="288" />
+<visible>Control.IsVisible(54) + Container.OnNext</visible>
+<animation effect="slide" tween="cubic" end="-50,0" time="200" reversible="false">Hidden</animation>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-5).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="-40" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="-40" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>50</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-4).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="10" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>50</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="10" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+
+<control type="image">
+<posx>100</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-3).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="60" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>100</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="60" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>150</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-2).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="110" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>150</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="110" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>570</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(4).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="810" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>570</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="810" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+
+<control type="image">
+<posx>520</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(3).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="760" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>520</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="760" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>470</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(2).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="710" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>470</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="710" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>420</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(1).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="660" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>420</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="660" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="group">
+<visible>Control.IsVisible(54) + Container.OnNext</visible>
+<animation effect="slide" tween="cubic" end="-60,0" time="200" reversible="false">Hidden</animation>
+
+<control type="image">
+<posx>260</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-1).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<visible>Container.OnNext</visible>
+<animation effect="rotatey" center="220" start="0" end="-65" time="200" reversible="false">Hidden</animation>
+</control>
+
+<control type="image">
+<posx>260</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<visible>Container.OnNext</visible>
+<animation effect="rotatey" center="220" start="0" end="-65" time="200" reversible="false">Hidden</animation>
+</control>
+
+
+
+<control type="image">
+<posx>370</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(0).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<visible>Container.OnNext</visible>
+<animation effect="rotatey" center="610" start="0" end="-65" time="200" reversible="false">Hidden</animation>
+<animation effect="rotatey" center="610" start="60" end="65" time="200" condition="true">Conditional</animation>
+
+</control>
+
+<control type="image">
+<posx>370</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<visible>Container.OnNext</visible>
+<animation effect="rotatey" center="610" start="0" end="-65" time="200" reversible="false">Hidden</animation>
+<animation effect="rotatey" center="610" start="60" end="65" time="200" condition="true">Conditional</animation>
+
+</control>
+
+</control>
+
+</control>
+<control type="group" id="3002">
+<posy>90</posy>
+<camera x="360" y="288" />
+<visible>Control.IsVisible(54) + Container.OnPrevious</visible>
+<animation effect="slide" tween="cubic" end="50,0" time="200" reversible="false">Hidden</animation>
+
+<control type="image">
+<posx>-50</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-4).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="-90" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>-50</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="-90" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-3).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="-40" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="-40" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>50</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-2).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="10" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>50</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="10" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>100</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-1).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="60" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>100</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="60" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>520</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(5).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="760" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>520</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="760" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>470</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(4).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="710" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>470</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="710" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>420</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(3).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="660" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>420</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="660" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>370</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(2).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="610" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>370</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="610" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="group">
+<visible>Control.IsVisible(54) + Container.OnPrevious</visible>
+<animation effect="slide" tween="cubic" end="60,0" time="200" reversible="false">Hidden</animation>
+
+<control type="image">
+<posx>260</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(1).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<visible>Container.OnPrevious</visible>
+<animation effect="rotatey" center="500" start="0" end="65" time="200" reversible="false">Hidden</animation>
+</control>
+
+<control type="image">
+<posx>260</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<visible>Container.OnPrevious</visible>
+<animation effect="rotatey" center="500" start="0" end="65" time="200" reversible="false">Hidden</animation>
+</control>
+
+
+<control type="image">
+<posx>150</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(0).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<visible>Container.OnPrevious</visible>
+<animation effect="rotatey" center="110" start="0" end="65" time="200" reversible="false">Hidden</animation>
+<animation effect="rotatey" center="110" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>150</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<visible>Container.OnPrevious</visible>
+<animation effect="rotatey" center="110" start="0" end="65" time="200" reversible="false">Hidden</animation>
+<animation effect="rotatey" center="110" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+</control>
+
+</control>
+
+<control type="group" id="3000">
+<posy>90</posy>
+<camera x="360" y="288" />
+<visible>Control.IsVisible(54) + !Control.IsVisible(3001)  + !Control.IsVisible(3002)</visible>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-4).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="-40" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="-40" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>50</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-3).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="10" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>50</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="10" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>100</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-2).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="60" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>100</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="60" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>150</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(-1).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="110" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>150</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="110" start="-60" end="-65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>520</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(4).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="760" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>520</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="760" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>470</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(3).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="710" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>470</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="710" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>420</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(2).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="660" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>420</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="660" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+<control type="image">
+<posx>370</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<info>Container.ListItem(1).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+<animation effect="rotatey" center="610" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+<control type="image">
+<posx>370</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<texture>mask4.png</texture>
+<animation effect="rotatey" center="610" start="60" end="65" time="0" condition="true">Conditional</animation>
+</control>
+
+
+
+<control type="image">
+<posx>260</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<aspectratio>stretch</aspectratio>
+<visible>!Contol.HasFocus(54)</visible>
+<info>Container.ListItem(0).Thumb</info>
+<texture diffuse="Mask3.png">defaultdvdposter.png</texture>
+</control>
+
+<control type="image">
+<posx>260</posx>
+<posy>0</posy>
+<width>200</width>
+<height>385</height>
+<aspectratio>stretch</aspectratio>
+<visible>!Contol.HasFocus(54)</visible>
+<texture>mask4.png</texture>
+</control>
+
+
+
+
+
+</control>
+
+<control type="scrollbar" id="90">
+<posx>210</posx>
+<posy>527</posy>
+<width>300</width>
+<height>20</height>
+<texturesliderbackground>Scroll-background.png</texturesliderbackground>
+<texturesliderbar>scroll-background.png</texturesliderbar>
+<texturesliderbarfocus>scroll-background.png</texturesliderbarfocus>
+<textureslidernib>scrollbar_nib1.png</textureslidernib>
+<textureslidernibfocus>scrollbar_nib_focus1.png</textureslidernibfocus>
+<onleft>90</onleft>
+<onright>90</onright>
+<onup>54</onup>
+<ondown>2</ondown>
+<showonepage>false</showonepage>
+<orientation>horizontal</orientation>
+<visible>Skin.HasSetting(sbar)</visible>
+<visible>Control.IsVisible(54)+!System.IdleTime(2)</visible>
+<visible>!Control.HasFocus(57)</visible>
+</control>
+
+
+
+<control type="wraplist" id="54">
+<visible>Container.Content(Movies) | Container.Content(MusicVideos) | Skin.HasSetting(TV Poster) + [Container.Content(TVShows)]</visible>
+<posx>-40</posx>
+<posy>165</posy>
+<width>760</width>
+<height>375</height>
+<onleft>54</onleft>
+<onright>54</onright>
+<onup>2</onup>
+<ondown>90</ondown>
+<scrolltime>0</scrolltime>
+<viewtype label="Coverflow">wraplist</viewtype>
+<pagecontrol>90</pagecontrol> 
+<focusposition>3</focusposition>
+<orientation>horizontal</orientation>
+<itemlayout height="250" width="100">
+</itemlayout>
+<focusedlayout height="250"  width="200">
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>200</width>
+<height>375</height>
+
+<visible>!Control.IsVisible(3001)  + !Control.IsVisible(3002)</visible>
+<aspectratio>stretch</aspectratio>
+</control>
+</focusedlayout>
+</control>
+
+<control type="label">
+<posx>0</posx>
+<posy>480</posy>
+<width>720</width>
+<height>16</height>
+<font>special16</font>
+<textcolor>white</textcolor>
+<align>center</align>
+<label>$INFO[ListItem.Label]</label>
+<include>selectedcolor</include>
+<visible>Control.IsVisible(54)</visible>
+</control>
+
+<control type="group">
+<posx>540</posx>
+<posy>477</posy>
+
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>170</width>
+<height>120</height>
+<aspectratio align="bottom">keep</aspectratio>
+<texture>R.png</texture>
+<visible>substring(listitem.mpaa,Rated R)</visible>
+<visible>container.content(movies) + Control.IsVisible(54)</visible>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>170</width>
+<height>120</height>
+<aspectratio align="bottom">keep</aspectratio>
+<texture>PG-13.png</texture>
+<visible>substring(listitem.mpaa,Rated PG-13)</visible>
+<visible>container.content(movies) + Control.IsVisible(54)</visible>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>170</width>
+<height>120</height>
+<aspectratio align="bottom">keep</aspectratio>
+<texture>PG.png</texture>
+<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)</visible>
+<visible>container.content(movies) + Control.IsVisible(54)</visible>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>170</width>
+<height>120</height>
+<aspectratio align="bottom">keep</aspectratio>
+<texture>NR.png</texture>
+<visible>substring(listitem.mpaa,Rated NR)</visible>
+<visible>container.content(movies) + Control.IsVisible(54)</visible>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>170</width>
+<height>120</height>
+<aspectratio align="bottom">keep</aspectratio>
+<texture>NC-17.png</texture>
+<visible>substring(listitem.mpaa,Rated NC-18)</visible>
+<visible>container.content(movies) + Control.IsVisible(54)</visible>
+</control>
+
+<control type="image">
+<posx>0</posx>
+<posy>0</posy>
+<width>170</width>
+<height>120</height>
+<aspectratio align="bottom">keep</aspectratio>
+<texture>G.png</texture>
+<visible>substring(listitem.mpaa,Rated G)</visible>
+<visible>container.content(movies) + Control.IsVisible(54)</visible>
+</control>
+
+</control>
+
+<control type="image" description="Ratings Image">
+<posx>-40</posx>
+<posy>522</posy>
+<width>240</width>
+<height>35</height>
+<info>ListItem.StarRating</info>
+<aspectratio>keep</aspectratio>
+<visible>Control.IsVisible(54) + Container.Content(Movies)</visible>
+<animation effect="fade" time="200">WindowOpen</animation>
+<animation effect="fade" time="200">WindowClose</animation> 
+</control>
+
+</include>
+
+
+	
+</includes>
