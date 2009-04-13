@@ -1,0 +1,145 @@
+<includes>
+
+	<include name="Furniture_Debug">
+	<control type="group">
+		<posx>1050</posx>
+		<posy>20</posy>
+		<description>Default Contents</description>
+		<include>common-fade-quick</include>
+
+	    <control>
+	      <description>preset background image</description>
+	      <type>image</type>
+	      <posx>-10</posx>
+	      <posy>-10</posy>
+	      <width>230</width>
+	      <height>350</height>
+	      <texture>box_opacity70.png</texture>	
+		</control>		  
+		<control type="label">
+			<description>Section Label</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<font>font13b</font>
+			<label>System Performance:</label>
+		</control>
+
+			<control type="label" >
+			<description>Platform xbox</description>
+			<posx>0</posx>
+			<posy>37</posy>
+			<label>Platform: Xbox</label>
+			<font>font12</font>
+			<visible>system.platform.xbox</visible>				
+			</control>
+
+			<control type="label">
+			<description>Platform win</description>
+			<posx>0</posx>
+			<posy>37</posy>
+			<label>Platform: Windows</label>
+			<font>font12</font>
+			<visible>system.platform.windows</visible>				
+			</control>	
+
+			<control type="label">
+			<description>Platform linux</description>
+			<posx>0</posx>
+			<posy>37</posy>
+			<label>Platform: Linux</label>
+			<font>font12</font>
+			<visible>system.platform.linux</visible>				
+			</control>		
+
+			<control type="label">
+			<description>Platform linux</description>
+			<posx>0</posx>
+			<posy>37</posy>
+			<label>Platform: Other (Apple ?)</label>
+			<font>font12</font>
+			<visible>!system.platform.linux + !system.platform.windows + !system.platform.xbox</visible>				
+			</control>			
+
+			<control type="label">
+			<description>CPU</description>
+			<posx>0</posx>
+			<posy>70</posy>
+			<label>CPU Usage:</label>
+			<font>font12</font>
+			</control>		
+			
+			<control type="progress">
+			<description>bar diagram cpu usage</description>
+			<info>bar.cpuusage</info>
+			<visible>true</visible>
+			<posx>0</posx>
+			<posy>105</posy>
+			<width>200</width>
+			<height>20</height>
+			<lefttexture>-</lefttexture>
+			<midtexture>Progress-Mid.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			</control>
+			
+			<control type="label">
+			<description>Label 5</description>
+			<posx>0</posx>
+			<posy>140</posy>
+			<label>$INFO[system.freememory] $LOCALIZE[158]</label>
+			<font>font12</font>
+			</control>
+			
+			<control type="progress">
+			<description>bar diagram free memory</description>
+			<info>bar.freememory</info>
+			<visible>true</visible>
+			<posx>0</posx>
+			<posy>175</posy>
+			<width>200</width>
+			<height>20</height>
+			<lefttexture>-</lefttexture>
+			<midtexture>Progress-Mid.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			</control>
+
+
+			<control type="label">
+			<posx>0</posx>
+			<posy>210</posy>
+			<label>Window:$INFO[System.CurrentWindow]</label>
+			<font>font13b</font>
+			</control>
+
+			<control type="label">
+			<description>Label 10</description>
+			<posx>0</posx>
+			<posy>245</posy>
+			<label>Control:$INFO[System.CurrentControl]</label>
+			<font>font12</font>
+			</control>
+
+			<control type="label">
+			<description>bar Free Space Total</description>
+			<posx>0</posx>
+			<posy>280</posy>
+			<label>FPS:$INFO[System.fps]</label>
+			<font>font12</font>
+			</control>
+
+			<control type="label">
+			<description>Fan Speed</description>
+			<posx>0</posx>
+			<posy>315</posy>
+			<label>Fan Speed: $INFO[system.FanSpeed]</label>
+			<font>font12</font>
+			</control>
+			
+			<visible>Skin.HasSetting(debug)</visible>
+		</control>
+	</include>
+	
+	
+	
+</includes>	
