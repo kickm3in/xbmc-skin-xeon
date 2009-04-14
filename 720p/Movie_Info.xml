@@ -214,6 +214,14 @@
 					<texture>flags/default.png</texture>
 					<visible>!Control.IsVisible(81) + !Skin.HasSetting(nodefaultflags)</visible>
 				</control>				-->
+				<control type="label">
+				<posx>140</posx>
+				<posy>40</posy>
+				<font>font12</font>
+				<align>right</align>
+				<label>$INFO[listitem.studio]</label>
+				<visible>!Control.IsVisible(81)</visible>
+				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/20thcenturyfox.png</texture>
@@ -408,7 +416,7 @@
 				</control>
 			</control>
 
-			<control type="group">
+			<!--<control type="group">
 				<posx>-150</posx>
 				<posy>-450</posy>
 				<control type="image">
@@ -446,7 +454,7 @@
 					<texture>flags/hdtv.png</texture>
 					<visible>substring(listitem.filename,hdtv)</visible>
 				</control>				
-			</control>
+			</control>-->
 			
 		<!--<control type="textbox">
 				<posx>-202</posx>

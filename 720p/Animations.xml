@@ -1,0 +1,266 @@
+<includes>
+
+<include name="Zoom-PlayerControl">
+	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo)</visible>
+	<animation effect="zoom" start="300" end="100" center="60,-212" acceleration="-1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="zoom" start="100" end="300" center="60,-212" acceleration="1" time="500" delay="200" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+
+
+<include name="dialogeffect">
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+<include name="VisibleFadeEffect">
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+</include>
+
+<!-- Animation styles ====================== -->
+
+<include name="common-fade">
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+<include name="common-fade-delay">
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" delay="1000" time="200">WindowClose</animation>
+</include>
+
+<include name="common-fade-delay">
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" delay="1000" time="200">WindowClose</animation>
+</include>
+
+<include name="context-fade">
+	<animation effect="fade" time="200">Visible</animation>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+<include name="openclose">
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="300">WindowClose</animation>
+</include>
+
+<include name="common-fade-normal">
+	<animation effect="fade" time="1000" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" delay="200" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+	<animation effect="fade" start="0" end="100" time="500" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="500" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+
+<include name="common-fade-media">
+	<animation effect="fade" delay="200" time="1000" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" delay="200" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+	<animation effect="fade" delay="200" start="0" end="100" time="500" condition="!Skin.HasSetting(Animate)">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="300" condition="!Skin.HasSetting(Animate)">WindowClose</animation>
+</include>
+
+<include name="common-fade-quick">
+	<animation effect="fade" time="0">Visible</animation>
+	<animation effect="fade" time="0">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+</include>
+
+<include name="common-effect">
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">Visible</animation>
+	<animation effect="fade" time="500" condition="!Skin.HasSetting(Animate)">Hidden</animation>
+</include>
+
+<include name="dialogslide">
+	<animation effect="slide" start="1280,0" end="-658,0" time="200" acceleration="-1">Visible</animation>
+	<animation effect="slide" start="-658,0" end="1280,0" time="200" acceleration="1">Hidden</animation>
+</include>
+
+<include name="backgroundfade">
+         <animation effect="fade" delay = "200" time="500">WindowOpen</animation>
+         <animation effect="fade" time="200">WindowClose</animation>
+         <animation effect="fade" delay = "200" time="800">Visible</animation>
+         <animation effect="fade" delay = "200" time="800">Hidden</animation>
+</include>
+
+<include name="disc">
+
+	<control type="image">
+		<posx>-30</posx>
+		<posy>-85</posy>
+		<width>410</width>
+		<height>252</height>
+		<include>discformat</include>		
+		<texture flipx="true">42.png</texture>
+		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
+		<aspectratio>keep</aspectratio>
+		<animation effect="slide" delay="300" start="-650,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-650,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+
+		<animation effect="slide" reversible="true" delay="400" start="0,0" end="300,300" time="150" condition="Container(300).HasFocus(13) + Control.HasFocus(300)">Conditional</animation>
+	</control>
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>-55</posy>
+		<width>310</width>
+		<height>52</height>
+		<colordiffuse>FFFFFFFF</colordiffuse>
+		<include>discformat</include>		
+		<texture>Filemanager/browserinfoback.png</texture>
+		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
+	</control>
+
+	
+		<control type="label">
+		<posx>1400</posx>
+		<posy>300</posy>
+		<label>$INFO[System.DVDLabel]</label>
+		<font>menufontacens2</font>
+		<include>common-fade</include>
+		<visible>System.HasMediadvd + Window.IsActive(Home) + Control.HasFocus(300)</visible>	
+		<animation effect="slide" delay="300" start="850,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="!Control.HasFocus(300) +!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="850,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+		
+		<animation effect="slide" tween="bounce" delay="50" start="450,0" end="-750,0" time="550" condition="Container(300).HasFocus(13)">Conditional</animation>
+		</control>	
+	<control type="image">
+		<posx>0</posx>
+		<posy>-3</posy>
+		<width>410</width>
+		<height>52</height>
+		<include>discformat</include>		
+		<texture flipx="true">timepanel3.png</texture>
+		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
+		<animation effect="slide" delay="300" start="-450,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+
+	</control>	
+		<control type="fadelabel">
+		<posx>25</posx>
+		<posy>0</posy>
+		<include>discformat</include>
+		<label>Disc Inserted Into Optical Drive</label>
+		<label>Disc Title: $INFO[System.DVDLabel]</label>
+		<scrollout>false</scrollout>
+		<pauseatend>6000</pauseatend>
+		<visible>System.HasMediadvd + Window.IsActive(Home)</visible>
+		<animation effect="slide" delay="300" start="-450,0" end="0,0" time="150" condition="!Window.IsActive(56) + !Window.Previous(56) + !Window.IsActive(12) + !Window.Previous(12) + !Window.IsActive(13) + !Window.Previous(13) + !Window.IsActive(14) + !Window.Previous(14) + !Window.IsActive(15) + !Window.Previous(15) + !Window.IsActive(16) + !Window.Previous(16) + !Window.IsActive(17) + !Window.Previous(17) + !Window.IsActive(18) + !Window.Previous(18) + !Window.IsActive(19) + !Window.Previous(19) + !Window.IsActive(3) + !Window.Previous(3)">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="!Window.IsActive(56) + !Window.Next(56) + !Window.Next(3) + !Window.IsActive(12) + !Window.Next(12) + !Window.IsActive(13) + !Window.Next(13) + !Window.IsActive(14) + !Window.Next(14) + !Window.IsActive(15) + !Window.Next(15) + !Window.IsActive(16) + !Window.Next(16) + !Window.IsActive(17) + !Window.Next(17) + !Window.IsActive(18) + !Window.Next(18) + !Window.IsActive(19) + !Window.Next(19) + !Window.IsActive(3)">WindowClose</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="[Window.IsActive(24) | Window.IsActive(25) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(501) | Window.IsActive(502)] + [[Control.IsVisible(57) + !Control.HasFocus(57)] | [Control.IsVisible(54) + !Control.HasFocus(54)] | [Control.IsVisible(58) + !Control.HasFocus(58)] | [Control.IsVisible(55) + !Control.HasFocus(55)] | [Control.IsVisible(51) + !Control.HasFocus(51)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Control.IsVisible(51) + [[Container(51).Column(6) + Container(51).Row(0)] | [Container(51).Column(5) + Container(51).Row(0)] | [Container(51).Column(4) + Container(51).Row(0)] | [Container(51).Column(7) + Container(51).Row(0)] | [Container(51).Column(8) + Container(51).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Control.IsVisible(58) + [[Container(58).Column(6) + Container(58).Row(0)] | [Container(58).Column(5) + Container(58).Row(0)] | [Container(58).Column(7) + Container(58).Row(0)] | [Container(58).Column(8) + Container(58).Row(0)]]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-450,0" time="150" condition="Window.IsActive(Home) + [!Window.Next(56) + !Window.Next(19) + !Window.Next(18) + !Window.Next(16) + !Window.Next(12) + !Window.Next(17) + !Window.Next(13) + !Window.Next(15)]">WindowClose</animation>
+
+		</control>
+</include>
+
+<include name="nowplaying">
+	<control type="image">
+		<posx>0</posx>
+		<posy>691</posy>
+		<width>1280</width>
+		<height>56</height>
+		<texture>nowplaying.png</texture>
+		<visible>[system.getbool(lookandfeel.enablerssfeeds) + !Skin.HasSetting(drophome)] | Window.IsActive(56) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19)</visible>
+		<visible>System.HasNetwork</visible>
+		<animation effect="fade" end="100" time="400">Visible</animation>
+		<animation effect="fade" end="100" time="400">Hidden</animation>
+		<animation effect="fade" end="100" time="400">WindowOpen</animation>
+		<animation effect="fade" end="0" time="400" condition="!system.getbool(lookandfeel.enablerssfeeds) | [!Window.Next(Home) + !Window.Next(56) + !Window.Next(12) + !Window.Next(13) + !Window.Next(14) + !Window.Next(15) + !Window.Next(16) + !Window.Next(17) + !Window.Next(18) + !Window.Next(19)]">WindowClose</animation>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>690</posy>
+		<width>1280</width>
+		<height>18</height>
+		<texture>nowplayingsmall.png</texture>
+		<visible>[!system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(drophome)] + Window.IsActive(Home)</visible>
+		<animation effect="fade" time="200">Visible</animation>
+		<animation effect="fade" time="200">Hidden</animation>
+		<animation effect="fade" time="200">WindowOpen</animation>
+		<animation effect="fade" time="200">WindowClose</animation>
+	</control>
+</include>
+
+<!-- Background transitions ================================== -->
+
+<include name="mediabackground">
+	<posx>-50</posx>
+	<posy>0</posy>
+	<width>1380</width>
+	<height>720</height>
+		<animation effect="fade" time="600" delay="750">Visible</animation>
+	<animation effect="fade" time="600" delay="750">Hidden</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<visible>!Control.IsVisible(58)</visible>
+</include>
+
+<include name="mediabackgroundfolder">
+	<posx>-50</posx>
+	<posy>0</posy>
+	<width>1380</width> <!-- fix overscan on 16:9 -->
+	<height>725</height>
+	<imagepath>-</imagepath>
+	<timeperimage>20000</timeperimage>
+	<fadetime>2000</fadetime>
+	<randomize>true</randomize>
+	<animation effect="fade" time="600" delay="750">Visible</animation>
+	<!--<animation effect="fade" time="200" delay="650">Hidden</animation>-->
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<visible>!Control.IsVisible(58)</visible>
+</include>
+
+<include name="mediabackgroundmusic">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<visible>!Control.IsVisible(58)</visible>
+</include>
+
+<include name="mediabackgroundfoldermusic">
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>1280</width>
+	<height>720</height>
+	<imagepath>-</imagepath>
+	<timeperimage>20000</timeperimage>
+	<fadetime>2000</fadetime>
+	<randomize>true</randomize>
+	<animation effect="fade" time="500">Visible</animation>
+	<animation effect="fade" time="500">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<visible>!Control.IsVisible(58)</visible>
+</include>
+
+
+
+
+
+
+
+</includes>

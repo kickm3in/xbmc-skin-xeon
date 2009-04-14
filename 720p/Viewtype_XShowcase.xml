@@ -10,11 +10,14 @@
 		<height>454</height>
 		<onleft>52</onleft>
 		<onright>52</onright>
+		<pagecontrol>60</pagecontrol>
 		<onup>2</onup>
-		<ondown>-</ondown>
+		<ondown>60</ondown>
 		<focusposition>4</focusposition>
 		<orientation>horizontal</orientation>
+		<scrolltime>250</scrolltime>
 		<include>common-fade</include>
+		<include>Animation_HideShowcase</include>
 		<visible>[Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(showcasetv)] | [Window.IsActive(24) + Skin.HasSetting(videomovies) + !Skin.HasSetting(showcasemovies)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(showcasemovieslib)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(showcasetvlib) + !Container.Content(episodes)]</visible>
 	     <itemlayout height="783" width="160">
 
@@ -216,6 +219,35 @@
 		      </control>
 	     </focusedlayout>
 	   </control>
+	   
+            <control type="scrollbar" id="60">
+                <description>My first scroll bar control</description>
+                <posx>305</posx>
+                <posy>663</posy>
+                <width>670</width>
+                <height>41</height>
+                <visible allowhiddenfocus="true">Control.IsVisible(57) + Control.HasFocus(60)</visible>
+                <texturesliderbackground>windows/scrollbarbackshowcase.png</texturesliderbackground>
+                <texturesliderbar>-</texturesliderbar>
+                <texturesliderbarfocus>-</texturesliderbarfocus>
+                <textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
+                <textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
+                <pulseonselect></pulseonselect>
+                <orientation>horizontal</orientation>
+                <showonepage>false</showonepage>
+                <onup>57</onup>
+                <ondown>94</ondown>
+                <onleft>60</onleft>
+                <onright>60</onright>
+                <include>Animation_HideShowcase</include>
+				<include>Animation_CommonFade</include>
+            </control>
+
+	   
+	   
+	   
+	   
+	   
 
 	<include>movieinfo</include>	
 	<include>ScrollOffsetLabel</include>
@@ -281,9 +313,28 @@
 			<animation effect="fade" start="100" end="0" time="150" delay="3000">Visible</animation>
 		</control>
 
+		
+		
+        <control type="button" id="94">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>0</width>
+            <height>0</height>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>57</onleft>
+            <onright>320</onright>
+            <onup>57</onup>
+            <ondown>57</ondown>
+        </control>		
+		
 	</include>
 	
-
+<include name="Animation_HideShowcase">
+	<animation type="Conditional" reversible="true" condition="Control.HasFocus(94) | Control.HasFocus(320) | Control.HasFocus(321) | Control.HasFocus(322)">
+		<effect type="slide" start="0,0" end="0,400" time="400" tween="cubic" easing="in" />
+	</animation>
+</include>
 	
 	
 	

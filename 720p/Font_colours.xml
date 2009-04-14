@@ -1,0 +1,118 @@
+<includes>
+
+<include name="listcolornofocus">
+	<textcolor>FF000000</textcolor>
+	<selectedcolor>FF000000</selectedcolor>
+</include>
+
+<include name="listcolorfocus">
+	<textcolor>FFFFFFFF</textcolor>
+	<selectedcolor>FFFFFFFF</selectedcolor>
+</include>
+
+<include name="playlistcolor1">
+	<textcolor>FFFFFFFF</textcolor>
+	<selectedcolor>e1b1e021</selectedcolor>
+</include>
+
+<include name="playlistcolor2">
+	<textcolor>FFFFFFFF</textcolor>
+	<selectedcolor>e1b1e021</selectedcolor>
+</include>
+
+<include name="settingsmenufont">
+	<textcolor>FFa8a8a8</textcolor>
+	<selectedcolor>e1b1e021</selectedcolor>
+	<focusedcolor>ffffffff</focusedcolor>
+</include>
+
+<include name="settingsmenubar">
+	<textcolor>FFffffff</textcolor>
+	<focusedcolor>FFffff00</focusedcolor>
+	<selectedcolor>FFffff00</selectedcolor>
+</include>
+
+<include name="osdfont">
+	<textcolor>FFffffff</textcolor>
+	<focusedcolor>FFababab</focusedcolor>
+	<selectedcolor>FFababab</selectedcolor>
+</include>
+
+<include name="osdfont2">
+	<textcolor>FFb8b8b8</textcolor>
+	<focusedcolor>FFFFFFFF</focusedcolor>
+	<selectedcolor>FFFFFFFF</selectedcolor>
+</include>
+
+
+<include name="bulktext">
+	<textcolor>FF000000</textcolor>
+	<selectedcolor>FF000000</selectedcolor>
+	<focusedcolor>FF000000</focusedcolor>
+	<font>font13</font>
+	<align>left</align>
+</include>
+
+
+<!-- Scraper info panel ================================== -->
+
+<include name="scrapertitle">
+	<textcolor>e1b1e021</textcolor>
+	<font>scraper</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="wallscrapertitle">
+	<textcolor>ee000000</textcolor>
+	<font>moviewalltitle</font>
+	<include>common-fade</include>
+</include>
+
+<include name="scraperinfo">
+	<textcolor>FFffffff</textcolor>
+	<font>scraper</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="scraperimdb">
+	<textcolor>FFffffff</textcolor>
+	<font>imdb</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="scraperimdbtitle">
+	<textcolor>e1b1e021</textcolor>
+	<font>imdb</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="wallinfotitle">
+	<textcolor>e1b1e021</textcolor>
+	<font>imdbshadow</font>
+</include>
+
+<include name="wallinfoheader">
+	<textcolor>FFFFFFFF</textcolor>
+	<font>imdbshadowbig</font>
+</include>
+
+<include name="wallinfo">
+	<textcolor>ffe1e1e1</textcolor>
+	<font>imdbshadow</font>
+</include>
+
+<include name="scraperimdbheader">
+	<textcolor>FFffffff</textcolor>
+	<font>imdbheader</font>
+	<include>common-fade-quick</include>
+</include>
+
+<include name="scraperinfogrey">
+	<textcolor>FF9d9d9d</textcolor>
+	<font>scraper</font>
+	<include>common-fade-quick</include>
+</include>
+
+
+
+</includes>
