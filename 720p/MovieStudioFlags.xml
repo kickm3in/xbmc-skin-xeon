@@ -1,0 +1,207 @@
+<includes>
+
+<include name="Studio_Flags">
+
+
+				<control type="label">
+				<posx>140</posx>
+				<posy>40</posy>
+				<font>font12</font>
+				<align>right</align>
+				<label>$INFO[listitem.studio]</label>
+				<visible>!Control.IsVisible(81)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/20thcenturyfox.png</texture>
+					<visible>substring(listitem.studio,Fox)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/universal.png</texture>
+					<visible>substring(listitem.studio,Universal)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/filmfour.png</texture>
+					<visible>substring(listitem.studio,FilmFour) | substring(listitem.studio,Channel Four)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/disney.png</texture>
+					<visible>substring(listitem.studio,Disney) | substring(listitem.studio,Pixar)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/gaumont.png</texture>
+					<visible>substring(listitem.studio,Gaumont)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/unitedartists.png</texture>
+					<visible>substring(listitem.studio,Artists)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/newlinecinema.png</texture>
+					<visible>substring(listitem.studio,New Line)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/dimension.png</texture>
+					<visible>substring(listitem.studio,Dimension)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/touchstone.png</texture>
+					<visible>substring(listitem.studio,Touchstone)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/hollywood.png</texture>
+					<visible>substring(listitem.studio,Hollywood)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/carolco.png</texture>
+					<visible>substring(listitem.studio,Carolco)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/revolution.png</texture>
+					<visible>substring(listitem.studio,Revolution)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/lucasfilm.png</texture>
+					<visible>substring(listitem.studio,Lucasfilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/screengems.png</texture>
+					<visible>substring(listitem.studio,Screen Gems)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/warner.png</texture>
+					<visible>substring(listitem.studio,Warner)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/tristar.png</texture>
+					<visible>substring(listitem.studio,TriStar)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/castlerock.png</texture>
+					<visible>substring(listitem.studio,Castle Rock)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/studiocanal.png</texture>
+					<visible>substring(listitem.studio,Studio Canal)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/paramount.png</texture>
+					<visible>substring(listitem.studio,Paramount) | substring(listitem.studio,Comedy Central)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/dreamworks.png</texture>
+					<visible>substring(listitem.studio,DreamWorks)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/columbia.png</texture>
+					<visible>substring(listitem.studio,Columbia)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/mgm.png</texture>
+					<visible>substring(listitem.studio,Mayer) | substring(listitem.studio,MGM)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/sonypictures.png</texture>
+					<visible>substring(listitem.studio,Sony)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/artisan.png</texture>
+					<visible>substring(listitem.studio,Artisan)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/lionsgate.png</texture>
+					<visible>substring(listitem.studio,Lionsgate)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/miramax.png</texture>
+					<visible>substring(listitem.studio,Miramax) + !substring(listitem.studio,Universal)</visible>
+				</control>
+				<!-- New flags added by Halibutt and Stagecrew -->
+				<!-- request more flags here: http://xbmc.org/forum/showthread.php?t=48315 -->
+				<control type="image" id="81">
+					<texture>flags/nuimage.png</texture>
+					<visible>substring(listitem.studio,Nuimage)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/millenium.png</texture>
+					<visible>substring(listitem.studio,Millenium)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/constantin.png</texture>
+					<visible>substring(listitem.studio,Constantin)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/orion.png</texture>
+					<visible>substring(listitem.studio,Orion)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/kadr.png</texture>
+					<visible>substring(listitem.studio,Studio Filmowe Kadr)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/eurimages.png</texture>
+					<visible>substring(listitem.studio,EurImages)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/magnolia.png</texture>
+					<visible>substring(listitem.studio,Magnolia)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/wdr.png</texture>
+					<visible>substring(listitem.studio,WDR)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/legendary.png</texture>
+					<visible>substring(listitem.studio,Legendary)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/celador.png</texture>
+					<visible>substring(listitem.studio,Celador)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/abandon.png</texture>
+					<visible>substring(listitem.studio,Abandon)</visible>
+				</control>
+				<control type="image" id="81">
+					<texture>flags/amblin.png</texture>
+					<visible>substring(listitem.studio,Amblin)</visible>
+				</control>
+
+
+			<!--<control type="group">
+				<posx>-150</posx>
+				<posy>-450</posy>
+				<control type="image">
+					<texture>flags/defaultsource.png</texture>
+					<visible>!Control.IsVisible(82) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>				
+				<control type="image" id="82">
+					<texture>flags/hddvd.png</texture>
+					<visible>substring(listitem.filename,hddvd)</visible>
+				</control>
+				<control type="image" id="82">
+					<texture>flags/bluray.png</texture>
+					<visible>substring(listitem.filename,bluray)</visible>
+				</control>
+				<control type="image" id="82">
+					<texture>flags/dvd.png</texture>
+					<visible>substring(listitem.filename,sddvd)</visible>
+				</control>
+				<control type="image" id="82">
+					<texture>flags/divx.png</texture>
+					<visible>substring(listitem.filename,divx)</visible>
+				</control>
+				<control type="image" id="82">
+					<texture>flags/divx.png</texture>
+					<visible>substring(listitem.filename,xvid)</visible>
+				</control>
+				<control type="image" id="82">
+					<texture>flags/hdtv.png</texture>
+					<visible>substring(listitem.filename,hdtv)</visible>
+				</control>				
+			</control>-->
+	
+</include>
+	
+	
+	
+</includes>	

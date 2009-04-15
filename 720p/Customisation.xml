@@ -1002,7 +1002,7 @@
 		<selected>Skin.HasSetting(mediaflags)</selected>	
 	</control>
 	
-	<control type="radiobutton" id="509">
+	<control type="radiobutton" id="507">
 		<width>1156</width>
 		<label>Disable "NEW" label for Unwatched items in Showcase View</label>
 		<onclick>Skin.ToggleSetting(New_SC_label)</onclick>
@@ -1010,7 +1010,7 @@
 		<include>customsettingsbutton</include>
 	</control>
 	
-		<control type="radiobutton" id="507">
+		<control type="radiobutton" id="508">
 		<width>1156</width>
 		<label>Display Intro Screen at Startup</label>
 		<onclick>Skin.ToggleSetting(Use_Startup_intro)</onclick>
@@ -1018,7 +1018,7 @@
 		<include>customsettingsbutton</include>
 	</control>	
 
-		<control type="radiobutton" id="508">
+		<control type="radiobutton" id="509">
 		<width>1156</width>
 		<label>XEON Startup Script (Playlist and Volume ramp)</label>
 		<onclick>Skin.ToggleSetting(Use_Startup_Script)</onclick>
@@ -1026,6 +1026,32 @@
 		<include>customsettingsbutton</include>
 	</control>	
 	
+	
+	<!-- ADD this >>>>> -->
+		<control type="radiobutton" id="510">
+				<width>1156</width>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>genre Mod on/off</label>
+			<onclick>Skin.ToggleSetting(moviegenre_onoff)</onclick>
+			<selected>!Skin.HasSetting(moviegenre_onoff)</selected>
+		</control>
+
+		<control type="radiobutton" id="511">
+				<width>1156</width>
+			<visible>!Skin.HasSetting(moviegenre_onoff)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Genre fallback image on/off</label>
+			<onclick>Skin.ToggleSetting(moviegenre_default_onoff)</onclick>
+			<selected>!Skin.HasSetting(moviegenre_default_onoff)</selected>
+		</control>
+		<control type="radiobutton" id="512">
+				<width>1156</width>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Genre fanart image on/off</label>
+			<onclick>Skin.ToggleSetting(genre_fanart_onoff)</onclick>
+			<selected>!skin.HasSetting(genre_fanart_onoff)</selected>
+		</control>			
+	<!-- <<<<< ADD this -->	
 
 	</control>
 
@@ -1079,6 +1105,14 @@
 			<label>Developer Mode (CPU & Memory meters on select screens)</label>
 			<onclick>Skin.ToggleSetting(debug)</onclick>
 			<selected>Skin.HasSetting(debug)</selected>
+		</control>
+		
+		<control type="radiobutton" id="606">
+			<width>1156</width>
+			<include>customsettingsbutton</include>
+			<label>Memory Warning (Warns on 10MB or less left)</label>
+			<onclick>Skin.ToggleSetting(Memory_Warning)</onclick>
+			<selected>Skin.HasSetting(Memory_Warning)</selected>
 		</control>
 		
 		<control type="image" id="9991">

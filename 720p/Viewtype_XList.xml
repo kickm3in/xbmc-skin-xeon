@@ -1,0 +1,289 @@
+<includes>
+
+<include name="Viewtype_List">
+	<control type="list" id="50">
+		<viewtype label="List">list</viewtype>
+		<posx>-37</posx>
+		<posy>194</posy>
+		<width>1280</width>
+		<height>333</height>
+		<pagecontrol>-</pagecontrol>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<scrolltime>0</scrolltime>
+		<include>common-fade</include>
+		<visible>Window.IsActive(35) | Window.IsActive(28) | [Window.IsActive(24) + [Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers) | Skin.HasSetting(gametrailers)] + !Skin.HasSetting(listmovies)] | [Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(listtv)] | [Window.IsActive(24) + Skin.HasSetting(videoclips) + !Skin.HasSetting(listclips)] | [Window.IsActive(1) + Skin.HasSetting(programapps) + !Skin.HasSetting(listapps)] | [Window.IsActive(1) + Skin.HasSetting(programgames) + !Skin.HasSetting(listgames)] | [Window.IsActive(2) + !Skin.HasSetting(listpictures)] | [Window.IsActive(20) + !Skin.HasSetting(listscripts)] | [Window.IsActive(1) + Skin.HasSetting(programarcade) + !Skin.HasSetting(listarcade)] | [Window.IsActive(24) + Skin.HasSetting(videoadult) + !Skin.HasSetting(listadult)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(listmovieslib)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(listtvlib)] | [Container.Content(episodes) + !Skin.HasSetting(listeplib)]</visible>
+
+		<itemlayout height="36">
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>690</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="image">
+				<posx>100</posx>
+				<posy>36</posy>
+				<width>845</width>
+				<height>3</height>
+				<texture>listdivider.png</texture>
+			</control>
+			<control type="label">
+				<posx>880</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity17</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+				<visible>!Container.Content(movies)</visible>
+			</control>
+			<control type="label">
+				<posx>880</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity17</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<info>ListItem.Year</info>
+				<visible>Container.Content(movies)</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="36">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>900</width>
+				<height>40</height>
+				<texture>listhighlightstub.png</texture>
+				<colordiffuse>d0FFFFFF</colordiffuse>
+				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+				<animation effect="fade" start="0" end="100">VisibleChange</animation>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>670</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>880</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity17</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+				<visible>!Container.Content(movies)</visible>
+			</control>
+			<control type="label">
+				<posx>880</posx>
+				<posy>0</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity17</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<info>ListItem.Year</info>
+				<visible>Container.Content(movies)</visible>
+			</control>
+ 		</focusedlayout>
+
+	</control>
+
+	<include>mediafocuslabel</include>
+	
+	<control type="group">
+		<posx>0</posx>
+		<posy>0</posy>
+		<visible>Control.IsVisible(50)</visible>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="356,0" end="0,0" acceleration="-1" time="150" />
+			<effect type="fade" start="0" end="100" time="150" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="0,0" end="356,0" acceleration="-1" time="150" />
+			<effect type="fade" start="100" end="0" time="150" />
+		</animation>
+		<control type="image">
+			<include>List_Thumbnail2</include>
+			<texture>defaulticonwidepictures.png</texture>
+			<visible>Window.IsVisible(2)</visible>
+			<aspectratio aligny="center">scale</aspectratio>
+		</control>
+		<control type="image">
+			<include>List_Thumbnail</include>
+			<texture>defaulticonpostermovies.png</texture>
+			<visible>[Window.IsVisible(25) + Container.Content(movies)] | Window.IsVisible(28)</visible>
+		</control>
+		<control type="image">
+			<include>List_Thumbnail</include>
+			<texture>defaulticonpostertv.png</texture>
+			<visible>Window.IsVisible(25) + Container.Content(tvshows)</visible>
+		</control>
+		<control type="image">
+			<include>List_Thumbnail</include>
+			<texture>defaulticonposterfolder.png</texture>
+			<visible>Window.IsVisible(25) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(episodes)</visible>
+		</control>
+		<control type="image">
+			<include>List_Thumbnail</include>
+			<visible>Window.IsVisible(24) | Container.Content(files)</visible>
+			<texture>defaulticonposterfolder.png</texture>
+		</control>
+		<control type="image">
+			<include>List_Thumbnail2</include>
+			<visible>Window.IsVisible(25) + Container.Content(episodes)</visible>
+			<texture>defaulticonwidetv.png</texture>
+		</control>
+		<control type="image">
+			<include>List_Thumbnail</include>
+			<visible>Window.IsVisible(20)</visible>
+			<texture>defaulticonposterscripts.png</texture>
+		</control>
+		
+		<control type="image">
+			<posx>926</posx>
+			<posy>118</posy>
+			<width>320</width>
+			<height>424</height>
+			<visible>!Container.Content(episodes) + !Window.IsVisible(2)</visible>
+			<texture>Videos_BigFrame2.png</texture>
+		</control>
+		<control type="image">
+			<posx>888</posx>
+			<posy>190</posy>
+			<width>380</width>
+			<height>278</height>
+			<visible>Container.Content(episodes) | Window.IsVisible(2)</visible>
+			<texture>Videos_BigFrame2.png</texture>
+		</control>
+		
+<!--	genre icon !! needs fixing
+			<control type="image">
+			<include>MovieListIcon_Thumb</include>
+			<info>Container.Listitem(0).Icon</info>
+			<fadetime>400</fadetime>
+			<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible>
+		</control>-->
+		<include>mod_moviegenre_list_8</include><!-- genre icon for list view.. BUG also appears in other views -->
+			
+		
+	</control>
+
+
+	
+</include>
+
+<include name="Viewtype_List2">
+	<control type="list" id="50">
+		<viewtype label="Roller">list</viewtype>
+		<posx>-37</posx>
+		<posy>194</posy>
+		<width>1280</width>
+		<height>333</height>
+		<pagecontrol>-</pagecontrol>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<scrolltime>0</scrolltime>
+		<include>common-fade</include>
+		<visible>Window.IsActive(28) | [Window.IsActive(24) + [Skin.HasSetting(videomovies) | Skin.HasSetting(movietrailers) | Skin.HasSetting(gametrailers)] + !Skin.HasSetting(listmovies)] | [Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(listtv)] | [Window.IsActive(24) + Skin.HasSetting(videoclips) + !Skin.HasSetting(listclips)] | [Window.IsActive(1) + Skin.HasSetting(programapps) + !Skin.HasSetting(listapps)] | [Window.IsActive(1) + Skin.HasSetting(programgames) + !Skin.HasSetting(listgames)] | [Window.IsActive(2) + !Skin.HasSetting(listpictures)] | [Window.IsActive(20) + !Skin.HasSetting(listscripts)] | [Window.IsActive(1) + Skin.HasSetting(programarcade) + !Skin.HasSetting(listarcade)] | [Window.IsActive(24) + Skin.HasSetting(videoadult) + !Skin.HasSetting(listadult)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(listmovieslib)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(listtvlib)]</visible>
+
+		<itemlayout height="36">
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>690</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="image">
+				<posx>100</posx>
+				<posy>36</posy>
+				<width>705</width>
+				<height>3</height>
+				<texture>listdivider.png</texture>
+			</control>
+		</itemlayout>
+		<focusedlayout height="36">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>760</width>
+				<height>40</height>
+				<texture>listhighlightstub.png</texture>
+				<colordiffuse>d0FFFFFF</colordiffuse>
+				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+				<animation effect="fade" start="0" end="100">VisibleChange</animation>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>670</width>
+				<height>39</height>
+				<font>fruity21</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+ 		</focusedlayout>
+
+	</control>
+
+	<include>mediafocuslabel</include>
+	
+	<control type="group">
+		<posx>0</posx>
+		<posy>0</posy>
+		<visible>Control.IsVisible(50)</visible>
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="356,0" end="0,0" acceleration="-1" time="150" />
+			<effect type="fade" start="0" end="100" time="150" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="0,0" end="356,0" acceleration="-1" time="150" />
+			<effect type="fade" start="100" end="0" time="150" />
+		</animation>
+		
+	</control>
+</include>
+
+	
+	<include name="MovieListIcon_Thumb">
+		<posx>850</posx>
+		<posy>203</posy>
+		<width>244</width>
+		<height>359</height>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<texture diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>		
+	</include>
+	
+	
+	
+</includes>	

@@ -216,7 +216,7 @@
 			
 				</control>					
 	
-	
+		<include>Furniture_Debug</include>
 	
 	<control type="group">
 		<posx>750</posx>
@@ -272,7 +272,7 @@
 			<description>CPU</description>
 			<posx>0</posx>
 			<posy>70</posy>
-			<label>CPU Usage:</label>
+			<label>CPU Usage:$INFO[system.cpuusage]</label>
 			<font>font12</font>
 			</control>		
 			

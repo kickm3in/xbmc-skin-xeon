@@ -212,5 +212,6 @@
 	<!--<include>time</include>-->
 			<!--<include>ScrollOffsetLabel</include>-->
 	<include>Furniture_Debug</include>
+	<include>Memory_Warning</include>	
 </controls>	
 </window>

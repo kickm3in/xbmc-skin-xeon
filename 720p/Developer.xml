@@ -69,7 +69,7 @@
 			<description>CPU</description>
 			<posx>0</posx>
 			<posy>70</posy>
-			<label>CPU Usage:<!--$INFO[system.cpuusage]--></label>
+			<label>CPU Usage:$INFO[system.cpuusage]</label>
 			<font>font12</font>
 			</control>		
 			

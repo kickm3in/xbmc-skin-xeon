@@ -1,0 +1,550 @@
+<includes>
+
+
+<include name="Viewtype_Gameroller">
+	<control type="list" id="50">
+		<viewtype label="Roller">list</viewtype>
+		<posx>-37</posx>
+		<posy>194</posy>
+		<width>1280</width>
+		<height>333</height>
+		<pagecontrol>-</pagecontrol>
+		<scrolltime>0</scrolltime>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+	<animation effect="fade" time="200">Hidden</animation>
+	<animation effect="fade" time="200">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+		<visible>Window.IsActive(35) | [[Window.IsActive(501) | Window.IsActive(500)] + !Skin.HasSetting(listmusic)] | [[Window.IsActive(502) | Window.IsActive(500)] + !Skin.HasSetting(listmusiclib)] + !Skin.HasSetting(rollergames)</visible>
+		<itemlayout height="36">
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>658</width>
+				<height>37</height>
+				<font>fruity21</font>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>736</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>37</height>
+				<font>fruity17</font>
+				<aligny>center</aligny>
+				<align>right</align>
+				<include>listcolornofocus</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+			</control>
+			<control type="image">
+				<posx>100</posx>
+				<posy>36</posy>
+				<width>705</width>
+				<height>3</height>
+				<texture>listdivider.png</texture>
+			</control>
+		</itemlayout>
+		<focusedlayout height="36">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>760</width>
+				<height>40</height>
+				<texture>listhighlightstub.png</texture>
+				<colordiffuse>d0FFFFFF</colordiffuse>
+				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2001)</visible>
+				<animation effect="fade" start="0" end="100">VisibleChange</animation>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>0</posy>
+				<width>658</width>
+				<height>37</height>
+				<font>fruity21</font>
+				<aligny>center</aligny>
+				<include>listcolorfocus</include>
+				<scroll>true</scroll>
+				<scrolltime>300</scrolltime>
+				<info>ListItem.Label</info>
+			</control>
+			<control type="label">
+				<posx>736</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>37</height>
+				<font>fruity17</font>
+				<aligny>center</aligny>
+				<align>right</align>
+				<include>listcolorfocus</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label2][/UPPERCASE]</label>
+			</control>
+ 		</focusedlayout>
+	</control>
+
+#-------------------------------------------------------------------------------------------
+#ROLLING DOWN
+#-------------------------------------------------------------------------------------------
+
+<control type="group">
+	<posx>-44</posx>
+	<posy>-18</posy>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="fade" start="0" end="100" time="200" />
+		<effect type="slide" start="300,0" end="0,0" time="200" acceleration="-1" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="fade" start="100" end="0" time="200" />
+		<effect type="slide" start="0,0" end="300,0" time="200" acceleration="-1" />
+	</animation>
+	<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+	<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+<control type="image" id="3000">
+	<posx>1035</posx>
+	<posy>158</posy>
+	<width>183</width>
+	<height>175</height>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<info>Container.Listitem(-3).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3000">
+	<posx>1001</posx>
+	<posy>148</posy>
+	<height>199</height>
+	<width>229</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="fade" start="0" end="100" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3000">
+	<posx>1035</posx>
+	<posy>158</posy>
+	<width>183</width>
+	<height>175</height>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="1019,175,219,199" time="200">Hidden</animation>
+	<info>Container.Listitem(-2).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3000">
+	<posx>1001</posx>
+	<posy>148</posy>
+	<height>199</height>
+	<width>229</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="983,164,267,224" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3000">
+	<posx>1019</posx>
+	<posy>175</posy>
+	<width>219</width>
+	<height>199</height>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="1008,201,235,224" time="200">Hidden</animation>
+	<info>Container.Listitem(-1).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3000">
+	<posx>983</posx>
+	<posy>164</posy>
+	<height>224</height>
+	<width>267</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" start="983,164,267,224" end="967,190,290,253" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3000">
+	<posx>1019</posx>
+	<posy>349</posy>
+	<width>219</width>
+	<height>199</height>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="1035,393,183,175" time="200">Hidden</animation>
+	<animation effect="fade" start="0" end="20" time="200" condition="true">Conditional</animation>
+	<info>Container.Listitem(3).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3000">
+	<posx>983</posx>
+	<posy>338</posy>
+	<height>224</height>
+	<width>267</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="1003,383,226,199" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3000">
+	<posx>1008</posx>
+	<posy>298</posy>
+	<width>235</width>
+	<height>224</height>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="1019,349,219,199" time="200">Hidden</animation>
+	<info>Container.Listitem(2).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3000">
+	<posx>967</posx>
+	<posy>285</posy>
+	<height>253</height>
+	<width>290</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="983,338,267,224" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3000">
+	<posx>997</posx>
+	<posy>235</posy>
+	<width>258</width>
+	<height>251</height>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="1008,298,235,224" time="200">Hidden</animation>
+	<animation effect="fade" start="50" end="80" time="200" condition="true">Conditional</animation>
+	<info>Container.Listitem(1).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3000">
+	<posx>951</posx>
+	<posy>224</posy>
+	<height>280</height>
+	<width>322</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="967,285,290,253" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3000">
+	<posx>1008</posx>
+	<posy>201</posy>
+	<width>235</width>
+	<height>224</height>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="997,235,258,251" time="200">Hidden</animation>
+	<info>Container.Listitem(0).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3000">
+	<posx>967</posx>
+	<posy>190</posy>
+	<height>253</height>
+	<width>290</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnPrevious</visible>
+	<animation effect="zoom" end="951,224,322,280" time="200">Hidden</animation>
+</control>
+
+#-------------------------------------------------------------------------------------------
+#ROLLING UP
+#-------------------------------------------------------------------------------------------
+
+<control type="image" id="3001">
+	<posx>1019</posx>
+	<posy>175</posy>
+	<width>219</width>
+	<height>199</height>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="1035,158,183,175" time="200">Hidden</animation>
+	<info>Container.Listitem(-3).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3001">
+	<posx>983</posx>
+	<posy>164</posy>
+	<height>224</height>
+	<width>267</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" start="983,164,267,224" end="1001,148,229,199" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3001">
+	<posx>1008</posx>
+	<posy>201</posy>
+	<width>235</width>
+	<height>224</height>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="1019,175,219,199" time="200">Hidden</animation>
+	<info>Container.Listitem(-2).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3001">
+	<posx>967</posx>
+	<posy>190</posy>
+	<height>253</height>
+	<width>290</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="983,164,267,224" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3001">
+	<posx>997</posx>
+	<posy>235</posy>
+	<width>258</width>
+	<height>251</height>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="1008,201,235,224" time="200">Hidden</animation>
+	<info>Container.Listitem(-1).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3001">
+	<posx>951</posx>
+	<posy>224</posy>
+	<height>280</height>
+	<width>322</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="967,190,290,253" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3001">
+	<posx>1035</posx>
+	<posy>393</posy>
+	<width>183</width>
+	<height>175</height>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="fade" start="0" end="20" time="200">Hidden</animation>
+	<info>Container.Listitem(3).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3001">
+	<posx>1003</posx>
+	<posy>383</posy>
+	<height>199</height>
+	<width>226</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="fade" start="0" end="20" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3001">
+	<posx>1035</posx>
+	<posy>393</posy>
+	<width>183</width>
+	<height>175</height>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="1019,349,219,199" time="200">Hidden</animation>
+	<info>Container.Listitem(2).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3001">
+	<posx>1003</posx>
+	<posy>383</posy>
+	<height>199</height>
+	<width>226</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="983,338,267,224" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3001">
+	<posx>1019</posx>
+	<posy>349</posy>
+	<width>219</width>
+	<height>199</height>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="1008,298,235,224" time="200">Hidden</animation>
+	<info>Container.Listitem(1).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3001">
+	<posx>983</posx>
+	<posy>338</posy>
+	<height>224</height>
+	<width>267</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="967,285,290,253" time="200">Hidden</animation>
+</control>
+
+<control type="image" id="3001">
+	<posx>1008</posx>
+	<posy>298</posy>
+	<width>235</width>
+	<height>224</height>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="997,235,258,251" time="200">Hidden</animation>
+	<info>Container.Listitem(0).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image" id="3001">
+	<posx>967</posx>
+	<posy>285</posy>
+	<height>253</height>
+	<width>290</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + Container.OnNext</visible>
+	<animation effect="zoom" end="951,224,322,280" time="200">Hidden</animation>
+</control>
+
+#-------------------------------------------------------------------------------------------
+#STATIC ICONS
+#-------------------------------------------------------------------------------------------
+
+<control type="image" id="3002">
+	<posx>1035</posx>
+	<posy>393</posy>
+	<width>183</width>
+	<height>175</height>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+	<info>Container.Listitem(3).Thumb</info>
+	<texture>defaulticongames.png</texture>
+</control>
+
+<control type="image">
+	<posx>1003</posx>
+	<posy>383</posy>
+	<height>199</height>
+	<width>226</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image" id="3002">
+	<posx>1035</posx>
+	<posy>158</posy>
+	<width>183</width>
+	<height>175</height>
+	<info>Container.Listitem(-3).Thumb</info>
+	<texture>defaulticongames.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image">
+	<posx>1001</posx>
+	<posy>148</posy>
+	<height>199</height>
+	<width>229</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image" id="3002">
+	<posx>1019</posx>
+	<posy>349</posy>
+	<width>219</width>
+	<height>199</height>
+	<info>Container.Listitem(2).Thumb</info>
+	<texture>defaulticongames.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image">
+	<posx>983</posx>
+	<posy>338</posy>
+	<height>224</height>
+	<width>267</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image" id="3002">
+	<posx>1019</posx>
+	<posy>175</posy>
+	<width>219</width>
+	<height>199</height>
+	<info>Container.Listitem(-2).Thumb</info>
+	<texture>defaulticongames.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image">
+	<posx>983</posx>
+	<posy>164</posy>
+	<height>224</height>
+	<width>267</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image" id="3002">
+	<posx>1008</posx>
+	<posy>298</posy>
+	<width>235</width>
+	<height>224</height>
+	<info>Container.Listitem(1).Thumb</info>
+	<texture>defaulticongames.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image">
+	<posx>967</posx>
+	<posy>285</posy>
+	<height>253</height>
+	<width>290</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+	
+<control type="image" id="3002">
+	<posx>1008</posx>
+	<posy>201</posy>
+	<width>235</width>
+	<height>224</height>
+	<info>Container.Listitem(-1).Thumb</info>
+	<texture>defaulticongames.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image">
+	<posx>967</posx>
+	<posy>190</posy>
+	<height>253</height>
+	<width>290</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image" id="3002">
+	<posx>997</posx>
+	<posy>235</posy>
+	<width>258</width>
+	<height>251</height>
+	<info>Container.Listitem(0).Thumb</info>
+	<texture>defaulticongames.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+<control type="image">
+	<posx>951</posx>
+	<posy>224</posy>
+	<height>280</height>
+	<width>322</width>
+	<texture>casegame.png</texture>
+	<visible>Control.IsVisible(50) + !Control.IsVisible(3001) + !Control.IsVisible(3000)</visible>
+</control>
+
+</control>
+</include>
+
+
+	
+
+	
+	
+	
+</includes>	

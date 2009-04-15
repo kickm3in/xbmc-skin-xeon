@@ -26,7 +26,7 @@
 				<include>scrollerlabel</include>
 				<textcolor>FF000000</textcolor>
 				<!--<animation effect="fade" start="0" end="100" time="800" condition="!Window.Previous(56) | !Window.Previous(12) | !Window.Previous(13) | !Window.Previous(14) | !Window.Previous(15) | !Window.Previous(16) | !Window.Previous(17) | !Window.Previous(18) | !Window.Previous(19)">Conditional</animation>-->
-				<animation effect="fade" start="100" end="0" time="200" >WindowcLOSE</animation>
+				<animation effect="fade" start="100" end="0" time="200" >WindowClose</animation>
 			</control>
 		</itemlayout>
 		<focusedlayout width="355" height="68">
@@ -96,7 +96,11 @@
 			</item>
 			</content>
 	</control>
+	
+	
 		<include>disc</include>	
+	
+	
 	<control type="wraplist" id="300">
 		<onup>302</onup>
 		<ondown>301</ondown>
@@ -286,7 +290,11 @@
 				<description>About</description>
 				<label>ABOUT</label>
 				<onclick>XBMC.ActivateWindow(71)</onclick>
-			</item>				
+			</item>	
+			<!--<item id="98">
+				<label>test</label>
+				<onclick>Control.HasFocus(301)</onclick>
+			</item>			-->
 		</content>
 	</control>
 		
@@ -438,7 +446,7 @@
 			<posy>697</posy>
 			<font>rssacens</font>
 			<include>rsstext</include>
-			<visible>!Player.HasVideo</visible>
+			<!--<visible>!Player.HasVideo</visible>-->
 		</control>
 
 </include>

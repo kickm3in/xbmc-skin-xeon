@@ -4,6 +4,9 @@
 	<controls>
 		
 
+	
+		
+		
 		
 		
 	<control type="multiimage">
@@ -165,6 +168,11 @@
 	<include>time</include>
 	<include>common-fade</include>
 	<include>Furniture_Debug</include>
+	<include>Memory_Warning</include>
+	
+
+
 	</controls>
+	
 
 </window>

@@ -2,7 +2,8 @@
 	<controls>
 
 	<!-- === Media Content ======================== -->
-
+	
+	
 	<control type="image">
 		<description>Panel</description>
 		<posx>-331</posx>
@@ -87,7 +88,7 @@
 		
 	</control>
 
-
+	<include>Furniture_Debug</include>
 
 	</controls>
 </window>

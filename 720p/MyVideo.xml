@@ -260,6 +260,7 @@
 	<include>contextback</include>
 	<include>nowplayingpopup</include>
 	<!--<include>time</include>-->
-		<include>Furniture_Debug</include>
+	<include>Furniture_Debug</include>
+	<include>Memory_Warning</include>		
 	</controls>
 </window>

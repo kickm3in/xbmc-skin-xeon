@@ -21,7 +21,7 @@
 		<visible>[Window.IsActive(24) + Skin.HasSetting(videotv) + !Skin.HasSetting(showcasetv)] | [Window.IsActive(24) + Skin.HasSetting(videomovies) + !Skin.HasSetting(showcasemovies)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + !Skin.HasSetting(showcasemovieslib)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + !Skin.HasSetting(showcasetvlib) + !Container.Content(episodes)]</visible>
 	     <itemlayout height="783" width="160">
 
-		 
+
 			<control type="image">
 			      <posx>64</posx>
 			      <posy>113</posy>
@@ -264,6 +264,19 @@
 			<visible>!Control.IsVisible(84) + Control.HasFocus(57) + [Container.Content(movies) | Container.Content(seasons)] + !Window.IsActive(2003)</visible>
 			<animation effect="fade" start="100" end="0" time="150" delay="3000">Visible</animation>
 		</control>
+
+		<control type="image">
+			<posx>1050</posx>
+			<posy>670</posy>
+			<width>201</width>
+			<height>43</height>
+
+			<include>common-fade</include>
+			<info>ListItem.StarRating</info>
+			<colordiffuse>FF7c7c7c</colordiffuse>
+			<visible>!Control.IsVisible(84) + Control.HasFocus(57) + [Container.Content(movies) | Container.Content(seasons)] + !Window.IsActive(2003)</visible>
+			<animation effect="fade" start="100" end="0" time="150" delay="3000">Visible</animation>
+		</control>
 		
 		<control type="image">
 			<posx>364</posx>
@@ -336,6 +349,43 @@
 	</animation>
 </include>
 	
+
+<include name="Showcase_Unfocused">
+	<posx>79</posx>
+	<posy>127</posy>
+	<width>134</width>
+	<height>192</height>
+	<texture diffuse="Thumb_Mask9.png">$INFO[ListItem.Thumb]</texture>
+	<colordiffuse>baFFFFFF</colordiffuse>
+	<aspectratio aligny="bottom">stretch</aspectratio>
+	<animation effect="fade" start="100" end="0" time="150" condition="Control.IsVisible(84)">Hidden</animation>
+	<animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
+</include>
+
+<include name="Showcase_Focused">
+
+	<posx>53</posx>
+	<posy>79</posy>
+	<width>185</width>
+	<height>266</height>
+	<texture diffuse="Thumb_Mask9.png">$INFO[ListItem.Thumb]</texture>
+	<aspectratio aligny="bottom">stretch</aspectratio>
+	<animation type="Focus" condition="!Container.Content(seasons) + !Window.IsActive(24)" reversible="false">
+		<effect type="zoom" start="79,127,124,181" end="53,79,185,266" time="100" />
+		<effect type="zoom" start="53,79,185,266" end="-437,37,224,321" acceleration="-1" delay="6000" time="150" />
+	<!--<effect type="rotatey" delay="3500" center="145,0" start="0" end="360" time="10000" pulse="true" reversible="true"/> <!-- rotate case -->-->
+
+	</animation>
 	
+	<!--<animation type="UnFocus" condition="!Container.Content(seasons) + !Window.IsActive(24) + Control.IsVisible(84)" reversible="false">
+		<effect type="zoom" start="-427,47,204,301" end="61,86,170,251" acceleration="-1" time="150"/>
+		<effect type="zoom" start="61,86,170,251" end="84,133,124,181" time="100" delay="100"/>
+		<effect type="fade" start="100" end="0" time="50"/>
+	</animation>-->
+	
+	<animation type="Focus" condition="Container.Content(seasons) | Window.IsActive(24)" reversible="false">
+		<effect type="zoom" start="84,133,124,181" end="61,86,170,251" time="100" />
+    </animation>
+</include>	
 	
 </includes>	

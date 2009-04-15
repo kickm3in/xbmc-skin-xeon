@@ -51,6 +51,9 @@
 	<include>contextback</include>
 	<include>nowplayingpopup</include>
 	<include>time</include>
+	
+	<include>Memory_Warning</include>
+	
 	</controls>
 
 </window>

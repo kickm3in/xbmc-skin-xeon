@@ -1,0 +1,287 @@
+<includes>
+
+
+<include name="Viewtype_Poster">
+	<control type="wraplist" id="56">
+	    <viewtype label="Poster">wrap</viewtype>
+	    <posx>-107</posx>
+	    <posy>117</posy>
+	    <width>1458</width>
+	    <height>442</height>
+	    <onleft>56</onleft>
+	    <onright>56</onright>
+	    <onup>2</onup>
+	    <ondown>2</ondown>
+	    <focusposition>6</focusposition>
+	    <orientation>horizontal</orientation>
+		<visible>!Container.Content(episodes) + [[Window.IsActive(25) + !Skin.HasSetting(postermovieslib) + Container.Content(movies)] | [Window.IsActive(24) + !Skin.HasSetting(postermovies)] | [Window.IsActive(24) + !Skin.HasSetting(postertv)] | [Window.IsActive(25) + !Skin.HasSetting(postertvlib) + [Container.Content(tvshows) | Container.Content(seasons)]] | [Window.IsActive(20) + !Skin.HasSetting(posterscripts)] | [Window.IsActive(1) + !Skin.HasSetting(postergames)]]</visible>
+	     <include>common-fade</include>
+		 		
+	     <itemlayout height="783" width="147">
+		 
+		  	<!--<control type="label">
+				<posx>200</posx>
+				<posy>400</posy>
+				<width>120</width>
+				<height>39</height>
+				<font>fruity17</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<include>listcolornofocus</include>
+				<info>ListItem.Label</info>
+				<label>[UPPERCASE]ccc ListItem.Label $INFO[ListItem.Title][/UPPERCASE]</label>
+			</control>-->
+
+		 
+			      <control type="image">
+			      <include>Poster_Unfocused</include>
+			      <texture>defaulticonpostermovies.png</texture>
+				  <visible>Window.IsVisible(25) + Container.Content(movies)</visible>
+		      </control>
+		      <control type="image">
+			      <include>Poster_Unfocused</include>
+			      <texture>defaulticonpostertv.png</texture>
+				  <visible>Window.IsVisible(25) + Container.Content(tvshows)</visible>
+		      </control>
+			  <control type="image">
+			      <include>Poster_Unfocused</include>
+			      <texture>defaulticonposterfolder.png</texture>
+				  <visible>Window.IsVisible(25) + !Container.Content(tvshows) + !Container.Content(movies)</visible>
+		      </control>
+		      <control type="image">
+			      <include>Poster_Unfocused</include>
+			      <texture>defaulticonposterfolder.png</texture>
+				  <visible>Window.IsVisible(24) | Container.Content(files)</visible>
+		      </control>
+		      <control type="image">
+			      <include>Poster_Unfocused</include>
+			      <texture>defaulticonposterscripts.png</texture>
+				  <visible>Window.IsVisible(20)</visible>
+		      </control>
+			  
+			  <control type="image">
+			      <include>Poster_Unfocused2</include>
+			      <texture>defaulticongames.png</texture>
+				  <visible>Window.IsVisible(1)</visible>
+		      </control>
+			  
+			  
+		      <control type="image">
+			      <posx>64</posx>
+			      <posy>113</posy>
+			      <width>165</width>
+			      <height>220</height>
+			      <colordiffuse>baFFFFFF</colordiffuse>
+			      <texture>Videos_BigFrame2.png</texture>
+				   <visible>!Control.IsVisible(84) + !Window.IsActive(1)</visible>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>				  
+		      </control>
+			  <control type="image">
+			      <posx>64</posx>
+			      <posy>113</posy>
+			      <width>165</width>
+			      <height>220</height>
+			      <colordiffuse>baFFFFFF</colordiffuse>
+			      <texture>gamecase.png</texture>
+				   <visible>!Control.IsVisible(84) + Window.IsActive(1)</visible>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>				  
+		      </control>
+			  
+			      <control type="image">
+			      <posx>84</posx>
+			      <posy>330</posy>
+			      <width>124</width>
+			      <height>186</height>
+			      <info>ListItem.Thumb</info>
+			      <aspectratio aligny="top">stretch</aspectratio>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">defaulticonposter.png</texture>
+				   <visible>!Control.IsVisible(84)</visible>
+			<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
+		      </control>
+		      <control type="image">
+			      <posx>64</posx>
+			      <posy>310</posy>
+			      <width>165</width>
+			      <height>225</height>
+			      <aspectratio aligny="top">stretch</aspectratio>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">Videos_BigFrame2.png</texture>
+				   <visible>!Control.IsVisible(84) + !Window.IsActive(1)</visible>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
+		      </control>
+			  <control type="image">
+			      <posx>64</posx>
+			      <posy>310</posy>
+			      <width>165</width>
+			      <height>225</height>
+			      <aspectratio aligny="top">stretch</aspectratio>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">gamecase.png</texture>
+				   <visible>!Control.IsVisible(84) + Window.IsActive(1)</visible>
+ 		    <animation effect="fade" start="100" end="0" time="50" >WindowClose</animation>
+		      </control>
+	     </itemlayout>
+	     <focusedlayout height="783" width="160">
+			      <control type="image">
+				  <include>Poster_Focused</include>
+			      <texture>defaulticonpostermovies.png</texture>
+				  <visible>Window.IsVisible(25) + Container.Content(movies)</visible> 
+		      </control>
+		      <control type="image">
+				  <include>Poster_Focused</include>
+			      <texture>defaulticonpostertv.png</texture>
+				  <visible>Window.IsVisible(25) + Container.Content(tvshows)</visible> 
+		      </control>
+			  <control type="image">
+				  <include>Poster_Focused</include>
+			      <texture>defaulticonposterfolder.png</texture>
+				  <visible>Window.IsVisible(25) + !Container.Content(tvshows) + !Container.Content(movies)</visible> 
+		      </control>
+		      <control type="image">
+				  <include>Poster_Focused</include>
+			      <texture>defaulticonposterfolder.png</texture>
+				  <visible>Window.IsVisible(24) + Container.Content(files)</visible> 
+		      </control>
+		      <control type="image">
+				  <include>Poster_Focused</include>
+			      <texture>defaulticonposterscripts.png</texture>
+				  <visible>Window.IsVisible(20)</visible> 
+		      </control>
+			        <control type="image">
+				  <include>Poster_Focused2</include>
+			      <texture>defaulticongames.png</texture>
+				  <visible>Window.IsVisible(1)</visible> 
+		      </control>
+
+		      <control type="image">
+			      <posx>0</posx>
+			      <posy>0</posy>
+			      <width>298</width>
+			      <height>405</height>
+			      <texture>Videos_BigFrame2.png</texture> 
+				  <visible>!Window.IsActive(1)</visible>
+			      <animation effect="zoom" start="64,113,165,220" end="0,0,298,405" reversible="false" time="250">Focus</animation>
+		      </control>
+			    <control type="image">
+			      <posx>0</posx>
+			      <posy>0</posy>
+			      <width>298</width>
+			      <height>405</height>
+			      <texture>gamecase.png</texture>
+				  <visible>Window.IsActive(1)</visible>				  
+			      <animation effect="zoom" start="64,113,165,220" end="0,0,298,405" reversible="false" time="250">Focus</animation>
+		      </control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>20</posy>
+				<width>53</width>
+				<height>24</height>
+				<texture>glint.png</texture>
+				<visible>!Skin.HasSetting(nosfx) + !Window.IsActive(1)</visible>
+				<animation type="Focus" reversible="false">
+					<effect type="slide" start="0,0" end="235,0" delay="600" tween="cubic" easing="inout" time="850" />
+					<effect type="fade" start="0" end="100" delay="600" time="400" />
+					<effect type="fade" start="100" end="0" delay="1000" time="350" />
+				</animation>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>358</posy>
+				<width>53</width>
+				<height>24</height>
+				<texture>glint.png</texture>
+				<visible>!Skin.HasSetting(nosfx) + !Window.IsActive(1)</visible>
+				<animation type="Focus" reversible="false">
+					<effect type="slide" start="0,0" end="198,0" delay="700" tween="cubic" easing="inout" time="850" />
+					<effect type="fade" start="0" end="100" delay="700" time="400" />
+					<effect type="fade" start="100" end="0" delay="1100" time="350" />
+				</animation>
+			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>22</posy>
+				<width>53</width>
+				<height>24</height>
+				<texture>glint.png</texture>
+				<visible>!Skin.HasSetting(nosfx) + Window.IsActive(1)</visible>
+				<animation type="Focus" reversible="false">
+					<effect type="slide" start="0,0" end="225,0" delay="600" tween="cubic" easing="inout" time="850" />
+					<effect type="fade" start="0" end="100" delay="600" time="400" />
+					<effect type="fade" start="100" end="0" delay="1000" time="350" />
+				</animation>
+			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>365</posy>
+				<width>53</width>
+				<height>24</height>
+				<texture>glint.png</texture>
+				<visible>!Skin.HasSetting(nosfx) + Window.IsActive(1)</visible>
+				<animation type="Focus" reversible="false">
+					<effect type="slide" start="0,0" end="225,0" delay="600" tween="cubic" easing="inout" time="850" />
+					<effect type="fade" start="0" end="100" delay="600" time="400" />
+					<effect type="fade" start="100" end="0" delay="1000" time="350" />
+				</animation>
+			</control>
+			
+		      <control type="image">
+			      <posx>36</posx>
+			      <posy>396</posy>
+			      <width>227</width>
+			      <height>336</height>
+			      <info>ListItem.Thumb</info>
+				  <visible>!Window.IsActive(1)</visible>	
+			      <aspectratio aligny="top">stretch</aspectratio>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">defaulticonposter.png</texture>
+			      <animation effect="zoom" start="84,344,124,181" end="36,423,227,336" reversible="false" time="250">Focus</animation>
+		      </control>
+			  <control type="image">
+			      <posx>36</posx>
+			      <posy>386</posy>
+			      <width>227</width>
+			      <height>336</height>
+			      <info>ListItem.Thumb</info>
+				  <visible>Window.IsActive(1)</visible>	
+			      <aspectratio aligny="top">stretch</aspectratio>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">defaulticonposter.png</texture>
+			      <animation effect="zoom" start="84,344,124,181" end="36,423,227,336" reversible="false" time="250">Focus</animation>
+		      </control>
+		      <control type="image">
+			      <posx>0</posx>
+			      <posy>360</posy>
+			      <width>298</width>
+			      <height>405</height>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">Videos_BigFrame2.png</texture>
+				   <visible>!Window.IsActive(1)</visible>	
+			      <animation effect="zoom" start="64,324,165,220" end="0,386,298,405" reversible="false" time="250">Focus</animation>
+		      </control>
+			  <control type="image">
+			      <posx>0</posx>
+			      <posy>356</posy>
+			      <width>298</width>
+			      <height>405</height>
+			      <texture flipy="true" diffuse="Thumb_Mask.png">gamecase.png</texture>
+				   <visible>Window.IsActive(1)</visible>	
+			      <animation effect="zoom" start="64,324,165,220" end="0,386,298,405" reversible="false" time="250">Focus</animation>
+		      </control>
+
+	     </focusedlayout>
+
+   	   </control>
+	   
+
+
+	<include>movieinfopanel</include>
+
+	<include>mediafocuslabel</include>
+
+	<include>contextselected</include>
+
+</include>
+
+
+	
+
+	
+	
+	
+</includes>	

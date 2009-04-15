@@ -19,9 +19,13 @@
 <include file="Viewtype_XShowcase.xml" />	
 <include file="Viewtype_XEpisode.xml" />	
 <include file="Viewtype_XCoverflow.xml" />	
-
-
-
+<include file="Viewtype_XList.xml" />	
+<include file="Viewtype_XPoster.xml" />	
+<include file="Viewtype_XGameroller.xml" />	
+<include file="Viewtype_XMediaInfo.xml" />	
+<include file="Includes_moviegenre.xml" /><!-- <<<<<< Add this -->
+<include file="MovieStudioFlags.xml" />	
+<include file="MemoryWarning.xml" />
 
 
 

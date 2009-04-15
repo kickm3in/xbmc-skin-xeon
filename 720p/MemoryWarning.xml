@@ -1,0 +1,44 @@
+<includes>
+
+
+<include name="Memory_Warning">
+
+	<control type="group">
+	<visible>substring(system.freememory,10mb,left) |substring(system.freememory,9mb,left) |substring(system.freememory,8mb,left) |substring(system.freememory,7mb,left) |substring(system.freememory,6mb,left) |substring(system.freememory,5mb,left) |substring(system.freememory,4mb,left) |substring(system.freememory,3mb,left) |substring(system.freememory,2mb,left) |substring(system.freememory,1mb,left)</visible>
+	<include>common-fade</include>	    
+	
+		<control>
+			<type>image</type>
+			<posx>200</posx>
+			<posy>120</posy>
+			<width>850</width>
+			<height>430</height>
+			<texture>box_opacity70.png</texture>	
+		</control>	
+	
+		<control type="label">
+			<description>test</description>
+			<posx>0</posx>
+			<posy>130</posy>
+			<width>1280</width>				
+			<label>Woooooh there.. [CR]Your memory is low![CR]only $INFO[system.freememory] free [CR]I suggest you take action</label>
+			<align>center</align>
+			<font>menufontacens2</font>
+			<textcolor>fffb9504</textcolor>
+		</control>	
+		<control type="label">
+			<description>test</description>
+			<posx>0</posx>
+			<posy>430</posy>
+			<width>1280</width>				
+			<label>[B]Possible Solutions:[/B][CR]- Resize Fanart down to 960x540 - Change Thumb Size in Advancedsettings.xml[CR]- Upgrade Memory (PC/Linux/OSX only) - Buy a new HTPC [CR] - A simple reboot may just fix it however ;-)</label>
+			<align>center</align>
+			<textcolor>fffb9504</textcolor>
+		</control>
+
+			<visible>Skin.HasSetting(Memory_Warning)</visible>			
+		</control>	
+
+</include>
+
+</includes>
