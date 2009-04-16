@@ -4,7 +4,7 @@
 <include name="Memory_Warning">
 
 	<control type="group">
-	<visible>substring(system.freememory,10mb,left) |substring(system.freememory,9mb,left) |substring(system.freememory,8mb,left) |substring(system.freememory,7mb,left) |substring(system.freememory,6mb,left) |substring(system.freememory,5mb,left) |substring(system.freememory,4mb,left) |substring(system.freememory,3mb,left) |substring(system.freememory,2mb,left) |substring(system.freememory,1mb,left)</visible>
+	<visible>substring(system.freememory,5mb,left) |substring(system.freememory,4mb,left) |substring(system.freememory,3mb,left) |substring(system.freememory,2mb,left) |substring(system.freememory,1mb,left)</visible>
 	<include>common-fade</include>	    
 	
 		<control>

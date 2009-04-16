@@ -1,5 +1,5 @@
 <window id="70">
-	<defaultcontrol always="true">1</defaultcontrol>
+	<defaultcontrol always="true">305</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 
@@ -10,23 +10,195 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>Startup\background-startup-16x9.png</texture>
-			<animation effect="fade" end="100" time="1000">WindowOpen</animation>			
+			<animation effect="fade" end="30" time="1000">WindowOpen</animation>			
 			<animation effect="fade" end="0" time="2500">WindowClose</animation>
 		</control>
 
-		<control type="label"id="69">
+
+	<control type="group">
+
 		<animation type="WindowOpen" reversible="false">
 		<effect type="slide" tween="bounce"delay="500" start ="180,0" end="0,0" time="500" />
 		</animation>
-		<label>Jukebox Help</label>
+	
+	<control type="label"id="69">>
+		<label>Jukebox Help and Settings</label>
+		<posx>55</posx>
+		<posy>53</posy>
+		<width>1150</width>
+		<height>30</height>
+		<font>menufontacens2</font>
+		<textcolor>fffffffff</textcolor>
+		<include>common-fade</include>
+	</control>
+
+	<control type="label"id="69">>
+		<label>Jukebox Help and Settings</label>
+		<posx>61</posx>
+		<posy>57</posy>
+		<width>1150</width>
+		<height>30</height>
+		<font>menufontacens2</font>
+		<textcolor>fffffffff</textcolor>
+		<include>common-fade</include>
+	</control>
+
+	<control type="label"id="69">
+		<label>Jukebox Help and Settings</label>
 		<posx>58</posx>
-		<posy>323</posy>
+		<posy>55</posy>
 		<width>1150</width>
 		<height>30</height>
 		<font>menufontacens2</font>
 		<textcolor>ff0000000</textcolor>
 		<include>common-fade</include>
 		</control>
+		
+		</control>		
+		
+		<control type="label">
+		<posx>60</posx>
+		<posy>140</posy>
+		<label>[B]Set your remote PC name here:[/B]</label>
+		</control>	
+		<control type="button" id="305">
+		<posx>53</posx>
+		<posy>170</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Remote PC Name (Current: $INFO[Skin.String(PCNAME)])</label>
+		<onclick>Skin.SetString(PCNAME)</onclick>
+		</control>		
+		<control type="label">
+		<posx>60</posx>
+		<posy>205</posy>
+		<label>Example: DANIELS[CR]Example of how this would appear to the playlist loader[CR][B]smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist1fn)].m3u[/B]</label>
+		</control>	
+
+
+
+
+		
+		<control type="button" id="306">
+		<posx>50</posx>
+		<posy>300</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #1 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist1fn)</onclick>
+		</control>	
+		<control type="button" id="307">
+		<posx>50</posx>
+		<posy>320</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #1 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
+		<onclick>Skin.SetString(playlist1name)</onclick>
+		</control>		
+		<control type="button" id="308">
+		<posx>50</posx>
+		<posy>350</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #2 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist1fn)</onclick>
+		</control>	
+		<control type="button" id="309">
+		<posx>50</posx>
+		<posy>370</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #2 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
+		<onclick>Skin.SetString(playlist1name)</onclick>
+		</control>
+		<control type="button" id="310">
+		<posx>50</posx>
+		<posy>400</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #3 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist1fn)</onclick>
+		</control>	
+		<control type="button" id="311">
+		<posx>50</posx>
+		<posy>420</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #3 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
+		<onclick>Skin.SetString(playlist1name)</onclick>
+		</control>
+		<control type="button" id="312">
+		<posx>50</posx>
+		<posy>450</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #4 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist1fn)</onclick>
+		</control>	
+		<control type="button" id="313">
+		<posx>50</posx>
+		<posy>470</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #4 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
+		<onclick>Skin.SetString(playlist1name)</onclick>
+		</control>
+		<control type="button" id="314">
+		<posx>50</posx>
+		<posy>500</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #5 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist1fn)</onclick>
+		</control>	
+		<control type="button" id="315">
+		<posx>50</posx>
+		<posy>520</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #5 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
+		<onclick>Skin.SetString(playlist1name)</onclick>
+		</control>
+		<control type="button" id="316">
+		<posx>50</posx>
+		<posy>550</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #6 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist1fn)</onclick>
+		</control>	
+		<control type="button" id="317">
+		<posx>50</posx>
+		<posy>570</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #6 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
+		<onclick>Skin.SetString(playlist1name)</onclick>
+		</control>
+		<control type="button" id="318">
+		<posx>50</posx>
+		<posy>600</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #7 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist1fn)</onclick>
+		</control>	
+		<control type="button" id="319">
+		<posx>50</posx>
+		<posy>620</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #7 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
+		<onclick>Skin.SetString(playlist1name)</onclick>
+		</control>
+		<control type="button" id="320">
+		<posx>50</posx>
+		<posy>650</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #8 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist1fn)</onclick>
+		</control>	
+		<control type="button" id="321">
+		<posx>50</posx>
+		<posy>670</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #8 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
+		<onclick>Skin.SetString(playlist1name)</onclick>
+		</control>		
+		
+		
+		
+		<control type="label">
+		<posx>650</posx>
+		<posy>155</posy>
+		<label>This is probably only going to work on XP or earlier machines..[CR]i dont have Vista, Linux or OSX, sorry[CR]This is primarily designed for easy access to playlists already setup on[CR]the PC. I find it much easier to use Windows Media Player to create[CR]Auto Playlists (.wml) files based on certain conditions for example[CR]80s music,and then copy the content into .M3U playlist files.[CR][CR]You can then use WMP to easily modify these playlists from the[CR]comfort of the PC rather than remote on XBMC.[CR][CR]To start, you need to setup your PC Share name above[CR](eg. Home Computer),[CR]this value is then used in the file names for the playlists set on the[CR]main page.[CR][CR] Conditions:[CR]- You must share the My Music folder on your PC [CR]- .M3U Playlists must be located in My Music/My Playlists/[CR]- Playlist files must be named on the PC as above.</label>
+		</control>	
+		
 		
 		<include>mediapanel</include>
 

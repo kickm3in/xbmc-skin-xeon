@@ -123,7 +123,7 @@
 		<control type="button" id="91">
 			<height>30</height>
 			<width>160</width>
-			<label>Playlist #1 - All Tracks (Random)</label>
+			<label>Playlist #1 - $INFO[Skin.String(playlist1name)]</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>
@@ -131,7 +131,7 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>
-			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/1.m3u)</onclick>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist1fn)].m3u)</onclick>
 		</control>
 
 		<control type="button" id="92">
@@ -145,7 +145,7 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
-			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/2.m3u)</onclick>			
+			<onclick>XBMC.PlayMedia(My Playlists/80s m3u.m3u)</onclick>			
 		</control>
 
 		<control type="button" id="93">
@@ -230,7 +230,7 @@
 		<control type="button" id="99">
 			<height>30</height>
 			<width>160</width>
-			<label>HELP</label>
+			<label>* Help and Settings *</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>

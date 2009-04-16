@@ -1110,7 +1110,7 @@
 		<control type="radiobutton" id="606">
 			<width>1156</width>
 			<include>customsettingsbutton</include>
-			<label>Memory Warning (Warns on 10MB or less left)</label>
+			<label>Memory Warning (Warns on 5MB or less left)</label>
 			<onclick>Skin.ToggleSetting(Memory_Warning)</onclick>
 			<selected>Skin.HasSetting(Memory_Warning)</selected>
 		</control>

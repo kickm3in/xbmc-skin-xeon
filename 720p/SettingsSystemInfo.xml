@@ -216,8 +216,7 @@
 			
 				</control>					
 	
-		<include>Furniture_Debug</include>
-	
+
 	<control type="group">
 		<posx>750</posx>
 		<posy>140</posy>
