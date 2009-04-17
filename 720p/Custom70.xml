@@ -1,5 +1,5 @@
 <window id="70">
-	<defaultcontrol always="true">305</defaultcontrol>
+	<defaultcontrol always="true">22</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 
@@ -11,9 +11,10 @@
 			<height>720</height>
 			<texture>Startup\background-startup-16x9.png</texture>
 			<animation effect="fade" end="30" time="1000">WindowOpen</animation>			
-			<animation effect="fade" end="0" time="2500">WindowClose</animation>
+			<animation effect="fade" start="30"end="0" time="2500">WindowClose</animation>
 		</control>
 
+		
 
 	<control type="group">
 
@@ -21,10 +22,10 @@
 		<effect type="slide" tween="bounce"delay="500" start ="180,0" end="0,0" time="500" />
 		</animation>
 	
-	<control type="label"id="69">>
+	<control type="label"id="70">
 		<label>Jukebox Help and Settings</label>
 		<posx>55</posx>
-		<posy>53</posy>
+		<posy>23</posy>
 		<width>1150</width>
 		<height>30</height>
 		<font>menufontacens2</font>
@@ -32,10 +33,10 @@
 		<include>common-fade</include>
 	</control>
 
-	<control type="label"id="69">>
+	<control type="label"id="70">
 		<label>Jukebox Help and Settings</label>
 		<posx>61</posx>
-		<posy>57</posy>
+		<posy>27</posy>
 		<width>1150</width>
 		<height>30</height>
 		<font>menufontacens2</font>
@@ -43,10 +44,10 @@
 		<include>common-fade</include>
 	</control>
 
-	<control type="label"id="69">
+	<control type="label"id="70">
 		<label>Jukebox Help and Settings</label>
 		<posx>58</posx>
-		<posy>55</posy>
+		<posy>25</posy>
 		<width>1150</width>
 		<height>30</height>
 		<font>menufontacens2</font>
@@ -55,152 +56,335 @@
 		</control>
 		
 		</control>		
+	
+
+	
 		
-		<control type="label">
-		<posx>60</posx>
-		<posy>140</posy>
-		<label>[B]Set your remote PC name here:[/B]</label>
-		</control>	
-		<control type="button" id="305">
-		<posx>53</posx>
-		<posy>170</posy>
+		<control type="label" id="91">
+		<posx>850</posx>
+		<posy>0</posy>		
 		<include>customsettingsbutton</include>
-		<label>Set Remote PC Name (Current: $INFO[Skin.String(PCNAME)])</label>
+		<label>[B]Current Audio Player Setting:Random[/B]</label>
+		<visible>$INFO[Playlist.IsRandom] + Player.HasAudio</visible>	
+		</control>	
+		
+		<control type="label" id="91">
+		<posx>850</posx>
+		<posy>0</posy>	
+		<include>customsettingsbutton</include>
+		<label>[B]Current Audio Player Setting:Not Random[/B]</label>
+		<visible>!$INFO[Playlist.IsRandom] + Player.HasAudio</visible>	
+		</control>		
+		
+		<control type="label" id="91">
+		<posx>850</posx>
+		<posy>0</posy>	
+		<include>customsettingsbutton</include>
+		<label>[B]Play audio to change Random on/off[/B]</label>
+		<visible>!Player.HasAudio</visible>	
+		</control>			
+		
+		<control type="label" id="92">
+		<posx>850</posx>
+		<posy>30</posy>		
+		<include>customsettingsbutton</include>
+		<label>[B]Current Audio Player Setting:Repeat all[/B]</label>
+		<visible>$INFO[Playlist.IsRepeat] + Player.HasAudio</visible>	
+		</control>			
+		
+		<control type="label" id="92">
+		<posx>850</posx>
+		<posy>30</posy>		
+		<include>customsettingsbutton</include>
+		<label>[B]Current Audio Player Setting:Repeat one mode[/B]</label>
+		<visible>$INFO[Playlist.IsRepeatOne] + Player.HasAudio</visible>	
+		</control>		
+		
+		<control type="label" id="92">
+		<posx>850</posx>
+		<posy>30</posy>		
+		<include>customsettingsbutton</include>
+		<label>[B]Current Audio Player Setting:Repeat off[/B]</label>
+		<visible>!$INFO[Playlist.IsRepeatOne] + !$INFO[Playlist.IsRepeat] +Player.HasAudio</visible>	
+		</control>			
+		
+		<control type="label" id="92">
+		<posx>850</posx>
+		<posy>30</posy>	
+		<include>customsettingsbutton</include>
+		<label>[B]Play audio to change Repeat on/off[/B]</label>
+		<visible>!Player.HasAudio</visible>	
+		</control>
+		
+		<control type="grouplist" id="9">
+		<posx>50</posx>
+		<posy>130</posy>
+		<width>1156</width>
+		<height>520</height>
+		<onleft>2</onleft>
+		<onright>1</onright>
+		<onup>9</onup>
+		<ondown>9</ondown>
+		<itemgap>0</itemgap>	
+		<visible allowhiddenfocus="true">ControlGroup(9).HasFocus()</visible>	
+		
+
+		<control type="button" id="304">
+		<include>customsettingsbutton</include>
+		<label>Set Remote Computer Name (Current: $INFO[Skin.String(PCNAME)])</label>
 		<onclick>Skin.SetString(PCNAME)</onclick>
 		</control>		
-		<control type="label">
-		<posx>60</posx>
-		<posy>205</posy>
-		<label>Example: DANIELS[CR]Example of how this would appear to the playlist loader[CR][B]smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist1fn)].m3u[/B]</label>
+		<control type="label" id="3051">
+		<width>1156</width>
+		<height>32</height>
+		<label> Example of how this path would appear to the playlist loader: smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist1fn)].m3u</label>
 		</control>	
+		<control type="label" id="3052">
+		<width>1156</width>
+		<height>32</height>
+		<label> smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist1fn)].m3u</label>
+		</control>			
+		<control type="togglebutton" id="94">
+			<include>customsettingsbutton</include>
+			<label>Toggle Random in player (must be playing audio)</label>
+			<altlabel>Toggle Random in player</altlabel>
+			<onclick>XBMC.PlayerControl(RandomOn)</onclick>
+			<altclick>XBMC.PlayerControl(RandomOff)</altclick>
+		</control>
 
-
-
-
+		<control type="togglebutton" id="95">
+			<include>customsettingsbutton</include>
+			<label>Toggle Repeat in player (must be playing audio)</label>
+			<altlabel>Toggle Repeat in player</altlabel>
+			<onclick>XBMC.PlayerControl(Repeat)</onclick>
+			<altclick>XBMC.PlayerControl(RepeatOff)</altclick>
+		</control>
+		
+		<control type="label">
+		<label></label>
+		</control>		
+		<control type="label">
+		<label>[CR][B] PRESS LEFT / RIGHT TO ACCESS OTHER PAGES[/B]</label>
+		</control>
+	</control>	
+	
+	
+	<control type="grouplist" id="1">
+		
+		<posx>50</posx>
+		<posy>130</posy>
+		<width>1156</width>
+		<height>520</height>
+		<onleft>9</onleft>
+		<onright>2</onright>
+		<onup>1</onup>
+		<ondown>1</ondown>
+		<itemgap>0</itemgap>
+		<visible allowhiddenfocus="true">ControlGroup(1).HasFocus()</visible>	
 		
 		<control type="button" id="306">
-		<posx>50</posx>
-		<posy>300</posy>
 		<include>customsettingsbutton</include>
 		<label>Set Playlist #1 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
 		<onclick>Skin.SetString(playlist1fn)</onclick>
 		</control>	
 		<control type="button" id="307">
 		<posx>50</posx>
-		<posy>320</posy>
+		<posy>350</posy>
 		<include>customsettingsbutton</include>
 		<label>Set Playlist #1 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
 		<onclick>Skin.SetString(playlist1name)</onclick>
-		</control>		
-		<control type="button" id="308">
-		<posx>50</posx>
-		<posy>350</posy>
-		<include>customsettingsbutton</include>
-		<label>Set Playlist #2 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
-		<onclick>Skin.SetString(playlist1fn)</onclick>
 		</control>	
+		<control type="togglebutton" id="308">
+			<include>customsettingsbutton</include>
+			<label>Test $INFO[Skin.String(playlist1fn)].m3u</label>
+			<altlabel>Stop $INFO[Skin.String(playlist1fn)].m3u</altlabel>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist1fn)].m3u)</onclick>
+			<altclick>XBMC.PlayerControl(stop)</altclick>
+		</control>			
+
 		<control type="button" id="309">
 		<posx>50</posx>
 		<posy>370</posy>
 		<include>customsettingsbutton</include>
-		<label>Set Playlist #2 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
-		<onclick>Skin.SetString(playlist1name)</onclick>
-		</control>
+		<label>Set Playlist #2 Filename as on PC (Current: $INFO[Skin.String(playlist2fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist2fn)</onclick>
+		</control>	
 		<control type="button" id="310">
+		<posx>50</posx>
+		<posy>370</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #2 name to appear on menu (Current: $INFO[Skin.String(playlist2name)])</label>
+		<onclick>Skin.SetString(playlist2name)</onclick>
+		</control>
+		<control type="togglebutton" id="311">
+			<include>customsettingsbutton</include>
+			<label>Test $INFO[Skin.String(playlist2fn)].m3u</label>
+			<altlabel>Stop $INFO[Skin.String(playlist2fn)].m3u</altlabel>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist2fn)].m3u)</onclick>
+			<altclick>XBMC.PlayerControl(stop)</altclick>
+		</control>	
+
+		<control type="button" id="312">
 		<posx>50</posx>
 		<posy>400</posy>
 		<include>customsettingsbutton</include>
-		<label>Set Playlist #3 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
-		<onclick>Skin.SetString(playlist1fn)</onclick>
-		</control>	
-		<control type="button" id="311">
-		<posx>50</posx>
-		<posy>420</posy>
-		<include>customsettingsbutton</include>
-		<label>Set Playlist #3 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
-		<onclick>Skin.SetString(playlist1name)</onclick>
-		</control>
-		<control type="button" id="312">
-		<posx>50</posx>
-		<posy>450</posy>
-		<include>customsettingsbutton</include>
-		<label>Set Playlist #4 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
-		<onclick>Skin.SetString(playlist1fn)</onclick>
+		<label>Set Playlist #3 Filename as on PC (Current: $INFO[Skin.String(playlist3fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist3fn)</onclick>
 		</control>	
 		<control type="button" id="313">
 		<posx>50</posx>
+		<posy>420</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #3 name to appear on menu (Current: $INFO[Skin.String(playlist3name)])</label>
+		<onclick>Skin.SetString(playlist3name)</onclick>
+		</control>
+		<control type="togglebutton" id="314">
+			<include>customsettingsbutton</include>
+			<label>Test $INFO[Skin.String(playlist3fn)].m3u</label>
+			<altlabel>Stop $INFO[Skin.String(playlist3fn)].m3u</altlabel>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist3fn)].m3u)</onclick>
+			<altclick>XBMC.PlayerControl(stop)</altclick>
+		</control>	
+
+		<control type="button" id="315">
+		<posx>50</posx>
+		<posy>450</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #4 Filename as on PC (Current: $INFO[Skin.String(playlist4fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist4fn)</onclick>
+		</control>	
+		<control type="button" id="316">
+		<posx>50</posx>
 		<posy>470</posy>
 		<include>customsettingsbutton</include>
-		<label>Set Playlist #4 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
-		<onclick>Skin.SetString(playlist1name)</onclick>
+		<label>Set Playlist #4 name to appear on menu (Current: $INFO[Skin.String(playlist4name)])</label>
+		<onclick>Skin.SetString(playlist4name)</onclick>
 		</control>
-		<control type="button" id="314">
+		<control type="togglebutton" id="317">
+			<include>customsettingsbutton</include>
+			<label>Test $INFO[Skin.String(playlist4fn)].m3u</label>
+			<altlabel>Stop $INFO[Skin.String(playlist4fn)].m3u</altlabel>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist4fn)].m3u)</onclick>
+			<altclick>XBMC.PlayerControl(stop)</altclick>
+		</control>	
+
+		<control type="button" id="318">
 		<posx>50</posx>
 		<posy>500</posy>
 		<include>customsettingsbutton</include>
-		<label>Set Playlist #5 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
-		<onclick>Skin.SetString(playlist1fn)</onclick>
-		</control>	
-		<control type="button" id="315">
-		<posx>50</posx>
-		<posy>520</posy>
-		<include>customsettingsbutton</include>
-		<label>Set Playlist #5 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
-		<onclick>Skin.SetString(playlist1name)</onclick>
-		</control>
-		<control type="button" id="316">
-		<posx>50</posx>
-		<posy>550</posy>
-		<include>customsettingsbutton</include>
-		<label>Set Playlist #6 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
-		<onclick>Skin.SetString(playlist1fn)</onclick>
-		</control>	
-		<control type="button" id="317">
-		<posx>50</posx>
-		<posy>570</posy>
-		<include>customsettingsbutton</include>
-		<label>Set Playlist #6 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
-		<onclick>Skin.SetString(playlist1name)</onclick>
-		</control>
-		<control type="button" id="318">
-		<posx>50</posx>
-		<posy>600</posy>
-		<include>customsettingsbutton</include>
-		<label>Set Playlist #7 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
-		<onclick>Skin.SetString(playlist1fn)</onclick>
+		<label>Set Playlist #5 Filename as on PC (Current: $INFO[Skin.String(playlist5fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist5fn)</onclick>
 		</control>	
 		<control type="button" id="319">
 		<posx>50</posx>
+		<posy>520</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #5 name to appear on menu (Current: $INFO[Skin.String(playlist5name)])</label>
+		<onclick>Skin.SetString(playlist5name)</onclick>
+		</control>
+		<control type="togglebutton" id="320">
+			<include>customsettingsbutton</include>
+			<label>Test $INFO[Skin.String(playlist5fn)].m3u</label>
+			<altlabel>Stop $INFO[Skin.String(playlist5fn)].m3u</altlabel>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist5fn)].m3u)</onclick>
+			<altclick>XBMC.PlayerControl(stop)</altclick>
+		</control>	
+
+		<control type="button" id="321">
+		<posx>50</posx>
+		<posy>550</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #6 Filename as on PC (Current: $INFO[Skin.String(playlist6fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist6fn)</onclick>
+		</control>	
+		<control type="button" id="322">
+		<posx>50</posx>
+		<posy>570</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #6 name to appear on menu (Current: $INFO[Skin.String(playlist6name)])</label>
+		<onclick>Skin.SetString(playlist6name)</onclick>
+		</control>
+		<control type="togglebutton" id="323">
+			<include>customsettingsbutton</include>
+			<label>Test $INFO[Skin.String(playlist6fn)].m3u</label>
+			<altlabel>Stop $INFO[Skin.String(playlist6fn)].m3u</altlabel>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist6fn)].m3u)</onclick>
+			<altclick>XBMC.PlayerControl(stop)</altclick>
+		</control>	
+
+		<control type="button" id="324">
+		<posx>50</posx>
+		<posy>600</posy>
+		<include>customsettingsbutton</include>
+		<label>Set Playlist #7 Filename as on PC (Current: $INFO[Skin.String(playlist7fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist7fn)</onclick>
+		</control>	
+		<control type="button" id="325">
+		<posx>50</posx>
 		<posy>620</posy>
 		<include>customsettingsbutton</include>
-		<label>Set Playlist #7 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
-		<onclick>Skin.SetString(playlist1name)</onclick>
+		<label>Set Playlist #7 name to appear on menu (Current: $INFO[Skin.String(playlist7name)])</label>
+		<onclick>Skin.SetString(playlist7name)</onclick>
 		</control>
-		<control type="button" id="320">
+		<control type="togglebutton" id="326">
+			<include>customsettingsbutton</include>
+			<label>Test $INFO[Skin.String(playlist7fn)].m3u</label>
+			<altlabel>Stop $INFO[Skin.String(playlist7fn)].m3u</altlabel>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist7fn)].m3u)</onclick>
+			<altclick>XBMC.PlayerControl(stop)</altclick>
+		</control>	
+
+		<control type="button" id="327">
 		<posx>50</posx>
 		<posy>650</posy>
 		<include>customsettingsbutton</include>
-		<label>Set Playlist #8 Filename as on PC (Current: $INFO[Skin.String(playlist1fn)].m3u)</label>
-		<onclick>Skin.SetString(playlist1fn)</onclick>
+		<label>Set Playlist #8 Filename as on PC (Current: $INFO[Skin.String(playlist8fn)].m3u)</label>
+		<onclick>Skin.SetString(playlist8fn)</onclick>
 		</control>	
-		<control type="button" id="321">
+		<control type="button" id="328">
 		<posx>50</posx>
 		<posy>670</posy>
 		<include>customsettingsbutton</include>
-		<label>Set Playlist #8 name to appear on menu (Current: $INFO[Skin.String(playlist1name)])</label>
-		<onclick>Skin.SetString(playlist1name)</onclick>
+		<label>Set Playlist #8 name to appear on menu (Current: $INFO[Skin.String(playlist8name)])</label>
+		<onclick>Skin.SetString(playlist8name)</onclick>
+		</control>	
+		<control type="togglebutton" id="329">
+			<include>customsettingsbutton</include>
+			<label>Test $INFO[Skin.String(playlist8fn)].m3u</label>
+			<altlabel>Stop $INFO[Skin.String(playlist8fn)].m3u</altlabel>
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist8fn)].m3u)</onclick>
+			<altclick>XBMC.PlayerControl(stop)</altclick>
+		</control>			
+		</control>			
+		
+	<control type="grouplist" id="2">
+		<posx>100</posx>
+		<posy>130</posy>	
+		<onleft>1</onleft>
+		<onright>9</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<visible allowhiddenfocus="true">ControlGroup(2).HasFocus()</visible>	
+		
+		<control type="label">
+		<label>This is probably only going to work on XP or earlier machines.. i dont have Vista, Linux or OSX, sorry[CR][CR]This is primarily designed for easy access to playlists already setup on the PC.[CR]I find it much easier to use Windows Media Player to create Auto Playlists [B](.wml)[/B] files based on certain conditions[CR]for example 80s music,and then copy the content into [B].M3U[/B] playlist files.[CR][CR]You can then use WMP to easily modify these playlists from the comfort of the PC rather than remote on XBMC.[CR][CR]To start, you need to setup your PC Share name (eg. Home Computer) and input this on page 3.[CR]This value is then used in the path name for the playlists set on the main page.[CR][CR] Conditions:[CR]- You must share the My Music folder on your PC [CR]- .M3U Playlists must be located in My Music/My Playlists/[CR]- Playlist files must be named on the PC as above.[CR]- At the mo, access must not be passworded as that is not included in the path (future job)[CR][CR][B]PRESS LEFT / RIGHT TO ACCESS OTHER PAGES[/B]</label>
+		</control>	
+
+		
+		<control type="button" id="22">
+		<posx>50</posx>
+		<posy>670</posy>
+
 		</control>		
 		
 		
-		
-		<control type="label">
-		<posx>650</posx>
-		<posy>155</posy>
-		<label>This is probably only going to work on XP or earlier machines..[CR]i dont have Vista, Linux or OSX, sorry[CR]This is primarily designed for easy access to playlists already setup on[CR]the PC. I find it much easier to use Windows Media Player to create[CR]Auto Playlists (.wml) files based on certain conditions for example[CR]80s music,and then copy the content into .M3U playlist files.[CR][CR]You can then use WMP to easily modify these playlists from the[CR]comfort of the PC rather than remote on XBMC.[CR][CR]To start, you need to setup your PC Share name above[CR](eg. Home Computer),[CR]this value is then used in the file names for the playlists set on the[CR]main page.[CR][CR] Conditions:[CR]- You must share the My Music folder on your PC [CR]- .M3U Playlists must be located in My Music/My Playlists/[CR]- Playlist files must be named on the PC as above.</label>
-		</control>	
+		</control>			
 		
 		
 		<include>mediapanel</include>
 
+		
+		
+		
 	</controls>
 </window>

@@ -137,7 +137,7 @@
 		<control type="button" id="92">
 			<height>30</height>
 			<width>160</width>
-			<label>Playlist #2 - Dance (Random)</label>
+			<label>Playlist #2 - $INFO[Skin.String(playlist2name)]</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>
@@ -145,13 +145,13 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
-			<onclick>XBMC.PlayMedia(My Playlists/80s m3u.m3u)</onclick>			
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist2fn)].m3u)</onclick>			
 		</control>
 
 		<control type="button" id="93">
 			<height>30</height>
 			<width>160</width>
-			<label>Playlist #3 - Hard Dance (Random)</label>
+			<label>Playlist #3 - $INFO[Skin.String(playlist3name)]</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>
@@ -159,12 +159,12 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
-			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/3.m3u)</onclick>			
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist3fn)].m3u)</onclick>			
 		</control>
 		<control type="button" id="94">
 			<height>30</height>
 			<width>160</width>
-			<label>Playlist #4 - 00's (Random)</label>
+			<label>Playlist #4 - $INFO[Skin.String(playlist4name)]</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>
@@ -172,12 +172,12 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
-			<onclick>XBMC.PlayMedia(smb://DANIELS/My Music/My Playlists/4.m3u)</onclick>			
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist4fn)].m3u)</onclick>			
 		</control>
 		<control type="button" id="95">
 			<height>30</height>
 			<width>160</width>
-			<label>Playlist #5 - 90's (Random)</label>
+			<label>Playlist #5 - $INFO[Skin.String(playlist5name)]</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>
@@ -185,12 +185,12 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
-			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/5.m3u)</onclick>			
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist5fn)].m3u)</onclick>			
 		</control>
 		<control type="button" id="96">
 			<height>30</height>
 			<width>160</width>
-			<label>Playlist #6 - 80's (Random)</label>
+			<label>Playlist #6 - $INFO[Skin.String(playlist6name)]</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>
@@ -198,12 +198,12 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
-			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/6.m3u)</onclick>			
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist6fn)].m3u)</onclick>			
 		</control>
 		<control type="button" id="97">
 			<height>30</height>
 			<width>160</width>
-			<label>Playlist #7 - 70's (Random)</label>
+			<label>Playlist #7 - $INFO[Skin.String(playlist7name)]</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>
@@ -211,12 +211,12 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
-			<onclick>XBMC.PlayMedia(special://xbmc/UserData/playlists/music/7.m3u)</onclick>			
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist7fn)].m3u)</onclick>			
 		</control>
 		<control type="button" id="98">
 			<height>30</height>
 			<width>160</width>
-			<label>Playlist #8 - 70's + 80's (Random)</label>
+			<label>Playlist #8 - $INFO[Skin.String(playlist8name)]</label>
 			<font>menufontacens2b</font>
 			<align>left</align>
 			<textcolor>90FFFFFF</textcolor>
@@ -224,7 +224,7 @@
 			<include>common-fade</include>
 			<animation effect="zoom" end="120" center="10,10" time="200">Focus</animation>
 			<animation effect="zoom" start="120" end="100" center="10,10" time="200">UnFocus</animation>			
-			<onclick>XBMC.PlayMedia(smb://DANIELS/My Music/My Playlists/8.m3u)</onclick>			
+			<onclick>XBMC.PlayMedia(smb://$INFO[Skin.String(PCNAME)]/My Music/My Playlists/$INFO[Skin.String(playlist8fn)].m3u)</onclick>			
 		</control>
 		
 		<control type="button" id="99">
@@ -322,6 +322,6 @@
 
 	</control>
 		<include>mediapanel</include>
-
+	<include>Furniture_Debug</include>
 	</controls>
 </window>
