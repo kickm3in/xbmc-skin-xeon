@@ -56,7 +56,7 @@
 			<align>left</align>
 			<font>font13s</font>
 			<textcolor>d0ffffff</textcolor>
-			<label>Volume</label>
+			<label>  $INFO[Control.GetLabel(9)]%</label>
 			<scroll>true</scroll>
 		</control>
 

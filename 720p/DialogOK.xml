@@ -32,8 +32,8 @@
 		<posx>190</posx>
 		<posy>260</posy>
 		<label>0</label>
-		<font>font10</font>
-		<align>center</align>
+		<font>font12</font>
+		<align>left</align>
 		<textcolor>FFffffff</textcolor>
 	</control>
 
@@ -42,8 +42,8 @@
 		<posx>190</posx>
 		<posy>280</posy>
 		<label>0</label>
-		<font>font10</font>
-		<align>center</align>
+		<font>font12</font>
+		<align>left</align>
 		<textcolor>FFffffff</textcolor>
 	</control>
 
