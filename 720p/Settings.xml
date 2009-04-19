@@ -9,8 +9,8 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>Startup\background-startup-16x9.png</texture>
-			<animation effect="fade" end="100" time="1000">WindowOpen</animation>			
-			<animation effect="fade" end="0" time="2500">WindowClose</animation>
+			<animation effect="fade" end="40" time="1000">WindowOpen</animation>			
+			<animation effect="fade" start="40" end="0" time="2500">WindowClose</animation>
 		</control>
 
 		<control type="label"id="69">
@@ -35,7 +35,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>xbmc-info</font>
-		<label>WELCOME TO XEON&#10;Please note that this beta software is still in development&#10;&#10;YOUR XBMC BUILD IS DATED $INFO[System.BuildDate]&#10;THIS SKIN REQUIRES A BUILD DATED Nov 03 2008 OR LATER&#10;&#10;PRESS BACK TO BEGIN (ALL SETTINGS KEPT)&#10;or&#10;PRESS SELECT TO BEGIN (SETTINGS RESET, USER PATHS KEPT - FRESH INSTALL)</label>
+		<label>[B]WELCOME TO XEON[/B]&#10;Please note that this beta software is still in development&#10;&#10;YOUR XBMC BUILD IS DATED $INFO[System.BuildDate]&#10;THIS SKIN REQUIRES A BUILD DATED Nov 03 2008 OR LATER&#10;&#10;PRESS BACK TO BEGIN (ALL SETTINGS KEPT)&#10;or&#10;PRESS SELECT TO BEGIN (SETTINGS RESET, USER PATHS KEPT - FRESH/FIRST INSTALL)</label>
 	</control>
 
 	<control type="button" id="22">
